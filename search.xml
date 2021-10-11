@@ -1,6 +1,477 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>WisBlock</title>
+    <url>/posts/PT276M/</url>
+    <content><![CDATA[<p><img src="wisblock-click-code-connect.png" alt="wisblock-click-code-connect"></p>
+<h1 id="WisBlock"><a href="#WisBlock" class="headerlink" title="WisBlock"></a>WisBlock</h1><p>WisBlock 是一个模块化系统，可以轻松地将低功耗广域网 (LPWAN) 实施到物联网解决方案中。</p>
+<p>WisBlock 可以快速实现从原型设计到批量生产，而无需为每一步都创建新的硬件模块。</p>
+<h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><ul>
+<li>紧凑的硬件设计</li>
+<li>标准化组件</li>
+<li>完全模块化</li>
+</ul>
+<h2 id="硬件组成"><a href="#硬件组成" class="headerlink" title="硬件组成"></a>硬件组成</h2><ul>
+<li>WisBlock Base</li>
+<li>WisBlock Core</li>
+<li>WisBlock Sensor</li>
+<li>WisBlock IO</li>
+</ul>
+<h1 id="WisBlock-Base"><a href="#WisBlock-Base" class="headerlink" title="WisBlock Base"></a>WisBlock Base</h1><p>WisBlock系列产品是搭载在WisBlock 底板上，它可以轻松的插入WisBlock核心板和多个其他的模块。</p>
+<p>WisBlock 底板同时还提供电源，支持可充电电池，太阳能的接口。同时还具有编程和调试的连接器。</p>
+<p>目前已经有2款WisBlock底板，分别为 RAK5005-O Base Board和RAK19003 Mini Base Board。</p>
+<table>
+<thead>
+<tr>
+<th align="center">RAK5005-O Base</th>
+<th align="center"><strong>RAK19003</strong> mini Base</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><img src="RAK5005-O_buy.png"  style="zoom: 25%;" /></td>
+<td align="center"><img src="RAK19003_buy.png"  style="zoom:25%;" /></td>
+</tr>
+</tbody></table>
+<h2 id="两款WisBlock-Base对比"><a href="#两款WisBlock-Base对比" class="headerlink" title="两款WisBlock Base对比"></a>两款WisBlock Base对比</h2><table>
+<thead>
+<tr>
+<th align="center">Parameter</th>
+<th align="center">RAK5005-O</th>
+<th align="center">RAK19003</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">USB</td>
+<td align="center">Micro USB</td>
+<td align="center">Type C</td>
+</tr>
+<tr>
+<td align="center">Battery</td>
+<td align="center">✓</td>
+<td align="center">✓</td>
+</tr>
+<tr>
+<td align="center">Solar</td>
+<td align="center">✓</td>
+<td align="center">✓</td>
+</tr>
+<tr>
+<td align="center">Reset</td>
+<td align="center">✓</td>
+<td align="center">✓</td>
+</tr>
+<tr>
+<td align="center">LED</td>
+<td align="center">✓</td>
+<td align="center">✓</td>
+</tr>
+<tr>
+<td align="center">CPU Slot</td>
+<td align="center">✓</td>
+<td align="center">✓</td>
+</tr>
+<tr>
+<td align="center">Sensor Slot</td>
+<td align="center">4</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td align="center">IO Slot</td>
+<td align="center">1</td>
+<td align="center">x</td>
+</tr>
+<tr>
+<td align="center">Header</td>
+<td align="center">3</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td align="center">Size</td>
+<td align="center">60 * 30 mm</td>
+<td align="center">35 * 30 mm</td>
+</tr>
+</tbody></table>
+<h1 id="WisBlock-Core"><a href="#WisBlock-Core" class="headerlink" title="WisBlock Core"></a>WisBlock Core</h1><p>WisBlock Core 是整个wisblcok的核心单元，用来处理和控制其他模块。</p>
+<p>各种不同的核心模块可实现不同的通信方式，如LoRa，WiFi，BLE等。</p>
+<h2 id="RAK4631"><a href="#RAK4631" class="headerlink" title="RAK4631"></a>RAK4631</h2><p>方案: Nordic nRF52840 + Semtech SX1262</p>
+<p>支持的无线技术: BLE + LoRa</p>
+<h2 id="RAK11200"><a href="#RAK11200" class="headerlink" title="RAK11200"></a>RAK11200</h2><p>方案: Espressif ESP32-WROVER</p>
+<p>支持的无线技术: WiFi/BlueTooth</p>
+<h2 id="RAK11310"><a href="#RAK11310" class="headerlink" title="RAK11310"></a>RAK11310</h2><p>方案: RaspberryPi RP2040  + Semtech SX1262</p>
+<p>支持的无线技术: LoRa</p>
+<table>
+<thead>
+<tr>
+<th align="center">RAK4631</th>
+<th align="center">RAK11200</th>
+<th align="center">RAK11310</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><img src="RAK4631_buy.png"  style="zoom: 25%;" /></td>
+<td align="center"><img src="RAK11200_buy.png"  style="zoom: 25%;" /></td>
+<td align="center"><img src="RAK11310_buy.png"  style="zoom: 25%;" /></td>
+</tr>
+</tbody></table>
+<h2 id="3款-WisBlcok-Core对比"><a href="#3款-WisBlcok-Core对比" class="headerlink" title="3款 WisBlcok Core对比"></a>3款 WisBlcok Core对比</h2><table>
+<thead>
+<tr>
+<th align="center">Parameter</th>
+<th align="center">RAK4631</th>
+<th align="center">RAK11200</th>
+<th align="center">RAK11310</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">MCU</td>
+<td align="center">Nordic nRF52840</td>
+<td align="center">Espressif ESP32-WROVER</td>
+<td align="center">RaspberryPi RP2040</td>
+</tr>
+<tr>
+<td align="center">CPU clock</td>
+<td align="center">64 MHz</td>
+<td align="center">Up to 240 MHz</td>
+<td align="center">133 MHz</td>
+</tr>
+<tr>
+<td align="center">core</td>
+<td align="center">32-bit ARM® Cortex™-M4 CPU</td>
+<td align="center">Two low-power Xtensa® 32-bit LX6 microprocessors</td>
+<td align="center">Dual M0+ Core</td>
+</tr>
+<tr>
+<td align="center">Flash</td>
+<td align="center">1 MB</td>
+<td align="center">4 MB</td>
+<td align="center">2 MB</td>
+</tr>
+<tr>
+<td align="center">RAM</td>
+<td align="center">256 KB</td>
+<td align="center">520 KB, 8 MB PSRAM</td>
+<td align="center">246 KB</td>
+</tr>
+<tr>
+<td align="center">LoRa MCU</td>
+<td align="center">Semtech SX1262</td>
+<td align="center">/</td>
+<td align="center">Semtech SX1262</td>
+</tr>
+<tr>
+<td align="center">LoRa</td>
+<td align="center">LoRaWan® 1.0.2</td>
+<td align="center">/</td>
+<td align="center">LoRaWan® 1.0.2</td>
+</tr>
+<tr>
+<td align="center">Bluetooth</td>
+<td align="center">Bluetooth 5.0</td>
+<td align="center">Bluetooth v4.2 BR/EDR, BLE</td>
+<td align="center">/</td>
+</tr>
+<tr>
+<td align="center">WiFi</td>
+<td align="center">/</td>
+<td align="center">802.11 b/g/n</td>
+<td align="center">/</td>
+</tr>
+<tr>
+<td align="center">GPIOs</td>
+<td align="center">I2C, SPI, UART,Analog inputs</td>
+<td align="center">I2C, SPI, UART,Analog inputs</td>
+<td align="center">I2C, SPI, UART,Analog inputs</td>
+</tr>
+<tr>
+<td align="center">SWD</td>
+<td align="center">✓</td>
+<td align="center">x</td>
+<td align="center">✓</td>
+</tr>
+<tr>
+<td align="center">Temperature range</td>
+<td align="center">-40 °C to +85 °C</td>
+<td align="center">-40 °C to +85 °C</td>
+<td align="center">-40 °C ~ 70 °C</td>
+</tr>
+<tr>
+<td align="center">Supply voltage</td>
+<td align="center">2.0 ~ 3.6 V</td>
+<td align="center">3.0 V ~ 3.6 V</td>
+<td align="center">2.0 V ~ 3.6 V</td>
+</tr>
+<tr>
+<td align="center">Antenna</td>
+<td align="center">external LoRa and BLE antenna</td>
+<td align="center">Built-in PCB antenna</td>
+<td align="center">external LoRa antenna</td>
+</tr>
+<tr>
+<td align="center">low power</td>
+<td align="center">✓</td>
+<td align="center">✓</td>
+<td align="center">✓</td>
+</tr>
+</tbody></table>
+<h1 id="WisBlock-Senor"><a href="#WisBlock-Senor" class="headerlink" title="WisBlock Senor"></a>WisBlock Senor</h1><table>
+<thead>
+<tr>
+<th align="center"><strong>RAK1901 TEMP&amp;HUMI</strong></th>
+<th align="center"><strong>RAK1902 PRESSURE</strong></th>
+<th align="center"><strong>RAK1903 LIGHT</strong></th>
+<th align="center"><strong>RAK1904 3-AXIS</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><img src="RAK1901_buy.png"  style="zoom:25%;" /></td>
+<td align="center"><img src="RAK1902_buy.png"  style="zoom:25%;" /></td>
+<td align="center"><img src="RAK1903_buy.png"  style="zoom:25%;" /></td>
+<td align="center"><img src="RAK1904_buy.png"  style="zoom:25%;" /></td>
+</tr>
+<tr>
+<td align="center"><strong>RAK1906 ENVIRONMENT</strong></td>
+<td align="center"><strong>RAK1910 GNSS</strong></td>
+<td align="center"><strong>RAK12003  Infrared Temperature</strong></td>
+<td align="center"><strong>RAK12004  MQ2 Gas</strong></td>
+</tr>
+<tr>
+<td align="center"><img src="RAK1906_buy.png"  style="zoom:25%;" /></td>
+<td align="center"><img src="RAK1910_buy.png"  style="zoom:25%;" /></td>
+<td align="center"><img src="RAK1906_buy.png"  style="zoom:25%;" /></td>
+<td align="center"><img src="RAK12004_buy.png"  style="zoom:25%;" /></td>
+</tr>
+<tr>
+<td align="center"><strong>RAK12005  Rain Sensor</strong></td>
+<td align="center"><strong>RAK12006  PIR</strong></td>
+<td align="center"><strong>RAK12007  Ultrasonic</strong></td>
+<td align="center"><strong>RAK12009  MQ3 Alcohol Gas</strong></td>
+</tr>
+<tr>
+<td align="center"><img src="RAK12005_buy.png"  style="zoom:25%;" /></td>
+<td align="center"><img src="RAK12006_buy.png"  style="zoom:25%;" /></td>
+<td align="center"><img src="RAK12007_buy.png"  style="zoom:25%;" /></td>
+<td align="center"><img src="RAK12009_buy.png"  style="zoom:25%;" /></td>
+</tr>
+<tr>
+<td align="center"><strong>RAK12010  Ambient Light</strong></td>
+<td align="center"><strong>RAK12011 Barometer WT</strong></td>
+<td align="center"><strong>RAK12012 Heart Rate</strong></td>
+<td align="center"><strong>RAK12015 Vibration Detection</strong></td>
+</tr>
+<tr>
+<td align="center"><img src="RAK12010_buy.png"  style="zoom:25%;" /></td>
+<td align="center"><img src="RAK12011_buy.png"  style="zoom:25%;" /></td>
+<td align="center"><img src="RAK12012_buy.png"  style="zoom:25%;" /></td>
+<td align="center"><img src="RAK12015_buy.png"  style="zoom:25%;" /></td>
+</tr>
+<tr>
+<td align="center"><strong>RAK12500 GNSS</strong></td>
+<td align="center"><strong>RAK16000 DC Current</strong></td>
+<td align="center"><strong>RAK18000 PDM Stereo Microphone</strong></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><img src="RAK12500_buy.png"  style="zoom:25%;" /></td>
+<td align="center"><img src="RAK16000_buy.png"  style="zoom:25%;" /></td>
+<td align="center"><img src="RAK18000_buy.png"  style="zoom:25%;" /></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<h1 id="WisBlock-Wireless"><a href="#WisBlock-Wireless" class="headerlink" title="WisBlock Wireless"></a>WisBlock Wireless</h1><table>
+<thead>
+<tr>
+<th align="center">RAK13101 GSM/GPRS</th>
+<th align="center">RAK2305 WiFi</th>
+<th align="center"><strong>RAK18000 PDM Stereo Microphone</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><img src="RAK13101_buy.png"  style="zoom: 25%;" /></td>
+<td align="center"><img src="RAK2305_buy.png"  style="zoom: 25%;" /></td>
+<td align="center"><img src="RAK5860_buy.png"  style="zoom: 25%;" /></td>
+</tr>
+</tbody></table>
+<h1 id="WisBlock-Interface"><a href="#WisBlock-Interface" class="headerlink" title="WisBlock Interface"></a>WisBlock Interface</h1><table>
+<thead>
+<tr>
+<th align="center">RAK5801 4-20mA</th>
+<th align="center">RAK5802 RS485</th>
+<th align="center">RAK5804 Extension</th>
+<th align="center">RAK5811 0-5V</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><img src="RAK5801_buy.png"  style="zoom:25%;" /></td>
+<td align="center"><img src="RAK5802_buy.png"  style="zoom:25%;" /></td>
+<td align="center"><img src="RAK5804_buy.png"  style="zoom:25%;" /></td>
+<td align="center"><img src="RAK5811_buy.png"  style="zoom:25%;" /></td>
+</tr>
+<tr>
+<td align="center"><strong>RAK1920 Sensor Adapter</strong></td>
+<td align="center"><strong>RAK13001 Relay</strong></td>
+<td align="center"><strong>RAK13002 IO</strong></td>
+<td align="center"><strong>RAK13003 IO Expansion</strong></td>
+</tr>
+<tr>
+<td align="center"><img src="RAK1920_buy.png"  style="zoom:25%;" /></td>
+<td align="center"><img src="RAK13001_buy.png"  style="zoom:25%;" /></td>
+<td align="center"><img src="rak13002_buy.png"  style="zoom:25%;" /></td>
+<td align="center"><img src="rak13003_buy.png"  style="zoom:25%;" /></td>
+</tr>
+<tr>
+<td align="center"><strong>RAK13004 PWM Expander</strong></td>
+<td align="center"><strong>RAK13005 LIN</strong></td>
+<td align="center"><strong>RAK14002 Touch</strong></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><img src="rak13004_buy.png"  style="zoom:25%;" /></td>
+<td align="center"><img src="RAK13005_buy.png"  style="zoom:25%;" /></td>
+<td align="center"><img src="RAK14002_buy.png"  style="zoom:25%;" /></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<h1 id="WisBlock-Display"><a href="#WisBlock-Display" class="headerlink" title="WisBlock  Display"></a>WisBlock  Display</h1><table>
+<thead>
+<tr>
+<th align="center">RAK14000 E-Ink Display</th>
+<th align="center">RAK14001 RGB LED</th>
+<th align="center">RAK14003 LED Bar Graph</th>
+<th align="center">RAK1921 OLED Display</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><img src="RAK14000_buy.png"  style="zoom:10%;" /></td>
+<td align="center"><img src="RAK14001_buy.png"  style="zoom: 50%;" /></td>
+<td align="center"><img src="RAK14003_buy.png"  style="zoom:15%;" /></td>
+<td align="center"><img src="RAK1921_buy.png"  style="zoom:25%;" /></td>
+</tr>
+</tbody></table>
+<h1 id="WisBlock-Extra"><a href="#WisBlock-Extra" class="headerlink" title="WisBlock  Extra"></a>WisBlock  Extra</h1><table>
+<thead>
+<tr>
+<th align="center">RAK12002 RTC</th>
+<th align="center">RAK18001 Buzzer</th>
+<th align="center">RAK19005 Sensor Extension Cable</th>
+<th align="center">RAK19008 IO Extension Cable</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><img src="rak12002_buy.png"  style="zoom:25%;" /></td>
+<td align="center"><img src="RAK18001_front.png"  style="zoom:25%;" /></td>
+<td align="center"><img src="RAK19005_buy.png"  style="zoom:25%;" /></td>
+<td align="center"><img src="RAK19008_buy.png"  style="zoom:25%;" /></td>
+</tr>
+</tbody></table>
+<h1 id="WisBlock-Storage"><a href="#WisBlock-Storage" class="headerlink" title="WisBlock  Storage"></a>WisBlock  Storage</h1><table>
+<thead>
+<tr>
+<th align="center">RAK15000 EEPROM</th>
+<th align="center">RAK15001 Flash</th>
+<th align="center">RAK15002 Micro SD Card</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><img src="RAK15000_buy.png"  style="zoom:25%;" /></td>
+<td align="center"><img src="RAK15001_buy.png"  style="zoom:25%;" /></td>
+<td align="center"><img src="rak15002_buy.png"  style="zoom:25%;" /></td>
+</tr>
+</tbody></table>
+<h1 id="WisBlock-Power"><a href="#WisBlock-Power" class="headerlink" title="WisBlock  Power"></a>WisBlock  Power</h1><table>
+<thead>
+<tr>
+<th align="center">RAK19002 Boost</th>
+<th align="center">RAK19004 Green Power</th>
+<th align="center">RAK19006 Wireless Charge</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><img src="RAK19002_buy.png"  style="zoom:25%;" /></td>
+<td align="center"><img src="RAK19004_buy.png"  style="zoom:2.2%;" /></td>
+<td align="center"><img src="RAK19006_buy.png"  style="zoom:25%;" /></td>
+</tr>
+</tbody></table>
+<h1 id="WisBlock-Motor"><a href="#WisBlock-Motor" class="headerlink" title="WisBlock  Motor"></a>WisBlock  Motor</h1><table>
+<thead>
+<tr>
+<th align="center">RAK17000 Motor Control</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><img src="RAK17000_buy.png"  style="zoom:25%;" /></td>
+</tr>
+</tbody></table>
+<h1 id="典型应用"><a href="#典型应用" class="headerlink" title="典型应用"></a>典型应用</h1><p><img src="2.wisblock-applications.png" alt="2.wisblock-applications"></p>
+<p>农业应用</p>
+<p><img src="agriculture.png" alt="img"></p>
+<p>物流应用</p>
+<p><img src="logistics.png" alt="img"></p>
+<p>工业应用</p>
+<p><img src="industry.png" alt="img"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Git安装</title>
+    <url>/posts/PVYZH2/</url>
+    <content><![CDATA[<p>安装git</p>
+<p>git config –global user.name “your name”</p>
+<p>git config –global user.email “your email”</p>
+<span id="more"></span>
+
+<h3 id="Git-Bash生成SSH公钥"><a href="#Git-Bash生成SSH公钥" class="headerlink" title="Git Bash生成SSH公钥"></a>Git Bash生成SSH公钥</h3><p>ssh -keygen -t rsa -C “您的邮箱地址”</p>
+<p>cat ~/.ssh/id_rsa.pub 将文件打印至终端</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh -T git@gitee.com</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<p>上传</p>
+<p>创建一个本地的版本库（其实也就是一个文件夹）</p>
+<p>打开文件夹 </p>
+<p>git bash here</p>
+<p>输入命令 git init </p>
+<p>生成  .git文件夹 它是Git用来跟踪和管理版本库的 默认隐藏 </p>
+<p>把项目粘贴到这个本地Git仓库里面</p>
+<p>git status 查看你当前的状态</p>
+<p>git add . 该目录下的所有文件添加到仓库</p>
+<p>git commit -m “shuoming”</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;youremail@example.com&quot;</span><br></pre></td></tr></table></figure>
+
+<p>用户下的.ssh目录里找到id_rsa和id_rsa.pub这两个文件  </p>
+<p>本地仓库进行关联</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git remote add origin https://github.com/cx0620/cx0620.github.io.git</span><br></pre></td></tr></table></figure>
+
+
+
+<p>新创建的仓库里面的README文件不在本地仓库目录中，通过以下命令先将内容合并以下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git pull --rebase origin master</span><br></pre></td></tr></table></figure>
+
+<p>把本地库的所有内容推送到远程仓库 </p>
+<p>新建的远程仓库是空的，所以要加上-u这个参数</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+
+
+
+<p>下次再从本地库上传内容的时候只需下面这样</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+
+
+
+<p>下载</p>
+<p>Git Bash Here</p>
+<p>git clone  <a href="https://github.com/cx0620/cx0620.github.io.git">https://github.com/cx0620/cx0620.github.io.git</a></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">连接Github与本地</span><br><span class="line">git config --global user.name &quot;stephenchen0620&quot;</span><br><span class="line">git config --global user.email &quot;408193714@qq.com&quot;</span><br><span class="line"></span><br><span class="line">ssh-keygen -t rsa -C &quot;408193714@qq.com&quot;</span><br><span class="line"></span><br><span class="line">cat ~/.ssh/id_rsa.pub</span><br><span class="line"></span><br><span class="line">ssh -T git@github.com</span><br><span class="line">ssh -T git@gitee.com</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>git</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>arduino安装教程</title>
     <url>/posts/3N08829/</url>
     <content><![CDATA[<h1 id="下载Arduino-IDE"><a href="#下载Arduino-IDE" class="headerlink" title="下载Arduino IDE"></a>下载Arduino IDE</h1><p>最新版本为 Arduino IDE 1.8.16 </p>
@@ -69,154 +540,6 @@
       </categories>
       <tags>
         <tag>arduino</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Git安装</title>
-    <url>/posts/PVYZH2/</url>
-    <content><![CDATA[<p>安装git</p>
-<p>git config –global user.name “your name”</p>
-<p>git config –global user.email “your email”</p>
-<span id="more"></span>
-
-<h3 id="Git-Bash生成SSH公钥"><a href="#Git-Bash生成SSH公钥" class="headerlink" title="Git Bash生成SSH公钥"></a>Git Bash生成SSH公钥</h3><p>ssh -keygen -t rsa -C “您的邮箱地址”</p>
-<p>cat ~/.ssh/id_rsa.pub 将文件打印至终端</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh -T git@gitee.com</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-<p>上传</p>
-<p>创建一个本地的版本库（其实也就是一个文件夹）</p>
-<p>打开文件夹 </p>
-<p>git bash here</p>
-<p>输入命令 git init </p>
-<p>生成  .git文件夹 它是Git用来跟踪和管理版本库的 默认隐藏 </p>
-<p>把项目粘贴到这个本地Git仓库里面</p>
-<p>git status 查看你当前的状态</p>
-<p>git add . 该目录下的所有文件添加到仓库</p>
-<p>git commit -m “shuoming”</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;youremail@example.com&quot;</span><br></pre></td></tr></table></figure>
-
-<p>用户下的.ssh目录里找到id_rsa和id_rsa.pub这两个文件  </p>
-<p>本地仓库进行关联</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git remote add origin https://github.com/cx0620/cx0620.github.io.git</span><br></pre></td></tr></table></figure>
-
-
-
-<p>新创建的仓库里面的README文件不在本地仓库目录中，通过以下命令先将内容合并以下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git pull --rebase origin master</span><br></pre></td></tr></table></figure>
-
-<p>把本地库的所有内容推送到远程仓库 </p>
-<p>新建的远程仓库是空的，所以要加上-u这个参数</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
-
-
-
-<p>下次再从本地库上传内容的时候只需下面这样</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
-
-
-
-<p>下载</p>
-<p>Git Bash Here</p>
-<p>git clone  <a href="https://github.com/cx0620/cx0620.github.io.git">https://github.com/cx0620/cx0620.github.io.git</a></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">连接Github与本地</span><br><span class="line">git config --global user.name &quot;stephenchen0620&quot;</span><br><span class="line">git config --global user.email &quot;408193714@qq.com&quot;</span><br><span class="line"></span><br><span class="line">ssh-keygen -t rsa -C &quot;408193714@qq.com&quot;</span><br><span class="line"></span><br><span class="line">cat ~/.ssh/id_rsa.pub</span><br><span class="line"></span><br><span class="line">ssh -T git@github.com</span><br><span class="line">ssh -T git@gitee.com</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>git</category>
-      </categories>
-      <tags>
-        <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>WisBlock</title>
-    <url>/posts/PT276M/</url>
-    <content><![CDATA[<iframe width="560" height="315" src="https://www.youtube.com/embed/8f6P3IjVMRA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
-
-<p><strong>Base</strong></p>
-<ul>
-<li>RAK5005-O WisBlock Base Board </li>
-<li>RAK19003  WisBlock Mini Base Board</li>
-</ul>
-<span id="more"></span>
-
-<p><strong>Core</strong></p>
-<ul>
-<li>RAK4631 WisBlock LPWAN Module</li>
-<li>RAK11200 WisBlock WiFi Module</li>
-<li>RAK3401  BLE Module</li>
-<li>RAK3372  STM32</li>
-<li>RAK11300 RP2040 stamp module</li>
-</ul>
-<p><strong>Senor</strong></p>
-<ul>
-<li>RAK1901 Temperature and Humidity Sensor</li>
-<li>RAK1902</li>
-<li>RAK1903</li>
-<li>RAK1904</li>
-<li>RAK1906</li>
-<li>RAK12003</li>
-<li>RAK12004</li>
-<li>RAK12005</li>
-<li>RAK12500</li>
-<li>RAK18000</li>
-</ul>
-<p><strong>Wireless</strong></p>
-<ul>
-<li>RAK2305</li>
-<li>RAK5860</li>
-</ul>
-<p><strong>Interface</strong></p>
-<ul>
-<li>RAK5801</li>
-<li>RAK5802</li>
-<li>RAK5804</li>
-<li>RAK5811</li>
-<li>RAK1920</li>
-<li>RAK13001</li>
-<li>RAK13002</li>
-<li>RAK13003</li>
-<li>RAK13004</li>
-<li>RAK13005</li>
-<li>RAK14002</li>
-</ul>
-<p><strong>Display</strong></p>
-<ul>
-<li>RAK1921</li>
-<li>RAK14000</li>
-<li>RAK14001</li>
-</ul>
-<p><strong>Extra</strong></p>
-<ul>
-<li>RAK12002</li>
-<li>RAK18001</li>
-<li>RAK19005</li>
-</ul>
-<p><strong>Power</strong></p>
-<ul>
-<li>RAK19002 WisBlock Boost Module</li>
-<li>RAK19006 WisBlock Wireless Charge Module</li>
-</ul>
-<p><strong>Motor</strong></p>
-<ul>
-<li>RAK17000 WisBlock Motor Control Module</li>
-</ul>
-]]></content>
-      <categories>
-        <category>WisBlock</category>
-      </categories>
-      <tags>
-        <tag>base</tag>
-        <tag>core</tag>
-        <tag>sensor</tag>
-        <tag>wireless</tag>
-        <tag>LoRa</tag>
       </tags>
   </entry>
 </search>
