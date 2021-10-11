@@ -17,6 +17,7 @@
 <li>WisBlock Sensor</li>
 <li>WisBlock IO</li>
 </ul>
+<p><img src="wisblock.svg"></p>
 <h1 id="WisBlock-Base"><a href="#WisBlock-Base" class="headerlink" title="WisBlock Base"></a>WisBlock Base</h1><p>WisBlock系列产品是搭载在WisBlock 底板上，它可以轻松的插入WisBlock核心板和多个其他的模块。</p>
 <p>WisBlock 底板同时还提供电源，支持可充电电池，太阳能的接口。同时还具有编程和调试的连接器。</p>
 <p>目前已经有2款WisBlock底板，分别为 RAK5005-O Base Board和RAK19003 Mini Base Board。</p>
