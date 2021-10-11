@@ -3,7 +3,7 @@
   <entry>
     <title>WisBlock</title>
     <url>/posts/PT276M/</url>
-    <content><![CDATA[<p><img src="wisblock-click-code-connect.png" alt="wisblock-click-code-connect"></p>
+    <content><![CDATA[<p><img src="wisblock-click-code-connect.png"></p>
 <h1 id="WisBlock"><a href="#WisBlock" class="headerlink" title="WisBlock"></a>WisBlock</h1><p>WisBlock 是一个模块化系统，可以轻松地将低功耗广域网 (LPWAN) 实施到物联网解决方案中。</p>
 <p>WisBlock 可以快速实现从原型设计到批量生产，而无需为每一步都创建新的硬件模块。</p>
 <h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><ul>
@@ -401,75 +401,14 @@
 <td align="center"><img src="RAK17000_buy.png"  style="zoom:25%;" /></td>
 </tr>
 </tbody></table>
-<h1 id="典型应用"><a href="#典型应用" class="headerlink" title="典型应用"></a>典型应用</h1><p><img src="2.wisblock-applications.png" alt="2.wisblock-applications"></p>
+<h1 id="典型应用"><a href="#典型应用" class="headerlink" title="典型应用"></a>典型应用</h1><p><img src="2.wisblock-applications.png"></p>
 <p>农业应用</p>
-<p><img src="agriculture.png" alt="img"></p>
+<p><img src="agriculture.png"></p>
 <p>物流应用</p>
-<p><img src="logistics.png" alt="img"></p>
+<p><img src="logistics.png"></p>
 <p>工业应用</p>
-<p><img src="industry.png" alt="img"></p>
+<p><img src="industry.png"></p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>Git安装</title>
-    <url>/posts/PVYZH2/</url>
-    <content><![CDATA[<p>安装git</p>
-<p>git config –global user.name “your name”</p>
-<p>git config –global user.email “your email”</p>
-<span id="more"></span>
-
-<h3 id="Git-Bash生成SSH公钥"><a href="#Git-Bash生成SSH公钥" class="headerlink" title="Git Bash生成SSH公钥"></a>Git Bash生成SSH公钥</h3><p>ssh -keygen -t rsa -C “您的邮箱地址”</p>
-<p>cat ~/.ssh/id_rsa.pub 将文件打印至终端</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh -T git@gitee.com</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-<p>上传</p>
-<p>创建一个本地的版本库（其实也就是一个文件夹）</p>
-<p>打开文件夹 </p>
-<p>git bash here</p>
-<p>输入命令 git init </p>
-<p>生成  .git文件夹 它是Git用来跟踪和管理版本库的 默认隐藏 </p>
-<p>把项目粘贴到这个本地Git仓库里面</p>
-<p>git status 查看你当前的状态</p>
-<p>git add . 该目录下的所有文件添加到仓库</p>
-<p>git commit -m “shuoming”</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;youremail@example.com&quot;</span><br></pre></td></tr></table></figure>
-
-<p>用户下的.ssh目录里找到id_rsa和id_rsa.pub这两个文件  </p>
-<p>本地仓库进行关联</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git remote add origin https://github.com/cx0620/cx0620.github.io.git</span><br></pre></td></tr></table></figure>
-
-
-
-<p>新创建的仓库里面的README文件不在本地仓库目录中，通过以下命令先将内容合并以下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git pull --rebase origin master</span><br></pre></td></tr></table></figure>
-
-<p>把本地库的所有内容推送到远程仓库 </p>
-<p>新建的远程仓库是空的，所以要加上-u这个参数</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
-
-
-
-<p>下次再从本地库上传内容的时候只需下面这样</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
-
-
-
-<p>下载</p>
-<p>Git Bash Here</p>
-<p>git clone  <a href="https://github.com/cx0620/cx0620.github.io.git">https://github.com/cx0620/cx0620.github.io.git</a></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">连接Github与本地</span><br><span class="line">git config --global user.name &quot;stephenchen0620&quot;</span><br><span class="line">git config --global user.email &quot;408193714@qq.com&quot;</span><br><span class="line"></span><br><span class="line">ssh-keygen -t rsa -C &quot;408193714@qq.com&quot;</span><br><span class="line"></span><br><span class="line">cat ~/.ssh/id_rsa.pub</span><br><span class="line"></span><br><span class="line">ssh -T git@github.com</span><br><span class="line">ssh -T git@gitee.com</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>git</category>
-      </categories>
-      <tags>
-        <tag>git</tag>
-      </tags>
   </entry>
   <entry>
     <title>arduino安装教程</title>
@@ -540,6 +479,67 @@
       </categories>
       <tags>
         <tag>arduino</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Git安装</title>
+    <url>/posts/PVYZH2/</url>
+    <content><![CDATA[<p>安装git</p>
+<p>git config –global user.name “your name”</p>
+<p>git config –global user.email “your email”</p>
+<span id="more"></span>
+
+<h3 id="Git-Bash生成SSH公钥"><a href="#Git-Bash生成SSH公钥" class="headerlink" title="Git Bash生成SSH公钥"></a>Git Bash生成SSH公钥</h3><p>ssh -keygen -t rsa -C “您的邮箱地址”</p>
+<p>cat ~/.ssh/id_rsa.pub 将文件打印至终端</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh -T git@gitee.com</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<p>上传</p>
+<p>创建一个本地的版本库（其实也就是一个文件夹）</p>
+<p>打开文件夹 </p>
+<p>git bash here</p>
+<p>输入命令 git init </p>
+<p>生成  .git文件夹 它是Git用来跟踪和管理版本库的 默认隐藏 </p>
+<p>把项目粘贴到这个本地Git仓库里面</p>
+<p>git status 查看你当前的状态</p>
+<p>git add . 该目录下的所有文件添加到仓库</p>
+<p>git commit -m “shuoming”</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;youremail@example.com&quot;</span><br></pre></td></tr></table></figure>
+
+<p>用户下的.ssh目录里找到id_rsa和id_rsa.pub这两个文件  </p>
+<p>本地仓库进行关联</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git remote add origin https://github.com/cx0620/cx0620.github.io.git</span><br></pre></td></tr></table></figure>
+
+
+
+<p>新创建的仓库里面的README文件不在本地仓库目录中，通过以下命令先将内容合并以下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git pull --rebase origin master</span><br></pre></td></tr></table></figure>
+
+<p>把本地库的所有内容推送到远程仓库 </p>
+<p>新建的远程仓库是空的，所以要加上-u这个参数</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+
+
+
+<p>下次再从本地库上传内容的时候只需下面这样</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+
+
+
+<p>下载</p>
+<p>Git Bash Here</p>
+<p>git clone  <a href="https://github.com/cx0620/cx0620.github.io.git">https://github.com/cx0620/cx0620.github.io.git</a></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">连接Github与本地</span><br><span class="line">git config --global user.name &quot;stephenchen0620&quot;</span><br><span class="line">git config --global user.email &quot;408193714@qq.com&quot;</span><br><span class="line"></span><br><span class="line">ssh-keygen -t rsa -C &quot;408193714@qq.com&quot;</span><br><span class="line"></span><br><span class="line">cat ~/.ssh/id_rsa.pub</span><br><span class="line"></span><br><span class="line">ssh -T git@github.com</span><br><span class="line">ssh -T git@gitee.com</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>git</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
       </tags>
   </entry>
 </search>
