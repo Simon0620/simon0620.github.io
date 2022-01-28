@@ -2133,8 +2133,8 @@ figure.highlight pre .javascript .function {
   -ms-flex: 1 auto;
   flex: 1 auto;
   margin: 0 auto;
-  padding: 20px 15px;
-  max-width: 1800px;
+  padding: 2rem 15px;
+  max-width: $layout-post-width;
   width: 100%;
 }
 @media screen and (max-width: 900px) {
