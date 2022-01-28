@@ -10,7 +10,7 @@
 
 <h3 id="Git-Bash生成SSH公钥"><a href="#Git-Bash生成SSH公钥" class="headerlink" title="Git Bash生成SSH公钥"></a>Git Bash生成SSH公钥</h3><p>ssh -keygen -t rsa -C “您的邮箱地址”</p>
 <p>cat ~/.ssh/id_rsa.pub 将文件打印至终端</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh -T git@gitee.com</span><br></pre></td></tr></table></figure>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">ssh <span class="literal">-T</span> git@gitee.com</span><br></pre></td></tr></table></figure>
 
 
 
@@ -28,35 +28,32 @@
 <p>git status 查看你当前的状态</p>
 <p>git add . 该目录下的所有文件添加到仓库</p>
 <p>git commit -m “shuoming”</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;youremail@example.com&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">ssh<span class="literal">-keygen</span> <span class="literal">-t</span> rsa <span class="literal">-C</span> <span class="string">&quot;youremail@example.com&quot;</span></span><br></pre></td></tr></table></figure>
 
 <p>用户下的.ssh目录里找到id_rsa和id_rsa.pub这两个文件  </p>
 <p>本地仓库进行关联</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git remote add origin https://github.com/cx0620/cx0620.github.io.git</span><br></pre></td></tr></table></figure>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">git remote add origin https://github.com/cx0620/cx0620.github.io.git</span><br></pre></td></tr></table></figure>
 
 
 
 <p>新创建的仓库里面的README文件不在本地仓库目录中，通过以下命令先将内容合并以下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git pull --rebase origin master</span><br></pre></td></tr></table></figure>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">git pull -<span class="literal">-rebase</span> origin master</span><br></pre></td></tr></table></figure>
 
 <p>把本地库的所有内容推送到远程仓库 </p>
 <p>新建的远程仓库是空的，所以要加上-u这个参数</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">git push <span class="literal">-u</span> origin master</span><br></pre></td></tr></table></figure>
 
 
 
 <p>下次再从本地库上传内容的时候只需下面这样</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
 
 
 
 <p>下载</p>
 <p>Git Bash Here</p>
 <p>git clone  <a href="https://github.com/cx0620/cx0620.github.io.git">https://github.com/cx0620/cx0620.github.io.git</a></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">连接Github与本地</span><br><span class="line">git config --global user.name &quot;stephenchen0620&quot;</span><br><span class="line">git config --global user.email &quot;408193714@qq.com&quot;</span><br><span class="line"></span><br><span class="line">ssh-keygen -t rsa -C &quot;408193714@qq.com&quot;</span><br><span class="line"></span><br><span class="line">cat ~/.ssh/id_rsa.pub</span><br><span class="line"></span><br><span class="line">ssh -T git@github.com</span><br><span class="line">ssh -T git@gitee.com</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>git</category>
-      </categories>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">连接Github与本地</span><br><span class="line">git config -<span class="literal">-global</span> user.name <span class="string">&quot;stephenchen0620&quot;</span></span><br><span class="line">git config -<span class="literal">-global</span> user.email <span class="string">&quot;408193714@qq.com&quot;</span></span><br><span class="line"></span><br><span class="line">ssh<span class="literal">-keygen</span> <span class="literal">-t</span> rsa <span class="literal">-C</span> <span class="string">&quot;408193714@qq.com&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cat</span> ~/.ssh/id_rsa.pub</span><br><span class="line"></span><br><span class="line">ssh <span class="literal">-T</span> git@github.com</span><br><span class="line">ssh <span class="literal">-T</span> git@gitee.com</span><br></pre></td></tr></table></figure>]]></content>
       <tags>
         <tag>git</tag>
       </tags>
@@ -474,6 +471,80 @@
 <p>工业应用</p>
 <p><img src="industry.png"></p>
 ]]></content>
+      <categories>
+        <category>WisBlock</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>arduino安装教程</title>
+    <url>/posts/3N08829/</url>
+    <content><![CDATA[<h1 id="下载Arduino-IDE"><a href="#下载Arduino-IDE" class="headerlink" title="下载Arduino IDE"></a>下载Arduino IDE</h1><p>最新版本为 Arduino IDE 1.8.16 </p>
+<p>下载地址 <a href="https://www.arduino.cc/en/software">https://www.arduino.cc/en/software</a></p>
+<span id="more"></span>
+
+<p><img src="1.download-arduino.png" alt="1.download-arduino"></p>
+<h1 id="windows下安装Arduino-IDE"><a href="#windows下安装Arduino-IDE" class="headerlink" title="windows下安装Arduino IDE"></a>windows下安装Arduino IDE</h1><ol>
+<li>点击 I Agree 按钮。</li>
+</ol>
+<p><img src="2.agreement-license.png" alt="2.agreement-license"></p>
+<ol start="2">
+<li>点击 next </li>
+</ol>
+<p><img src="3.installation-options.png" alt="3.installation-options"></p>
+<ol start="3">
+<li>选择合适安装目录，点击Install。</li>
+</ol>
+<p><img src="4.installation-folder.png" alt="4.installation-folder"></p>
+<ol start="4">
+<li>安装中…</li>
+</ol>
+<p><img src="5.installing.png" alt="5.installing"></p>
+<ol start="5">
+<li>安装完成</li>
+</ol>
+<p><img src="6.installation-success.png" alt="6.installation-success"></p>
+<h1 id="IDE界面介绍"><a href="#IDE界面介绍" class="headerlink" title="IDE界面介绍"></a>IDE界面介绍</h1><p><img src="7.arduino-ide.png" alt="7.arduino-ide"></p>
+<ol>
+<li><p>菜单栏</p>
+</li>
+<li><p>快捷按钮</p>
+</li>
+</ol>
+<p><img src="8.operating-buttons.png" alt="8.operating-buttons"></p>
+<ol start="3">
+<li><p>代码编辑区</p>
+</li>
+<li><p>状态区</p>
+</li>
+<li><p>输出信息窗口</p>
+</li>
+</ol>
+<h1 id="IDE-配置"><a href="#IDE-配置" class="headerlink" title="IDE 配置"></a>IDE 配置</h1><p><img src="9.preferences.png" alt="9.preferences"></p>
+<p><img src="add_bsp_icon.png" alt="add_bsp_icon"></p>
+<p>添加网址 </p>
+<p><a href="https://raw.githubusercontent.com/RAKwireless/RAKwireless-Arduino-BSP-Index/main/package_rakwireless_index.json">https://raw.githubusercontent.com/RAKwireless/RAKwireless-Arduino-BSP-Index/main/package_rakwireless_index.json</a></p>
+<p><img src="add-bsp-url.png" alt="add-bsp-url"></p>
+<p>添加开发板</p>
+<p><img src="11.boards-manager.png" alt="11.boards-manager"></p>
+<p><img src="wisblock_core-1631516043841.png" alt="wisblock_core"></p>
+<p><img src="13.rakwireless-nrf-modules.png" alt="13.rakwireless-nrf-modules"></p>
+<h1 id="RAK-示例"><a href="#RAK-示例" class="headerlink" title="RAK 示例"></a>RAK 示例</h1><p><img src="14.wisblock-modules.png" alt="14.wisblock-modules"></p>
+<h1 id="编译一个示例"><a href="#编译一个示例" class="headerlink" title="编译一个示例"></a>编译一个示例</h1><p><img src="15.select-lora-otaa-example.png" alt="15.select-lora-otaa-example"></p>
+<p><img src="16.install-library-step1.png" alt="16.install-library-step1"></p>
+<p>下载库文件</p>
+<p><img src="17.install-library-step2.png" alt="17.install-library-step2"></p>
+<p><img src="18.compile-example.png" alt="18.compile-example"></p>
+<p>第一个程序 </p>
+<p>使用wisblock 点亮LED</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LED_GREEN  35</span></span><br><span class="line"><span class="comment">// #define LED_BLUE  36</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">setup</span><span class="params">()</span> </span></span><br><span class="line"><span class="function"></span>&#123;    </span><br><span class="line">  pinMode(LED_GREEN,OUTPUT);</span><br><span class="line">  Serial.begin(<span class="number">115200</span>);</span><br><span class="line">  </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">loop</span><span class="params">()</span> </span></span><br><span class="line"><span class="function"></span>&#123; </span><br><span class="line">  digitalWrite(LED_GREEN,HIGH);</span><br><span class="line">  delay(<span class="number">1000</span>);</span><br><span class="line">  digitalWrite(LED_GREEN,LOW);</span><br><span class="line">  delay(<span class="number">1000</span>);</span><br><span class="line">    </span><br><span class="line">  Serial.println(<span class="string">&quot;RAKwireless: Make IOT Easy!&quot;</span>); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>WisBlock</category>
+      </categories>
+      <tags>
+        <tag>arduino</tag>
+      </tags>
   </entry>
   <entry>
     <title>ripple</title>
@@ -502,6 +573,9 @@
 <p><img src="image-20211216154541621.png" alt="image-20211216154541621" style="zoom:10%;" /> <img src="image-20211216154550299.png" alt="image-20211216154550299" style="zoom:10%;" /></p>
 <p><img src="image-20211216153347681.png" alt="image-20211216153347681"></p>
 ]]></content>
+      <categories>
+        <category>hardware test</category>
+      </categories>
   </entry>
   <entry>
     <title>必备软件</title>
@@ -571,78 +645,9 @@
 <li>测试报告</li>
 </ul>
 ]]></content>
-  </entry>
-  <entry>
-    <title>arduino安装教程</title>
-    <url>/posts/3N08829/</url>
-    <content><![CDATA[<h1 id="下载Arduino-IDE"><a href="#下载Arduino-IDE" class="headerlink" title="下载Arduino IDE"></a>下载Arduino IDE</h1><p>最新版本为 Arduino IDE 1.8.16 </p>
-<p>下载地址 <a href="https://www.arduino.cc/en/software">https://www.arduino.cc/en/software</a></p>
-<span id="more"></span>
-
-<p><img src="1.download-arduino.png" alt="1.download-arduino"></p>
-<h1 id="windows下安装Arduino-IDE"><a href="#windows下安装Arduino-IDE" class="headerlink" title="windows下安装Arduino IDE"></a>windows下安装Arduino IDE</h1><ol>
-<li>点击 I Agree 按钮。</li>
-</ol>
-<p><img src="2.agreement-license.png" alt="2.agreement-license"></p>
-<ol start="2">
-<li>点击 next </li>
-</ol>
-<p><img src="3.installation-options.png" alt="3.installation-options"></p>
-<ol start="3">
-<li>选择合适安装目录，点击Install。</li>
-</ol>
-<p><img src="4.installation-folder.png" alt="4.installation-folder"></p>
-<ol start="4">
-<li>安装中…</li>
-</ol>
-<p><img src="5.installing.png" alt="5.installing"></p>
-<ol start="5">
-<li>安装完成</li>
-</ol>
-<p><img src="6.installation-success.png" alt="6.installation-success"></p>
-<h1 id="IDE界面介绍"><a href="#IDE界面介绍" class="headerlink" title="IDE界面介绍"></a>IDE界面介绍</h1><p><img src="7.arduino-ide.png" alt="7.arduino-ide"></p>
-<ol>
-<li><p>菜单栏</p>
-</li>
-<li><p>快捷按钮</p>
-</li>
-</ol>
-<p><img src="8.operating-buttons.png" alt="8.operating-buttons"></p>
-<ol start="3">
-<li><p>代码编辑区</p>
-</li>
-<li><p>状态区</p>
-</li>
-<li><p>输出信息窗口</p>
-</li>
-</ol>
-<h1 id="IDE-配置"><a href="#IDE-配置" class="headerlink" title="IDE 配置"></a>IDE 配置</h1><p><img src="9.preferences.png" alt="9.preferences"></p>
-<p><img src="add_bsp_icon.png" alt="add_bsp_icon"></p>
-<p>添加网址 </p>
-<p><a href="https://raw.githubusercontent.com/RAKwireless/RAKwireless-Arduino-BSP-Index/main/package_rakwireless_index.json">https://raw.githubusercontent.com/RAKwireless/RAKwireless-Arduino-BSP-Index/main/package_rakwireless_index.json</a></p>
-<p><img src="add-bsp-url.png" alt="add-bsp-url"></p>
-<p>添加开发板</p>
-<p><img src="11.boards-manager.png" alt="11.boards-manager"></p>
-<p><img src="wisblock_core-1631516043841.png" alt="wisblock_core"></p>
-<p><img src="13.rakwireless-nrf-modules.png" alt="13.rakwireless-nrf-modules"></p>
-<h1 id="RAK-示例"><a href="#RAK-示例" class="headerlink" title="RAK 示例"></a>RAK 示例</h1><p><img src="14.wisblock-modules.png" alt="14.wisblock-modules"></p>
-<h1 id="编译一个示例"><a href="#编译一个示例" class="headerlink" title="编译一个示例"></a>编译一个示例</h1><p><img src="15.select-lora-otaa-example.png" alt="15.select-lora-otaa-example"></p>
-<p><img src="16.install-library-step1.png" alt="16.install-library-step1"></p>
-<p>下载库文件</p>
-<p><img src="17.install-library-step2.png" alt="17.install-library-step2"></p>
-<p><img src="18.compile-example.png" alt="18.compile-example"></p>
-<p>第一个程序 </p>
-<p>使用wisblock 点亮LED</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LED_GREEN  35</span></span><br><span class="line"><span class="comment">// #define LED_BLUE  36</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">setup</span><span class="params">()</span> </span></span><br><span class="line"><span class="function"></span>&#123;    </span><br><span class="line">  pinMode(LED_GREEN,OUTPUT);</span><br><span class="line">  Serial.begin(<span class="number">115200</span>);</span><br><span class="line">  </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">loop</span><span class="params">()</span> </span></span><br><span class="line"><span class="function"></span>&#123; </span><br><span class="line">  digitalWrite(LED_GREEN,HIGH);</span><br><span class="line">  delay(<span class="number">1000</span>);</span><br><span class="line">  digitalWrite(LED_GREEN,LOW);</span><br><span class="line">  delay(<span class="number">1000</span>);</span><br><span class="line">    </span><br><span class="line">  Serial.println(<span class="string">&quot;RAKwireless: Make IOT Easy!&quot;</span>); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
       <categories>
-        <category>arduino</category>
-        <category>2020</category>
+        <category>hardware test</category>
       </categories>
-      <tags>
-        <tag>arduino</tag>
-      </tags>
   </entry>
   <entry>
     <title>RAK7268固件烧录</title>
@@ -699,7 +704,7 @@
 <p><img src="firmware.gif" alt="firmware"></p>
 <h1 id="写入电子标签"><a href="#写入电子标签" class="headerlink" title="写入电子标签"></a>写入电子标签</h1><p>需要根据实际情况更改参数 ，比如<code>文件路径</code>, <code>port 编号</code>，<code>bomid</code>，<code>oem_mode</code>l，<code>base_mac</code>，<code>eui</code>  </p>
 <p>model RAK7249, RAK7258, RAK7268, RAK7289</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">python hwdesc_writer.py &quot;&#123;\&quot;csv\&quot;:\&quot;D:\\project\\2020\\RAK7268\\new firmware\\RAK7268_PCBA_test_V5.14\\hwdesc-writer-v1.0.19\\samplecsv\\RAK7268.csv\&quot;,\&quot;uart\&quot;:&#123;\&quot;port\&quot;:\&quot;COM4\&quot;&#125;,\&quot;bomid\&quot;:\&quot;918100D5\&quot;,\&quot;oem_model\&quot;:\&quot;RAK7268C\&quot;,\&quot;dev\&quot;:&#123;\&quot;serial_number\&quot;:\&quot;918100JM6010120703\&quot;,\&quot;base_mac\&quot;:\&quot;AC:1F:09:05:17:72\&quot;,\&quot;mac_count\&quot;:\&quot;2\&quot;,\&quot;eui\&quot;:\&quot;ac1f09fffe051772\&quot;&#125;,\&quot;manufacturer\&quot;:&#123;\&quot;date\&quot;:\&quot;2021-12-12\&quot;&#125;,\&quot;vendor_name\&quot;:\&quot;RAK\&quot;,\&quot;sku\&quot;:\&quot;\&quot;,\&quot;clei_code\&quot;:\&quot;\&quot;,\&quot;build_info\&quot;:\&quot;\&quot;,\&quot;test_tracking_number\&quot;:\&quot;SMT123\&quot;,\&quot;e_label_ver\&quot;:\&quot;1\&quot;&#125;&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">python hwdesc_writer.py <span class="string">&quot;&#123;\&quot;</span>csv\<span class="string">&quot;:\&quot;</span>D:\\project\\<span class="number">2020</span>\\RAK7268\\new firmware\\RAK7268_PCBA_test_V5.<span class="number">14</span>\\hwdesc<span class="literal">-writer</span><span class="literal">-v1</span>.<span class="number">0.19</span>\\samplecsv\\RAK7268.csv\<span class="string">&quot;,\&quot;</span>uart\<span class="string">&quot;:&#123;\&quot;</span>port\<span class="string">&quot;:\&quot;</span>COM4\<span class="string">&quot;&#125;,\&quot;</span>bomid\<span class="string">&quot;:\&quot;</span><span class="number">918100</span>D5\<span class="string">&quot;,\&quot;</span>oem_model\<span class="string">&quot;:\&quot;</span>RAK7268C\<span class="string">&quot;,\&quot;</span>dev\<span class="string">&quot;:&#123;\&quot;</span>serial_number\<span class="string">&quot;:\&quot;</span><span class="number">918100</span>JM6010120703\<span class="string">&quot;,\&quot;</span>base_mac\<span class="string">&quot;:\&quot;</span><span class="built_in">AC</span>:<span class="number">1</span>F:<span class="number">09</span>:<span class="number">05</span>:<span class="number">17</span>:<span class="number">72</span>\<span class="string">&quot;,\&quot;</span>mac_count\<span class="string">&quot;:\&quot;</span><span class="number">2</span>\<span class="string">&quot;,\&quot;</span>eui\<span class="string">&quot;:\&quot;</span>ac1f09fffe051772\<span class="string">&quot;&#125;,\&quot;</span>manufacturer\<span class="string">&quot;:&#123;\&quot;</span>date\<span class="string">&quot;:\&quot;</span><span class="number">2021</span><span class="literal">-12</span><span class="literal">-12</span>\<span class="string">&quot;&#125;,\&quot;</span>vendor_name\<span class="string">&quot;:\&quot;</span>RAK\<span class="string">&quot;,\&quot;</span>sku\<span class="string">&quot;:\&quot;</span>\<span class="string">&quot;,\&quot;</span>clei_code\<span class="string">&quot;:\&quot;</span>\<span class="string">&quot;,\&quot;</span>build_info\<span class="string">&quot;:\&quot;</span>\<span class="string">&quot;,\&quot;</span>test_tracking_number\<span class="string">&quot;:\&quot;</span>SMT123\<span class="string">&quot;,\&quot;</span>e_label_ver\<span class="string">&quot;:\&quot;</span><span class="number">1</span>\<span class="string">&quot;&#125;&quot;</span></span><br></pre></td></tr></table></figure>
 
 <p><img src="einfo.gif" alt="einfo"></p>
 <p>RAK7268配置如下，选择合适的BOM_ID写如电子标签。</p>
@@ -1068,12 +1073,13 @@
 <h1 id="登录login"><a href="#登录login" class="headerlink" title="登录login"></a>登录login</h1><p>Login: <code>root</code></p>
 <p>Password: <code>root</code></p>
 <p><img src="login.gif" alt="login"></p>
-<h1 id="恢复默认设置"><a href="#恢复默认设置" class="headerlink" title="恢复默认设置"></a>恢复默认设置</h1><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">firstboot -y &amp;&amp; reboot</span><br></pre></td></tr></table></figure>
+<h1 id="恢复默认设置"><a href="#恢复默认设置" class="headerlink" title="恢复默认设置"></a>恢复默认设置</h1><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">firstboot <span class="literal">-y</span> &amp;&amp; reboot</span><br></pre></td></tr></table></figure>
 
 <p><img src="firstboot.gif" alt="firstboot"></p>
 ]]></content>
       <categories>
         <category>WisGate</category>
+        <category>RAK7268</category>
       </categories>
   </entry>
   <entry>
@@ -1199,7 +1205,7 @@
 <td align="center">11</td>
 </tr>
 </tbody></table>
-<h1 id="RAK2247命令"><a href="#RAK2247命令" class="headerlink" title="RAK2247命令"></a>RAK2247命令</h1><h2 id="LoRa-TX"><a href="#LoRa-TX" class="headerlink" title="LoRa TX"></a>LoRa TX</h2><h3 id="util-tx-continuous"><a href="#util-tx-continuous" class="headerlink" title="util_tx_continuous"></a>util_tx_continuous</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd /usr/bin</span><br><span class="line"></span><br><span class="line">killall lora_pkt_fwd</span><br><span class="line"></span><br><span class="line">reset_lgw.sh start 11</span><br><span class="line"></span><br><span class="line">util_tx_continuous -f 868.3 -r 1257 --notch 250 --dig 0 --mix 13 --pa 3 --mod LORA --sf 7 --bw 125    #高频 持续包</span><br><span class="line"></span><br><span class="line">util_tx_continuous -f 433.8 -r 1255 --notch 250 --dig 0 --mix 10 --pa 0 --mod LORA --sf 7 --bw 125    #低频 持续包</span><br><span class="line"></span><br><span class="line">util_tx_continuous -h  #参数说明</span><br></pre></td></tr></table></figure>
+<h1 id="RAK2247命令"><a href="#RAK2247命令" class="headerlink" title="RAK2247命令"></a>RAK2247命令</h1><h2 id="LoRa-TX"><a href="#LoRa-TX" class="headerlink" title="LoRa TX"></a>LoRa TX</h2><h3 id="util-tx-continuous"><a href="#util-tx-continuous" class="headerlink" title="util_tx_continuous"></a>util_tx_continuous</h3><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /usr/bin</span><br><span class="line"></span><br><span class="line">killall lora_pkt_fwd</span><br><span class="line"></span><br><span class="line">reset_lgw.sh <span class="built_in">start</span> <span class="number">11</span></span><br><span class="line"></span><br><span class="line">util_tx_continuous <span class="operator">-f</span> <span class="number">868.3</span> <span class="literal">-r</span> <span class="number">1257</span> -<span class="literal">-notch</span> <span class="number">250</span> -<span class="literal">-dig</span> <span class="number">0</span> -<span class="literal">-mix</span> <span class="number">13</span> -<span class="literal">-pa</span> <span class="number">3</span> -<span class="literal">-mod</span> LORA -<span class="literal">-sf</span> <span class="number">7</span> -<span class="literal">-bw</span> <span class="number">125</span>    <span class="comment">#高频 持续包</span></span><br><span class="line"></span><br><span class="line">util_tx_continuous <span class="operator">-f</span> <span class="number">433.8</span> <span class="literal">-r</span> <span class="number">1255</span> -<span class="literal">-notch</span> <span class="number">250</span> -<span class="literal">-dig</span> <span class="number">0</span> -<span class="literal">-mix</span> <span class="number">10</span> -<span class="literal">-pa</span> <span class="number">0</span> -<span class="literal">-mod</span> LORA -<span class="literal">-sf</span> <span class="number">7</span> -<span class="literal">-bw</span> <span class="number">125</span>    <span class="comment">#低频 持续包</span></span><br><span class="line"></span><br><span class="line">util_tx_continuous <span class="literal">-h</span>  <span class="comment">#参数说明</span></span><br></pre></td></tr></table></figure>
 <blockquote>
 <p><code>-r</code> 参数 高频设置1257， 低频设置1255</p>
 <p><code>--dig 0 --mix 10 --pa 0</code> 这3个参数来设置发射功率，大概趋势如下表</p>
@@ -1306,7 +1312,7 @@
 </blockquote>
 <img src="util_tx_continuous.gif" alt="util_tx_continuous"  />
 
-<h3 id="util-tx-test"><a href="#util-tx-test" class="headerlink" title="util_tx_test"></a>util_tx_test</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">killall lora_pkt_fwd</span><br><span class="line"></span><br><span class="line">reset_lgw.sh start 11</span><br><span class="line"></span><br><span class="line">util_tx_test -r 1255 -f 487.1 -k 1 -m LORA -b 125 -s 7 -c 1 -p 20 -z 32 -t 1000 -x -1   #高频 数据包</span><br><span class="line"></span><br><span class="line">util_tx_test -r 1257 -f 923.3 -k 1 -m LORA -b 125 -s 7 -c 1 -p 20 -z 32 -t 1000 -x -1   #低频 数据包</span><br><span class="line"></span><br><span class="line">util_tx_test -h  #参数说明</span><br></pre></td></tr></table></figure>
+<h3 id="util-tx-test"><a href="#util-tx-test" class="headerlink" title="util_tx_test"></a>util_tx_test</h3><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">killall lora_pkt_fwd</span><br><span class="line"></span><br><span class="line">reset_lgw.sh <span class="built_in">start</span> <span class="number">11</span></span><br><span class="line"></span><br><span class="line">util_tx_test <span class="literal">-r</span> <span class="number">1255</span> <span class="operator">-f</span> <span class="number">487.1</span> <span class="literal">-k</span> <span class="number">1</span> <span class="literal">-m</span> LORA <span class="literal">-b</span> <span class="number">125</span> <span class="literal">-s</span> <span class="number">7</span> <span class="literal">-c</span> <span class="number">1</span> <span class="literal">-p</span> <span class="number">20</span> <span class="literal">-z</span> <span class="number">32</span> <span class="literal">-t</span> <span class="number">1000</span> <span class="literal">-x</span> <span class="literal">-1</span>   <span class="comment">#高频 数据包</span></span><br><span class="line"></span><br><span class="line">util_tx_test <span class="literal">-r</span> <span class="number">1257</span> <span class="operator">-f</span> <span class="number">923.3</span> <span class="literal">-k</span> <span class="number">1</span> <span class="literal">-m</span> LORA <span class="literal">-b</span> <span class="number">125</span> <span class="literal">-s</span> <span class="number">7</span> <span class="literal">-c</span> <span class="number">1</span> <span class="literal">-p</span> <span class="number">20</span> <span class="literal">-z</span> <span class="number">32</span> <span class="literal">-t</span> <span class="number">1000</span> <span class="literal">-x</span> <span class="literal">-1</span>   <span class="comment">#低频 数据包</span></span><br><span class="line"></span><br><span class="line">util_tx_test <span class="literal">-h</span>  <span class="comment">#参数说明</span></span><br></pre></td></tr></table></figure>
 <blockquote>
 <p><code>-r</code> 参数 高频设置1257， 低频设置1255</p>
 <p><code>-m</code> 有三个模式 LORA, FSK, CW  其中CW为单载波</p>
@@ -1316,15 +1322,15 @@
 <img src="util_tx_test.gif" alt="util_tx_test"/>
 
 <p>LoRa RX</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">killall lora_pkt_fwd</span><br><span class="line"></span><br><span class="line">reset_lgw.sh start 11</span><br><span class="line"></span><br><span class="line">cd /tmp/</span><br><span class="line"></span><br><span class="line">cp /usr/share/lora/global_conf.json.US915 ./global_conf.json</span><br><span class="line"></span><br><span class="line">util_pkt_logger</span><br></pre></td></tr></table></figure>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">killall lora_pkt_fwd</span><br><span class="line"></span><br><span class="line">reset_lgw.sh <span class="built_in">start</span> <span class="number">11</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> /tmp/</span><br><span class="line"></span><br><span class="line"><span class="built_in">cp</span> /usr/share/lora/global_conf.json.US915 ./global_conf.json</span><br><span class="line"></span><br><span class="line">util_pkt_logger</span><br></pre></td></tr></table></figure>
 <p>拷贝对应国家json文件</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cp /usr/share/lora/global_conf.json.EU433 ./global_conf.json</span><br><span class="line"></span><br><span class="line">cp /usr/share/lora/global_conf.json.CN470 ./global_conf.json</span><br><span class="line"></span><br><span class="line">cp /usr/share/lora/global_conf.json.EU868 ./global_conf.json</span><br><span class="line"></span><br><span class="line">cp /usr/share/lora/global_conf.json.US915 ./global_conf.json</span><br><span class="line"></span><br><span class="line">cp /usr/share/lora/global_conf.json.KR920 ./global_conf.json</span><br></pre></td></tr></table></figure>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cp</span> /usr/share/lora/global_conf.json.EU433 ./global_conf.json</span><br><span class="line"></span><br><span class="line"><span class="built_in">cp</span> /usr/share/lora/global_conf.json.CN470 ./global_conf.json</span><br><span class="line"></span><br><span class="line"><span class="built_in">cp</span> /usr/share/lora/global_conf.json.EU868 ./global_conf.json</span><br><span class="line"></span><br><span class="line"><span class="built_in">cp</span> /usr/share/lora/global_conf.json.US915 ./global_conf.json</span><br><span class="line"></span><br><span class="line"><span class="built_in">cp</span> /usr/share/lora/global_conf.json.KR920 ./global_conf.json</span><br></pre></td></tr></table></figure>
 
 <img src="rx.gif" alt="rx" />
 
 
 
-<h1 id="RAK2287命令"><a href="#RAK2287命令" class="headerlink" title="RAK2287命令"></a>RAK2287命令</h1><h2 id="LoRa-TX-1"><a href="#LoRa-TX-1" class="headerlink" title="LoRa TX"></a>LoRa TX</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">killall lora_pkt_fwd</span><br><span class="line"></span><br><span class="line">cd /usr/bin</span><br><span class="line"></span><br><span class="line">test_loragw_sx1302_hal_tx  -k 0 -c 0 -r 1250 -f 868.3 -m LORA -s 7 -b 125 -n 1000 -z 50 -t 1000 --pa 1 --pwid 18</span><br><span class="line"></span><br><span class="line">test_loragw_sx1302_hal_tx -h #参数说明</span><br></pre></td></tr></table></figure>
+<h1 id="RAK2287命令"><a href="#RAK2287命令" class="headerlink" title="RAK2287命令"></a>RAK2287命令</h1><h2 id="LoRa-TX-1"><a href="#LoRa-TX-1" class="headerlink" title="LoRa TX"></a>LoRa TX</h2><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">killall lora_pkt_fwd</span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> /usr/bin</span><br><span class="line"></span><br><span class="line">test_loragw_sx1302_hal_tx  <span class="literal">-k</span> <span class="number">0</span> <span class="literal">-c</span> <span class="number">0</span> <span class="literal">-r</span> <span class="number">1250</span> <span class="operator">-f</span> <span class="number">868.3</span> <span class="literal">-m</span> LORA <span class="literal">-s</span> <span class="number">7</span> <span class="literal">-b</span> <span class="number">125</span> <span class="literal">-n</span> <span class="number">1000</span> <span class="literal">-z</span> <span class="number">50</span> <span class="literal">-t</span> <span class="number">1000</span> -<span class="literal">-pa</span> <span class="number">1</span> -<span class="literal">-pwid</span> <span class="number">18</span></span><br><span class="line"></span><br><span class="line">test_loragw_sx1302_hal_tx <span class="literal">-h</span> <span class="comment">#参数说明</span></span><br></pre></td></tr></table></figure>
 
 <blockquote>
 <p><code>--pa 1 --pwid 18</code> 两个参数配置发射功率，大概趋势如下表。</p>
@@ -1416,27 +1422,28 @@
 </blockquote>
 <img src="1302 tx.gif" alt="1302 tx"  />
 
-<h2 id="LoRa-RX"><a href="#LoRa-RX" class="headerlink" title="LoRa RX"></a>LoRa RX</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">killall lora_pkt_fwd</span><br><span class="line"></span><br><span class="line">cd /usr/bin</span><br><span class="line"></span><br><span class="line">test_loragw_sx1302_hal_rx -k 0 -r 1250 -a 863.3 -b 868.3 -n 100 -z 50 -m 0</span><br><span class="line"></span><br><span class="line">test_loragw_sx1302_hal_rx -h #参数说明</span><br></pre></td></tr></table></figure>
+<h2 id="LoRa-RX"><a href="#LoRa-RX" class="headerlink" title="LoRa RX"></a>LoRa RX</h2><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">killall lora_pkt_fwd</span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> /usr/bin</span><br><span class="line"></span><br><span class="line">test_loragw_sx1302_hal_rx <span class="literal">-k</span> <span class="number">0</span> <span class="literal">-r</span> <span class="number">1250</span> <span class="literal">-a</span> <span class="number">863.3</span> <span class="literal">-b</span> <span class="number">868.3</span> <span class="literal">-n</span> <span class="number">100</span> <span class="literal">-z</span> <span class="number">50</span> <span class="literal">-m</span> <span class="number">0</span></span><br><span class="line"></span><br><span class="line">test_loragw_sx1302_hal_rx <span class="literal">-h</span> <span class="comment">#参数说明</span></span><br></pre></td></tr></table></figure>
 
 <img src="1302 rx.gif" alt="1302 rx" />
 
-<h1 id="WiFi命令"><a href="#WiFi命令" class="headerlink" title="WiFi命令"></a>WiFi命令</h1><h2 id="Tx"><a href="#Tx" class="headerlink" title="Tx"></a>Tx</h2><h3 id="固定数据包"><a href="#固定数据包" class="headerlink" title="固定数据包"></a>固定数据包</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">iwpriv ra0 set ATE=ATESTART</span><br><span class="line">iwpriv ra0 set ATECHANNEL=6</span><br><span class="line">iwpriv ra0 set ATETXMODE=1</span><br><span class="line">iwpriv ra0 set ATETXMCS=7</span><br><span class="line">iwpriv ra0 set ATETXBW=0</span><br><span class="line">iwpriv ra0 set ATETXGI=0</span><br><span class="line">iwpriv ra0 set ATETXLEN=1024</span><br><span class="line">iwpriv ra0 set ATETXPOW0=20</span><br><span class="line">iwpriv ra0 set ATETXPOW1=21</span><br><span class="line">iwpriv ra0 set ATETXCNT=100000</span><br><span class="line">iwpriv ra0 set ATETXANT=0</span><br><span class="line">iwpriv ra0 set ATE=TXFRAME</span><br></pre></td></tr></table></figure>
+<h1 id="WiFi命令"><a href="#WiFi命令" class="headerlink" title="WiFi命令"></a>WiFi命令</h1><h2 id="Tx"><a href="#Tx" class="headerlink" title="Tx"></a>Tx</h2><h3 id="固定数据包"><a href="#固定数据包" class="headerlink" title="固定数据包"></a>固定数据包</h3><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">iwpriv ra0 <span class="built_in">set</span> ATE=ATESTART</span><br><span class="line">iwpriv ra0 <span class="built_in">set</span> ATECHANNEL=<span class="number">6</span></span><br><span class="line">iwpriv ra0 <span class="built_in">set</span> ATETXMODE=<span class="number">1</span></span><br><span class="line">iwpriv ra0 <span class="built_in">set</span> ATETXMCS=<span class="number">7</span></span><br><span class="line">iwpriv ra0 <span class="built_in">set</span> ATETXBW=<span class="number">0</span></span><br><span class="line">iwpriv ra0 <span class="built_in">set</span> ATETXGI=<span class="number">0</span></span><br><span class="line">iwpriv ra0 <span class="built_in">set</span> ATETXLEN=<span class="number">1024</span></span><br><span class="line">iwpriv ra0 <span class="built_in">set</span> ATETXPOW0=<span class="number">20</span></span><br><span class="line">iwpriv ra0 <span class="built_in">set</span> ATETXPOW1=<span class="number">21</span></span><br><span class="line">iwpriv ra0 <span class="built_in">set</span> ATETXCNT=<span class="number">100000</span></span><br><span class="line">iwpriv ra0 <span class="built_in">set</span> ATETXANT=<span class="number">0</span></span><br><span class="line">iwpriv ra0 <span class="built_in">set</span> ATE=TXFRAME</span><br></pre></td></tr></table></figure>
 
 <blockquote>
-<p>参数说明<br> <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">iwpriv ra0 set ATECHANNEL=6       </span><br><span class="line"><span class="meta">#</span><span class="bash"> 信道，1~14  2.437</span></span><br><span class="line"></span><br><span class="line">iwpriv ra0 set ATETXMODE=1 </span><br><span class="line"><span class="meta">#</span><span class="bash"> 0: CCK 802.11b</span> </span><br><span class="line"><span class="meta">#</span><span class="bash"> 1: OFDM 802.11g</span> </span><br><span class="line"><span class="meta">#</span><span class="bash"> 2: HT_MIX 802.11b/g/n</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 3: Green Field 802.11n</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 4: VHT 802.11ac (802.11 AC chipset only)</span></span><br><span class="line"></span><br><span class="line">iwpriv ra0 set ATETXMCS=7</span><br><span class="line"><span class="meta">#</span><span class="bash"> 修改速率 Value: 0 ~ 15</span>  </span><br><span class="line"><span class="meta">#</span><span class="bash"> When ATE TX Mode is CCK/OFDM/HT, MCS 0~7: 1ss , 8~15: 2ss,</span>  </span><br><span class="line"></span><br><span class="line">iwpriv ra0 set ATETXBW=0     </span><br><span class="line"><span class="meta">#</span><span class="bash"> 修改带宽</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Value:   0: 20MHz, 1: 40MHz</span> </span><br><span class="line"></span><br><span class="line">iwpriv ra0 set ATETXGI=0      </span><br><span class="line"><span class="meta">#</span><span class="bash"> Value:   0: Long GI,   1: Short GI</span> </span><br><span class="line"></span><br><span class="line">iwpriv ra0 set ATETXANT=0   </span><br><span class="line"><span class="meta">#</span><span class="bash"> 修改天线个数，   0: All Antenna TX,    1: Antenna 0 TX,    2: Antenna 1 TX</span> </span><br><span class="line"></span><br><span class="line">iwpriv ra0 set ATETXPOW0=15  </span><br><span class="line"><span class="meta">#</span><span class="bash">功率设置</span></span><br><span class="line"></span><br><span class="line">iwpriv ra0 set ATETXCNT=100000  </span><br><span class="line"><span class="meta">#</span><span class="bash"> 持续发包个数，用TXCONT发射时，删除这条</span></span><br><span class="line"></span><br><span class="line">iwpriv ra0 set ATE=TXFRAME    </span><br><span class="line"><span class="meta">#</span><span class="bash"> 100% duty cycle发射改为TXCONT</span></span><br></pre></td></tr></table></figure></p>
+<p>参数说明<br> <figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">iwpriv ra0 <span class="built_in">set</span> ATECHANNEL=<span class="number">6</span>       </span><br><span class="line"><span class="comment"># 信道，1~14  2.437</span></span><br><span class="line"></span><br><span class="line">iwpriv ra0 <span class="built_in">set</span> ATETXMODE=<span class="number">1</span> </span><br><span class="line"><span class="comment"># 0: CCK 802.11b </span></span><br><span class="line"><span class="comment"># 1: OFDM 802.11g </span></span><br><span class="line"><span class="comment"># 2: HT_MIX 802.11b/g/n</span></span><br><span class="line"><span class="comment"># 3: Green Field 802.11n</span></span><br><span class="line"><span class="comment"># 4: VHT 802.11ac (802.11 AC chipset only)</span></span><br><span class="line"></span><br><span class="line">iwpriv ra0 <span class="built_in">set</span> ATETXMCS=<span class="number">7</span></span><br><span class="line"><span class="comment"># 修改速率 Value: 0 ~ 15  </span></span><br><span class="line"><span class="comment"># When ATE TX Mode is CCK/OFDM/HT, MCS 0~7: 1ss , 8~15: 2ss,  </span></span><br><span class="line"></span><br><span class="line">iwpriv ra0 <span class="built_in">set</span> ATETXBW=<span class="number">0</span>     </span><br><span class="line"><span class="comment"># 修改带宽</span></span><br><span class="line"><span class="comment"># Value:   0: 20MHz, 1: 40MHz </span></span><br><span class="line"></span><br><span class="line">iwpriv ra0 <span class="built_in">set</span> ATETXGI=<span class="number">0</span>      </span><br><span class="line"><span class="comment"># Value:   0: Long GI,   1: Short GI </span></span><br><span class="line"></span><br><span class="line">iwpriv ra0 <span class="built_in">set</span> ATETXANT=<span class="number">0</span>   </span><br><span class="line"><span class="comment"># 修改天线个数，   0: All Antenna TX,    1: Antenna 0 TX,    2: Antenna 1 TX </span></span><br><span class="line"></span><br><span class="line">iwpriv ra0 <span class="built_in">set</span> ATETXPOW0=<span class="number">15</span>  </span><br><span class="line"><span class="comment">#功率设置</span></span><br><span class="line"></span><br><span class="line">iwpriv ra0 <span class="built_in">set</span> ATETXCNT=<span class="number">100000</span>  </span><br><span class="line"><span class="comment"># 持续发包个数，用TXCONT发射时，删除这条</span></span><br><span class="line"></span><br><span class="line">iwpriv ra0 <span class="built_in">set</span> ATE=TXFRAME    </span><br><span class="line"><span class="comment"># 100% duty cycle发射改为TXCONT</span></span><br></pre></td></tr></table></figure></p>
 </blockquote>
 <p>停止</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">iwpriv ra0 set ATE=ATESTART  停止</span><br></pre></td></tr></table></figure>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">iwpriv ra0 <span class="built_in">set</span> ATE=ATESTART  停止</span><br></pre></td></tr></table></figure>
 
-<h3 id="长发"><a href="#长发" class="headerlink" title="长发"></a>长发</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">iwpriv ra0 set ATE=ATESTART</span><br><span class="line">iwpriv ra0 set ATECHANNEL=6</span><br><span class="line">iwpriv ra0 set ATETXMODE=1</span><br><span class="line">iwpriv ra0 set ATETXMCS=0</span><br><span class="line">iwpriv ra0 set ATETXBW=0</span><br><span class="line">iwpriv ra0 set ATETXGI=0</span><br><span class="line">iwpriv ra0 set ATETXLEN=1024</span><br><span class="line">iwpriv ra0 set ATETXPOW0=20</span><br><span class="line">iwpriv ra0 set ATETXPOW1=21</span><br><span class="line">iwpriv ra0 set ATETXANT=0</span><br><span class="line">iwpriv ra0 set ATE=TXCONT</span><br></pre></td></tr></table></figure>
+<h3 id="长发"><a href="#长发" class="headerlink" title="长发"></a>长发</h3><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">iwpriv ra0 <span class="built_in">set</span> ATE=ATESTART</span><br><span class="line">iwpriv ra0 <span class="built_in">set</span> ATECHANNEL=<span class="number">6</span></span><br><span class="line">iwpriv ra0 <span class="built_in">set</span> ATETXMODE=<span class="number">1</span></span><br><span class="line">iwpriv ra0 <span class="built_in">set</span> ATETXMCS=<span class="number">0</span></span><br><span class="line">iwpriv ra0 <span class="built_in">set</span> ATETXBW=<span class="number">0</span></span><br><span class="line">iwpriv ra0 <span class="built_in">set</span> ATETXGI=<span class="number">0</span></span><br><span class="line">iwpriv ra0 <span class="built_in">set</span> ATETXLEN=<span class="number">1024</span></span><br><span class="line">iwpriv ra0 <span class="built_in">set</span> ATETXPOW0=<span class="number">20</span></span><br><span class="line">iwpriv ra0 <span class="built_in">set</span> ATETXPOW1=<span class="number">21</span></span><br><span class="line">iwpriv ra0 <span class="built_in">set</span> ATETXANT=<span class="number">0</span></span><br><span class="line">iwpriv ra0 <span class="built_in">set</span> ATE=TXCONT</span><br></pre></td></tr></table></figure>
 
-<h2 id="Rx"><a href="#Rx" class="headerlink" title="Rx"></a>Rx</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">iwpriv ra0 set ATE=ATESTART </span><br><span class="line">iwpriv ra0 set ATECHANNEL=1 </span><br><span class="line">iwpriv ra0 set ResetCounter=0 </span><br><span class="line">iwpriv ra0 set ATETXFREQOFFSET=0</span><br><span class="line">iwpriv ra0 set ATETXMODE=1 </span><br><span class="line">iwpriv ra0 set ATETXMCS=7 </span><br><span class="line">iwpriv ra0 set ATETXBW=0 </span><br><span class="line">iwpriv ra0 set ATETXFREQOFFSET=0</span><br><span class="line">iwpriv ra0 set ATE=RXFRAME </span><br><span class="line">iwpriv ra0 set ATERXFER=1 </span><br><span class="line">iwpriv ra0 set ATE=ATESTART</span><br></pre></td></tr></table></figure>
+<h2 id="Rx"><a href="#Rx" class="headerlink" title="Rx"></a>Rx</h2><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">iwpriv ra0 <span class="built_in">set</span> ATE=ATESTART </span><br><span class="line">iwpriv ra0 <span class="built_in">set</span> ATECHANNEL=<span class="number">1</span> </span><br><span class="line">iwpriv ra0 <span class="built_in">set</span> ResetCounter=<span class="number">0</span> </span><br><span class="line">iwpriv ra0 <span class="built_in">set</span> ATETXFREQOFFSET=<span class="number">0</span></span><br><span class="line">iwpriv ra0 <span class="built_in">set</span> ATETXMODE=<span class="number">1</span> </span><br><span class="line">iwpriv ra0 <span class="built_in">set</span> ATETXMCS=<span class="number">7</span> </span><br><span class="line">iwpriv ra0 <span class="built_in">set</span> ATETXBW=<span class="number">0</span> </span><br><span class="line">iwpriv ra0 <span class="built_in">set</span> ATETXFREQOFFSET=<span class="number">0</span></span><br><span class="line">iwpriv ra0 <span class="built_in">set</span> ATE=RXFRAME </span><br><span class="line">iwpriv ra0 <span class="built_in">set</span> ATERXFER=<span class="number">1</span> </span><br><span class="line">iwpriv ra0 <span class="built_in">set</span> ATE=ATESTART</span><br></pre></td></tr></table></figure>
 
 
 
 ]]></content>
       <categories>
         <category>WisGate</category>
+        <category>RAK7268</category>
       </categories>
   </entry>
 </search>
