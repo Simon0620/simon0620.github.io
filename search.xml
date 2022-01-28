@@ -547,37 +547,6 @@
       </tags>
   </entry>
   <entry>
-    <title>ripple</title>
-    <url>/posts/2M58RF5/</url>
-    <content><![CDATA[<p><img src="image-20211216153757245.png" alt="image-20211216153757245" style="zoom:10%;" /> <img src="image-20211216153834632.png" alt="image-20211216153834632" style="zoom:10%;" /></p>
-<p><img src="image-20211216153924191.png" alt="image-20211216153924191" style="zoom:10%;" /> <img src="image-20211216153951667.png" alt="image-20211216153951667" style="zoom:10%;" /></p>
-<span id="more"></span>
-
-<p>鳄鱼夹</p>
-<p><img src="024.jpg" alt="024"></p>
-<p>地线环</p>
-<p><img src="022.jpg" alt="022"></p>
-<p>同轴线</p>
-<p><img src="025.jpg" alt="025"></p>
-<p>隔直板</p>
-<p><img src="020.jpg" alt="020"></p>
-<p>鳄鱼夹</p>
-<p><img src="013.jpg" alt="013"></p>
-<p>地线环</p>
-<p><img src="014.jpg" alt="014"></p>
-<p>同轴线</p>
-<p><img src="image-20211216153224123.png" alt="image-20211216153224123"></p>
-<p>隔直板</p>
-<p><img src="015.jpg" alt="015"></p>
-<p><img src="image-20211216154342747.png" alt="image-20211216154342747" style="zoom:10%;" /> <img src="a7936242c3929d991055733818a6657.jpg" alt="a7936242c3929d991055733818a6657" style="zoom:10%;" /></p>
-<p><img src="image-20211216154541621.png" alt="image-20211216154541621" style="zoom:10%;" /> <img src="image-20211216154550299.png" alt="image-20211216154550299" style="zoom:10%;" /></p>
-<p><img src="image-20211216153347681.png" alt="image-20211216153347681"></p>
-]]></content>
-      <categories>
-        <category>hardware test</category>
-      </categories>
-  </entry>
-  <entry>
     <title>必备软件</title>
     <url>/posts/3W3PHMP/</url>
     <content><![CDATA[<h1 id="软件工具"><a href="#软件工具" class="headerlink" title="软件工具"></a>软件工具</h1><h2 id="EDA"><a href="#EDA" class="headerlink" title="EDA"></a>EDA</h2><ul>
@@ -644,6 +613,37 @@
 <li>可靠性测试规范</li>
 <li>测试报告</li>
 </ul>
+]]></content>
+      <categories>
+        <category>hardware test</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>ripple</title>
+    <url>/posts/2M58RF5/</url>
+    <content><![CDATA[<p><img src="image-20211216153757245.png" alt="image-20211216153757245" style="zoom:10%;" /> <img src="image-20211216153834632.png" alt="image-20211216153834632" style="zoom:10%;" /></p>
+<p><img src="image-20211216153924191.png" alt="image-20211216153924191" style="zoom:10%;" /> <img src="image-20211216153951667.png" alt="image-20211216153951667" style="zoom:10%;" /></p>
+<span id="more"></span>
+
+<p>鳄鱼夹</p>
+<p><img src="024.jpg" alt="024"></p>
+<p>地线环</p>
+<p><img src="022.jpg" alt="022"></p>
+<p>同轴线</p>
+<p><img src="025.jpg" alt="025"></p>
+<p>隔直板</p>
+<p><img src="020.jpg" alt="020"></p>
+<p>鳄鱼夹</p>
+<p><img src="013.jpg" alt="013"></p>
+<p>地线环</p>
+<p><img src="014.jpg" alt="014"></p>
+<p>同轴线</p>
+<p><img src="image-20211216153224123.png" alt="image-20211216153224123"></p>
+<p>隔直板</p>
+<p><img src="015.jpg" alt="015"></p>
+<p><img src="image-20211216154342747.png" alt="image-20211216154342747" style="zoom:10%;" /> <img src="a7936242c3929d991055733818a6657.jpg" alt="a7936242c3929d991055733818a6657" style="zoom:10%;" /></p>
+<p><img src="image-20211216154541621.png" alt="image-20211216154541621" style="zoom:10%;" /> <img src="image-20211216154550299.png" alt="image-20211216154550299" style="zoom:10%;" /></p>
+<p><img src="image-20211216153347681.png" alt="image-20211216153347681"></p>
 ]]></content>
       <categories>
         <category>hardware test</category>
