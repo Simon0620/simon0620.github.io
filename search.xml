@@ -430,6 +430,366 @@
 ]]></content>
   </entry>
   <entry>
+    <title>RAK7268测试命令</title>
+    <url>/posts/373YG0T/</url>
+    <content><![CDATA[<h1 id="RAK7268配置"><a href="#RAK7268配置" class="headerlink" title="RAK7268配置"></a>RAK7268配置</h1><p>firmware version:  WisGateOS_1.2.3.bin</p>
+<table>
+<thead>
+<tr>
+<th align="center">WiFi</th>
+<th align="center">LoRa</th>
+<th align="center">Cellular</th>
+<th align="center">BLE</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">RAK634</td>
+<td align="center">RAK2247</td>
+<td align="center">EG95-E</td>
+<td align="center">RAK13400</td>
+</tr>
+<tr>
+<td align="center">RAK634</td>
+<td align="center">RAK2287</td>
+<td align="center">EG95-NA</td>
+<td align="center">RAK13401</td>
+</tr>
+</tbody></table>
+<p>其中Cellular 和BLE为可选。</p>
+<span id="more"></span>
+
+<h1 id="LoRa配置信息"><a href="#LoRa配置信息" class="headerlink" title="LoRa配置信息"></a>LoRa配置信息</h1><table>
+<thead>
+<tr>
+<th align="center">DEVICE_MODEL</th>
+<th align="center">LORA.band</th>
+<th align="center">LORA.module</th>
+<th align="center">LORA.bb_model</th>
+<th align="center">LORA.radio_model</th>
+<th align="center">LORA.intf_type</th>
+<th align="center">LORA.intf_path</th>
+<th align="center">LORA.reset_pin</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">RAK7268</td>
+<td align="center">EU433</td>
+<td align="center">RAK2247</td>
+<td align="center">SX1301</td>
+<td align="center">SX1255</td>
+<td align="center">spi</td>
+<td align="center">/dev/spidev32766.1</td>
+<td align="center">11</td>
+</tr>
+<tr>
+<td align="center">RAK7268</td>
+<td align="center">CN470</td>
+<td align="center">RAK2247</td>
+<td align="center">SX1301</td>
+<td align="center">SX1255</td>
+<td align="center">spi</td>
+<td align="center">/dev/spidev32766.1</td>
+<td align="center">11</td>
+</tr>
+<tr>
+<td align="center">RAK7268</td>
+<td align="center">EU868</td>
+<td align="center">RAK2247</td>
+<td align="center">SX1301</td>
+<td align="center">SX1257</td>
+<td align="center">spi</td>
+<td align="center">/dev/spidev32766.1</td>
+<td align="center">11</td>
+</tr>
+<tr>
+<td align="center">RAK7268</td>
+<td align="center">US915</td>
+<td align="center">RAK2247</td>
+<td align="center">SX1301</td>
+<td align="center">SX1257</td>
+<td align="center">spi</td>
+<td align="center">/dev/spidev32766.1</td>
+<td align="center">11</td>
+</tr>
+<tr>
+<td align="center">RAK7268</td>
+<td align="center">EU433</td>
+<td align="center">RAK2287</td>
+<td align="center">SX1302</td>
+<td align="center">SX1250</td>
+<td align="center">spi</td>
+<td align="center">/dev/spidev32766.1</td>
+<td align="center">11</td>
+</tr>
+<tr>
+<td align="center">RAK7268</td>
+<td align="center">CN470</td>
+<td align="center">RAK2287</td>
+<td align="center">SX1302</td>
+<td align="center">SX1250</td>
+<td align="center">spi</td>
+<td align="center">/dev/spidev32766.1</td>
+<td align="center">11</td>
+</tr>
+<tr>
+<td align="center">RAK7268</td>
+<td align="center">EU868</td>
+<td align="center">RAK2287</td>
+<td align="center">SX1302</td>
+<td align="center">SX1250</td>
+<td align="center">spi</td>
+<td align="center">/dev/spidev32766.1</td>
+<td align="center">11</td>
+</tr>
+<tr>
+<td align="center">RAK7268</td>
+<td align="center">US915</td>
+<td align="center">RAK2287</td>
+<td align="center">SX1302</td>
+<td align="center">SX1250</td>
+<td align="center">spi</td>
+<td align="center">/dev/spidev32766.1</td>
+<td align="center">11</td>
+</tr>
+</tbody></table>
+<h1 id="RAK2247命令"><a href="#RAK2247命令" class="headerlink" title="RAK2247命令"></a>RAK2247命令</h1><h2 id="LoRa-TX"><a href="#LoRa-TX" class="headerlink" title="LoRa TX"></a>LoRa TX</h2><h3 id="util-tx-continuous"><a href="#util-tx-continuous" class="headerlink" title="util_tx_continuous"></a>util_tx_continuous</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd /usr/bin</span><br><span class="line"></span><br><span class="line">killall lora_pkt_fwd</span><br><span class="line"></span><br><span class="line">reset_lgw.sh start 11</span><br><span class="line"></span><br><span class="line">util_tx_continuous -f 868.3 -r 1257 --notch 250 --dig 0 --mix 13 --pa 3 --mod LORA --sf 7 --bw 125    #高频 持续包</span><br><span class="line"></span><br><span class="line">util_tx_continuous -f 433.8 -r 1255 --notch 250 --dig 0 --mix 10 --pa 0 --mod LORA --sf 7 --bw 125    #低频 持续包</span><br><span class="line"></span><br><span class="line">util_tx_continuous -h  #参数说明</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><code>-r</code> 参数 高频设置1257， 低频设置1255</p>
+<p><code>--dig 0 --mix 10 --pa 0</code> 这3个参数来设置发射功率，大概趋势如下表</p>
+<table>
+<thead>
+<tr>
+<th align="center">Item</th>
+<th align="center">0</th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
+<th align="center">4</th>
+<th align="center">5</th>
+<th align="center">6</th>
+<th align="center">7</th>
+<th align="center">8</th>
+<th align="center">9</th>
+<th align="center">10</th>
+<th align="center">11</th>
+<th align="center">12</th>
+<th align="center">13</th>
+<th align="center">14</th>
+<th align="center">15</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">PA</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">2</td>
+<td align="center">2</td>
+<td align="center">2</td>
+<td align="center">2</td>
+<td align="center">3</td>
+<td align="center">3</td>
+<td align="center">3</td>
+<td align="center">3</td>
+<td align="center">3</td>
+<td align="center">3</td>
+</tr>
+<tr>
+<td align="center">MIX</td>
+<td align="center">10</td>
+<td align="center">14</td>
+<td align="center">8</td>
+<td align="center">9</td>
+<td align="center">9</td>
+<td align="center">9</td>
+<td align="center">10</td>
+<td align="center">11</td>
+<td align="center">12</td>
+<td align="center">12</td>
+<td align="center">8</td>
+<td align="center">10</td>
+<td align="center">12</td>
+<td align="center">14</td>
+<td align="center">15</td>
+<td align="center">15</td>
+</tr>
+<tr>
+<td align="center">DIG</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">3</td>
+<td align="center">3</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">POWER</td>
+<td align="center">-6</td>
+<td align="center">-3</td>
+<td align="center">0</td>
+<td align="center">3</td>
+<td align="center">6</td>
+<td align="center">10</td>
+<td align="center">11</td>
+<td align="center">12</td>
+<td align="center">13</td>
+<td align="center">14</td>
+<td align="center">16</td>
+<td align="center">20</td>
+<td align="center">23</td>
+<td align="center">25</td>
+<td align="center">26</td>
+<td align="center">27</td>
+</tr>
+</tbody></table>
+<p><code>--mode</code> 有三个模式 LORA, FSK, CW  其中CW为单载波</p>
+</blockquote>
+<img src="util_tx_continuous.gif" alt="util_tx_continuous"  />
+
+<h3 id="util-tx-test"><a href="#util-tx-test" class="headerlink" title="util_tx_test"></a>util_tx_test</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">killall lora_pkt_fwd</span><br><span class="line"></span><br><span class="line">reset_lgw.sh start 11</span><br><span class="line"></span><br><span class="line">util_tx_test -r 1255 -f 487.1 -k 1 -m LORA -b 125 -s 7 -c 1 -p 20 -z 32 -t 1000 -x -1   #高频 数据包</span><br><span class="line"></span><br><span class="line">util_tx_test -r 1257 -f 923.3 -k 1 -m LORA -b 125 -s 7 -c 1 -p 20 -z 32 -t 1000 -x -1   #低频 数据包</span><br><span class="line"></span><br><span class="line">util_tx_test -h  #参数说明</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><code>-r</code> 参数 高频设置1257， 低频设置1255</p>
+<p><code>-m</code> 有三个模式 LORA, FSK, CW  其中CW为单载波</p>
+<p><code>-p</code>为发射功率</p>
+<p><code>-x</code> 数据包的数量，当设置为-1时，按ctrl-c才会停止。</p>
+</blockquote>
+<img src="util_tx_test.gif" alt="util_tx_test"/>
+
+<p>LoRa RX</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">killall lora_pkt_fwd</span><br><span class="line"></span><br><span class="line">reset_lgw.sh start 11</span><br><span class="line"></span><br><span class="line">cd /tmp/</span><br><span class="line"></span><br><span class="line">cp /usr/share/lora/global_conf.json.US915 ./global_conf.json</span><br><span class="line"></span><br><span class="line">util_pkt_logger</span><br></pre></td></tr></table></figure>
+<p>拷贝对应国家json文件</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cp /usr/share/lora/global_conf.json.EU433 ./global_conf.json</span><br><span class="line"></span><br><span class="line">cp /usr/share/lora/global_conf.json.CN470 ./global_conf.json</span><br><span class="line"></span><br><span class="line">cp /usr/share/lora/global_conf.json.EU868 ./global_conf.json</span><br><span class="line"></span><br><span class="line">cp /usr/share/lora/global_conf.json.US915 ./global_conf.json</span><br><span class="line"></span><br><span class="line">cp /usr/share/lora/global_conf.json.KR920 ./global_conf.json</span><br></pre></td></tr></table></figure>
+
+<img src="rx.gif" alt="rx" />
+
+
+
+<h1 id="RAK2287命令"><a href="#RAK2287命令" class="headerlink" title="RAK2287命令"></a>RAK2287命令</h1><h2 id="LoRa-TX-1"><a href="#LoRa-TX-1" class="headerlink" title="LoRa TX"></a>LoRa TX</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">killall lora_pkt_fwd</span><br><span class="line"></span><br><span class="line">cd /usr/bin</span><br><span class="line"></span><br><span class="line">test_loragw_sx1302_hal_tx  -k 0 -c 0 -r 1250 -f 868.3 -m LORA -s 7 -b 125 -n 1000 -z 50 -t 1000 --pa 1 --pwid 18</span><br><span class="line"></span><br><span class="line">test_loragw_sx1302_hal_tx -h #参数说明</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><code>--pa 1 --pwid 18</code> 两个参数配置发射功率，大概趋势如下表。</p>
+<table>
+<thead>
+<tr>
+<th align="center">tx_power</th>
+<th align="center">pwid</th>
+<th align="center">0</th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
+<th align="center">4</th>
+<th align="center">5</th>
+<th align="center">6</th>
+<th align="center">7</th>
+<th align="center">8</th>
+<th align="center">9</th>
+<th align="center">10</th>
+<th align="center">11</th>
+<th align="center">12</th>
+<th align="center">13</th>
+<th align="center">14</th>
+<th align="center">15</th>
+<th align="center">16</th>
+<th align="center">17</th>
+<th align="center">18</th>
+<th align="center">19</th>
+<th align="center">20</th>
+<th align="center">21</th>
+<th align="center">22</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">PA</td>
+<td align="center">0</td>
+<td align="center">-17.06</td>
+<td align="center">-16.2</td>
+<td align="center">-15.2</td>
+<td align="center">-14.59</td>
+<td align="center">-13.32</td>
+<td align="center">-12.43</td>
+<td align="center">-11.39</td>
+<td align="center">-10.09</td>
+<td align="center">-9.23</td>
+<td align="center">-8.12</td>
+<td align="center">-7.15</td>
+<td align="center">-6.19</td>
+<td align="center">-5.21</td>
+<td align="center">-4.23</td>
+<td align="center">-3.38</td>
+<td align="center">-2.42</td>
+<td align="center">-1.12</td>
+<td align="center">0.08</td>
+<td align="center">1.25</td>
+<td align="center">2.14</td>
+<td align="center">3.49</td>
+<td align="center">4.66</td>
+<td align="center">5.47</td>
+</tr>
+<tr>
+<td align="center">PA</td>
+<td align="center">1</td>
+<td align="center">6.92</td>
+<td align="center">7.89</td>
+<td align="center">8.98</td>
+<td align="center">9.65</td>
+<td align="center">10.82</td>
+<td align="center">11.63</td>
+<td align="center">12.56</td>
+<td align="center">13.45</td>
+<td align="center">14.38</td>
+<td align="center">15.3</td>
+<td align="center">16.14</td>
+<td align="center">16.97</td>
+<td align="center">17.81</td>
+<td align="center">18.79</td>
+<td align="center">19.6</td>
+<td align="center">20.46</td>
+<td align="center">21.78</td>
+<td align="center">23.22</td>
+<td align="center">24.38</td>
+<td align="center">25.02</td>
+<td align="center">25.66</td>
+<td align="center">26.12</td>
+<td align="center">26.4</td>
+</tr>
+</tbody></table>
+</blockquote>
+<img src="1302 tx.gif" alt="1302 tx"  />
+
+<h2 id="LoRa-RX"><a href="#LoRa-RX" class="headerlink" title="LoRa RX"></a>LoRa RX</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">killall lora_pkt_fwd</span><br><span class="line"></span><br><span class="line">cd /usr/bin</span><br><span class="line"></span><br><span class="line">test_loragw_sx1302_hal_rx -k 0 -r 1250 -a 863.3 -b 868.3 -n 100 -z 50 -m 0</span><br><span class="line"></span><br><span class="line">test_loragw_sx1302_hal_rx -h #参数说明</span><br></pre></td></tr></table></figure>
+
+<img src="1302 rx.gif" alt="1302 rx" />
+
+<h1 id="WiFi命令"><a href="#WiFi命令" class="headerlink" title="WiFi命令"></a>WiFi命令</h1><h2 id="Tx"><a href="#Tx" class="headerlink" title="Tx"></a>Tx</h2><h3 id="固定数据包"><a href="#固定数据包" class="headerlink" title="固定数据包"></a>固定数据包</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">iwpriv ra0 set ATE=ATESTART</span><br><span class="line">iwpriv ra0 set ATECHANNEL=6</span><br><span class="line">iwpriv ra0 set ATETXMODE=1</span><br><span class="line">iwpriv ra0 set ATETXMCS=7</span><br><span class="line">iwpriv ra0 set ATETXBW=0</span><br><span class="line">iwpriv ra0 set ATETXGI=0</span><br><span class="line">iwpriv ra0 set ATETXLEN=1024</span><br><span class="line">iwpriv ra0 set ATETXPOW0=20</span><br><span class="line">iwpriv ra0 set ATETXPOW1=21</span><br><span class="line">iwpriv ra0 set ATETXCNT=100000</span><br><span class="line">iwpriv ra0 set ATETXANT=0</span><br><span class="line">iwpriv ra0 set ATE=TXFRAME</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>参数说明<br> <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">iwpriv ra0 set ATECHANNEL=6       </span><br><span class="line"><span class="meta">#</span><span class="bash"> 信道，1~14  2.437</span></span><br><span class="line"></span><br><span class="line">iwpriv ra0 set ATETXMODE=1 </span><br><span class="line"><span class="meta">#</span><span class="bash"> 0: CCK 802.11b</span> </span><br><span class="line"><span class="meta">#</span><span class="bash"> 1: OFDM 802.11g</span> </span><br><span class="line"><span class="meta">#</span><span class="bash"> 2: HT_MIX 802.11b/g/n</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 3: Green Field 802.11n</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 4: VHT 802.11ac (802.11 AC chipset only)</span></span><br><span class="line"></span><br><span class="line">iwpriv ra0 set ATETXMCS=7</span><br><span class="line"><span class="meta">#</span><span class="bash"> 修改速率 Value: 0 ~ 15</span>  </span><br><span class="line"><span class="meta">#</span><span class="bash"> When ATE TX Mode is CCK/OFDM/HT, MCS 0~7: 1ss , 8~15: 2ss,</span>  </span><br><span class="line"></span><br><span class="line">iwpriv ra0 set ATETXBW=0     </span><br><span class="line"><span class="meta">#</span><span class="bash"> 修改带宽</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Value:   0: 20MHz, 1: 40MHz</span> </span><br><span class="line"></span><br><span class="line">iwpriv ra0 set ATETXGI=0      </span><br><span class="line"><span class="meta">#</span><span class="bash"> Value:   0: Long GI,   1: Short GI</span> </span><br><span class="line"></span><br><span class="line">iwpriv ra0 set ATETXANT=0   </span><br><span class="line"><span class="meta">#</span><span class="bash"> 修改天线个数，   0: All Antenna TX,    1: Antenna 0 TX,    2: Antenna 1 TX</span> </span><br><span class="line"></span><br><span class="line">iwpriv ra0 set ATETXPOW0=15  </span><br><span class="line"><span class="meta">#</span><span class="bash">功率设置</span></span><br><span class="line"></span><br><span class="line">iwpriv ra0 set ATETXCNT=100000  </span><br><span class="line"><span class="meta">#</span><span class="bash"> 持续发包个数，用TXCONT发射时，删除这条</span></span><br><span class="line"></span><br><span class="line">iwpriv ra0 set ATE=TXFRAME    </span><br><span class="line"><span class="meta">#</span><span class="bash"> 100% duty cycle发射改为TXCONT</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>停止</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">iwpriv ra0 set ATE=ATESTART  停止</span><br></pre></td></tr></table></figure>
+
+<h3 id="长发"><a href="#长发" class="headerlink" title="长发"></a>长发</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">iwpriv ra0 set ATE=ATESTART</span><br><span class="line">iwpriv ra0 set ATECHANNEL=6</span><br><span class="line">iwpriv ra0 set ATETXMODE=1</span><br><span class="line">iwpriv ra0 set ATETXMCS=0</span><br><span class="line">iwpriv ra0 set ATETXBW=0</span><br><span class="line">iwpriv ra0 set ATETXGI=0</span><br><span class="line">iwpriv ra0 set ATETXLEN=1024</span><br><span class="line">iwpriv ra0 set ATETXPOW0=20</span><br><span class="line">iwpriv ra0 set ATETXPOW1=21</span><br><span class="line">iwpriv ra0 set ATETXANT=0</span><br><span class="line">iwpriv ra0 set ATE=TXCONT</span><br></pre></td></tr></table></figure>
+
+<h2 id="Rx"><a href="#Rx" class="headerlink" title="Rx"></a>Rx</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">iwpriv ra0 set ATE=ATESTART </span><br><span class="line">iwpriv ra0 set ATECHANNEL=1 </span><br><span class="line">iwpriv ra0 set ResetCounter=0 </span><br><span class="line">iwpriv ra0 set ATETXFREQOFFSET=0</span><br><span class="line">iwpriv ra0 set ATETXMODE=1 </span><br><span class="line">iwpriv ra0 set ATETXMCS=7 </span><br><span class="line">iwpriv ra0 set ATETXBW=0 </span><br><span class="line">iwpriv ra0 set ATETXFREQOFFSET=0</span><br><span class="line">iwpriv ra0 set ATE=RXFRAME </span><br><span class="line">iwpriv ra0 set ATERXFER=1 </span><br><span class="line">iwpriv ra0 set ATE=ATESTART</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+  </entry>
+  <entry>
     <title>WisBlock</title>
     <url>/posts/PT276M/</url>
     <content><![CDATA[<p><img src="wisblock-click-code-connect.png"></p>
@@ -844,366 +1204,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>RAK7268测试命令</title>
-    <url>/posts/373YG0T/</url>
-    <content><![CDATA[<h1 id="RAK7268配置"><a href="#RAK7268配置" class="headerlink" title="RAK7268配置"></a>RAK7268配置</h1><p>firmware version:  WisGateOS_1.2.3.bin</p>
-<table>
-<thead>
-<tr>
-<th align="center">WiFi</th>
-<th align="center">LoRa</th>
-<th align="center">Cellular</th>
-<th align="center">BLE</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">RAK634</td>
-<td align="center">RAK2247</td>
-<td align="center">EG95-E</td>
-<td align="center">RAK13400</td>
-</tr>
-<tr>
-<td align="center">RAK634</td>
-<td align="center">RAK2287</td>
-<td align="center">EG95-NA</td>
-<td align="center">RAK13401</td>
-</tr>
-</tbody></table>
-<p>其中Cellular 和BLE为可选。</p>
-<span id="more"></span>
-
-<h1 id="LoRa配置信息"><a href="#LoRa配置信息" class="headerlink" title="LoRa配置信息"></a>LoRa配置信息</h1><table>
-<thead>
-<tr>
-<th align="center">DEVICE_MODEL</th>
-<th align="center">LORA.band</th>
-<th align="center">LORA.module</th>
-<th align="center">LORA.bb_model</th>
-<th align="center">LORA.radio_model</th>
-<th align="center">LORA.intf_type</th>
-<th align="center">LORA.intf_path</th>
-<th align="center">LORA.reset_pin</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">RAK7268</td>
-<td align="center">EU433</td>
-<td align="center">RAK2247</td>
-<td align="center">SX1301</td>
-<td align="center">SX1255</td>
-<td align="center">spi</td>
-<td align="center">/dev/spidev32766.1</td>
-<td align="center">11</td>
-</tr>
-<tr>
-<td align="center">RAK7268</td>
-<td align="center">CN470</td>
-<td align="center">RAK2247</td>
-<td align="center">SX1301</td>
-<td align="center">SX1255</td>
-<td align="center">spi</td>
-<td align="center">/dev/spidev32766.1</td>
-<td align="center">11</td>
-</tr>
-<tr>
-<td align="center">RAK7268</td>
-<td align="center">EU868</td>
-<td align="center">RAK2247</td>
-<td align="center">SX1301</td>
-<td align="center">SX1257</td>
-<td align="center">spi</td>
-<td align="center">/dev/spidev32766.1</td>
-<td align="center">11</td>
-</tr>
-<tr>
-<td align="center">RAK7268</td>
-<td align="center">US915</td>
-<td align="center">RAK2247</td>
-<td align="center">SX1301</td>
-<td align="center">SX1257</td>
-<td align="center">spi</td>
-<td align="center">/dev/spidev32766.1</td>
-<td align="center">11</td>
-</tr>
-<tr>
-<td align="center">RAK7268</td>
-<td align="center">EU433</td>
-<td align="center">RAK2287</td>
-<td align="center">SX1302</td>
-<td align="center">SX1250</td>
-<td align="center">spi</td>
-<td align="center">/dev/spidev32766.1</td>
-<td align="center">11</td>
-</tr>
-<tr>
-<td align="center">RAK7268</td>
-<td align="center">CN470</td>
-<td align="center">RAK2287</td>
-<td align="center">SX1302</td>
-<td align="center">SX1250</td>
-<td align="center">spi</td>
-<td align="center">/dev/spidev32766.1</td>
-<td align="center">11</td>
-</tr>
-<tr>
-<td align="center">RAK7268</td>
-<td align="center">EU868</td>
-<td align="center">RAK2287</td>
-<td align="center">SX1302</td>
-<td align="center">SX1250</td>
-<td align="center">spi</td>
-<td align="center">/dev/spidev32766.1</td>
-<td align="center">11</td>
-</tr>
-<tr>
-<td align="center">RAK7268</td>
-<td align="center">US915</td>
-<td align="center">RAK2287</td>
-<td align="center">SX1302</td>
-<td align="center">SX1250</td>
-<td align="center">spi</td>
-<td align="center">/dev/spidev32766.1</td>
-<td align="center">11</td>
-</tr>
-</tbody></table>
-<h1 id="RAK2247命令"><a href="#RAK2247命令" class="headerlink" title="RAK2247命令"></a>RAK2247命令</h1><h2 id="LoRa-TX"><a href="#LoRa-TX" class="headerlink" title="LoRa TX"></a>LoRa TX</h2><h3 id="util-tx-continuous"><a href="#util-tx-continuous" class="headerlink" title="util_tx_continuous"></a>util_tx_continuous</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd /usr/bin</span><br><span class="line"></span><br><span class="line">killall lora_pkt_fwd</span><br><span class="line"></span><br><span class="line">reset_lgw.sh start 11</span><br><span class="line"></span><br><span class="line">util_tx_continuous -f 868.3 -r 1257 --notch 250 --dig 0 --mix 13 --pa 3 --mod LORA --sf 7 --bw 125    #高频 持续包</span><br><span class="line"></span><br><span class="line">util_tx_continuous -f 433.8 -r 1255 --notch 250 --dig 0 --mix 10 --pa 0 --mod LORA --sf 7 --bw 125    #低频 持续包</span><br><span class="line"></span><br><span class="line">util_tx_continuous -h  #参数说明</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p><code>-r</code> 参数 高频设置1257， 低频设置1255</p>
-<p><code>--dig 0 --mix 10 --pa 0</code> 这3个参数来设置发射功率，大概趋势如下表</p>
-<table>
-<thead>
-<tr>
-<th align="center">Item</th>
-<th align="center">0</th>
-<th align="center">1</th>
-<th align="center">2</th>
-<th align="center">3</th>
-<th align="center">4</th>
-<th align="center">5</th>
-<th align="center">6</th>
-<th align="center">7</th>
-<th align="center">8</th>
-<th align="center">9</th>
-<th align="center">10</th>
-<th align="center">11</th>
-<th align="center">12</th>
-<th align="center">13</th>
-<th align="center">14</th>
-<th align="center">15</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">PA</td>
-<td align="center">0</td>
-<td align="center">0</td>
-<td align="center">1</td>
-<td align="center">2</td>
-<td align="center">1</td>
-<td align="center">2</td>
-<td align="center">2</td>
-<td align="center">2</td>
-<td align="center">2</td>
-<td align="center">2</td>
-<td align="center">3</td>
-<td align="center">3</td>
-<td align="center">3</td>
-<td align="center">3</td>
-<td align="center">3</td>
-<td align="center">3</td>
-</tr>
-<tr>
-<td align="center">MIX</td>
-<td align="center">10</td>
-<td align="center">14</td>
-<td align="center">8</td>
-<td align="center">9</td>
-<td align="center">9</td>
-<td align="center">9</td>
-<td align="center">10</td>
-<td align="center">11</td>
-<td align="center">12</td>
-<td align="center">12</td>
-<td align="center">8</td>
-<td align="center">10</td>
-<td align="center">12</td>
-<td align="center">14</td>
-<td align="center">15</td>
-<td align="center">15</td>
-</tr>
-<tr>
-<td align="center">DIG</td>
-<td align="center">0</td>
-<td align="center">0</td>
-<td align="center">3</td>
-<td align="center">3</td>
-<td align="center">1</td>
-<td align="center">0</td>
-<td align="center">0</td>
-<td align="center">0</td>
-<td align="center">1</td>
-<td align="center">0</td>
-<td align="center">1</td>
-<td align="center">0</td>
-<td align="center">0</td>
-<td align="center">0</td>
-<td align="center">0</td>
-<td align="center">0</td>
-</tr>
-<tr>
-<td align="center">POWER</td>
-<td align="center">-6</td>
-<td align="center">-3</td>
-<td align="center">0</td>
-<td align="center">3</td>
-<td align="center">6</td>
-<td align="center">10</td>
-<td align="center">11</td>
-<td align="center">12</td>
-<td align="center">13</td>
-<td align="center">14</td>
-<td align="center">16</td>
-<td align="center">20</td>
-<td align="center">23</td>
-<td align="center">25</td>
-<td align="center">26</td>
-<td align="center">27</td>
-</tr>
-</tbody></table>
-<p><code>--mode</code> 有三个模式 LORA, FSK, CW  其中CW为单载波</p>
-</blockquote>
-<img src="util_tx_continuous.gif" alt="util_tx_continuous"  />
-
-<h3 id="util-tx-test"><a href="#util-tx-test" class="headerlink" title="util_tx_test"></a>util_tx_test</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">killall lora_pkt_fwd</span><br><span class="line"></span><br><span class="line">reset_lgw.sh start 11</span><br><span class="line"></span><br><span class="line">util_tx_test -r 1255 -f 487.1 -k 1 -m LORA -b 125 -s 7 -c 1 -p 20 -z 32 -t 1000 -x -1   #高频 数据包</span><br><span class="line"></span><br><span class="line">util_tx_test -r 1257 -f 923.3 -k 1 -m LORA -b 125 -s 7 -c 1 -p 20 -z 32 -t 1000 -x -1   #低频 数据包</span><br><span class="line"></span><br><span class="line">util_tx_test -h  #参数说明</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p><code>-r</code> 参数 高频设置1257， 低频设置1255</p>
-<p><code>-m</code> 有三个模式 LORA, FSK, CW  其中CW为单载波</p>
-<p><code>-p</code>为发射功率</p>
-<p><code>-x</code> 数据包的数量，当设置为-1时，按ctrl-c才会停止。</p>
-</blockquote>
-<img src="util_tx_test.gif" alt="util_tx_test"/>
-
-<p>LoRa RX</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">killall lora_pkt_fwd</span><br><span class="line"></span><br><span class="line">reset_lgw.sh start 11</span><br><span class="line"></span><br><span class="line">cd /tmp/</span><br><span class="line"></span><br><span class="line">cp /usr/share/lora/global_conf.json.US915 ./global_conf.json</span><br><span class="line"></span><br><span class="line">util_pkt_logger</span><br></pre></td></tr></table></figure>
-<p>拷贝对应国家json文件</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cp /usr/share/lora/global_conf.json.EU433 ./global_conf.json</span><br><span class="line"></span><br><span class="line">cp /usr/share/lora/global_conf.json.CN470 ./global_conf.json</span><br><span class="line"></span><br><span class="line">cp /usr/share/lora/global_conf.json.EU868 ./global_conf.json</span><br><span class="line"></span><br><span class="line">cp /usr/share/lora/global_conf.json.US915 ./global_conf.json</span><br><span class="line"></span><br><span class="line">cp /usr/share/lora/global_conf.json.KR920 ./global_conf.json</span><br></pre></td></tr></table></figure>
-
-<img src="rx.gif" alt="rx" />
-
-
-
-<h1 id="RAK2287命令"><a href="#RAK2287命令" class="headerlink" title="RAK2287命令"></a>RAK2287命令</h1><h2 id="LoRa-TX-1"><a href="#LoRa-TX-1" class="headerlink" title="LoRa TX"></a>LoRa TX</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">killall lora_pkt_fwd</span><br><span class="line"></span><br><span class="line">cd /usr/bin</span><br><span class="line"></span><br><span class="line">test_loragw_sx1302_hal_tx  -k 0 -c 0 -r 1250 -f 868.3 -m LORA -s 7 -b 125 -n 1000 -z 50 -t 1000 --pa 1 --pwid 18</span><br><span class="line"></span><br><span class="line">test_loragw_sx1302_hal_tx -h #参数说明</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p><code>--pa 1 --pwid 18</code> 两个参数配置发射功率，大概趋势如下表。</p>
-<table>
-<thead>
-<tr>
-<th align="center">tx_power</th>
-<th align="center">pwid</th>
-<th align="center">0</th>
-<th align="center">1</th>
-<th align="center">2</th>
-<th align="center">3</th>
-<th align="center">4</th>
-<th align="center">5</th>
-<th align="center">6</th>
-<th align="center">7</th>
-<th align="center">8</th>
-<th align="center">9</th>
-<th align="center">10</th>
-<th align="center">11</th>
-<th align="center">12</th>
-<th align="center">13</th>
-<th align="center">14</th>
-<th align="center">15</th>
-<th align="center">16</th>
-<th align="center">17</th>
-<th align="center">18</th>
-<th align="center">19</th>
-<th align="center">20</th>
-<th align="center">21</th>
-<th align="center">22</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">PA</td>
-<td align="center">0</td>
-<td align="center">-17.06</td>
-<td align="center">-16.2</td>
-<td align="center">-15.2</td>
-<td align="center">-14.59</td>
-<td align="center">-13.32</td>
-<td align="center">-12.43</td>
-<td align="center">-11.39</td>
-<td align="center">-10.09</td>
-<td align="center">-9.23</td>
-<td align="center">-8.12</td>
-<td align="center">-7.15</td>
-<td align="center">-6.19</td>
-<td align="center">-5.21</td>
-<td align="center">-4.23</td>
-<td align="center">-3.38</td>
-<td align="center">-2.42</td>
-<td align="center">-1.12</td>
-<td align="center">0.08</td>
-<td align="center">1.25</td>
-<td align="center">2.14</td>
-<td align="center">3.49</td>
-<td align="center">4.66</td>
-<td align="center">5.47</td>
-</tr>
-<tr>
-<td align="center">PA</td>
-<td align="center">1</td>
-<td align="center">6.92</td>
-<td align="center">7.89</td>
-<td align="center">8.98</td>
-<td align="center">9.65</td>
-<td align="center">10.82</td>
-<td align="center">11.63</td>
-<td align="center">12.56</td>
-<td align="center">13.45</td>
-<td align="center">14.38</td>
-<td align="center">15.3</td>
-<td align="center">16.14</td>
-<td align="center">16.97</td>
-<td align="center">17.81</td>
-<td align="center">18.79</td>
-<td align="center">19.6</td>
-<td align="center">20.46</td>
-<td align="center">21.78</td>
-<td align="center">23.22</td>
-<td align="center">24.38</td>
-<td align="center">25.02</td>
-<td align="center">25.66</td>
-<td align="center">26.12</td>
-<td align="center">26.4</td>
-</tr>
-</tbody></table>
-</blockquote>
-<img src="1302 tx.gif" alt="1302 tx"  />
-
-<h2 id="LoRa-RX"><a href="#LoRa-RX" class="headerlink" title="LoRa RX"></a>LoRa RX</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">killall lora_pkt_fwd</span><br><span class="line"></span><br><span class="line">cd /usr/bin</span><br><span class="line"></span><br><span class="line">test_loragw_sx1302_hal_rx -k 0 -r 1250 -a 863.3 -b 868.3 -n 100 -z 50 -m 0</span><br><span class="line"></span><br><span class="line">test_loragw_sx1302_hal_rx -h #参数说明</span><br></pre></td></tr></table></figure>
-
-<img src="1302 rx.gif" alt="1302 rx" />
-
-<h1 id="WiFi命令"><a href="#WiFi命令" class="headerlink" title="WiFi命令"></a>WiFi命令</h1><h2 id="Tx"><a href="#Tx" class="headerlink" title="Tx"></a>Tx</h2><h3 id="固定数据包"><a href="#固定数据包" class="headerlink" title="固定数据包"></a>固定数据包</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">iwpriv ra0 set ATE=ATESTART</span><br><span class="line">iwpriv ra0 set ATECHANNEL=6</span><br><span class="line">iwpriv ra0 set ATETXMODE=1</span><br><span class="line">iwpriv ra0 set ATETXMCS=7</span><br><span class="line">iwpriv ra0 set ATETXBW=0</span><br><span class="line">iwpriv ra0 set ATETXGI=0</span><br><span class="line">iwpriv ra0 set ATETXLEN=1024</span><br><span class="line">iwpriv ra0 set ATETXPOW0=20</span><br><span class="line">iwpriv ra0 set ATETXPOW1=21</span><br><span class="line">iwpriv ra0 set ATETXCNT=100000</span><br><span class="line">iwpriv ra0 set ATETXANT=0</span><br><span class="line">iwpriv ra0 set ATE=TXFRAME</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>参数说明<br> <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">iwpriv ra0 set ATECHANNEL=6       </span><br><span class="line"><span class="meta">#</span><span class="bash"> 信道，1~14  2.437</span></span><br><span class="line"></span><br><span class="line">iwpriv ra0 set ATETXMODE=1 </span><br><span class="line"><span class="meta">#</span><span class="bash"> 0: CCK 802.11b</span> </span><br><span class="line"><span class="meta">#</span><span class="bash"> 1: OFDM 802.11g</span> </span><br><span class="line"><span class="meta">#</span><span class="bash"> 2: HT_MIX 802.11b/g/n</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 3: Green Field 802.11n</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 4: VHT 802.11ac (802.11 AC chipset only)</span></span><br><span class="line"></span><br><span class="line">iwpriv ra0 set ATETXMCS=7</span><br><span class="line"><span class="meta">#</span><span class="bash"> 修改速率 Value: 0 ~ 15</span>  </span><br><span class="line"><span class="meta">#</span><span class="bash"> When ATE TX Mode is CCK/OFDM/HT, MCS 0~7: 1ss , 8~15: 2ss,</span>  </span><br><span class="line"></span><br><span class="line">iwpriv ra0 set ATETXBW=0     </span><br><span class="line"><span class="meta">#</span><span class="bash"> 修改带宽</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Value:   0: 20MHz, 1: 40MHz</span> </span><br><span class="line"></span><br><span class="line">iwpriv ra0 set ATETXGI=0      </span><br><span class="line"><span class="meta">#</span><span class="bash"> Value:   0: Long GI,   1: Short GI</span> </span><br><span class="line"></span><br><span class="line">iwpriv ra0 set ATETXANT=0   </span><br><span class="line"><span class="meta">#</span><span class="bash"> 修改天线个数，   0: All Antenna TX,    1: Antenna 0 TX,    2: Antenna 1 TX</span> </span><br><span class="line"></span><br><span class="line">iwpriv ra0 set ATETXPOW0=15  </span><br><span class="line"><span class="meta">#</span><span class="bash">功率设置</span></span><br><span class="line"></span><br><span class="line">iwpriv ra0 set ATETXCNT=100000  </span><br><span class="line"><span class="meta">#</span><span class="bash"> 持续发包个数，用TXCONT发射时，删除这条</span></span><br><span class="line"></span><br><span class="line">iwpriv ra0 set ATE=TXFRAME    </span><br><span class="line"><span class="meta">#</span><span class="bash"> 100% duty cycle发射改为TXCONT</span></span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<p>停止</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">iwpriv ra0 set ATE=ATESTART  停止</span><br></pre></td></tr></table></figure>
-
-<h3 id="长发"><a href="#长发" class="headerlink" title="长发"></a>长发</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">iwpriv ra0 set ATE=ATESTART</span><br><span class="line">iwpriv ra0 set ATECHANNEL=6</span><br><span class="line">iwpriv ra0 set ATETXMODE=1</span><br><span class="line">iwpriv ra0 set ATETXMCS=0</span><br><span class="line">iwpriv ra0 set ATETXBW=0</span><br><span class="line">iwpriv ra0 set ATETXGI=0</span><br><span class="line">iwpriv ra0 set ATETXLEN=1024</span><br><span class="line">iwpriv ra0 set ATETXPOW0=20</span><br><span class="line">iwpriv ra0 set ATETXPOW1=21</span><br><span class="line">iwpriv ra0 set ATETXANT=0</span><br><span class="line">iwpriv ra0 set ATE=TXCONT</span><br></pre></td></tr></table></figure>
-
-<h2 id="Rx"><a href="#Rx" class="headerlink" title="Rx"></a>Rx</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">iwpriv ra0 set ATE=ATESTART </span><br><span class="line">iwpriv ra0 set ATECHANNEL=1 </span><br><span class="line">iwpriv ra0 set ResetCounter=0 </span><br><span class="line">iwpriv ra0 set ATETXFREQOFFSET=0</span><br><span class="line">iwpriv ra0 set ATETXMODE=1 </span><br><span class="line">iwpriv ra0 set ATETXMCS=7 </span><br><span class="line">iwpriv ra0 set ATETXBW=0 </span><br><span class="line">iwpriv ra0 set ATETXFREQOFFSET=0</span><br><span class="line">iwpriv ra0 set ATE=RXFRAME </span><br><span class="line">iwpriv ra0 set ATERXFER=1 </span><br><span class="line">iwpriv ra0 set ATE=ATESTART</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-  </entry>
-  <entry>
     <title>arduino安装教程</title>
     <url>/posts/3N08829/</url>
     <content><![CDATA[<h1 id="下载Arduino-IDE"><a href="#下载Arduino-IDE" class="headerlink" title="下载Arduino IDE"></a>下载Arduino IDE</h1><p>最新版本为 Arduino IDE 1.8.16 </p>
@@ -1275,6 +1275,34 @@
       </tags>
   </entry>
   <entry>
+    <title>ripple</title>
+    <url>/posts/2M58RF5/</url>
+    <content><![CDATA[<p><img src="image-20211216153757245.png" alt="image-20211216153757245" style="zoom:10%;" /> <img src="image-20211216153834632.png" alt="image-20211216153834632" style="zoom:10%;" /></p>
+<p><img src="image-20211216153924191.png" alt="image-20211216153924191" style="zoom:10%;" /> <img src="image-20211216153951667.png" alt="image-20211216153951667" style="zoom:10%;" /></p>
+<span id="more"></span>
+
+<p>鳄鱼夹</p>
+<p><img src="024.jpg" alt="024"></p>
+<p>地线环</p>
+<p><img src="022.jpg" alt="022"></p>
+<p>同轴线</p>
+<p><img src="025.jpg" alt="025"></p>
+<p>隔直板</p>
+<p><img src="020.jpg" alt="020"></p>
+<p>鳄鱼夹</p>
+<p><img src="013.jpg" alt="013"></p>
+<p>地线环</p>
+<p><img src="014.jpg" alt="014"></p>
+<p>同轴线</p>
+<p><img src="image-20211216153224123.png" alt="image-20211216153224123"></p>
+<p>隔直板</p>
+<p><img src="015.jpg" alt="015"></p>
+<p><img src="image-20211216154342747.png" alt="image-20211216154342747" style="zoom:10%;" /> <img src="a7936242c3929d991055733818a6657.jpg" alt="a7936242c3929d991055733818a6657" style="zoom:10%;" /></p>
+<p><img src="image-20211216154541621.png" alt="image-20211216154541621" style="zoom:10%;" /> <img src="image-20211216154550299.png" alt="image-20211216154550299" style="zoom:10%;" /></p>
+<p><img src="image-20211216153347681.png" alt="image-20211216153347681"></p>
+]]></content>
+  </entry>
+  <entry>
     <title>Git安装</title>
     <url>/posts/PVYZH2/</url>
     <content><![CDATA[<p>安装git</p>
@@ -1334,34 +1362,6 @@
       <tags>
         <tag>git</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>ripple</title>
-    <url>/posts/2M58RF5/</url>
-    <content><![CDATA[<p><img src="image-20211216153757245.png" alt="image-20211216153757245" style="zoom:10%;" /> <img src="image-20211216153834632.png" alt="image-20211216153834632" style="zoom:10%;" /></p>
-<p><img src="image-20211216153924191.png" alt="image-20211216153924191" style="zoom:10%;" /> <img src="image-20211216153951667.png" alt="image-20211216153951667" style="zoom:10%;" /></p>
-<span id="more"></span>
-
-<p>鳄鱼夹</p>
-<p><img src="024.jpg" alt="024"></p>
-<p>地线环</p>
-<p><img src="022.jpg" alt="022"></p>
-<p>同轴线</p>
-<p><img src="025.jpg" alt="025"></p>
-<p>隔直板</p>
-<p><img src="020.jpg" alt="020"></p>
-<p>鳄鱼夹</p>
-<p><img src="013.jpg" alt="013"></p>
-<p>地线环</p>
-<p><img src="014.jpg" alt="014"></p>
-<p>同轴线</p>
-<p><img src="image-20211216153224123.png" alt="image-20211216153224123"></p>
-<p>隔直板</p>
-<p><img src="015.jpg" alt="015"></p>
-<p><img src="image-20211216154342747.png" alt="image-20211216154342747" style="zoom:10%;" /> <img src="a7936242c3929d991055733818a6657.jpg" alt="a7936242c3929d991055733818a6657" style="zoom:10%;" /></p>
-<p><img src="image-20211216154541621.png" alt="image-20211216154541621" style="zoom:10%;" /> <img src="image-20211216154550299.png" alt="image-20211216154550299" style="zoom:10%;" /></p>
-<p><img src="image-20211216153347681.png" alt="image-20211216153347681"></p>
-]]></content>
   </entry>
   <entry>
     <title>必备软件</title>
