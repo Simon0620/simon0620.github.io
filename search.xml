@@ -1,11 +1,443 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>RAK7268固件烧录</title>
+    <url>/posts/1JE0BV0/</url>
+    <content><![CDATA[<h1 id="环境搭建示意图"><a href="#环境搭建示意图" class="headerlink" title="环境搭建示意图"></a>环境搭建示意图</h1><ol>
+<li>使用USB线连接WisGate和PC，</li>
+<li>使用网线连接WisGate和PC。</li>
+</ol>
+<span id="more"></span>
+
+<p><img src="connect.svg" alt="connect"></p>
+<h1 id="电脑IP配置"><a href="#电脑IP配置" class="headerlink" title="电脑IP配置"></a>电脑IP配置</h1><ol>
+<li>设置IP地址为<code>192.168.1.5</code>，</li>
+<li>设置子网掩码为<code>255.255.255.0</code>。</li>
+</ol>
+<p><img src="network.png" alt="network"></p>
+<h1 id="Tftpd64配置"><a href="#Tftpd64配置" class="headerlink" title="Tftpd64配置"></a>Tftpd64配置</h1><ol>
+<li>点击Browse，设置Current Directory为uboot和firmware所在的文件夹，</li>
+<li>点击Server interface 下拉菜单，选择<code>192.168.1.5</code>，即电脑设置的IP地址，</li>
+<li>点击Show Dir 可以确认当前路径是否有待烧录的固件。</li>
+</ol>
+<p><img src="tftpd.png" alt="tftpd"></p>
+<h1 id="串口设置"><a href="#串口设置" class="headerlink" title="串口设置"></a>串口设置</h1><ol>
+<li>打开crt软件，Protocol选择 <code>Serial</code></li>
+<li>设置波特率<code>57600</code></li>
+<li>Flow Control 全部不勾选</li>
+</ol>
+<p>![serial port](serial port.png)</p>
+<h1 id="模式选择"><a href="#模式选择" class="headerlink" title="模式选择"></a>模式选择</h1><p>  1: Load system code to SDRAM via TFTP. </p>
+<p>  2: Load system code then write to Flash via TFTP. </p>
+<p>  3: Boot system code via Flash (default).</p>
+<p>  4: Entr boot command line interface.</p>
+<p>  7: Load Boot Loader code then write to Flash via Serial. </p>
+<p>  9: Load Boot Loader code then write to Flash via TFTP. </p>
+<p>当前使用<code>9</code>和<code>2</code>烧录</p>
+<p><code>9</code>为通过tftp烧录boot loader</p>
+<p><code>2</code>为通过tftp烧录firmware</p>
+<p><img src="634.gif" alt="634"></p>
+<h1 id="烧录uboot"><a href="#烧录uboot" class="headerlink" title="烧录uboot"></a>烧录uboot</h1><ol>
+<li>选择<code>2</code> 通过tftp烧录firmware</li>
+<li>输入<code>Y</code></li>
+<li>device IP 输入<code>192.168.1.2</code></li>
+<li>server IP 输入<code>192.168.1.5</code></li>
+<li> Uboot filename 输入<code>uboot.bin</code></li>
+</ol>
+<p><img src="uboot.gif" alt="uboot"></p>
+<h1 id="烧录firmware"><a href="#烧录firmware" class="headerlink" title="烧录firmware"></a>烧录firmware</h1><ol>
+<li>选择2 通过tftp烧录boot loader</li>
+<li>输入<code>Y</code></li>
+<li>device IP 输入<code>192.168.1.2</code></li>
+<li>server IP 输入<code>192.168.1.5</code></li>
+<li> Uboot filename 输入<code>WisGateOS_1.2.3.bin</code></li>
+</ol>
+<p><img src="firmware.gif" alt="firmware"></p>
+<h1 id="写入电子标签"><a href="#写入电子标签" class="headerlink" title="写入电子标签"></a>写入电子标签</h1><p>需要根据实际情况更改参数 ，比如<code>文件路径</code>, <code>port 编号</code>，<code>bomid</code>，<code>oem_mode</code>l，<code>base_mac</code>，<code>eui</code>  </p>
+<p>model RAK7249, RAK7258, RAK7268, RAK7289</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">python hwdesc_writer.py &quot;&#123;\&quot;csv\&quot;:\&quot;D:\\project\\2020\\RAK7268\\new firmware\\RAK7268_PCBA_test_V5.14\\hwdesc-writer-v1.0.19\\samplecsv\\RAK7268.csv\&quot;,\&quot;uart\&quot;:&#123;\&quot;port\&quot;:\&quot;COM4\&quot;&#125;,\&quot;bomid\&quot;:\&quot;918100D5\&quot;,\&quot;oem_model\&quot;:\&quot;RAK7268C\&quot;,\&quot;dev\&quot;:&#123;\&quot;serial_number\&quot;:\&quot;918100JM6010120703\&quot;,\&quot;base_mac\&quot;:\&quot;AC:1F:09:05:17:72\&quot;,\&quot;mac_count\&quot;:\&quot;2\&quot;,\&quot;eui\&quot;:\&quot;ac1f09fffe051772\&quot;&#125;,\&quot;manufacturer\&quot;:&#123;\&quot;date\&quot;:\&quot;2021-12-12\&quot;&#125;,\&quot;vendor_name\&quot;:\&quot;RAK\&quot;,\&quot;sku\&quot;:\&quot;\&quot;,\&quot;clei_code\&quot;:\&quot;\&quot;,\&quot;build_info\&quot;:\&quot;\&quot;,\&quot;test_tracking_number\&quot;:\&quot;SMT123\&quot;,\&quot;e_label_ver\&quot;:\&quot;1\&quot;&#125;&quot;</span><br></pre></td></tr></table></figure>
+
+<p><img src="einfo.gif" alt="einfo"></p>
+<p>RAK7268配置如下，选择合适的BOM_ID写如电子标签。</p>
+<table>
+<thead>
+<tr>
+<th align="center">DEVICE_MODEL</th>
+<th align="center">DEVICE_OEM_MODEL</th>
+<th align="center">BOM_ID</th>
+<th align="center">BAND</th>
+<th align="center">LTE</th>
+<th align="center">LTE_number</th>
+<th align="center">LORA_number</th>
+<th align="center">GPS</th>
+<th align="center">BLE</th>
+<th align="center">Lora_type</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">RAK7268</td>
+<td align="center">918100D0</td>
+<td align="center">918100D0</td>
+<td align="center">US915</td>
+<td align="center">NA</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">RAK2247</td>
+</tr>
+<tr>
+<td align="center">RAK7268</td>
+<td align="center">918100D1</td>
+<td align="center">918100D1</td>
+<td align="center">EU868</td>
+<td align="center">NA</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">RAK2247</td>
+</tr>
+<tr>
+<td align="center">RAK7268C</td>
+<td align="center">918100D4</td>
+<td align="center">918100D4</td>
+<td align="center">US915</td>
+<td align="center">EG95NA</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">RAK2247</td>
+</tr>
+<tr>
+<td align="center">RAK7268C</td>
+<td align="center">918100D5</td>
+<td align="center">918100D5</td>
+<td align="center">EU868</td>
+<td align="center">EG95E</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">RAK2247</td>
+</tr>
+<tr>
+<td align="center">RAK7268</td>
+<td align="center">918100C9</td>
+<td align="center">918100C9</td>
+<td align="center">US915</td>
+<td align="center">NA</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">RAK2287</td>
+</tr>
+<tr>
+<td align="center">RAK7268</td>
+<td align="center">918100CA</td>
+<td align="center">918100CA</td>
+<td align="center">EU868</td>
+<td align="center">NA</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">RAK2287</td>
+</tr>
+<tr>
+<td align="center">RAK7268</td>
+<td align="center">918100CV</td>
+<td align="center">918100CV</td>
+<td align="center">CN470</td>
+<td align="center">NA</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">RAK2287</td>
+</tr>
+<tr>
+<td align="center">RAK7268</td>
+<td align="center">918100CW</td>
+<td align="center">918100CW</td>
+<td align="center">US915</td>
+<td align="center">NA</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">RAK2287</td>
+</tr>
+<tr>
+<td align="center">RAK7268</td>
+<td align="center">918100CX</td>
+<td align="center">918100CX</td>
+<td align="center">EU868</td>
+<td align="center">NA</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">RAK2287</td>
+</tr>
+<tr>
+<td align="center">RAK7268</td>
+<td align="center">918100CY</td>
+<td align="center">918100CY</td>
+<td align="center">CN470</td>
+<td align="center">NA</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">RAK2287</td>
+</tr>
+<tr>
+<td align="center">RAK7268C</td>
+<td align="center">918100DF</td>
+<td align="center">918100DF</td>
+<td align="center">US915</td>
+<td align="center">EG95NA</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">RAK2287</td>
+</tr>
+<tr>
+<td align="center">RAK7268C</td>
+<td align="center">918100DG</td>
+<td align="center">918100DG</td>
+<td align="center">EU868</td>
+<td align="center">EG95E</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">RAK2287</td>
+</tr>
+<tr>
+<td align="center">RAK7268C</td>
+<td align="center">918100DH</td>
+<td align="center">918100DH</td>
+<td align="center">US915</td>
+<td align="center">EG95NA</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">RAK2287</td>
+</tr>
+<tr>
+<td align="center">RAK7268C</td>
+<td align="center">918100DJ</td>
+<td align="center">918100DJ</td>
+<td align="center">EU868</td>
+<td align="center">EG95E</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">RAK2287</td>
+</tr>
+<tr>
+<td align="center">RAK7268</td>
+<td align="center">918100DK</td>
+<td align="center">918100DK</td>
+<td align="center">US915</td>
+<td align="center">NA</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">RAK2247</td>
+</tr>
+<tr>
+<td align="center">RAK7268</td>
+<td align="center">918100DL</td>
+<td align="center">918100DL</td>
+<td align="center">EU868</td>
+<td align="center">NA</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">RAK2247</td>
+</tr>
+<tr>
+<td align="center">RAK7268C</td>
+<td align="center">918100DM</td>
+<td align="center">918100DM</td>
+<td align="center">US915</td>
+<td align="center">EG95NA</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">RAK2247</td>
+</tr>
+<tr>
+<td align="center">RAK7268C</td>
+<td align="center">918100DN</td>
+<td align="center">918100DN</td>
+<td align="center">EU868</td>
+<td align="center">EG95E</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">RAK2247</td>
+</tr>
+<tr>
+<td align="center">RAK7268</td>
+<td align="center">918100DP</td>
+<td align="center">918100DP</td>
+<td align="center">US915</td>
+<td align="center">NA</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">RAK2287</td>
+</tr>
+<tr>
+<td align="center">RAK7268</td>
+<td align="center">918100DQ</td>
+<td align="center">918100DQ</td>
+<td align="center">UE868</td>
+<td align="center">NA</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">RAK2287</td>
+</tr>
+<tr>
+<td align="center">RAK7268C</td>
+<td align="center">918100DR</td>
+<td align="center">918100DR</td>
+<td align="center">US915</td>
+<td align="center">EG95NA</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">RAK2287</td>
+</tr>
+<tr>
+<td align="center">RAK7268C</td>
+<td align="center">918100DS</td>
+<td align="center">918100DS</td>
+<td align="center">EU868</td>
+<td align="center">EG95E</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">RAK2287</td>
+</tr>
+<tr>
+<td align="center">RAK7268</td>
+<td align="center">918100D2</td>
+<td align="center">918100D2</td>
+<td align="center">CN470</td>
+<td align="center">NA</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">RAK2247</td>
+</tr>
+<tr>
+<td align="center">RAK7268</td>
+<td align="center">918100D3</td>
+<td align="center">918100D3</td>
+<td align="center">EU433</td>
+<td align="center">NA</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">RAK2247</td>
+</tr>
+<tr>
+<td align="center">RAK7268C</td>
+<td align="center">918100D6</td>
+<td align="center">918100D6</td>
+<td align="center">CN470</td>
+<td align="center">EG95E</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">RAK2247</td>
+</tr>
+<tr>
+<td align="center">RAK7268C</td>
+<td align="center">918100D7</td>
+<td align="center">918100D7</td>
+<td align="center">EU433</td>
+<td align="center">EG95E</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">RAK2247</td>
+</tr>
+<tr>
+<td align="center">RAK7268C</td>
+<td align="center">918100EF</td>
+<td align="center">918100EF</td>
+<td align="center">CN470</td>
+<td align="center">EG95E</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">RAK2287</td>
+</tr>
+<tr>
+<td align="center">RAK7268C</td>
+<td align="center">918100EG</td>
+<td align="center">918100EG</td>
+<td align="center">EU433</td>
+<td align="center">EG95E</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">RAK2287</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>注意：</strong></p>
+<p>1.需要安装python环境 和pyserial 库</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">pip install pyserail</span><br></pre></td></tr></table></figure>
+
+<p><img src="pyserial.gif" alt="pyserial"></p>
+<ol start="2">
+<li>不能使用powershell 来写电子标签，会报错。</li>
+</ol>
+</blockquote>
+<h1 id="登录login"><a href="#登录login" class="headerlink" title="登录login"></a>登录login</h1><p>Login: <code>root</code></p>
+<p>Password: <code>root</code></p>
+<p><img src="login.gif" alt="login"></p>
+<h1 id="恢复默认设置"><a href="#恢复默认设置" class="headerlink" title="恢复默认设置"></a>恢复默认设置</h1><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">firstboot -y &amp;&amp; reboot</span><br></pre></td></tr></table></figure>
+
+<p><img src="firstboot.gif" alt="firstboot"></p>
+]]></content>
+  </entry>
+  <entry>
     <title>WisBlock</title>
     <url>/posts/PT276M/</url>
     <content><![CDATA[<p><img src="wisblock-click-code-connect.png"></p>
 <h1 id="WisBlock"><a href="#WisBlock" class="headerlink" title="WisBlock"></a>WisBlock</h1><p>WisBlock 是一个模块化系统，可以轻松地将低功耗广域网 (LPWAN) 实施到物联网解决方案中。</p>
 <p>WisBlock 可以快速实现从原型设计到批量生产，而无需为每一步都创建新的硬件模块。</p>
+<span id="more"></span>
+
+
 <h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><ul>
 <li>紧凑的硬件设计</li>
 <li>标准化组件</li>
@@ -412,6 +844,366 @@
 ]]></content>
   </entry>
   <entry>
+    <title>RAK7268测试命令</title>
+    <url>/posts/373YG0T/</url>
+    <content><![CDATA[<h1 id="RAK7268配置"><a href="#RAK7268配置" class="headerlink" title="RAK7268配置"></a>RAK7268配置</h1><p>firmware version:  WisGateOS_1.2.3.bin</p>
+<table>
+<thead>
+<tr>
+<th align="center">WiFi</th>
+<th align="center">LoRa</th>
+<th align="center">Cellular</th>
+<th align="center">BLE</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">RAK634</td>
+<td align="center">RAK2247</td>
+<td align="center">EG95-E</td>
+<td align="center">RAK13400</td>
+</tr>
+<tr>
+<td align="center">RAK634</td>
+<td align="center">RAK2287</td>
+<td align="center">EG95-NA</td>
+<td align="center">RAK13401</td>
+</tr>
+</tbody></table>
+<p>其中Cellular 和BLE为可选。</p>
+<span id="more"></span>
+
+<h1 id="LoRa配置信息"><a href="#LoRa配置信息" class="headerlink" title="LoRa配置信息"></a>LoRa配置信息</h1><table>
+<thead>
+<tr>
+<th align="center">DEVICE_MODEL</th>
+<th align="center">LORA.band</th>
+<th align="center">LORA.module</th>
+<th align="center">LORA.bb_model</th>
+<th align="center">LORA.radio_model</th>
+<th align="center">LORA.intf_type</th>
+<th align="center">LORA.intf_path</th>
+<th align="center">LORA.reset_pin</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">RAK7268</td>
+<td align="center">EU433</td>
+<td align="center">RAK2247</td>
+<td align="center">SX1301</td>
+<td align="center">SX1255</td>
+<td align="center">spi</td>
+<td align="center">/dev/spidev32766.1</td>
+<td align="center">11</td>
+</tr>
+<tr>
+<td align="center">RAK7268</td>
+<td align="center">CN470</td>
+<td align="center">RAK2247</td>
+<td align="center">SX1301</td>
+<td align="center">SX1255</td>
+<td align="center">spi</td>
+<td align="center">/dev/spidev32766.1</td>
+<td align="center">11</td>
+</tr>
+<tr>
+<td align="center">RAK7268</td>
+<td align="center">EU868</td>
+<td align="center">RAK2247</td>
+<td align="center">SX1301</td>
+<td align="center">SX1257</td>
+<td align="center">spi</td>
+<td align="center">/dev/spidev32766.1</td>
+<td align="center">11</td>
+</tr>
+<tr>
+<td align="center">RAK7268</td>
+<td align="center">US915</td>
+<td align="center">RAK2247</td>
+<td align="center">SX1301</td>
+<td align="center">SX1257</td>
+<td align="center">spi</td>
+<td align="center">/dev/spidev32766.1</td>
+<td align="center">11</td>
+</tr>
+<tr>
+<td align="center">RAK7268</td>
+<td align="center">EU433</td>
+<td align="center">RAK2287</td>
+<td align="center">SX1302</td>
+<td align="center">SX1250</td>
+<td align="center">spi</td>
+<td align="center">/dev/spidev32766.1</td>
+<td align="center">11</td>
+</tr>
+<tr>
+<td align="center">RAK7268</td>
+<td align="center">CN470</td>
+<td align="center">RAK2287</td>
+<td align="center">SX1302</td>
+<td align="center">SX1250</td>
+<td align="center">spi</td>
+<td align="center">/dev/spidev32766.1</td>
+<td align="center">11</td>
+</tr>
+<tr>
+<td align="center">RAK7268</td>
+<td align="center">EU868</td>
+<td align="center">RAK2287</td>
+<td align="center">SX1302</td>
+<td align="center">SX1250</td>
+<td align="center">spi</td>
+<td align="center">/dev/spidev32766.1</td>
+<td align="center">11</td>
+</tr>
+<tr>
+<td align="center">RAK7268</td>
+<td align="center">US915</td>
+<td align="center">RAK2287</td>
+<td align="center">SX1302</td>
+<td align="center">SX1250</td>
+<td align="center">spi</td>
+<td align="center">/dev/spidev32766.1</td>
+<td align="center">11</td>
+</tr>
+</tbody></table>
+<h1 id="RAK2247命令"><a href="#RAK2247命令" class="headerlink" title="RAK2247命令"></a>RAK2247命令</h1><h2 id="LoRa-TX"><a href="#LoRa-TX" class="headerlink" title="LoRa TX"></a>LoRa TX</h2><h3 id="util-tx-continuous"><a href="#util-tx-continuous" class="headerlink" title="util_tx_continuous"></a>util_tx_continuous</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd /usr/bin</span><br><span class="line"></span><br><span class="line">killall lora_pkt_fwd</span><br><span class="line"></span><br><span class="line">reset_lgw.sh start 11</span><br><span class="line"></span><br><span class="line">util_tx_continuous -f 868.3 -r 1257 --notch 250 --dig 0 --mix 13 --pa 3 --mod LORA --sf 7 --bw 125    #高频 持续包</span><br><span class="line"></span><br><span class="line">util_tx_continuous -f 433.8 -r 1255 --notch 250 --dig 0 --mix 10 --pa 0 --mod LORA --sf 7 --bw 125    #低频 持续包</span><br><span class="line"></span><br><span class="line">util_tx_continuous -h  #参数说明</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><code>-r</code> 参数 高频设置1257， 低频设置1255</p>
+<p><code>--dig 0 --mix 10 --pa 0</code> 这3个参数来设置发射功率，大概趋势如下表</p>
+<table>
+<thead>
+<tr>
+<th align="center">Item</th>
+<th align="center">0</th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
+<th align="center">4</th>
+<th align="center">5</th>
+<th align="center">6</th>
+<th align="center">7</th>
+<th align="center">8</th>
+<th align="center">9</th>
+<th align="center">10</th>
+<th align="center">11</th>
+<th align="center">12</th>
+<th align="center">13</th>
+<th align="center">14</th>
+<th align="center">15</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">PA</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">2</td>
+<td align="center">2</td>
+<td align="center">2</td>
+<td align="center">2</td>
+<td align="center">3</td>
+<td align="center">3</td>
+<td align="center">3</td>
+<td align="center">3</td>
+<td align="center">3</td>
+<td align="center">3</td>
+</tr>
+<tr>
+<td align="center">MIX</td>
+<td align="center">10</td>
+<td align="center">14</td>
+<td align="center">8</td>
+<td align="center">9</td>
+<td align="center">9</td>
+<td align="center">9</td>
+<td align="center">10</td>
+<td align="center">11</td>
+<td align="center">12</td>
+<td align="center">12</td>
+<td align="center">8</td>
+<td align="center">10</td>
+<td align="center">12</td>
+<td align="center">14</td>
+<td align="center">15</td>
+<td align="center">15</td>
+</tr>
+<tr>
+<td align="center">DIG</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">3</td>
+<td align="center">3</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">POWER</td>
+<td align="center">-6</td>
+<td align="center">-3</td>
+<td align="center">0</td>
+<td align="center">3</td>
+<td align="center">6</td>
+<td align="center">10</td>
+<td align="center">11</td>
+<td align="center">12</td>
+<td align="center">13</td>
+<td align="center">14</td>
+<td align="center">16</td>
+<td align="center">20</td>
+<td align="center">23</td>
+<td align="center">25</td>
+<td align="center">26</td>
+<td align="center">27</td>
+</tr>
+</tbody></table>
+<p><code>--mode</code> 有三个模式 LORA, FSK, CW  其中CW为单载波</p>
+</blockquote>
+<img src="util_tx_continuous.gif" alt="util_tx_continuous"  />
+
+<h3 id="util-tx-test"><a href="#util-tx-test" class="headerlink" title="util_tx_test"></a>util_tx_test</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">killall lora_pkt_fwd</span><br><span class="line"></span><br><span class="line">reset_lgw.sh start 11</span><br><span class="line"></span><br><span class="line">util_tx_test -r 1255 -f 487.1 -k 1 -m LORA -b 125 -s 7 -c 1 -p 20 -z 32 -t 1000 -x -1   #高频 数据包</span><br><span class="line"></span><br><span class="line">util_tx_test -r 1257 -f 923.3 -k 1 -m LORA -b 125 -s 7 -c 1 -p 20 -z 32 -t 1000 -x -1   #低频 数据包</span><br><span class="line"></span><br><span class="line">util_tx_test -h  #参数说明</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><code>-r</code> 参数 高频设置1257， 低频设置1255</p>
+<p><code>-m</code> 有三个模式 LORA, FSK, CW  其中CW为单载波</p>
+<p><code>-p</code>为发射功率</p>
+<p><code>-x</code> 数据包的数量，当设置为-1时，按ctrl-c才会停止。</p>
+</blockquote>
+<img src="util_tx_test.gif" alt="util_tx_test"/>
+
+<p>LoRa RX</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">killall lora_pkt_fwd</span><br><span class="line"></span><br><span class="line">reset_lgw.sh start 11</span><br><span class="line"></span><br><span class="line">cd /tmp/</span><br><span class="line"></span><br><span class="line">cp /usr/share/lora/global_conf.json.US915 ./global_conf.json</span><br><span class="line"></span><br><span class="line">util_pkt_logger</span><br></pre></td></tr></table></figure>
+<p>拷贝对应国家json文件</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cp /usr/share/lora/global_conf.json.EU433 ./global_conf.json</span><br><span class="line"></span><br><span class="line">cp /usr/share/lora/global_conf.json.CN470 ./global_conf.json</span><br><span class="line"></span><br><span class="line">cp /usr/share/lora/global_conf.json.EU868 ./global_conf.json</span><br><span class="line"></span><br><span class="line">cp /usr/share/lora/global_conf.json.US915 ./global_conf.json</span><br><span class="line"></span><br><span class="line">cp /usr/share/lora/global_conf.json.KR920 ./global_conf.json</span><br></pre></td></tr></table></figure>
+
+<img src="rx.gif" alt="rx" />
+
+
+
+<h1 id="RAK2287命令"><a href="#RAK2287命令" class="headerlink" title="RAK2287命令"></a>RAK2287命令</h1><h2 id="LoRa-TX-1"><a href="#LoRa-TX-1" class="headerlink" title="LoRa TX"></a>LoRa TX</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">killall lora_pkt_fwd</span><br><span class="line"></span><br><span class="line">cd /usr/bin</span><br><span class="line"></span><br><span class="line">test_loragw_sx1302_hal_tx  -k 0 -c 0 -r 1250 -f 868.3 -m LORA -s 7 -b 125 -n 1000 -z 50 -t 1000 --pa 1 --pwid 18</span><br><span class="line"></span><br><span class="line">test_loragw_sx1302_hal_tx -h #参数说明</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><code>--pa 1 --pwid 18</code> 两个参数配置发射功率，大概趋势如下表。</p>
+<table>
+<thead>
+<tr>
+<th align="center">tx_power</th>
+<th align="center">pwid</th>
+<th align="center">0</th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
+<th align="center">4</th>
+<th align="center">5</th>
+<th align="center">6</th>
+<th align="center">7</th>
+<th align="center">8</th>
+<th align="center">9</th>
+<th align="center">10</th>
+<th align="center">11</th>
+<th align="center">12</th>
+<th align="center">13</th>
+<th align="center">14</th>
+<th align="center">15</th>
+<th align="center">16</th>
+<th align="center">17</th>
+<th align="center">18</th>
+<th align="center">19</th>
+<th align="center">20</th>
+<th align="center">21</th>
+<th align="center">22</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">PA</td>
+<td align="center">0</td>
+<td align="center">-17.06</td>
+<td align="center">-16.2</td>
+<td align="center">-15.2</td>
+<td align="center">-14.59</td>
+<td align="center">-13.32</td>
+<td align="center">-12.43</td>
+<td align="center">-11.39</td>
+<td align="center">-10.09</td>
+<td align="center">-9.23</td>
+<td align="center">-8.12</td>
+<td align="center">-7.15</td>
+<td align="center">-6.19</td>
+<td align="center">-5.21</td>
+<td align="center">-4.23</td>
+<td align="center">-3.38</td>
+<td align="center">-2.42</td>
+<td align="center">-1.12</td>
+<td align="center">0.08</td>
+<td align="center">1.25</td>
+<td align="center">2.14</td>
+<td align="center">3.49</td>
+<td align="center">4.66</td>
+<td align="center">5.47</td>
+</tr>
+<tr>
+<td align="center">PA</td>
+<td align="center">1</td>
+<td align="center">6.92</td>
+<td align="center">7.89</td>
+<td align="center">8.98</td>
+<td align="center">9.65</td>
+<td align="center">10.82</td>
+<td align="center">11.63</td>
+<td align="center">12.56</td>
+<td align="center">13.45</td>
+<td align="center">14.38</td>
+<td align="center">15.3</td>
+<td align="center">16.14</td>
+<td align="center">16.97</td>
+<td align="center">17.81</td>
+<td align="center">18.79</td>
+<td align="center">19.6</td>
+<td align="center">20.46</td>
+<td align="center">21.78</td>
+<td align="center">23.22</td>
+<td align="center">24.38</td>
+<td align="center">25.02</td>
+<td align="center">25.66</td>
+<td align="center">26.12</td>
+<td align="center">26.4</td>
+</tr>
+</tbody></table>
+</blockquote>
+<img src="1302 tx.gif" alt="1302 tx"  />
+
+<h2 id="LoRa-RX"><a href="#LoRa-RX" class="headerlink" title="LoRa RX"></a>LoRa RX</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">killall lora_pkt_fwd</span><br><span class="line"></span><br><span class="line">cd /usr/bin</span><br><span class="line"></span><br><span class="line">test_loragw_sx1302_hal_rx -k 0 -r 1250 -a 863.3 -b 868.3 -n 100 -z 50 -m 0</span><br><span class="line"></span><br><span class="line">test_loragw_sx1302_hal_rx -h #参数说明</span><br></pre></td></tr></table></figure>
+
+<img src="1302 rx.gif" alt="1302 rx" />
+
+<h1 id="WiFi命令"><a href="#WiFi命令" class="headerlink" title="WiFi命令"></a>WiFi命令</h1><h2 id="Tx"><a href="#Tx" class="headerlink" title="Tx"></a>Tx</h2><h3 id="固定数据包"><a href="#固定数据包" class="headerlink" title="固定数据包"></a>固定数据包</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">iwpriv ra0 set ATE=ATESTART</span><br><span class="line">iwpriv ra0 set ATECHANNEL=6</span><br><span class="line">iwpriv ra0 set ATETXMODE=1</span><br><span class="line">iwpriv ra0 set ATETXMCS=7</span><br><span class="line">iwpriv ra0 set ATETXBW=0</span><br><span class="line">iwpriv ra0 set ATETXGI=0</span><br><span class="line">iwpriv ra0 set ATETXLEN=1024</span><br><span class="line">iwpriv ra0 set ATETXPOW0=20</span><br><span class="line">iwpriv ra0 set ATETXPOW1=21</span><br><span class="line">iwpriv ra0 set ATETXCNT=100000</span><br><span class="line">iwpriv ra0 set ATETXANT=0</span><br><span class="line">iwpriv ra0 set ATE=TXFRAME</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>参数说明<br> <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">iwpriv ra0 set ATECHANNEL=6       </span><br><span class="line"><span class="meta">#</span><span class="bash"> 信道，1~14  2.437</span></span><br><span class="line"></span><br><span class="line">iwpriv ra0 set ATETXMODE=1 </span><br><span class="line"><span class="meta">#</span><span class="bash"> 0: CCK 802.11b</span> </span><br><span class="line"><span class="meta">#</span><span class="bash"> 1: OFDM 802.11g</span> </span><br><span class="line"><span class="meta">#</span><span class="bash"> 2: HT_MIX 802.11b/g/n</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 3: Green Field 802.11n</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 4: VHT 802.11ac (802.11 AC chipset only)</span></span><br><span class="line"></span><br><span class="line">iwpriv ra0 set ATETXMCS=7</span><br><span class="line"><span class="meta">#</span><span class="bash"> 修改速率 Value: 0 ~ 15</span>  </span><br><span class="line"><span class="meta">#</span><span class="bash"> When ATE TX Mode is CCK/OFDM/HT, MCS 0~7: 1ss , 8~15: 2ss,</span>  </span><br><span class="line"></span><br><span class="line">iwpriv ra0 set ATETXBW=0     </span><br><span class="line"><span class="meta">#</span><span class="bash"> 修改带宽</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Value:   0: 20MHz, 1: 40MHz</span> </span><br><span class="line"></span><br><span class="line">iwpriv ra0 set ATETXGI=0      </span><br><span class="line"><span class="meta">#</span><span class="bash"> Value:   0: Long GI,   1: Short GI</span> </span><br><span class="line"></span><br><span class="line">iwpriv ra0 set ATETXANT=0   </span><br><span class="line"><span class="meta">#</span><span class="bash"> 修改天线个数，   0: All Antenna TX,    1: Antenna 0 TX,    2: Antenna 1 TX</span> </span><br><span class="line"></span><br><span class="line">iwpriv ra0 set ATETXPOW0=15  </span><br><span class="line"><span class="meta">#</span><span class="bash">功率设置</span></span><br><span class="line"></span><br><span class="line">iwpriv ra0 set ATETXCNT=100000  </span><br><span class="line"><span class="meta">#</span><span class="bash"> 持续发包个数，用TXCONT发射时，删除这条</span></span><br><span class="line"></span><br><span class="line">iwpriv ra0 set ATE=TXFRAME    </span><br><span class="line"><span class="meta">#</span><span class="bash"> 100% duty cycle发射改为TXCONT</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>停止</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">iwpriv ra0 set ATE=ATESTART  停止</span><br></pre></td></tr></table></figure>
+
+<h3 id="长发"><a href="#长发" class="headerlink" title="长发"></a>长发</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">iwpriv ra0 set ATE=ATESTART</span><br><span class="line">iwpriv ra0 set ATECHANNEL=6</span><br><span class="line">iwpriv ra0 set ATETXMODE=1</span><br><span class="line">iwpriv ra0 set ATETXMCS=0</span><br><span class="line">iwpriv ra0 set ATETXBW=0</span><br><span class="line">iwpriv ra0 set ATETXGI=0</span><br><span class="line">iwpriv ra0 set ATETXLEN=1024</span><br><span class="line">iwpriv ra0 set ATETXPOW0=20</span><br><span class="line">iwpriv ra0 set ATETXPOW1=21</span><br><span class="line">iwpriv ra0 set ATETXANT=0</span><br><span class="line">iwpriv ra0 set ATE=TXCONT</span><br></pre></td></tr></table></figure>
+
+<h2 id="Rx"><a href="#Rx" class="headerlink" title="Rx"></a>Rx</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">iwpriv ra0 set ATE=ATESTART </span><br><span class="line">iwpriv ra0 set ATECHANNEL=1 </span><br><span class="line">iwpriv ra0 set ResetCounter=0 </span><br><span class="line">iwpriv ra0 set ATETXFREQOFFSET=0</span><br><span class="line">iwpriv ra0 set ATETXMODE=1 </span><br><span class="line">iwpriv ra0 set ATETXMCS=7 </span><br><span class="line">iwpriv ra0 set ATETXBW=0 </span><br><span class="line">iwpriv ra0 set ATETXFREQOFFSET=0</span><br><span class="line">iwpriv ra0 set ATE=RXFRAME </span><br><span class="line">iwpriv ra0 set ATERXFER=1 </span><br><span class="line">iwpriv ra0 set ATE=ATESTART</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+  </entry>
+  <entry>
     <title>arduino安装教程</title>
     <url>/posts/3N08829/</url>
     <content><![CDATA[<h1 id="下载Arduino-IDE"><a href="#下载Arduino-IDE" class="headerlink" title="下载Arduino IDE"></a>下载Arduino IDE</h1><p>最新版本为 Arduino IDE 1.8.16 </p>
@@ -542,5 +1334,102 @@
       <tags>
         <tag>git</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>ripple</title>
+    <url>/posts/2M58RF5/</url>
+    <content><![CDATA[<p><img src="image-20211216153757245.png" alt="image-20211216153757245" style="zoom:10%;" /> <img src="image-20211216153834632.png" alt="image-20211216153834632" style="zoom:10%;" /></p>
+<p><img src="image-20211216153924191.png" alt="image-20211216153924191" style="zoom:10%;" /> <img src="image-20211216153951667.png" alt="image-20211216153951667" style="zoom:10%;" /></p>
+<span id="more"></span>
+
+<p>鳄鱼夹</p>
+<p><img src="024.jpg" alt="024"></p>
+<p>地线环</p>
+<p><img src="022.jpg" alt="022"></p>
+<p>同轴线</p>
+<p><img src="025.jpg" alt="025"></p>
+<p>隔直板</p>
+<p><img src="020.jpg" alt="020"></p>
+<p>鳄鱼夹</p>
+<p><img src="013.jpg" alt="013"></p>
+<p>地线环</p>
+<p><img src="014.jpg" alt="014"></p>
+<p>同轴线</p>
+<p><img src="image-20211216153224123.png" alt="image-20211216153224123"></p>
+<p>隔直板</p>
+<p><img src="015.jpg" alt="015"></p>
+<p><img src="image-20211216154342747.png" alt="image-20211216154342747" style="zoom:10%;" /> <img src="a7936242c3929d991055733818a6657.jpg" alt="a7936242c3929d991055733818a6657" style="zoom:10%;" /></p>
+<p><img src="image-20211216154541621.png" alt="image-20211216154541621" style="zoom:10%;" /> <img src="image-20211216154550299.png" alt="image-20211216154550299" style="zoom:10%;" /></p>
+<p><img src="image-20211216153347681.png" alt="image-20211216153347681"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>必备软件</title>
+    <url>/posts/3W3PHMP/</url>
+    <content><![CDATA[<h1 id="软件工具"><a href="#软件工具" class="headerlink" title="软件工具"></a>软件工具</h1><h2 id="EDA"><a href="#EDA" class="headerlink" title="EDA"></a>EDA</h2><ul>
+<li>Cadence</li>
+<li>Altium Designer</li>
+</ul>
+<span id="more"></span>
+
+<h2 id="IDE"><a href="#IDE" class="headerlink" title="IDE"></a>IDE</h2><ul>
+<li>Arduino</li>
+<li>python</li>
+</ul>
+<h2 id="沟通工具"><a href="#沟通工具" class="headerlink" title="沟通工具"></a>沟通工具</h2><ul>
+<li>E-mail</li>
+<li>Mattermost</li>
+<li>腾讯会议</li>
+<li>Zoom 会议</li>
+<li>TeamViewer</li>
+</ul>
+<h2 id="烧录工具"><a href="#烧录工具" class="headerlink" title="烧录工具"></a>烧录工具</h2><ul>
+<li>tftpd32</li>
+<li>J-link</li>
+<li>STM32CubeProgrammer</li>
+<li>RAK Device Firmware Upgrade Tool</li>
+<li>balenaEtcher SD卡烧录</li>
+</ul>
+<h2 id="调试工具"><a href="#调试工具" class="headerlink" title="调试工具"></a>调试工具</h2><ul>
+<li>SecureCRT/shell</li>
+<li>sscom5.13.1</li>
+<li>RAK_SERIAL_PORT</li>
+</ul>
+<h2 id="ERP"><a href="#ERP" class="headerlink" title="ERP"></a>ERP</h2><ul>
+<li>2BizBox 客户端</li>
+<li>Odoo系统 <a href="https://erp.rak-internal.net/">https://erp.rak-internal.net/</a></li>
+</ul>
+<h2 id="仪器相关"><a href="#仪器相关" class="headerlink" title="仪器相关"></a>仪器相关</h2><ul>
+<li>RWC5020x_App LoRa</li>
+<li>PDA-602A POE</li>
+<li>otti 功耗</li>
+</ul>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>Chariot 性能测试</p>
+<h1 id="公司网页"><a href="#公司网页" class="headerlink" title="公司网页"></a>公司网页</h1><ul>
+<li><a href="https://docs.rakwireless.com/">https://docs.rakwireless.com/</a></li>
+<li><a href="http://rakwireless.zentaopm.com/">http://rakwireless.zentaopm.com/</a> 禅道</li>
+<li><a href="https://rakwireless.atlassian.net/">https://rakwireless.atlassian.net/</a> JIRA</li>
+<li><a href="https://downloads.rakwireless.com.cn/">https://downloads.rakwireless.com.cn/</a></li>
+<li><a href="https://git.rak-internal.net/">https://git.rak-internal.net/</a> </li>
+</ul>
+<h1 id="仪器"><a href="#仪器" class="headerlink" title="仪器"></a>仪器</h1><ul>
+<li>示波器</li>
+<li>频谱仪</li>
+<li>网分</li>
+<li>LoRa综测仪</li>
+<li>恒温箱</li>
+<li>频率计</li>
+<li>otii功耗测试仪</li>
+<li>电子负载</li>
+<li>直流源</li>
+<li>电烙铁/热风枪</li>
+</ul>
+<h1 id="测试文档"><a href="#测试文档" class="headerlink" title="测试文档"></a>测试文档</h1><ul>
+<li>单板测试规范</li>
+<li>LoRa测试规范</li>
+<li>可靠性测试规范</li>
+<li>测试报告</li>
+</ul>
+]]></content>
   </entry>
 </search>
