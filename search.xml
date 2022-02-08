@@ -1,74 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>arduino安装教程</title>
-    <url>/posts/3N08829/</url>
-    <content><![CDATA[<h1 id="下载Arduino-IDE"><a href="#下载Arduino-IDE" class="headerlink" title="下载Arduino IDE"></a>下载Arduino IDE</h1><p>最新版本为 Arduino IDE 1.8.16 </p>
-<p>下载地址 <a href="https://www.arduino.cc/en/software">https://www.arduino.cc/en/software</a></p>
+    <title>Git安装</title>
+    <url>/posts/PVYZH2/</url>
+    <content><![CDATA[<p>安装git</p>
+<p>git config –global user.name “your name”</p>
+<p>git config –global user.email “your email”</p>
 <span id="more"></span>
 
-<p><img src="1.download-arduino.png" alt="1.download-arduino"></p>
-<h1 id="windows下安装Arduino-IDE"><a href="#windows下安装Arduino-IDE" class="headerlink" title="windows下安装Arduino IDE"></a>windows下安装Arduino IDE</h1><ol>
-<li>点击 I Agree 按钮。</li>
-</ol>
-<p><img src="2.agreement-license.png" alt="2.agreement-license"></p>
-<ol start="2">
-<li>点击 next </li>
-</ol>
-<p><img src="3.installation-options.png" alt="3.installation-options"></p>
-<ol start="3">
-<li>选择合适安装目录，点击Install。</li>
-</ol>
-<p><img src="4.installation-folder.png" alt="4.installation-folder"></p>
-<ol start="4">
-<li>安装中…</li>
-</ol>
-<p><img src="5.installing.png" alt="5.installing"></p>
-<ol start="5">
-<li>安装完成</li>
-</ol>
-<p><img src="6.installation-success.png" alt="6.installation-success"></p>
-<h1 id="IDE界面介绍"><a href="#IDE界面介绍" class="headerlink" title="IDE界面介绍"></a>IDE界面介绍</h1><p><img src="7.arduino-ide.png" alt="7.arduino-ide"></p>
-<ol>
-<li><p>菜单栏</p>
-</li>
-<li><p>快捷按钮</p>
-</li>
-</ol>
-<p><img src="8.operating-buttons.png" alt="8.operating-buttons"></p>
-<ol start="3">
-<li><p>代码编辑区</p>
-</li>
-<li><p>状态区</p>
-</li>
-<li><p>输出信息窗口</p>
-</li>
-</ol>
-<h1 id="IDE-配置"><a href="#IDE-配置" class="headerlink" title="IDE 配置"></a>IDE 配置</h1><p><img src="9.preferences.png" alt="9.preferences"></p>
-<p><img src="add_bsp_icon.png" alt="add_bsp_icon"></p>
-<p>添加网址 </p>
-<p><a href="https://raw.githubusercontent.com/RAKwireless/RAKwireless-Arduino-BSP-Index/main/package_rakwireless_index.json">https://raw.githubusercontent.com/RAKwireless/RAKwireless-Arduino-BSP-Index/main/package_rakwireless_index.json</a></p>
-<p><img src="add-bsp-url.png" alt="add-bsp-url"></p>
-<p>添加开发板</p>
-<p><img src="11.boards-manager.png" alt="11.boards-manager"></p>
-<p><img src="wisblock_core-1631516043841.png" alt="wisblock_core"></p>
-<p><img src="13.rakwireless-nrf-modules.png" alt="13.rakwireless-nrf-modules"></p>
-<h1 id="RAK-示例"><a href="#RAK-示例" class="headerlink" title="RAK 示例"></a>RAK 示例</h1><p><img src="14.wisblock-modules.png" alt="14.wisblock-modules"></p>
-<h1 id="编译一个示例"><a href="#编译一个示例" class="headerlink" title="编译一个示例"></a>编译一个示例</h1><p><img src="15.select-lora-otaa-example.png" alt="15.select-lora-otaa-example"></p>
-<p><img src="16.install-library-step1.png" alt="16.install-library-step1"></p>
-<p>下载库文件</p>
-<p><img src="17.install-library-step2.png" alt="17.install-library-step2"></p>
-<p><img src="18.compile-example.png" alt="18.compile-example"></p>
-<p>第一个程序 </p>
-<p>使用wisblock 点亮LED</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LED_GREEN  35</span></span><br><span class="line"><span class="comment">// #define LED_BLUE  36</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">setup</span><span class="params">()</span> </span></span><br><span class="line"><span class="function"></span>&#123;    </span><br><span class="line">  pinMode(LED_GREEN,OUTPUT);</span><br><span class="line">  Serial.begin(<span class="number">115200</span>);</span><br><span class="line">  </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">loop</span><span class="params">()</span> </span></span><br><span class="line"><span class="function"></span>&#123; </span><br><span class="line">  digitalWrite(LED_GREEN,HIGH);</span><br><span class="line">  delay(<span class="number">1000</span>);</span><br><span class="line">  digitalWrite(LED_GREEN,LOW);</span><br><span class="line">  delay(<span class="number">1000</span>);</span><br><span class="line">    </span><br><span class="line">  Serial.println(<span class="string">&quot;RAKwireless: Make IOT Easy!&quot;</span>); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Git-Bash生成SSH公钥"><a href="#Git-Bash生成SSH公钥" class="headerlink" title="Git Bash生成SSH公钥"></a>Git Bash生成SSH公钥</h3><p>ssh -keygen -t rsa -C “您的邮箱地址”</p>
+<p>cat ~/.ssh/id_rsa.pub 将文件打印至终端</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">ssh <span class="literal">-T</span> git@gitee.com</span><br></pre></td></tr></table></figure>
 
-]]></content>
-      <categories>
-        <category>WisBlock</category>
-      </categories>
+
+
+
+
+
+
+<p>上传</p>
+<p>创建一个本地的版本库（其实也就是一个文件夹）</p>
+<p>打开文件夹 </p>
+<p>git bash here</p>
+<p>输入命令 git init </p>
+<p>生成  .git文件夹 它是Git用来跟踪和管理版本库的 默认隐藏 </p>
+<p>把项目粘贴到这个本地Git仓库里面</p>
+<p>git status 查看你当前的状态</p>
+<p>git add . 该目录下的所有文件添加到仓库</p>
+<p>git commit -m “shuoming”</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">ssh<span class="literal">-keygen</span> <span class="literal">-t</span> rsa <span class="literal">-C</span> <span class="string">&quot;youremail@example.com&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>用户下的.ssh目录里找到id_rsa和id_rsa.pub这两个文件  </p>
+<p>本地仓库进行关联</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">git remote add origin https://github.com/cx0620/cx0620.github.io.git</span><br></pre></td></tr></table></figure>
+
+
+
+<p>新创建的仓库里面的README文件不在本地仓库目录中，通过以下命令先将内容合并以下：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">git pull -<span class="literal">-rebase</span> origin master</span><br></pre></td></tr></table></figure>
+
+<p>把本地库的所有内容推送到远程仓库 </p>
+<p>新建的远程仓库是空的，所以要加上-u这个参数</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">git push <span class="literal">-u</span> origin master</span><br></pre></td></tr></table></figure>
+
+
+
+<p>下次再从本地库上传内容的时候只需下面这样</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+
+
+
+<p>下载</p>
+<p>Git Bash Here</p>
+<p>git clone  <a href="https://github.com/cx0620/cx0620.github.io.git">https://github.com/cx0620/cx0620.github.io.git</a></p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">连接Github与本地</span><br><span class="line">git config -<span class="literal">-global</span> user.name <span class="string">&quot;stephenchen0620&quot;</span></span><br><span class="line">git config -<span class="literal">-global</span> user.email <span class="string">&quot;408193714@qq.com&quot;</span></span><br><span class="line"></span><br><span class="line">ssh<span class="literal">-keygen</span> <span class="literal">-t</span> rsa <span class="literal">-C</span> <span class="string">&quot;408193714@qq.com&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cat</span> ~/.ssh/id_rsa.pub</span><br><span class="line"></span><br><span class="line">ssh <span class="literal">-T</span> git@github.com</span><br><span class="line">ssh <span class="literal">-T</span> git@gitee.com</span><br></pre></td></tr></table></figure>]]></content>
       <tags>
-        <tag>arduino</tag>
+        <tag>git</tag>
       </tags>
   </entry>
   <entry>
@@ -489,61 +476,74 @@
       </categories>
   </entry>
   <entry>
-    <title>Git安装</title>
-    <url>/posts/PVYZH2/</url>
-    <content><![CDATA[<p>安装git</p>
-<p>git config –global user.name “your name”</p>
-<p>git config –global user.email “your email”</p>
+    <title>arduino安装教程</title>
+    <url>/posts/3N08829/</url>
+    <content><![CDATA[<h1 id="下载Arduino-IDE"><a href="#下载Arduino-IDE" class="headerlink" title="下载Arduino IDE"></a>下载Arduino IDE</h1><p>最新版本为 Arduino IDE 1.8.16 </p>
+<p>下载地址 <a href="https://www.arduino.cc/en/software">https://www.arduino.cc/en/software</a></p>
 <span id="more"></span>
 
-<h3 id="Git-Bash生成SSH公钥"><a href="#Git-Bash生成SSH公钥" class="headerlink" title="Git Bash生成SSH公钥"></a>Git Bash生成SSH公钥</h3><p>ssh -keygen -t rsa -C “您的邮箱地址”</p>
-<p>cat ~/.ssh/id_rsa.pub 将文件打印至终端</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">ssh <span class="literal">-T</span> git@gitee.com</span><br></pre></td></tr></table></figure>
+<p><img src="1.download-arduino.png" alt="1.download-arduino"></p>
+<h1 id="windows下安装Arduino-IDE"><a href="#windows下安装Arduino-IDE" class="headerlink" title="windows下安装Arduino IDE"></a>windows下安装Arduino IDE</h1><ol>
+<li>点击 I Agree 按钮。</li>
+</ol>
+<p><img src="2.agreement-license.png" alt="2.agreement-license"></p>
+<ol start="2">
+<li>点击 next </li>
+</ol>
+<p><img src="3.installation-options.png" alt="3.installation-options"></p>
+<ol start="3">
+<li>选择合适安装目录，点击Install。</li>
+</ol>
+<p><img src="4.installation-folder.png" alt="4.installation-folder"></p>
+<ol start="4">
+<li>安装中…</li>
+</ol>
+<p><img src="5.installing.png" alt="5.installing"></p>
+<ol start="5">
+<li>安装完成</li>
+</ol>
+<p><img src="6.installation-success.png" alt="6.installation-success"></p>
+<h1 id="IDE界面介绍"><a href="#IDE界面介绍" class="headerlink" title="IDE界面介绍"></a>IDE界面介绍</h1><p><img src="7.arduino-ide.png" alt="7.arduino-ide"></p>
+<ol>
+<li><p>菜单栏</p>
+</li>
+<li><p>快捷按钮</p>
+</li>
+</ol>
+<p><img src="8.operating-buttons.png" alt="8.operating-buttons"></p>
+<ol start="3">
+<li><p>代码编辑区</p>
+</li>
+<li><p>状态区</p>
+</li>
+<li><p>输出信息窗口</p>
+</li>
+</ol>
+<h1 id="IDE-配置"><a href="#IDE-配置" class="headerlink" title="IDE 配置"></a>IDE 配置</h1><p><img src="9.preferences.png" alt="9.preferences"></p>
+<p><img src="add_bsp_icon.png" alt="add_bsp_icon"></p>
+<p>添加网址 </p>
+<p><a href="https://raw.githubusercontent.com/RAKwireless/RAKwireless-Arduino-BSP-Index/main/package_rakwireless_index.json">https://raw.githubusercontent.com/RAKwireless/RAKwireless-Arduino-BSP-Index/main/package_rakwireless_index.json</a></p>
+<p><img src="add-bsp-url.png" alt="add-bsp-url"></p>
+<p>添加开发板</p>
+<p><img src="11.boards-manager.png" alt="11.boards-manager"></p>
+<p><img src="wisblock_core-1631516043841.png" alt="wisblock_core"></p>
+<p><img src="13.rakwireless-nrf-modules.png" alt="13.rakwireless-nrf-modules"></p>
+<h1 id="RAK-示例"><a href="#RAK-示例" class="headerlink" title="RAK 示例"></a>RAK 示例</h1><p><img src="14.wisblock-modules.png" alt="14.wisblock-modules"></p>
+<h1 id="编译一个示例"><a href="#编译一个示例" class="headerlink" title="编译一个示例"></a>编译一个示例</h1><p><img src="15.select-lora-otaa-example.png" alt="15.select-lora-otaa-example"></p>
+<p><img src="16.install-library-step1.png" alt="16.install-library-step1"></p>
+<p>下载库文件</p>
+<p><img src="17.install-library-step2.png" alt="17.install-library-step2"></p>
+<p><img src="18.compile-example.png" alt="18.compile-example"></p>
+<p>第一个程序 </p>
+<p>使用wisblock 点亮LED</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LED_GREEN  35</span></span><br><span class="line"><span class="comment">// #define LED_BLUE  36</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">setup</span><span class="params">()</span> </span></span><br><span class="line"><span class="function"></span>&#123;    </span><br><span class="line">  pinMode(LED_GREEN,OUTPUT);</span><br><span class="line">  Serial.begin(<span class="number">115200</span>);</span><br><span class="line">  </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">loop</span><span class="params">()</span> </span></span><br><span class="line"><span class="function"></span>&#123; </span><br><span class="line">  digitalWrite(LED_GREEN,HIGH);</span><br><span class="line">  delay(<span class="number">1000</span>);</span><br><span class="line">  digitalWrite(LED_GREEN,LOW);</span><br><span class="line">  delay(<span class="number">1000</span>);</span><br><span class="line">    </span><br><span class="line">  Serial.println(<span class="string">&quot;RAKwireless: Make IOT Easy!&quot;</span>); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-
-
-
-
-
-
-<p>上传</p>
-<p>创建一个本地的版本库（其实也就是一个文件夹）</p>
-<p>打开文件夹 </p>
-<p>git bash here</p>
-<p>输入命令 git init </p>
-<p>生成  .git文件夹 它是Git用来跟踪和管理版本库的 默认隐藏 </p>
-<p>把项目粘贴到这个本地Git仓库里面</p>
-<p>git status 查看你当前的状态</p>
-<p>git add . 该目录下的所有文件添加到仓库</p>
-<p>git commit -m “shuoming”</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">ssh<span class="literal">-keygen</span> <span class="literal">-t</span> rsa <span class="literal">-C</span> <span class="string">&quot;youremail@example.com&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>用户下的.ssh目录里找到id_rsa和id_rsa.pub这两个文件  </p>
-<p>本地仓库进行关联</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">git remote add origin https://github.com/cx0620/cx0620.github.io.git</span><br></pre></td></tr></table></figure>
-
-
-
-<p>新创建的仓库里面的README文件不在本地仓库目录中，通过以下命令先将内容合并以下：</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">git pull -<span class="literal">-rebase</span> origin master</span><br></pre></td></tr></table></figure>
-
-<p>把本地库的所有内容推送到远程仓库 </p>
-<p>新建的远程仓库是空的，所以要加上-u这个参数</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">git push <span class="literal">-u</span> origin master</span><br></pre></td></tr></table></figure>
-
-
-
-<p>下次再从本地库上传内容的时候只需下面这样</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
-
-
-
-<p>下载</p>
-<p>Git Bash Here</p>
-<p>git clone  <a href="https://github.com/cx0620/cx0620.github.io.git">https://github.com/cx0620/cx0620.github.io.git</a></p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">连接Github与本地</span><br><span class="line">git config -<span class="literal">-global</span> user.name <span class="string">&quot;stephenchen0620&quot;</span></span><br><span class="line">git config -<span class="literal">-global</span> user.email <span class="string">&quot;408193714@qq.com&quot;</span></span><br><span class="line"></span><br><span class="line">ssh<span class="literal">-keygen</span> <span class="literal">-t</span> rsa <span class="literal">-C</span> <span class="string">&quot;408193714@qq.com&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cat</span> ~/.ssh/id_rsa.pub</span><br><span class="line"></span><br><span class="line">ssh <span class="literal">-T</span> git@github.com</span><br><span class="line">ssh <span class="literal">-T</span> git@gitee.com</span><br></pre></td></tr></table></figure>]]></content>
+]]></content>
+      <categories>
+        <category>WisBlock</category>
+      </categories>
       <tags>
-        <tag>git</tag>
+        <tag>arduino</tag>
       </tags>
   </entry>
   <entry>
