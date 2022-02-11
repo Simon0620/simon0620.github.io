@@ -68,128 +68,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>sensor</title>
-    <url>/posts/2Y8C5XG/</url>
-    <content><![CDATA[<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>RAK1901</th>
-<th>RAK12003</th>
-<th>RAK1902</th>
-<th>RAK12011</th>
-<th>RAK1906</th>
-<th>RAK1903</th>
-<th>RAK12010</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Description</td>
-<td>Temperature  and Humidity</td>
-<td>Infrared Temperature  Sensor</td>
-<td>Barometric  Pressure</td>
-<td>Barometer WT</td>
-<td>Environmental Sensor</td>
-<td>Ambient Light</td>
-<td>Ambient  Light</td>
-</tr>
-<tr>
-<td>accuracy</td>
-<td>±2.0  °C<br/>±2.0%</td>
-<td>±3° C</td>
-<td>±0.1  hPa<br/> ±1.5 °C</td>
-<td>±0.1 hPa</td>
-<td>±1.0<br/>±3 % r.H.<br/>±0.6 hPa</td>
-<td>0.20%</td>
-<td></td>
-</tr>
-<tr>
-<td>range</td>
-<td>-40  °C to +125 °C<br/>0 to 100%</td>
-<td>-20 °C to +85 °C</td>
-<td>260-1260  hPa<br/>      -40 °C to +85 °C</td>
-<td>260-1260 hPa</td>
-<td>-40  °C to +85 °C<br/> 0 to 100% <br/>300 to 1100 hPa</td>
-<td>0.01 to 83865 lux</td>
-<td>0 to 120,000 lux</td>
-</tr>
-<tr>
-<td>Size (mm)</td>
-<td>10 x 10</td>
-<td>10 x 10</td>
-<td>10 x 10</td>
-<td>10 x 10</td>
-<td>10 x 10</td>
-<td>10 x 10</td>
-<td>10 x 10</td>
-</tr>
-<tr>
-<td>Input voltage  (V)</td>
-<td>1.6~3.6</td>
-<td>3~3.6</td>
-<td>1.6~3.6</td>
-<td>1.7~3.6</td>
-<td>1.71~3.6</td>
-<td>1.6~3.6</td>
-<td>2.5~3.6</td>
-</tr>
-<tr>
-<td>Sleep current  (uA)</td>
-<td>0.3</td>
-<td>2.5</td>
-<td>1</td>
-<td>1</td>
-<td>0.15</td>
-<td>0.4</td>
-<td>0.5</td>
-</tr>
-<tr>
-<td>Measure  current (uA)</td>
-<td>430</td>
-<td>1400</td>
-<td>12</td>
-<td>15</td>
-<td>340  Humidity<br/>714 Pressure<br/>350 Temperature</td>
-<td>3.7</td>
-<td>45</td>
-</tr>
-<tr>
-<td>Communication  interface</td>
-<td>I2C</td>
-<td>I2C</td>
-<td>I2C</td>
-<td>I2C</td>
-<td>I2C</td>
-<td>I2C</td>
-<td>I2C</td>
-</tr>
-<tr>
-<td>connector pin</td>
-<td>24</td>
-<td>24</td>
-<td>24</td>
-<td>24</td>
-<td>24</td>
-<td>24</td>
-<td>24</td>
-</tr>
-<tr>
-<td>Chipset</td>
-<td>Sensirion SHTC3</td>
-<td>Melexis MLX90632SLD</td>
-<td>ST LPS22HB</td>
-<td>ST LPS33HW</td>
-<td>BOSCH BME680</td>
-<td>TI OPT3001DNPR</td>
-<td>Vishay VEML7700</td>
-</tr>
-</tbody></table>
-]]></content>
-      <categories>
-        <category>WisBlock</category>
-      </categories>
-  </entry>
-  <entry>
     <title>WisBlock</title>
     <url>/posts/PT276M/</url>
     <content><![CDATA[<p><img src="wisblock-click-code-connect.png"></p>
@@ -1872,884 +1750,6 @@
 <p><img src="image-20211216154342747.png" alt="image-20211216154342747" style="zoom:10%;" /> <img src="a7936242c3929d991055733818a6657.jpg" alt="a7936242c3929d991055733818a6657" style="zoom:10%;" /></p>
 <p><img src="image-20211216154541621.png" alt="image-20211216154541621" style="zoom:10%;" /> <img src="image-20211216154550299.png" alt="image-20211216154550299" style="zoom:10%;" /></p>
 <p><img src="image-20211216153347681.png" alt="image-20211216153347681"></p>
-]]></content>
-      <categories>
-        <category>硬件测试</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>单板测试规范</title>
-    <url>/posts/2C58KSR/</url>
-    <content><![CDATA[<h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><h2 id="编写目的"><a href="#编写目的" class="headerlink" title="编写目的"></a>编写目的</h2><p>研发设计产品的单板硬件测试指导。</p>
-<h1 id="测试准备"><a href="#测试准备" class="headerlink" title="测试准备"></a>测试准备</h1><h2 id="测试仪器"><a href="#测试仪器" class="headerlink" title="测试仪器"></a>测试仪器</h2><table>
-<thead>
-<tr>
-<th>名称</th>
-<th>型号</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>示波器</td>
-<td>Tektronix TDS7104</td>
-</tr>
-<tr>
-<td>无源电压探头</td>
-<td>Tektronix P6139A</td>
-</tr>
-<tr>
-<td>直流电源</td>
-<td>GWINSTEK GPS-2303C</td>
-</tr>
-<tr>
-<td>频谱分析仪</td>
-<td>HP8596E</td>
-</tr>
-<tr>
-<td>万用表</td>
-<td></td>
-</tr>
-<tr>
-<td>同轴电缆</td>
-<td></td>
-</tr>
-</tbody></table>
-<h2 id="测试条件"><a href="#测试条件" class="headerlink" title="测试条件"></a>测试条件</h2><ul>
-<li>测试仪器使用前需要校准</li>
-<li>单板/系统上电正常工作30分钟后测试</li>
-<li>测试仪器和测试单板需要共地</li>
-<li>信号质量测试点选择在信号接收端</li>
-</ul>
-<h1 id="测试项目"><a href="#测试项目" class="headerlink" title="测试项目"></a>测试项目</h1><h2 id="单板功耗（Power-consumption）"><a href="#单板功耗（Power-consumption）" class="headerlink" title="单板功耗（Power consumption）"></a>单板功耗（Power consumption）</h2><h3 id="适配器供电-针对网关产品"><a href="#适配器供电-针对网关产品" class="headerlink" title="适配器供电(针对网关产品)"></a>适配器供电(针对网关产品)</h3><ul>
-<li>使用12V适配器供电，LoRa，WiFi，4G，以太网等业务正常运行，</li>
-<li>禁用wifi功能，4g、以太网功能跑起来，记录LoRa 接收和发送时的最大电流</li>
-<li>启用wifi功能，4g、以太网功能跑起来，记录LoRa 接收和发送时的最大电流</li>
-</ul>
-<h3 id="POE设备供电-针对网关产品"><a href="#POE设备供电-针对网关产品" class="headerlink" title="POE设备供电(针对网关产品)"></a>POE设备供电(针对网关产品)</h3><ul>
-<li>使用12V适配器供电，LoRa，WiFi，4G，以太网等业务正常运行，</li>
-<li>禁用wifi功能，4g、以太网功能跑起来，分别测试LoRa 接收和发送时的最大电流</li>
-<li>启用wifi功能，4g、以太网功能跑起来，分别测试LoRa 接收和发送时的最大电流</li>
-</ul>
-<h2 id="电源完整性（PI）"><a href="#电源完整性（PI）" class="headerlink" title="电源完整性（PI）"></a>电源完整性（PI）</h2><h3 id="电压精度（voltage-accuracy）"><a href="#电压精度（voltage-accuracy）" class="headerlink" title="电压精度（voltage accuracy）"></a>电压精度（voltage accuracy）</h3><h4 id="测试步骤"><a href="#测试步骤" class="headerlink" title="测试步骤"></a>测试步骤</h4><ul>
-<li>使用电压表（或万用表）的黑表笔连接测试电源的地</li>
-<li>使用电压表（或万用表）的红表笔连接被测试电压</li>
-<li>读取电压表的数值</li>
-</ul>
-<h4 id="测试点"><a href="#测试点" class="headerlink" title="测试点"></a>测试点</h4><ul>
-<li>电源模块(DC/DC,LDO等)的电压输出管脚或就近的电容</li>
-<li>芯片的电源管脚或就近的电容</li>
-</ul>
-<h4 id="测试标准"><a href="#测试标准" class="headerlink" title="测试标准"></a>测试标准</h4><p>​    一般在标称电压值5%范围内，或者根据芯片的Datasheet要求来确定。</p>
-<h4 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h4><ul>
-<li>首要推荐使用精密的电压表测试；</li>
-<li>次要选择用数字万用表，确保电池电量充足，否则测量误差较大；</li>
-<li>不推荐使用示波器测量电压精度，偏差较大；万一使用，则需设置为直流并取均方根值（RMS）。</li>
-</ul>
-<h3 id="纹波噪声（Ripple-amp-Noise）"><a href="#纹波噪声（Ripple-amp-Noise）" class="headerlink" title="纹波噪声（Ripple &amp; Noise）"></a>纹波噪声（Ripple &amp; Noise）</h3><h4 id="测试步骤-1"><a href="#测试步骤-1" class="headerlink" title="测试步骤"></a>测试步骤</h4><ul>
-<li>设置示波器AC耦合，同轴电缆一端接示波器，另外一端焊接到被测试电压的电容两端。</li>
-<li>测试纹波：设置示波器带宽20MHz，调节水平刻度为us级/格，示波器至少捕捉4个周期以上，读取示波器的峰峰值，周期/频率。</li>
-<li>测试噪声：设置示波器带宽为全带宽，波形设置累计模式，调节水平刻度为ms级/格，读取示波器的峰峰值。</li>
-<li>分别测试单板在空载和满载的情况。</li>
-</ul>
-<h4 id="测试点-1"><a href="#测试点-1" class="headerlink" title="测试点"></a>测试点</h4><p>​    芯片的电源管脚附近的电容</p>
-<h4 id="测试标准-1"><a href="#测试标准-1" class="headerlink" title="测试标准"></a>测试标准</h4><ul>
-<li>纹波：2%，或者依据datasheet要求；</li>
-<li>噪声：5%，或者依据datasheet要求。</li>
-</ul>
-<h4 id="注意事项-1"><a href="#注意事项-1" class="headerlink" title="注意事项"></a>注意事项</h4><ul>
-<li>无同轴电缆时，尽量使用自制的电源测试探头</li>
-<li>尽量使用小衰减比的探头，探头的接地线尽量短</li>
-</ul>
-<h3 id="电源上下电波形（Power-on-and-off-waveforms）"><a href="#电源上下电波形（Power-on-and-off-waveforms）" class="headerlink" title="电源上下电波形（Power on and off waveforms）"></a>电源上下电波形（Power on and off waveforms）</h3><h4 id="测试步骤-2"><a href="#测试步骤-2" class="headerlink" title="测试步骤"></a>测试步骤</h4><ul>
-<li> 设置示波器触发方式为边沿触发。</li>
-<li>上下电，查看波形是否单调，并读取过冲值。</li>
-</ul>
-<h4 id="测试标准-2"><a href="#测试标准-2" class="headerlink" title="测试标准"></a>测试标准</h4><p>波形单调，无平台、跌坑。过冲值一般不超过5%，或者依据datasheet要求。</p>
-<h4 id="注意事项-2"><a href="#注意事项-2" class="headerlink" title="注意事项"></a>注意事项</h4><ul>
-<li>需要遍历以下几种情况</li>
-<li>12V适配器拔插</li>
-<li>单板接口拔插</li>
-<li>POE上下电情况</li>
-</ul>
-<h3 id="电源上下电时序（Sequence）"><a href="#电源上下电时序（Sequence）" class="headerlink" title="电源上下电时序（Sequence）"></a>电源上下电时序（Sequence）</h3><h4 id="测试步骤-3"><a href="#测试步骤-3" class="headerlink" title="测试步骤"></a>测试步骤</h4><ul>
-<li>将探头连接主板待测电源的电容处。</li>
-<li>示波器设置上升沿触发，将主板上电开机，得到上电时序。</li>
-<li>示波器设置下降沿触发，将主板下电关机，得到上电时序。</li>
-</ul>
-<h4 id="测试标准-3"><a href="#测试标准-3" class="headerlink" title="测试标准"></a>测试标准</h4><p>时序标准参考datasheet要求。</p>
-<h2 id="信号完整性（SI）"><a href="#信号完整性（SI）" class="headerlink" title="信号完整性（SI）"></a>信号完整性（SI）</h2><h3 id="时钟信号（Clock）"><a href="#时钟信号（Clock）" class="headerlink" title="时钟信号（Clock）"></a>时钟信号（Clock）</h3><h4 id="测试步骤-4"><a href="#测试步骤-4" class="headerlink" title="测试步骤"></a>测试步骤</h4><ul>
-<li> 尽量选择靠近接收端，芯片时钟输入端的引脚连接探头。</li>
-<li> 使用示波器测量表3的相关参数</li>
-<li>使用频率计测试接收端时钟的频率，并核算ppm。</li>
-</ul>
-<h4 id="测试标准-4"><a href="#测试标准-4" class="headerlink" title="测试标准"></a>测试标准</h4><p>时钟信号参考datasheet要求。</p>
-<table>
-<thead>
-<tr>
-<th>Symbol</th>
-<th>Parameter</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Vih</td>
-<td>高电平幅值</td>
-</tr>
-<tr>
-<td>Vil</td>
-<td>低电平幅值</td>
-</tr>
-<tr>
-<td>Tr</td>
-<td>上升时间</td>
-</tr>
-<tr>
-<td>Tf</td>
-<td>下降时间</td>
-</tr>
-<tr>
-<td>Freq.</td>
-<td>频率</td>
-</tr>
-<tr>
-<td>Duty cycle</td>
-<td>占空比</td>
-</tr>
-<tr>
-<td>tHIGH</td>
-<td>正脉冲宽度</td>
-</tr>
-<tr>
-<td>tLOW</td>
-<td>负脉冲宽度</td>
-</tr>
-<tr>
-<td>Period</td>
-<td>周期</td>
-</tr>
-<tr>
-<td>Jitter</td>
-<td>抖动</td>
-</tr>
-<tr>
-<td>Overshoot</td>
-<td>过冲</td>
-</tr>
-<tr>
-<td>Undershoot</td>
-<td>下冲</td>
-</tr>
-</tbody></table>
-<h4 id="注意事项-3"><a href="#注意事项-3" class="headerlink" title="注意事项"></a>注意事项</h4><ul>
-<li>注意观察时钟信号边沿是否单调，波形是否存在较大毛刺，回勾</li>
-<li>占空比满足40%-60%</li>
-</ul>
-<h3 id="复位信号（Reset）"><a href="#复位信号（Reset）" class="headerlink" title="复位信号（Reset）"></a>复位信号（Reset）</h3><h4 id="测试步骤-5"><a href="#测试步骤-5" class="headerlink" title="测试步骤"></a>测试步骤</h4><ul>
-<li> 尽量选择靠近芯片接收端的阻容或者过孔连接探头。</li>
-<li>单板上电，观察复位信号的波形</li>
-</ul>
-<h4 id="测试标准-5"><a href="#测试标准-5" class="headerlink" title="测试标准"></a>测试标准</h4><p>复位信号参考datasheet要求。</p>
-<h4 id="注意事项-4"><a href="#注意事项-4" class="headerlink" title="注意事项"></a>注意事项</h4><ul>
-<li> 除了看水平时间，还需要展开看边沿单调性等信号质量；</li>
-<li>对低电平复位有效的信号，取下降沿触发；</li>
-<li>对于上电复位信号，取最晚上电的电源信号作参考，与复位信号一起测试。</li>
-<li>复位信号有效的脉宽长度需要满足Datasheet的要求。</li>
-</ul>
-<h3 id="I2C"><a href="#I2C" class="headerlink" title="I2C"></a>I2C</h3><h4 id="测试步骤-6"><a href="#测试步骤-6" class="headerlink" title="测试步骤"></a>测试步骤</h4><ul>
-<li>分别测试SCL和SDA信号高低电平，确认是否存在过冲，毛刺。 </li>
-<li>用示波器测量I2C总线的各项参数，并记录。</li>
-</ul>
-<h4 id="测试标准-6"><a href="#测试标准-6" class="headerlink" title="测试标准"></a>测试标准</h4><p>I2C信号标准参考datasheet要求。</p>
-<p><img src="image-20220207173223349.png" alt="image-20220207173223349"></p>
-<p><img src="clip_image002.gif" alt="img"></p>
-<table>
-<thead>
-  <tr>
-    <th rowspan="2">PARAMETER</th>
-    <th rowspan="2">SYMBOL</th>
-    <th colspan="2">STANDARD-MODE</th>
-    <th colspan="2">FAST-MODE</th>
-    <th colspan="2">Hs-MODE</th>
-    <th rowspan="2">UNIT</th>
-  </tr>
-  <tr>
-    <th>MIN.</th>
-    <th>MAX.</th>
-    <th>MIN.</th>
-    <th>MAX.</th>
-    <th>MIN.</th>
-    <th>MAX.</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>LOWlevel input voltage</td>
-    <td>VIL</td>
-    <td>-0.5</td>
-    <td>0.3VDD</td>
-    <td>-0.5</td>
-    <td>0.3VDD</td>
-    <td>-0.5</td>
-    <td>0.3VDD</td>
-    <td>V</td>
-  </tr>
-  <tr>
-    <td>HIGHlevel input voltage</td>
-    <td>VIH</td>
-    <td>0.7VDD</td>
-    <td>VDD +0.5</td>
-    <td>0.7VDD</td>
-    <td>VDD +0.5</td>
-    <td>0.7VDD</td>
-    <td>VDD +0.5</td>
-    <td>V</td>
-  </tr>
-  <tr>
-    <td>SCLclock frequency</td>
-    <td>fSCL</td>
-    <td>0</td>
-    <td>100</td>
-    <td>0</td>
-    <td>400</td>
-    <td>0</td>
-    <td>3400</td>
-    <td>kHz</td>
-  </tr>
-  <tr>
-    <td>LOWperiod of the SCL clock</td>
-    <td>tLOW</td>
-    <td>4.7</td>
-    <td>–</td>
-    <td>1.3</td>
-    <td>–</td>
-    <td>0.16</td>
-    <td>–</td>
-    <td>ms</td>
-  </tr>
-  <tr>
-    <td>HIGHperiod of the SCL clock</td>
-    <td>tHIGH</td>
-    <td>4</td>
-    <td>–</td>
-    <td>0.6</td>
-    <td>–</td>
-    <td>0.06</td>
-    <td>–</td>
-    <td>ms</td>
-  </tr>
-  <tr>
-    <td>Risetime of both SDA and SCL signals</td>
-    <td>tr</td>
-    <td>–</td>
-    <td>1000</td>
-    <td>20</td>
-    <td>300</td>
-    <td>10</td>
-    <td>40</td>
-    <td>ns</td>
-  </tr>
-  <tr>
-    <td>Falltime of both SDA and SCL signals</td>
-    <td>tf</td>
-    <td>–</td>
-    <td>300</td>
-    <td>20</td>
-    <td>300</td>
-    <td>10</td>
-    <td>40</td>
-    <td>ns</td>
-  </tr>
-  <tr>
-    <td>Holdtime (repeated) START condition</td>
-    <td>tHD;STA</td>
-    <td>4</td>
-    <td>–</td>
-    <td>0.6</td>
-    <td>-</td>
-    <td>0.16</td>
-    <td>-</td>
-    <td>ms</td>
-  </tr>
-  <tr>
-    <td>Set-uptime for a repeated START condition</td>
-    <td>tSU;STA</td>
-    <td>4.7</td>
-    <td>–</td>
-    <td>0.6</td>
-    <td>–</td>
-    <td>0.16</td>
-    <td>–</td>
-    <td>ms</td>
-  </tr>
-  <tr>
-    <td>Datahold time</td>
-    <td>tHD;DAT</td>
-    <td>0</td>
-    <td>3.45</td>
-    <td>0</td>
-    <td>0.9</td>
-    <td>0</td>
-    <td>0.07</td>
-    <td>ms</td>
-  </tr>
-  <tr>
-    <td>Dataset-up time</td>
-    <td>tSU;DAT</td>
-    <td>250</td>
-    <td>-</td>
-    <td>100</td>
-    <td>–</td>
-    <td>10</td>
-    <td>–</td>
-    <td>ns</td>
-  </tr>
-  <tr>
-    <td>Set-uptime for STOP condition</td>
-    <td>tSU;STO</td>
-    <td>4</td>
-    <td>–</td>
-    <td>0.6</td>
-    <td>–</td>
-    <td>0.16</td>
-    <td>–</td>
-    <td>ms</td>
-  </tr>
-  <tr>
-    <td>Busfree time between a STOP and START condition</td>
-    <td>tBUF</td>
-    <td>4.7</td>
-    <td>–</td>
-    <td>1.3</td>
-    <td>–</td>
-    <td>0.1</td>
-    <td>–</td>
-    <td>ms</td>
-  </tr>
-</tbody>
-</table>
-
-<h3 id="SPI"><a href="#SPI" class="headerlink" title="SPI"></a>SPI</h3><h4 id="测试步骤-7"><a href="#测试步骤-7" class="headerlink" title="测试步骤"></a>测试步骤</h4><ul>
-<li>分别测试CLK,CS,SDI,SDO信号的高低电平，确认是否存在过冲，毛刺。</li>
-<li>量测SPI总线的各项参数，并记录。</li>
-</ul>
-<p><img src="clip_image002.jpg" alt="img"></p>
-<table>
-<thead>
-<tr>
-<th>符号</th>
-<th>名称</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>VIL</td>
-<td>输入信号的低电平范围</td>
-</tr>
-<tr>
-<td>VIH</td>
-<td>输入信号的高电平范围</td>
-</tr>
-<tr>
-<td>Freq</td>
-<td>时钟频率</td>
-</tr>
-<tr>
-<td>tR</td>
-<td>时钟上升时间</td>
-</tr>
-<tr>
-<td>tF</td>
-<td>时钟下降时间</td>
-</tr>
-<tr>
-<td>tLOW</td>
-<td>时钟低电平时间</td>
-</tr>
-<tr>
-<td>tHIGH</td>
-<td>时钟高电平时间</td>
-</tr>
-<tr>
-<td>tSU.CS</td>
-<td>片选信号建立时间</td>
-</tr>
-<tr>
-<td>tSU.SDI</td>
-<td>数据输入信号建立时间</td>
-</tr>
-<tr>
-<td>tHD.CS</td>
-<td>片选信号保持时间</td>
-</tr>
-<tr>
-<td>tHD.SDI</td>
-<td>数据输入信号保持时间</td>
-</tr>
-<tr>
-<td>tHD.SDO</td>
-<td>数据输出信号保持时间</td>
-</tr>
-<tr>
-<td>tV.SDO</td>
-<td>数据输出有效时间最大时间</td>
-</tr>
-</tbody></table>
-<h3 id="UART"><a href="#UART" class="headerlink" title="UART"></a>UART</h3><h4 id="测试步骤-8"><a href="#测试步骤-8" class="headerlink" title="测试步骤"></a>测试步骤</h4><ul>
-<li>分别测试Txd Rxd信号的高低电平，确认是否存在过冲，毛刺。</li>
-<li>测量UART总线的各项参数，并记录。</li>
-<li>用光标卡UART的波特率</li>
-</ul>
-<h4 id="测试标准-7"><a href="#测试标准-7" class="headerlink" title="测试标准"></a>测试标准</h4><p>参考芯片datasheet的要求</p>
-<h3 id="SD卡"><a href="#SD卡" class="headerlink" title="SD卡"></a>SD卡</h3><table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Symbol</th>
-<th>Min</th>
-<th>Max</th>
-<th>Unit</th>
-<th>Remark</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Supply  Voltage</td>
-<td>VDD</td>
-<td>2.7</td>
-<td>3.6</td>
-<td>V</td>
-<td></td>
-</tr>
-<tr>
-<td>Output  High Voltage</td>
-<td>VOH</td>
-<td>0.75*VDD</td>
-<td></td>
-<td>V</td>
-<td>IOH=-2mA VDD min</td>
-</tr>
-<tr>
-<td>Output  Low Voltage</td>
-<td>VOL</td>
-<td></td>
-<td>0.125*VDD</td>
-<td>V</td>
-<td>IOL = 2mA VDD min</td>
-</tr>
-<tr>
-<td>Input  High Voltage</td>
-<td>VIH</td>
-<td>0.625*VDD</td>
-<td>VDD+0.3</td>
-<td>V</td>
-<td></td>
-</tr>
-<tr>
-<td>Input  Low Voltage</td>
-<td>VIL</td>
-<td>VSS-0.3</td>
-<td>0.25  *VDD</td>
-<td>V</td>
-<td></td>
-</tr>
-<tr>
-<td>Power  Up Time</td>
-<td></td>
-<td></td>
-<td>250</td>
-<td>ms</td>
-<td>From  0V to VDD min</td>
-</tr>
-<tr>
-<td>Supply ramp up time</td>
-<td></td>
-<td>1</td>
-<td></td>
-<td>ms</td>
-<td>or  &gt;74 sd clocks</td>
-</tr>
-</tbody></table>
-<p><img src="image-20220207173956552.png" alt="image-20220207173956552"></p>
-<h4 id="下电时序"><a href="#下电时序" class="headerlink" title="下电时序"></a>下电时序</h4><p>下电时，在 1mS 内电源电压必须下降到小于500mV。</p>
-<h4 id="总线时序"><a href="#总线时序" class="headerlink" title="总线时序"></a>总线时序</h4><p><strong>普通模式</strong></p>
-<p><img src="image-20220207174020152.png" alt="image-20220207174020152"></p>
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Symbol</th>
-<th>Min.</th>
-<th>Max.</th>
-<th>Unit</th>
-<th>Remark</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Clock  CLK (All values are referred to min (VIH) and max (VIL),</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Clock frequency Data Transfer Mode</td>
-<td>fPP</td>
-<td>0</td>
-<td>25</td>
-<td>MHz</td>
-<td>CCARD ≤ 10 pF (1  card)</td>
-</tr>
-<tr>
-<td>Clock frequency Identification Mode</td>
-<td>fOD</td>
-<td>0(1)/100</td>
-<td>400</td>
-<td>kHz</td>
-<td>CCARD ≤ 10 pF (1 card)</td>
-</tr>
-<tr>
-<td>Clock low time</td>
-<td>tWL</td>
-<td>10</td>
-<td></td>
-<td>ns</td>
-<td>CCARD ≤ 10 pF (1  card)</td>
-</tr>
-<tr>
-<td>Clock high time</td>
-<td>tWH</td>
-<td>10</td>
-<td></td>
-<td>ns</td>
-<td>CCARD ≤ 10 pF (1  card)</td>
-</tr>
-<tr>
-<td>Clock rise time</td>
-<td>tTLH</td>
-<td></td>
-<td>10</td>
-<td>ns</td>
-<td>CCARD ≤ 10 pF (1  card)</td>
-</tr>
-<tr>
-<td>Clock fall time</td>
-<td>tTHL</td>
-<td></td>
-<td>10</td>
-<td>ns</td>
-<td>CCARD ≤ 10 pF (1  card)</td>
-</tr>
-<tr>
-<td>Inputs CMD, DAT (referenced to CLK)</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Input set-up time</td>
-<td>tISU</td>
-<td>5</td>
-<td></td>
-<td>ns</td>
-<td>CCARD ≤ 10 pF (1  card)</td>
-</tr>
-<tr>
-<td>Input hold time</td>
-<td>tIH</td>
-<td>5</td>
-<td></td>
-<td>ns</td>
-<td>CCARD ≤ 10 pF (1  card)</td>
-</tr>
-<tr>
-<td>Outputs CMD, DAT (referenced to CLK)</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Output Delay time during Data Transfer  Mode</td>
-<td>tODLY</td>
-<td>0</td>
-<td>14</td>
-<td>ns</td>
-<td>CL ≤ 40 pF (1 card)</td>
-</tr>
-<tr>
-<td>Output Delay time during Identification  Mode</td>
-<td>tODLY</td>
-<td>0</td>
-<td>50</td>
-<td>ns</td>
-<td>CL ≤ 40 pF (1 card)</td>
-</tr>
-</tbody></table>
-<p><strong>高速模式</strong></p>
-<p><img src="image-20220207174056401.png" alt="image-20220207174056401"></p>
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Symbol</th>
-<th>Min.</th>
-<th>Max.</th>
-<th>Unit</th>
-<th>Remark</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Clock CLK (All values are referred to min  (VIH)  and max (VIL),</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Clock frequency Data Transfer Mode</td>
-<td>fPP</td>
-<td>0</td>
-<td>50</td>
-<td>MHz</td>
-<td>CCARD ≤ 10 pF (1 card)</td>
-</tr>
-<tr>
-<td>Clock low time</td>
-<td>tWL</td>
-<td>7</td>
-<td></td>
-<td>ns</td>
-<td>CCARD ≤ 10 pF (1 card)</td>
-</tr>
-<tr>
-<td>Clock high time</td>
-<td>tWH</td>
-<td>7</td>
-<td></td>
-<td>ns</td>
-<td>CCARD ≤ 10 pF (1 card)</td>
-</tr>
-<tr>
-<td>Clock rise time</td>
-<td>tTLH</td>
-<td></td>
-<td>3</td>
-<td>ns</td>
-<td>CCARD ≤ 10 pF (1 card)</td>
-</tr>
-<tr>
-<td>Clock fall time</td>
-<td>tTHL</td>
-<td></td>
-<td>3</td>
-<td>ns</td>
-<td>CCARD ≤ 10 pF (1 card)</td>
-</tr>
-<tr>
-<td>Inputs CMD, DAT (referenced to CLK)</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Input set-up time</td>
-<td>tISU</td>
-<td>6</td>
-<td></td>
-<td>ns</td>
-<td>CCARD ≤ 10 pF (1 card)</td>
-</tr>
-<tr>
-<td>Input hold time</td>
-<td>tIH</td>
-<td>2</td>
-<td></td>
-<td>ns</td>
-<td>CCARD ≤ 10 pF (1 card)</td>
-</tr>
-<tr>
-<td>Outputs CMD, DAT (referenced to CLK)</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Output Delay time during Data Transfer  Mode</td>
-<td>tODLY</td>
-<td></td>
-<td>14</td>
-<td>ns</td>
-<td>CL ≤ 40 pF (1 card)</td>
-</tr>
-<tr>
-<td>Output Hold time</td>
-<td>tOH</td>
-<td>2.5</td>
-<td></td>
-<td>ns</td>
-<td>CL ³  15pF (1 card)</td>
-</tr>
-<tr>
-<td>Total System capacitance for each line1</td>
-<td>CL</td>
-<td></td>
-<td>40</td>
-<td>pF</td>
-<td>1 card</td>
-</tr>
-</tbody></table>
-<h3 id="SIM卡"><a href="#SIM卡" class="headerlink" title="SIM卡"></a>SIM卡</h3><h4 id="SIM电源"><a href="#SIM电源" class="headerlink" title="SIM电源"></a>SIM电源</h4><table>
-<thead>
-  <tr>
-    <th>Symbol</th>
-    <th>Conditions</th>
-    <th>Minimum</th>
-    <th>Maximum</th>
-    <th>Unit</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td rowspan="3">UCC</td>
-    <td>Class A</td>
-    <td>4.5</td>
-    <td>5.5</td>
-    <td rowspan="3">V</td>
-  </tr>
-  <tr>
-    <td>Class B</td>
-    <td>2.7</td>
-    <td>3.3</td>
-  </tr>
-  <tr>
-    <td>Class C</td>
-    <td>1.62</td>
-    <td>1.98</td>
-  </tr>
-</tbody>
-</table>
-
-
-
-<h4 id="RST"><a href="#RST" class="headerlink" title="RST"></a>RST</h4><table>
-<thead>
-<tr>
-<th>Symbol</th>
-<th>Conditions</th>
-<th>Minimum</th>
-<th>Maximum</th>
-<th>Unit</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><em>U</em>IH</td>
-<td></td>
-<td>0,8  <em>U</em>CC</td>
-<td><em>U</em>CC</td>
-<td>V</td>
-</tr>
-<tr>
-<td><em>U</em>IL</td>
-<td></td>
-<td>0</td>
-<td>0,12  <em>U</em>CC</td>
-<td>V</td>
-</tr>
-<tr>
-<td><em>t</em>R <em>t</em>F</td>
-<td><em>C</em>IN = 30 pF</td>
-<td></td>
-<td>1</td>
-<td>µs</td>
-</tr>
-</tbody></table>
-<blockquote>
-<p>The  voltage shall remain between – 0,3 V and UCC + 0,3 V.</p>
-</blockquote>
-<h4 id="CLK"><a href="#CLK" class="headerlink" title="CLK"></a>CLK</h4><table>
-<thead>
-<tr>
-<th>Symbol</th>
-<th>Conditions</th>
-<th>Minimum</th>
-<th>Maximum</th>
-<th>Unit</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><em>U</em>IH</td>
-<td></td>
-<td>0,7 <em>U</em>CC</td>
-<td><em>U</em>CC</td>
-<td>V</td>
-</tr>
-<tr>
-<td><em>U</em>IL</td>
-<td>Class A and class B</td>
-<td>0</td>
-<td>0,5</td>
-<td>V</td>
-</tr>
-<tr>
-<td>Class C</td>
-<td>0</td>
-<td>0,2 <em>U</em>CC</td>
-<td>V</td>
-<td></td>
-</tr>
-<tr>
-<td><em>t</em>R <em>t</em>F</td>
-<td><em>C</em>IN = 30 pF</td>
-<td></td>
-<td>9 % of cycle</td>
-<td></td>
-</tr>
-</tbody></table>
-<blockquote>
-<p>The  voltage shall remain between – 0,3 V and <em>U</em>CC + 0,3 V.</p>
-</blockquote>
-<h4 id="IO"><a href="#IO" class="headerlink" title="IO"></a>IO</h4><table>
-<thead>
-<tr>
-<th>Symbol</th>
-<th>Conditions</th>
-<th>Minimum</th>
-<th>Maximum</th>
-<th>Unit</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><em>U</em>IH</td>
-<td></td>
-<td>0,7  <em>U</em>CC</td>
-<td><em>U</em>CC</td>
-<td>V</td>
-</tr>
-<tr>
-<td><em>U</em>IL</td>
-<td></td>
-<td>0</td>
-<td>0,15  <em>U</em>CC</td>
-<td>V</td>
-</tr>
-<tr>
-<td><em>t</em>R <em>t</em>F</td>
-<td><em>C</em>IN = 30 pF; <em>C</em>OUT = 30 pF</td>
-<td></td>
-<td>1</td>
-<td>µs</td>
-</tr>
-</tbody></table>
-<blockquote>
-<p>The  voltage shall remain between – 0,3 V and <em>U</em>CC + 0,3 V.</p>
-</blockquote>
-<h4 id="上电时序-Tb-Tc"><a href="#上电时序-Tb-Tc" class="headerlink" title="上电时序 (Tb,Tc)"></a>上电时序 (Tb,Tc)</h4><p><img src="image-20220207174208174.png" alt="image-20220207174208174"></p>
-<h4 id="下电时序-1"><a href="#下电时序-1" class="headerlink" title="下电时序"></a>下电时序</h4><p><img src="image-20220207174217484.png" alt="image-20220207174217484"></p>
 ]]></content>
       <categories>
         <category>硬件测试</category>
@@ -5145,6 +4145,884 @@
       <categories>
         <category>WisGate</category>
         <category>RAK7268</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>单板测试规范</title>
+    <url>/posts/2C58KSR/</url>
+    <content><![CDATA[<h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><h2 id="编写目的"><a href="#编写目的" class="headerlink" title="编写目的"></a>编写目的</h2><p>研发设计产品的单板硬件测试指导。</p>
+<h1 id="测试准备"><a href="#测试准备" class="headerlink" title="测试准备"></a>测试准备</h1><h2 id="测试仪器"><a href="#测试仪器" class="headerlink" title="测试仪器"></a>测试仪器</h2><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>型号</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>示波器</td>
+<td>Tektronix TDS7104</td>
+</tr>
+<tr>
+<td>无源电压探头</td>
+<td>Tektronix P6139A</td>
+</tr>
+<tr>
+<td>直流电源</td>
+<td>GWINSTEK GPS-2303C</td>
+</tr>
+<tr>
+<td>频谱分析仪</td>
+<td>HP8596E</td>
+</tr>
+<tr>
+<td>万用表</td>
+<td></td>
+</tr>
+<tr>
+<td>同轴电缆</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="测试条件"><a href="#测试条件" class="headerlink" title="测试条件"></a>测试条件</h2><ul>
+<li>测试仪器使用前需要校准</li>
+<li>单板/系统上电正常工作30分钟后测试</li>
+<li>测试仪器和测试单板需要共地</li>
+<li>信号质量测试点选择在信号接收端</li>
+</ul>
+<h1 id="测试项目"><a href="#测试项目" class="headerlink" title="测试项目"></a>测试项目</h1><h2 id="单板功耗（Power-consumption）"><a href="#单板功耗（Power-consumption）" class="headerlink" title="单板功耗（Power consumption）"></a>单板功耗（Power consumption）</h2><h3 id="适配器供电-针对网关产品"><a href="#适配器供电-针对网关产品" class="headerlink" title="适配器供电(针对网关产品)"></a>适配器供电(针对网关产品)</h3><ul>
+<li>使用12V适配器供电，LoRa，WiFi，4G，以太网等业务正常运行，</li>
+<li>禁用wifi功能，4g、以太网功能跑起来，记录LoRa 接收和发送时的最大电流</li>
+<li>启用wifi功能，4g、以太网功能跑起来，记录LoRa 接收和发送时的最大电流</li>
+</ul>
+<h3 id="POE设备供电-针对网关产品"><a href="#POE设备供电-针对网关产品" class="headerlink" title="POE设备供电(针对网关产品)"></a>POE设备供电(针对网关产品)</h3><ul>
+<li>使用12V适配器供电，LoRa，WiFi，4G，以太网等业务正常运行，</li>
+<li>禁用wifi功能，4g、以太网功能跑起来，分别测试LoRa 接收和发送时的最大电流</li>
+<li>启用wifi功能，4g、以太网功能跑起来，分别测试LoRa 接收和发送时的最大电流</li>
+</ul>
+<h2 id="电源完整性（PI）"><a href="#电源完整性（PI）" class="headerlink" title="电源完整性（PI）"></a>电源完整性（PI）</h2><h3 id="电压精度（voltage-accuracy）"><a href="#电压精度（voltage-accuracy）" class="headerlink" title="电压精度（voltage accuracy）"></a>电压精度（voltage accuracy）</h3><h4 id="测试步骤"><a href="#测试步骤" class="headerlink" title="测试步骤"></a>测试步骤</h4><ul>
+<li>使用电压表（或万用表）的黑表笔连接测试电源的地</li>
+<li>使用电压表（或万用表）的红表笔连接被测试电压</li>
+<li>读取电压表的数值</li>
+</ul>
+<h4 id="测试点"><a href="#测试点" class="headerlink" title="测试点"></a>测试点</h4><ul>
+<li>电源模块(DC/DC,LDO等)的电压输出管脚或就近的电容</li>
+<li>芯片的电源管脚或就近的电容</li>
+</ul>
+<h4 id="测试标准"><a href="#测试标准" class="headerlink" title="测试标准"></a>测试标准</h4><p>​    一般在标称电压值5%范围内，或者根据芯片的Datasheet要求来确定。</p>
+<h4 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h4><ul>
+<li>首要推荐使用精密的电压表测试；</li>
+<li>次要选择用数字万用表，确保电池电量充足，否则测量误差较大；</li>
+<li>不推荐使用示波器测量电压精度，偏差较大；万一使用，则需设置为直流并取均方根值（RMS）。</li>
+</ul>
+<h3 id="纹波噪声（Ripple-amp-Noise）"><a href="#纹波噪声（Ripple-amp-Noise）" class="headerlink" title="纹波噪声（Ripple &amp; Noise）"></a>纹波噪声（Ripple &amp; Noise）</h3><h4 id="测试步骤-1"><a href="#测试步骤-1" class="headerlink" title="测试步骤"></a>测试步骤</h4><ul>
+<li>设置示波器AC耦合，同轴电缆一端接示波器，另外一端焊接到被测试电压的电容两端。</li>
+<li>测试纹波：设置示波器带宽20MHz，调节水平刻度为us级/格，示波器至少捕捉4个周期以上，读取示波器的峰峰值，周期/频率。</li>
+<li>测试噪声：设置示波器带宽为全带宽，波形设置累计模式，调节水平刻度为ms级/格，读取示波器的峰峰值。</li>
+<li>分别测试单板在空载和满载的情况。</li>
+</ul>
+<h4 id="测试点-1"><a href="#测试点-1" class="headerlink" title="测试点"></a>测试点</h4><p>​    芯片的电源管脚附近的电容</p>
+<h4 id="测试标准-1"><a href="#测试标准-1" class="headerlink" title="测试标准"></a>测试标准</h4><ul>
+<li>纹波：2%，或者依据datasheet要求；</li>
+<li>噪声：5%，或者依据datasheet要求。</li>
+</ul>
+<h4 id="注意事项-1"><a href="#注意事项-1" class="headerlink" title="注意事项"></a>注意事项</h4><ul>
+<li>无同轴电缆时，尽量使用自制的电源测试探头</li>
+<li>尽量使用小衰减比的探头，探头的接地线尽量短</li>
+</ul>
+<h3 id="电源上下电波形（Power-on-and-off-waveforms）"><a href="#电源上下电波形（Power-on-and-off-waveforms）" class="headerlink" title="电源上下电波形（Power on and off waveforms）"></a>电源上下电波形（Power on and off waveforms）</h3><h4 id="测试步骤-2"><a href="#测试步骤-2" class="headerlink" title="测试步骤"></a>测试步骤</h4><ul>
+<li> 设置示波器触发方式为边沿触发。</li>
+<li>上下电，查看波形是否单调，并读取过冲值。</li>
+</ul>
+<h4 id="测试标准-2"><a href="#测试标准-2" class="headerlink" title="测试标准"></a>测试标准</h4><p>波形单调，无平台、跌坑。过冲值一般不超过5%，或者依据datasheet要求。</p>
+<h4 id="注意事项-2"><a href="#注意事项-2" class="headerlink" title="注意事项"></a>注意事项</h4><ul>
+<li>需要遍历以下几种情况</li>
+<li>12V适配器拔插</li>
+<li>单板接口拔插</li>
+<li>POE上下电情况</li>
+</ul>
+<h3 id="电源上下电时序（Sequence）"><a href="#电源上下电时序（Sequence）" class="headerlink" title="电源上下电时序（Sequence）"></a>电源上下电时序（Sequence）</h3><h4 id="测试步骤-3"><a href="#测试步骤-3" class="headerlink" title="测试步骤"></a>测试步骤</h4><ul>
+<li>将探头连接主板待测电源的电容处。</li>
+<li>示波器设置上升沿触发，将主板上电开机，得到上电时序。</li>
+<li>示波器设置下降沿触发，将主板下电关机，得到上电时序。</li>
+</ul>
+<h4 id="测试标准-3"><a href="#测试标准-3" class="headerlink" title="测试标准"></a>测试标准</h4><p>时序标准参考datasheet要求。</p>
+<h2 id="信号完整性（SI）"><a href="#信号完整性（SI）" class="headerlink" title="信号完整性（SI）"></a>信号完整性（SI）</h2><h3 id="时钟信号（Clock）"><a href="#时钟信号（Clock）" class="headerlink" title="时钟信号（Clock）"></a>时钟信号（Clock）</h3><h4 id="测试步骤-4"><a href="#测试步骤-4" class="headerlink" title="测试步骤"></a>测试步骤</h4><ul>
+<li> 尽量选择靠近接收端，芯片时钟输入端的引脚连接探头。</li>
+<li> 使用示波器测量表3的相关参数</li>
+<li>使用频率计测试接收端时钟的频率，并核算ppm。</li>
+</ul>
+<h4 id="测试标准-4"><a href="#测试标准-4" class="headerlink" title="测试标准"></a>测试标准</h4><p>时钟信号参考datasheet要求。</p>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Parameter</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Vih</td>
+<td>高电平幅值</td>
+</tr>
+<tr>
+<td>Vil</td>
+<td>低电平幅值</td>
+</tr>
+<tr>
+<td>Tr</td>
+<td>上升时间</td>
+</tr>
+<tr>
+<td>Tf</td>
+<td>下降时间</td>
+</tr>
+<tr>
+<td>Freq.</td>
+<td>频率</td>
+</tr>
+<tr>
+<td>Duty cycle</td>
+<td>占空比</td>
+</tr>
+<tr>
+<td>tHIGH</td>
+<td>正脉冲宽度</td>
+</tr>
+<tr>
+<td>tLOW</td>
+<td>负脉冲宽度</td>
+</tr>
+<tr>
+<td>Period</td>
+<td>周期</td>
+</tr>
+<tr>
+<td>Jitter</td>
+<td>抖动</td>
+</tr>
+<tr>
+<td>Overshoot</td>
+<td>过冲</td>
+</tr>
+<tr>
+<td>Undershoot</td>
+<td>下冲</td>
+</tr>
+</tbody></table>
+<h4 id="注意事项-3"><a href="#注意事项-3" class="headerlink" title="注意事项"></a>注意事项</h4><ul>
+<li>注意观察时钟信号边沿是否单调，波形是否存在较大毛刺，回勾</li>
+<li>占空比满足40%-60%</li>
+</ul>
+<h3 id="复位信号（Reset）"><a href="#复位信号（Reset）" class="headerlink" title="复位信号（Reset）"></a>复位信号（Reset）</h3><h4 id="测试步骤-5"><a href="#测试步骤-5" class="headerlink" title="测试步骤"></a>测试步骤</h4><ul>
+<li> 尽量选择靠近芯片接收端的阻容或者过孔连接探头。</li>
+<li>单板上电，观察复位信号的波形</li>
+</ul>
+<h4 id="测试标准-5"><a href="#测试标准-5" class="headerlink" title="测试标准"></a>测试标准</h4><p>复位信号参考datasheet要求。</p>
+<h4 id="注意事项-4"><a href="#注意事项-4" class="headerlink" title="注意事项"></a>注意事项</h4><ul>
+<li> 除了看水平时间，还需要展开看边沿单调性等信号质量；</li>
+<li>对低电平复位有效的信号，取下降沿触发；</li>
+<li>对于上电复位信号，取最晚上电的电源信号作参考，与复位信号一起测试。</li>
+<li>复位信号有效的脉宽长度需要满足Datasheet的要求。</li>
+</ul>
+<h3 id="I2C"><a href="#I2C" class="headerlink" title="I2C"></a>I2C</h3><h4 id="测试步骤-6"><a href="#测试步骤-6" class="headerlink" title="测试步骤"></a>测试步骤</h4><ul>
+<li>分别测试SCL和SDA信号高低电平，确认是否存在过冲，毛刺。 </li>
+<li>用示波器测量I2C总线的各项参数，并记录。</li>
+</ul>
+<h4 id="测试标准-6"><a href="#测试标准-6" class="headerlink" title="测试标准"></a>测试标准</h4><p>I2C信号标准参考datasheet要求。</p>
+<p><img src="image-20220207173223349.png" alt="image-20220207173223349"></p>
+<p><img src="clip_image002.gif" alt="img"></p>
+<table>
+<thead>
+  <tr>
+    <th rowspan="2">PARAMETER</th>
+    <th rowspan="2">SYMBOL</th>
+    <th colspan="2">STANDARD-MODE</th>
+    <th colspan="2">FAST-MODE</th>
+    <th colspan="2">Hs-MODE</th>
+    <th rowspan="2">UNIT</th>
+  </tr>
+  <tr>
+    <th>MIN.</th>
+    <th>MAX.</th>
+    <th>MIN.</th>
+    <th>MAX.</th>
+    <th>MIN.</th>
+    <th>MAX.</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>LOWlevel input voltage</td>
+    <td>VIL</td>
+    <td>-0.5</td>
+    <td>0.3VDD</td>
+    <td>-0.5</td>
+    <td>0.3VDD</td>
+    <td>-0.5</td>
+    <td>0.3VDD</td>
+    <td>V</td>
+  </tr>
+  <tr>
+    <td>HIGHlevel input voltage</td>
+    <td>VIH</td>
+    <td>0.7VDD</td>
+    <td>VDD +0.5</td>
+    <td>0.7VDD</td>
+    <td>VDD +0.5</td>
+    <td>0.7VDD</td>
+    <td>VDD +0.5</td>
+    <td>V</td>
+  </tr>
+  <tr>
+    <td>SCLclock frequency</td>
+    <td>fSCL</td>
+    <td>0</td>
+    <td>100</td>
+    <td>0</td>
+    <td>400</td>
+    <td>0</td>
+    <td>3400</td>
+    <td>kHz</td>
+  </tr>
+  <tr>
+    <td>LOWperiod of the SCL clock</td>
+    <td>tLOW</td>
+    <td>4.7</td>
+    <td>–</td>
+    <td>1.3</td>
+    <td>–</td>
+    <td>0.16</td>
+    <td>–</td>
+    <td>ms</td>
+  </tr>
+  <tr>
+    <td>HIGHperiod of the SCL clock</td>
+    <td>tHIGH</td>
+    <td>4</td>
+    <td>–</td>
+    <td>0.6</td>
+    <td>–</td>
+    <td>0.06</td>
+    <td>–</td>
+    <td>ms</td>
+  </tr>
+  <tr>
+    <td>Risetime of both SDA and SCL signals</td>
+    <td>tr</td>
+    <td>–</td>
+    <td>1000</td>
+    <td>20</td>
+    <td>300</td>
+    <td>10</td>
+    <td>40</td>
+    <td>ns</td>
+  </tr>
+  <tr>
+    <td>Falltime of both SDA and SCL signals</td>
+    <td>tf</td>
+    <td>–</td>
+    <td>300</td>
+    <td>20</td>
+    <td>300</td>
+    <td>10</td>
+    <td>40</td>
+    <td>ns</td>
+  </tr>
+  <tr>
+    <td>Holdtime (repeated) START condition</td>
+    <td>tHD;STA</td>
+    <td>4</td>
+    <td>–</td>
+    <td>0.6</td>
+    <td>-</td>
+    <td>0.16</td>
+    <td>-</td>
+    <td>ms</td>
+  </tr>
+  <tr>
+    <td>Set-uptime for a repeated START condition</td>
+    <td>tSU;STA</td>
+    <td>4.7</td>
+    <td>–</td>
+    <td>0.6</td>
+    <td>–</td>
+    <td>0.16</td>
+    <td>–</td>
+    <td>ms</td>
+  </tr>
+  <tr>
+    <td>Datahold time</td>
+    <td>tHD;DAT</td>
+    <td>0</td>
+    <td>3.45</td>
+    <td>0</td>
+    <td>0.9</td>
+    <td>0</td>
+    <td>0.07</td>
+    <td>ms</td>
+  </tr>
+  <tr>
+    <td>Dataset-up time</td>
+    <td>tSU;DAT</td>
+    <td>250</td>
+    <td>-</td>
+    <td>100</td>
+    <td>–</td>
+    <td>10</td>
+    <td>–</td>
+    <td>ns</td>
+  </tr>
+  <tr>
+    <td>Set-uptime for STOP condition</td>
+    <td>tSU;STO</td>
+    <td>4</td>
+    <td>–</td>
+    <td>0.6</td>
+    <td>–</td>
+    <td>0.16</td>
+    <td>–</td>
+    <td>ms</td>
+  </tr>
+  <tr>
+    <td>Busfree time between a STOP and START condition</td>
+    <td>tBUF</td>
+    <td>4.7</td>
+    <td>–</td>
+    <td>1.3</td>
+    <td>–</td>
+    <td>0.1</td>
+    <td>–</td>
+    <td>ms</td>
+  </tr>
+</tbody>
+</table>
+
+<h3 id="SPI"><a href="#SPI" class="headerlink" title="SPI"></a>SPI</h3><h4 id="测试步骤-7"><a href="#测试步骤-7" class="headerlink" title="测试步骤"></a>测试步骤</h4><ul>
+<li>分别测试CLK,CS,SDI,SDO信号的高低电平，确认是否存在过冲，毛刺。</li>
+<li>量测SPI总线的各项参数，并记录。</li>
+</ul>
+<p><img src="clip_image002.jpg" alt="img"></p>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>名称</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>VIL</td>
+<td>输入信号的低电平范围</td>
+</tr>
+<tr>
+<td>VIH</td>
+<td>输入信号的高电平范围</td>
+</tr>
+<tr>
+<td>Freq</td>
+<td>时钟频率</td>
+</tr>
+<tr>
+<td>tR</td>
+<td>时钟上升时间</td>
+</tr>
+<tr>
+<td>tF</td>
+<td>时钟下降时间</td>
+</tr>
+<tr>
+<td>tLOW</td>
+<td>时钟低电平时间</td>
+</tr>
+<tr>
+<td>tHIGH</td>
+<td>时钟高电平时间</td>
+</tr>
+<tr>
+<td>tSU.CS</td>
+<td>片选信号建立时间</td>
+</tr>
+<tr>
+<td>tSU.SDI</td>
+<td>数据输入信号建立时间</td>
+</tr>
+<tr>
+<td>tHD.CS</td>
+<td>片选信号保持时间</td>
+</tr>
+<tr>
+<td>tHD.SDI</td>
+<td>数据输入信号保持时间</td>
+</tr>
+<tr>
+<td>tHD.SDO</td>
+<td>数据输出信号保持时间</td>
+</tr>
+<tr>
+<td>tV.SDO</td>
+<td>数据输出有效时间最大时间</td>
+</tr>
+</tbody></table>
+<h3 id="UART"><a href="#UART" class="headerlink" title="UART"></a>UART</h3><h4 id="测试步骤-8"><a href="#测试步骤-8" class="headerlink" title="测试步骤"></a>测试步骤</h4><ul>
+<li>分别测试Txd Rxd信号的高低电平，确认是否存在过冲，毛刺。</li>
+<li>测量UART总线的各项参数，并记录。</li>
+<li>用光标卡UART的波特率</li>
+</ul>
+<h4 id="测试标准-7"><a href="#测试标准-7" class="headerlink" title="测试标准"></a>测试标准</h4><p>参考芯片datasheet的要求</p>
+<h3 id="SD卡"><a href="#SD卡" class="headerlink" title="SD卡"></a>SD卡</h3><table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Symbol</th>
+<th>Min</th>
+<th>Max</th>
+<th>Unit</th>
+<th>Remark</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Supply  Voltage</td>
+<td>VDD</td>
+<td>2.7</td>
+<td>3.6</td>
+<td>V</td>
+<td></td>
+</tr>
+<tr>
+<td>Output  High Voltage</td>
+<td>VOH</td>
+<td>0.75*VDD</td>
+<td></td>
+<td>V</td>
+<td>IOH=-2mA VDD min</td>
+</tr>
+<tr>
+<td>Output  Low Voltage</td>
+<td>VOL</td>
+<td></td>
+<td>0.125*VDD</td>
+<td>V</td>
+<td>IOL = 2mA VDD min</td>
+</tr>
+<tr>
+<td>Input  High Voltage</td>
+<td>VIH</td>
+<td>0.625*VDD</td>
+<td>VDD+0.3</td>
+<td>V</td>
+<td></td>
+</tr>
+<tr>
+<td>Input  Low Voltage</td>
+<td>VIL</td>
+<td>VSS-0.3</td>
+<td>0.25  *VDD</td>
+<td>V</td>
+<td></td>
+</tr>
+<tr>
+<td>Power  Up Time</td>
+<td></td>
+<td></td>
+<td>250</td>
+<td>ms</td>
+<td>From  0V to VDD min</td>
+</tr>
+<tr>
+<td>Supply ramp up time</td>
+<td></td>
+<td>1</td>
+<td></td>
+<td>ms</td>
+<td>or  &gt;74 sd clocks</td>
+</tr>
+</tbody></table>
+<p><img src="image-20220207173956552.png" alt="image-20220207173956552"></p>
+<h4 id="下电时序"><a href="#下电时序" class="headerlink" title="下电时序"></a>下电时序</h4><p>下电时，在 1mS 内电源电压必须下降到小于500mV。</p>
+<h4 id="总线时序"><a href="#总线时序" class="headerlink" title="总线时序"></a>总线时序</h4><p><strong>普通模式</strong></p>
+<p><img src="image-20220207174020152.png" alt="image-20220207174020152"></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Symbol</th>
+<th>Min.</th>
+<th>Max.</th>
+<th>Unit</th>
+<th>Remark</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Clock  CLK (All values are referred to min (VIH) and max (VIL),</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Clock frequency Data Transfer Mode</td>
+<td>fPP</td>
+<td>0</td>
+<td>25</td>
+<td>MHz</td>
+<td>CCARD ≤ 10 pF (1  card)</td>
+</tr>
+<tr>
+<td>Clock frequency Identification Mode</td>
+<td>fOD</td>
+<td>0(1)/100</td>
+<td>400</td>
+<td>kHz</td>
+<td>CCARD ≤ 10 pF (1 card)</td>
+</tr>
+<tr>
+<td>Clock low time</td>
+<td>tWL</td>
+<td>10</td>
+<td></td>
+<td>ns</td>
+<td>CCARD ≤ 10 pF (1  card)</td>
+</tr>
+<tr>
+<td>Clock high time</td>
+<td>tWH</td>
+<td>10</td>
+<td></td>
+<td>ns</td>
+<td>CCARD ≤ 10 pF (1  card)</td>
+</tr>
+<tr>
+<td>Clock rise time</td>
+<td>tTLH</td>
+<td></td>
+<td>10</td>
+<td>ns</td>
+<td>CCARD ≤ 10 pF (1  card)</td>
+</tr>
+<tr>
+<td>Clock fall time</td>
+<td>tTHL</td>
+<td></td>
+<td>10</td>
+<td>ns</td>
+<td>CCARD ≤ 10 pF (1  card)</td>
+</tr>
+<tr>
+<td>Inputs CMD, DAT (referenced to CLK)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Input set-up time</td>
+<td>tISU</td>
+<td>5</td>
+<td></td>
+<td>ns</td>
+<td>CCARD ≤ 10 pF (1  card)</td>
+</tr>
+<tr>
+<td>Input hold time</td>
+<td>tIH</td>
+<td>5</td>
+<td></td>
+<td>ns</td>
+<td>CCARD ≤ 10 pF (1  card)</td>
+</tr>
+<tr>
+<td>Outputs CMD, DAT (referenced to CLK)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Output Delay time during Data Transfer  Mode</td>
+<td>tODLY</td>
+<td>0</td>
+<td>14</td>
+<td>ns</td>
+<td>CL ≤ 40 pF (1 card)</td>
+</tr>
+<tr>
+<td>Output Delay time during Identification  Mode</td>
+<td>tODLY</td>
+<td>0</td>
+<td>50</td>
+<td>ns</td>
+<td>CL ≤ 40 pF (1 card)</td>
+</tr>
+</tbody></table>
+<p><strong>高速模式</strong></p>
+<p><img src="image-20220207174056401.png" alt="image-20220207174056401"></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Symbol</th>
+<th>Min.</th>
+<th>Max.</th>
+<th>Unit</th>
+<th>Remark</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Clock CLK (All values are referred to min  (VIH)  and max (VIL),</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Clock frequency Data Transfer Mode</td>
+<td>fPP</td>
+<td>0</td>
+<td>50</td>
+<td>MHz</td>
+<td>CCARD ≤ 10 pF (1 card)</td>
+</tr>
+<tr>
+<td>Clock low time</td>
+<td>tWL</td>
+<td>7</td>
+<td></td>
+<td>ns</td>
+<td>CCARD ≤ 10 pF (1 card)</td>
+</tr>
+<tr>
+<td>Clock high time</td>
+<td>tWH</td>
+<td>7</td>
+<td></td>
+<td>ns</td>
+<td>CCARD ≤ 10 pF (1 card)</td>
+</tr>
+<tr>
+<td>Clock rise time</td>
+<td>tTLH</td>
+<td></td>
+<td>3</td>
+<td>ns</td>
+<td>CCARD ≤ 10 pF (1 card)</td>
+</tr>
+<tr>
+<td>Clock fall time</td>
+<td>tTHL</td>
+<td></td>
+<td>3</td>
+<td>ns</td>
+<td>CCARD ≤ 10 pF (1 card)</td>
+</tr>
+<tr>
+<td>Inputs CMD, DAT (referenced to CLK)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Input set-up time</td>
+<td>tISU</td>
+<td>6</td>
+<td></td>
+<td>ns</td>
+<td>CCARD ≤ 10 pF (1 card)</td>
+</tr>
+<tr>
+<td>Input hold time</td>
+<td>tIH</td>
+<td>2</td>
+<td></td>
+<td>ns</td>
+<td>CCARD ≤ 10 pF (1 card)</td>
+</tr>
+<tr>
+<td>Outputs CMD, DAT (referenced to CLK)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Output Delay time during Data Transfer  Mode</td>
+<td>tODLY</td>
+<td></td>
+<td>14</td>
+<td>ns</td>
+<td>CL ≤ 40 pF (1 card)</td>
+</tr>
+<tr>
+<td>Output Hold time</td>
+<td>tOH</td>
+<td>2.5</td>
+<td></td>
+<td>ns</td>
+<td>CL ³  15pF (1 card)</td>
+</tr>
+<tr>
+<td>Total System capacitance for each line1</td>
+<td>CL</td>
+<td></td>
+<td>40</td>
+<td>pF</td>
+<td>1 card</td>
+</tr>
+</tbody></table>
+<h3 id="SIM卡"><a href="#SIM卡" class="headerlink" title="SIM卡"></a>SIM卡</h3><h4 id="SIM电源"><a href="#SIM电源" class="headerlink" title="SIM电源"></a>SIM电源</h4><table>
+<thead>
+  <tr>
+    <th>Symbol</th>
+    <th>Conditions</th>
+    <th>Minimum</th>
+    <th>Maximum</th>
+    <th>Unit</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td rowspan="3">UCC</td>
+    <td>Class A</td>
+    <td>4.5</td>
+    <td>5.5</td>
+    <td rowspan="3">V</td>
+  </tr>
+  <tr>
+    <td>Class B</td>
+    <td>2.7</td>
+    <td>3.3</td>
+  </tr>
+  <tr>
+    <td>Class C</td>
+    <td>1.62</td>
+    <td>1.98</td>
+  </tr>
+</tbody>
+</table>
+
+
+
+<h4 id="RST"><a href="#RST" class="headerlink" title="RST"></a>RST</h4><table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Conditions</th>
+<th>Minimum</th>
+<th>Maximum</th>
+<th>Unit</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><em>U</em>IH</td>
+<td></td>
+<td>0,8  <em>U</em>CC</td>
+<td><em>U</em>CC</td>
+<td>V</td>
+</tr>
+<tr>
+<td><em>U</em>IL</td>
+<td></td>
+<td>0</td>
+<td>0,12  <em>U</em>CC</td>
+<td>V</td>
+</tr>
+<tr>
+<td><em>t</em>R <em>t</em>F</td>
+<td><em>C</em>IN = 30 pF</td>
+<td></td>
+<td>1</td>
+<td>µs</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>The  voltage shall remain between – 0,3 V and UCC + 0,3 V.</p>
+</blockquote>
+<h4 id="CLK"><a href="#CLK" class="headerlink" title="CLK"></a>CLK</h4><table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Conditions</th>
+<th>Minimum</th>
+<th>Maximum</th>
+<th>Unit</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><em>U</em>IH</td>
+<td></td>
+<td>0,7 <em>U</em>CC</td>
+<td><em>U</em>CC</td>
+<td>V</td>
+</tr>
+<tr>
+<td><em>U</em>IL</td>
+<td>Class A and class B</td>
+<td>0</td>
+<td>0,5</td>
+<td>V</td>
+</tr>
+<tr>
+<td>Class C</td>
+<td>0</td>
+<td>0,2 <em>U</em>CC</td>
+<td>V</td>
+<td></td>
+</tr>
+<tr>
+<td><em>t</em>R <em>t</em>F</td>
+<td><em>C</em>IN = 30 pF</td>
+<td></td>
+<td>9 % of cycle</td>
+<td></td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>The  voltage shall remain between – 0,3 V and <em>U</em>CC + 0,3 V.</p>
+</blockquote>
+<h4 id="IO"><a href="#IO" class="headerlink" title="IO"></a>IO</h4><table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Conditions</th>
+<th>Minimum</th>
+<th>Maximum</th>
+<th>Unit</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><em>U</em>IH</td>
+<td></td>
+<td>0,7  <em>U</em>CC</td>
+<td><em>U</em>CC</td>
+<td>V</td>
+</tr>
+<tr>
+<td><em>U</em>IL</td>
+<td></td>
+<td>0</td>
+<td>0,15  <em>U</em>CC</td>
+<td>V</td>
+</tr>
+<tr>
+<td><em>t</em>R <em>t</em>F</td>
+<td><em>C</em>IN = 30 pF; <em>C</em>OUT = 30 pF</td>
+<td></td>
+<td>1</td>
+<td>µs</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>The  voltage shall remain between – 0,3 V and <em>U</em>CC + 0,3 V.</p>
+</blockquote>
+<h4 id="上电时序-Tb-Tc"><a href="#上电时序-Tb-Tc" class="headerlink" title="上电时序 (Tb,Tc)"></a>上电时序 (Tb,Tc)</h4><p><img src="image-20220207174208174.png" alt="image-20220207174208174"></p>
+<h4 id="下电时序-1"><a href="#下电时序-1" class="headerlink" title="下电时序"></a>下电时序</h4><p><img src="image-20220207174217484.png" alt="image-20220207174217484"></p>
+]]></content>
+      <categories>
+        <category>硬件测试</category>
       </categories>
   </entry>
   <entry>
