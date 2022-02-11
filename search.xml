@@ -485,6 +485,77 @@
       </categories>
   </entry>
   <entry>
+    <title>arduino安装教程</title>
+    <url>/posts/3N08829/</url>
+    <content><![CDATA[<h1 id="下载Arduino-IDE"><a href="#下载Arduino-IDE" class="headerlink" title="下载Arduino IDE"></a>下载Arduino IDE</h1><p>最新版本为 Arduino IDE 1.8.16 </p>
+<p>下载地址 <a href="https://www.arduino.cc/en/software">https://www.arduino.cc/en/software</a></p>
+<span id="more"></span>
+
+<p><img src="1.download-arduino.png" alt="1.download-arduino"></p>
+<h1 id="windows下安装Arduino-IDE"><a href="#windows下安装Arduino-IDE" class="headerlink" title="windows下安装Arduino IDE"></a>windows下安装Arduino IDE</h1><ol>
+<li>点击 I Agree 按钮。</li>
+</ol>
+<p><img src="2.agreement-license.png" alt="2.agreement-license"></p>
+<ol start="2">
+<li>点击 next </li>
+</ol>
+<p><img src="3.installation-options.png" alt="3.installation-options"></p>
+<ol start="3">
+<li>选择合适安装目录，点击Install。</li>
+</ol>
+<p><img src="4.installation-folder.png" alt="4.installation-folder"></p>
+<ol start="4">
+<li>安装中…</li>
+</ol>
+<p><img src="5.installing.png" alt="5.installing"></p>
+<ol start="5">
+<li>安装完成</li>
+</ol>
+<p><img src="6.installation-success.png" alt="6.installation-success"></p>
+<h1 id="IDE界面介绍"><a href="#IDE界面介绍" class="headerlink" title="IDE界面介绍"></a>IDE界面介绍</h1><p><img src="7.arduino-ide.png" alt="7.arduino-ide"></p>
+<ol>
+<li><p>菜单栏</p>
+</li>
+<li><p>快捷按钮</p>
+</li>
+</ol>
+<p><img src="8.operating-buttons.png" alt="8.operating-buttons"></p>
+<ol start="3">
+<li><p>代码编辑区</p>
+</li>
+<li><p>状态区</p>
+</li>
+<li><p>输出信息窗口</p>
+</li>
+</ol>
+<h1 id="IDE-配置"><a href="#IDE-配置" class="headerlink" title="IDE 配置"></a>IDE 配置</h1><p><img src="9.preferences.png" alt="9.preferences"></p>
+<p><img src="add_bsp_icon.png" alt="add_bsp_icon"></p>
+<p>添加网址 </p>
+<p><a href="https://raw.githubusercontent.com/RAKwireless/RAKwireless-Arduino-BSP-Index/main/package_rakwireless_index.json">https://raw.githubusercontent.com/RAKwireless/RAKwireless-Arduino-BSP-Index/main/package_rakwireless_index.json</a></p>
+<p><img src="add-bsp-url.png" alt="add-bsp-url"></p>
+<p>添加开发板</p>
+<p><img src="11.boards-manager.png" alt="11.boards-manager"></p>
+<p><img src="wisblock_core-1631516043841.png" alt="wisblock_core"></p>
+<p><img src="13.rakwireless-nrf-modules.png" alt="13.rakwireless-nrf-modules"></p>
+<h1 id="RAK-示例"><a href="#RAK-示例" class="headerlink" title="RAK 示例"></a>RAK 示例</h1><p><img src="14.wisblock-modules.png" alt="14.wisblock-modules"></p>
+<h1 id="编译一个示例"><a href="#编译一个示例" class="headerlink" title="编译一个示例"></a>编译一个示例</h1><p><img src="15.select-lora-otaa-example.png" alt="15.select-lora-otaa-example"></p>
+<p><img src="16.install-library-step1.png" alt="16.install-library-step1"></p>
+<p>下载库文件</p>
+<p><img src="17.install-library-step2.png" alt="17.install-library-step2"></p>
+<p><img src="18.compile-example.png" alt="18.compile-example"></p>
+<p>第一个程序 </p>
+<p>使用wisblock 点亮LED</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LED_GREEN  35</span></span><br><span class="line"><span class="comment">// #define LED_BLUE  36</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">setup</span><span class="params">()</span> </span></span><br><span class="line"><span class="function"></span>&#123;    </span><br><span class="line">  pinMode(LED_GREEN,OUTPUT);</span><br><span class="line">  Serial.begin(<span class="number">115200</span>);</span><br><span class="line">  </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">loop</span><span class="params">()</span> </span></span><br><span class="line"><span class="function"></span>&#123; </span><br><span class="line">  digitalWrite(LED_GREEN,HIGH);</span><br><span class="line">  delay(<span class="number">1000</span>);</span><br><span class="line">  digitalWrite(LED_GREEN,LOW);</span><br><span class="line">  delay(<span class="number">1000</span>);</span><br><span class="line">    </span><br><span class="line">  Serial.println(<span class="string">&quot;RAKwireless: Make IOT Easy!&quot;</span>); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>WisBlock</category>
+      </categories>
+      <tags>
+        <tag>arduino</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>sensor</title>
     <url>/posts/2Y8C5XG/</url>
     <content><![CDATA[<table>
@@ -607,75 +678,173 @@
       </categories>
   </entry>
   <entry>
-    <title>arduino安装教程</title>
-    <url>/posts/3N08829/</url>
-    <content><![CDATA[<h1 id="下载Arduino-IDE"><a href="#下载Arduino-IDE" class="headerlink" title="下载Arduino IDE"></a>下载Arduino IDE</h1><p>最新版本为 Arduino IDE 1.8.16 </p>
-<p>下载地址 <a href="https://www.arduino.cc/en/software">https://www.arduino.cc/en/software</a></p>
-<span id="more"></span>
-
-<p><img src="1.download-arduino.png" alt="1.download-arduino"></p>
-<h1 id="windows下安装Arduino-IDE"><a href="#windows下安装Arduino-IDE" class="headerlink" title="windows下安装Arduino IDE"></a>windows下安装Arduino IDE</h1><ol>
-<li>点击 I Agree 按钮。</li>
-</ol>
-<p><img src="2.agreement-license.png" alt="2.agreement-license"></p>
-<ol start="2">
-<li>点击 next </li>
-</ol>
-<p><img src="3.installation-options.png" alt="3.installation-options"></p>
-<ol start="3">
-<li>选择合适安装目录，点击Install。</li>
-</ol>
-<p><img src="4.installation-folder.png" alt="4.installation-folder"></p>
-<ol start="4">
-<li>安装中…</li>
-</ol>
-<p><img src="5.installing.png" alt="5.installing"></p>
-<ol start="5">
-<li>安装完成</li>
-</ol>
-<p><img src="6.installation-success.png" alt="6.installation-success"></p>
-<h1 id="IDE界面介绍"><a href="#IDE界面介绍" class="headerlink" title="IDE界面介绍"></a>IDE界面介绍</h1><p><img src="7.arduino-ide.png" alt="7.arduino-ide"></p>
-<ol>
-<li><p>菜单栏</p>
+    <title>环境传感器1</title>
+    <url>/posts/2Q829CG/</url>
+    <content><![CDATA[<h1 id="传感器参数对比"><a href="#传感器参数对比" class="headerlink" title="传感器参数对比"></a>传感器参数对比</h1><table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>RAK1901</th>
+<th>RAK12003</th>
+<th>RAK1902</th>
+<th>RAK12011</th>
+<th>RAK1906</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Description</td>
+<td>Temperature  and Humidity</td>
+<td>Infrared Temperature  Sensor</td>
+<td>Barometric  Pressure</td>
+<td>Barometer WT</td>
+<td>Environmental Sensor</td>
+</tr>
+<tr>
+<td>accuracy</td>
+<td>±2.0  °C<br/>±2.0%</td>
+<td>±3° C</td>
+<td>±0.1  hPa<br/> ±1.5 °C</td>
+<td>±0.1 hPa</td>
+<td>±1.0<br/>±3 % r.H.<br/>±0.6 hPa</td>
+</tr>
+<tr>
+<td>range</td>
+<td>-40  °C to +125 °C<br/>0 to 100%</td>
+<td>-20 °C to +85 °C</td>
+<td>260-1260  hPa<br/>-40 °C to +85 °C</td>
+<td>260-1260 hPa</td>
+<td>-40  °C to +85 °C<br/>0 to 100% <br/>300 to 1100 hPa</td>
+</tr>
+<tr>
+<td>Size (mm)</td>
+<td>10 x 10</td>
+<td>10 x 10</td>
+<td>10 x 10</td>
+<td>10 x 10</td>
+<td>10 x 10</td>
+</tr>
+<tr>
+<td>Input voltage  (V)</td>
+<td>1.6~3.6</td>
+<td>3~3.6</td>
+<td>1.6~3.6</td>
+<td>1.7~3.6</td>
+<td>1.71~3.6</td>
+</tr>
+<tr>
+<td>Sleep current  (uA)</td>
+<td>0.3</td>
+<td>2.5</td>
+<td>1</td>
+<td>1</td>
+<td>0.15</td>
+</tr>
+<tr>
+<td>Measure  current (uA)</td>
+<td>430</td>
+<td>1400</td>
+<td>12</td>
+<td>15</td>
+<td>340  Humidity<br/>714 Pressure<br/>350 Temperature</td>
+</tr>
+<tr>
+<td>Communication  interface</td>
+<td>I2C</td>
+<td>I2C</td>
+<td>I2C</td>
+<td>I2C</td>
+<td>I2C</td>
+</tr>
+<tr>
+<td>connector pin</td>
+<td>24</td>
+<td>24</td>
+<td>24</td>
+<td>24</td>
+<td>24</td>
+</tr>
+<tr>
+<td>Chipset</td>
+<td>Sensirion SHTC3</td>
+<td>Melexis MLX90632SLD</td>
+<td>ST LPS22HB</td>
+<td>ST LPS33HW</td>
+<td>BOSCH BME680</td>
+</tr>
+</tbody></table>
+<h1 id="实物"><a href="#实物" class="headerlink" title="实物"></a>实物</h1><table>
+<thead>
+<tr>
+<th>RAK1901</th>
+<th>RAK12003</th>
+<th>RAK1902</th>
+<th>RAK12011</th>
+<th>RAK1906</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Temperature  and Humidity</td>
+<td>Infrared Temperature  Sensor</td>
+<td>Barometric  Pressure</td>
+<td>Barometer WT</td>
+<td>Environmental Sensor</td>
+</tr>
+<tr>
+<td><img src="RAK1901_buy.png" alt="img" style="zoom:24%;" /></td>
+<td><img src="RAK12003_buy.png" alt="img" style="zoom:24%;" /></td>
+<td><img src="RAK1902_buy.png" alt="img" style="zoom:24%;" /></td>
+<td><img src="RAK12011_buy.png" alt="img" style="zoom:24%;" /></td>
+<td><img src="RAK1906_buy.png" alt="img" style="zoom:24%;" /></td>
+</tr>
+</tbody></table>
+<h1 id="简述-pin角定义和原理图"><a href="#简述-pin角定义和原理图" class="headerlink" title="简述 pin角定义和原理图"></a>简述 pin角定义和原理图</h1><p><img src="RAK1901_pin.png" alt="img"></p>
+<p><img src="rak1901-schematic.png" alt="img"></p>
+<h1 id="快速入门指南"><a href="#快速入门指南" class="headerlink" title="快速入门指南"></a>快速入门指南</h1><p><a href="https://docs.rakwireless.com/Product-Categories/WisBlock/RAK1901/Quickstart/">https://docs.rakwireless.com/Product-Categories/WisBlock/RAK1901/Quickstart/</a></p>
+<p><a href="https://docs.rakwireless.com/Product-Categories/WisBlock/RAK1902/Quickstart/">https://docs.rakwireless.com/Product-Categories/WisBlock/RAK1902/Quickstart/</a></p>
+<p><a href="https://docs.rakwireless.com/Product-Categories/WisBlock/RAK1906/Quickstart/">https://docs.rakwireless.com/Product-Categories/WisBlock/RAK1906/Quickstart/</a></p>
+<p><a href="https://docs.rakwireless.com/Product-Categories/WisBlock/RAK12003/Quickstart/">https://docs.rakwireless.com/Product-Categories/WisBlock/RAK12003/Quickstart/</a></p>
+<p><a href="https://docs.rakwireless.com/Product-Categories/WisBlock/RAK12011/Quickstart/">https://docs.rakwireless.com/Product-Categories/WisBlock/RAK12011/Quickstart/</a></p>
+<blockquote>
+<p><a href="https://docs.rakwireless.com.cn/Product-Categories/WisBlock/RAK12011/Quickstart/">https://docs.rakwireless.com.cn/Product-Categories/WisBlock/RAK12011/Quickstart/</a>  中文版在<code>.com</code>后面加<code>.cn</code>即可</p>
+</blockquote>
+<h1 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h1><h2 id="温湿度传感器"><a href="#温湿度传感器" class="headerlink" title="温湿度传感器"></a>温湿度传感器</h2><ul>
+<li><p>气候监测天气测量和预报</p>
 </li>
-<li><p>快捷按钮</p>
+<li><p>温室养殖</p>
+<p>现代农林畜牧各产业都有相当数量的温室，温室的湿度控制与温度控制同样重要，把湿度控制在农作物、树木、畜禽等生长适宜的范围，是减少病虫害、提高产量的条件之一。</p>
 </li>
-</ol>
-<p><img src="8.operating-buttons.png" alt="8.operating-buttons"></p>
-<ol start="3">
-<li><p>代码编辑区</p>
+<li><p>工业生产　</p>
+<p>在纺织、电子、精密机器、陶瓷工业等部门，空气湿度直接影响产品的质量和产量。</p>
 </li>
-<li><p>状态区</p>
+<li><p>物品储藏　</p>
+<p>各种物品对环境均有一定的适应性。湿度过高过低均会使物品丧失原有性能。如在高湿度地区，电子产品在仓库的损害严重，非金属零件会发霉变质，金属零件会腐蚀生锈。</p>
 </li>
-<li><p>输出信息窗口</p>
+<li><p>精密仪器的使用保护　</p>
+<p>许多精密仪器、设备对工作环境要求较高，环境湿度必须控制在一定范围内，以保证它们的正常工作，提高工作效率及可靠性。</p>
 </li>
-</ol>
-<h1 id="IDE-配置"><a href="#IDE-配置" class="headerlink" title="IDE 配置"></a>IDE 配置</h1><p><img src="9.preferences.png" alt="9.preferences"></p>
-<p><img src="add_bsp_icon.png" alt="add_bsp_icon"></p>
-<p>添加网址 </p>
-<p><a href="https://raw.githubusercontent.com/RAKwireless/RAKwireless-Arduino-BSP-Index/main/package_rakwireless_index.json">https://raw.githubusercontent.com/RAKwireless/RAKwireless-Arduino-BSP-Index/main/package_rakwireless_index.json</a></p>
-<p><img src="add-bsp-url.png" alt="add-bsp-url"></p>
-<p>添加开发板</p>
-<p><img src="11.boards-manager.png" alt="11.boards-manager"></p>
-<p><img src="wisblock_core-1631516043841.png" alt="wisblock_core"></p>
-<p><img src="13.rakwireless-nrf-modules.png" alt="13.rakwireless-nrf-modules"></p>
-<h1 id="RAK-示例"><a href="#RAK-示例" class="headerlink" title="RAK 示例"></a>RAK 示例</h1><p><img src="14.wisblock-modules.png" alt="14.wisblock-modules"></p>
-<h1 id="编译一个示例"><a href="#编译一个示例" class="headerlink" title="编译一个示例"></a>编译一个示例</h1><p><img src="15.select-lora-otaa-example.png" alt="15.select-lora-otaa-example"></p>
-<p><img src="16.install-library-step1.png" alt="16.install-library-step1"></p>
-<p>下载库文件</p>
-<p><img src="17.install-library-step2.png" alt="17.install-library-step2"></p>
-<p><img src="18.compile-example.png" alt="18.compile-example"></p>
-<p>第一个程序 </p>
-<p>使用wisblock 点亮LED</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LED_GREEN  35</span></span><br><span class="line"><span class="comment">// #define LED_BLUE  36</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">setup</span><span class="params">()</span> </span></span><br><span class="line"><span class="function"></span>&#123;    </span><br><span class="line">  pinMode(LED_GREEN,OUTPUT);</span><br><span class="line">  Serial.begin(<span class="number">115200</span>);</span><br><span class="line">  </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">loop</span><span class="params">()</span> </span></span><br><span class="line"><span class="function"></span>&#123; </span><br><span class="line">  digitalWrite(LED_GREEN,HIGH);</span><br><span class="line">  delay(<span class="number">1000</span>);</span><br><span class="line">  digitalWrite(LED_GREEN,LOW);</span><br><span class="line">  delay(<span class="number">1000</span>);</span><br><span class="line">    </span><br><span class="line">  Serial.println(<span class="string">&quot;RAKwireless: Make IOT Easy!&quot;</span>); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<li><p>地铁环境</p>
+<p>地铁乘客流量大，所需新风量变化大。因此地铁的空调负荷变化大，要实现节能必须借助于自动控制的手段。</p>
+</li>
+<li><p>疫苗冷链存储运输</p>
+<p>疫苗储存须有严格的温度控制标准，而正规的疫苗存储配送链应该全程配备温湿度监控设备，以符合药品经营质量管理规范（GSP）的要求。</p>
+</li>
+</ul>
+<h2 id="压力传感器"><a href="#压力传感器" class="headerlink" title="压力传感器"></a>压力传感器</h2><ul>
+<li><p>称重系统</p>
+</li>
+<li><p>海拔高度测量 </p>
+</li>
+<li><p>应用于液压系统</p>
+</li>
+<li><p>安全控制系统</p>
+</li>
+<li><p>压缩机，空调冷设备</p>
+</li>
+</ul>
 ]]></content>
       <categories>
         <category>WisBlock</category>
       </categories>
-      <tags>
-        <tag>arduino</tag>
-      </tags>
   </entry>
   <entry>
     <title>ripple</title>
