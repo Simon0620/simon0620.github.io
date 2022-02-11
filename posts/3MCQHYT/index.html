@@ -1,0 +1,1136 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>emc测试规范 | Stephen's blog</title><meta name="author" content="Stephen Chen"><meta name="copyright" content="Stephen Chen"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="编写目的公司研发的LoRa网关，节点等产品整机 EMC测试指导。 定义说明EMC 即电磁兼容，Electromagnetic Compatibility 我们把电磁能量对电子设备的这种影响称之为电磁干扰。就是它不会因为周边的电磁环境而导致性能降低、功能丧失或损坏，也不会在周边 环境中产生过量的电磁能量，以致影响周边设备的正常工作。 EMC 包含了以下三个方面的含义：  EMI 电磁干扰：即处在一定">
+<meta property="og:type" content="article">
+<meta property="og:title" content="emc测试规范">
+<meta property="og:url" content="https://stephenchen0620.github.io/posts/3MCQHYT/index.html">
+<meta property="og:site_name" content="Stephen&#39;s blog">
+<meta property="og:description" content="编写目的公司研发的LoRa网关，节点等产品整机 EMC测试指导。 定义说明EMC 即电磁兼容，Electromagnetic Compatibility 我们把电磁能量对电子设备的这种影响称之为电磁干扰。就是它不会因为周边的电磁环境而导致性能降低、功能丧失或损坏，也不会在周边 环境中产生过量的电磁能量，以致影响周边设备的正常工作。 EMC 包含了以下三个方面的含义：  EMI 电磁干扰：即处在一定">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://stephenchen0620.github.io/posts/3MCQHYT/emc.jpg">
+<meta property="article:published_time" content="2022-02-11T07:45:10.589Z">
+<meta property="article:modified_time" content="2022-02-11T08:59:38.287Z">
+<meta property="article:author" content="Stephen Chen">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://stephenchen0620.github.io/posts/3MCQHYT/emc.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://stephenchen0620.github.io/posts/3MCQHYT/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'emc测试规范',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-02-11 16:59:38'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">13</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 目录</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> RAK Product</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/WisGate/"><span> WisGate</span></a></li><li><a class="site-page child" href="/WisNode/"><span> WisNode</span></a></li><li><a class="site-page child" href="/WisBlock/"><span> WisBlock</span></a></li><li><a class="site-page child" href="/WisDuo/"><span> WisDuo</span></a></li><li><a class="site-page child" href="/WisLink/"><span> WisLink</span></a></li><li><a class="site-page child" href="/WisHat/"><span> WisHat</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/posts/3MCQHYT/emc.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Stephen's blog</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 目录</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> RAK Product</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/WisGate/"><span> WisGate</span></a></li><li><a class="site-page child" href="/WisNode/"><span> WisNode</span></a></li><li><a class="site-page child" href="/WisBlock/"><span> WisBlock</span></a></li><li><a class="site-page child" href="/WisDuo/"><span> WisDuo</span></a></li><li><a class="site-page child" href="/WisLink/"><span> WisLink</span></a></li><li><a class="site-page child" href="/WisHat/"><span> WisHat</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">emc测试规范</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-02-11T07:45:10.589Z" title="发表于 2022-02-11 15:45:10">2022-02-11</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-02-11T08:59:38.287Z" title="更新于 2022-02-11 16:59:38">2022-02-11</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%A1%AC%E4%BB%B6%E6%B5%8B%E8%AF%95/">硬件测试</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="emc测试规范"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="编写目的"><a href="#编写目的" class="headerlink" title="编写目的"></a>编写目的</h1><p>公司研发的LoRa网关，节点等产品整机 EMC测试指导。</p>
+<h1 id="定义说明"><a href="#定义说明" class="headerlink" title="定义说明"></a>定义说明</h1><p>EMC 即电磁兼容，Electromagnetic Compatibility 我们把电磁能量对电子设备的这种影响称之为电磁干扰。就是它不会因为周边的电磁环境而导致性能降低、功能丧失或损坏，也不会在周边 环境中产生过量的电磁能量，以致影响周边设备的正常工作。</p>
+<p>EMC 包含了以下三个方面的含义：</p>
+<ul>
+<li><p>EMI 电磁干扰：即处在一定环境中设备或系统，在正常运行时，不应超过相应标准。</p>
+</li>
+<li><p>EMS电磁敏感度：即处在一定环境中设备或系统，在正常运行时，设备或系统能承受相应标准规定范围内的电磁能量干扰。</p>
+</li>
+<li><p>电磁环境：即系统或设备的工作环境。</p>
+</li>
+</ul>
+<h1 id="名词解释"><a href="#名词解释" class="headerlink" title="名词解释"></a>名词解释</h1><table>
+<thead>
+<tr>
+<th>RGP</th>
+<th>Reference  Ground Plane 一块导电平面，其电位用作公共参考电位</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>耦合网络</td>
+<td>将能量从一个电路传送到另一个电路的电路</td>
+</tr>
+<tr>
+<td>去耦网络</td>
+<td>用于防止施加到 EUT 上的浪涌信号影响其他辅助实验的设备</td>
+</tr>
+<tr>
+<td>RE</td>
+<td>Radiated Emission 辐射骚扰</td>
+</tr>
+<tr>
+<td>EUT</td>
+<td>Equipment Under  Test 受试设备</td>
+</tr>
+<tr>
+<td>AE</td>
+<td>Auxiliary Equipment 辅助设备</td>
+</tr>
+<tr>
+<td>CDN</td>
+<td>Coupling &amp; Decoupling Net 耦合、去耦合网络</td>
+</tr>
+<tr>
+<td>AMN</td>
+<td>Artificial  Mains Network人工电源网络</td>
+</tr>
+<tr>
+<td>ISN</td>
+<td>Impedance  Stabilization Network阻抗稳定网络</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>注：</p>
+<p><strong>AMN</strong>：人工电源网络，为了在端子电压测量点上提供规定的高频阻抗，并把被测电路和电网上的背景噪声隔离开，需要使用到 AMN。在相线与参考地之间、中线与参考地之间测量传导骚扰。 </p>
+<p><strong>ISN</strong>：阻抗稳定网络。ISN（包括校准时需要与 EUT和 AE连接的所有转接头）应能提供足够</p>
+<p>的隔离，以隔离那些来自与受试电信端口相连的 AE和负载的骚扰。</p>
+</blockquote>
+<h1 id="测试项目及参考标准"><a href="#测试项目及参考标准" class="headerlink" title="测试项目及参考标准"></a>测试项目及参考标准</h1><table>
+<thead>
+  <tr>
+    <th colspan="2">Standard</th>
+    <th>Description</th>
+    <th>Remark</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td rowspan="4">Emission</td>
+    <td>EN 55032</td>
+    <td>Radiated Emission<br>辐射骚扰</td>
+    <td>Below 1GHz<br>Above 1GHz</td>
+  </tr>
+  <tr>
+    <td>EN 55032</td>
+    <td>Conducted Emission<br>传导骚扰</td>
+    <td>AC Mains Port<br>DC Power Port<br>Wired Network Port</td>
+  </tr>
+  <tr>
+    <td>EN 61000-3-2</td>
+    <td>Harmonic Current Emissions<br>谐波电流</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>EN 61000-3-3</td>
+    <td>Voltage Fluctuations &amp; Flicker<br>电压波动与闪烁</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td rowspan="6">Immunity</td>
+    <td>EN 61000-4-2</td>
+    <td>Electrostatic Discharge Immunity<br>静电放电抗扰度</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>EN 61000-4-3</td>
+    <td>Radiated RF Electromagnetic Field Immunity<br>辐射射频电磁场抗扰度</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>EN 61000-4-4</td>
+    <td>Electrical Fast Transient/Burst Immunity<br>电快速瞬变脉冲群抗扰度</td>
+    <td>AC Port<br>DC Port<br>Wired Network Port</td>
+  </tr>
+  <tr>
+    <td>EN 61000-4-5</td>
+    <td>Surge Immunity<br>浪涌抗扰度</td>
+    <td>AC Port<br>Wired Network Port</td>
+  </tr>
+  <tr>
+    <td>EN 61000-4-6</td>
+    <td>Immunity to Conducted Disturbances Induced by RF Fields<br>射频场感应的传导骚扰抗扰度</td>
+    <td>AC Port<br>DC Port<br>Wired Network Port</td>
+  </tr>
+  <tr>
+    <td>EN 61000-4-11</td>
+    <td>Voltage Dips and short Interruptions Immunity<br>电压暂降,短时中断和电压变化抗扰度</td>
+    <td> </td>
+  </tr>
+</tbody>
+</table>
+
+
+
+<h1 id="测试环境"><a href="#测试环境" class="headerlink" title="测试环境"></a>测试环境</h1><p>在下列温度湿度以及气压极限范围内的任一组合的条件下来进行测量和机械方面的检验： </p>
+<ul>
+<li><p>环境温度：15~35℃</p>
+</li>
+<li><p>相对湿度：30%~60% </p>
+</li>
+<li><p>气压：86~106kPa</p>
+</li>
+</ul>
+<h1 id="测试样机"><a href="#测试样机" class="headerlink" title="测试样机"></a>测试样机</h1><ul>
+<li><p>由项目组提供单板样机，确定最新硬件配置，并升级最新固件。</p>
+</li>
+<li><p>NPI工程师负责组装新整机，安装对应新机壳和整机附件(指定电源，散热片等)</p>
+</li>
+<li><p>测试人员样机领用签名，资产挂账记录。</p>
+</li>
+<li><p>测试通过的样机许保留封样，以便追溯。</p>
+</li>
+</ul>
+<h1 id="测试策略"><a href="#测试策略" class="headerlink" title="测试策略"></a>测试策略</h1><table>
+<thead>
+  <tr>
+    <th>EMC</th>
+    <th>Description</th>
+    <th>适用产品</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td rowspan="4">Emission</td>
+    <td>RE</td>
+    <td>所有产品</td>
+  </tr>
+  <tr>
+    <td>CE</td>
+    <td>所有产品</td>
+  </tr>
+  <tr>
+    <td>Harmonic Current</td>
+    <td>目前产品不适用</td>
+  </tr>
+  <tr>
+    <td>Voltage Fluctuations &amp; Flicker</td>
+    <td>网关或带AC Mains产品</td>
+  </tr>
+  <tr>
+    <td rowspan="7">Immunity</td>
+    <td>RS</td>
+    <td>所有产品</td>
+  </tr>
+  <tr>
+    <td>CS</td>
+    <td>网关或 带AC Mains，LAN口产品</td>
+  </tr>
+  <tr>
+    <td>EFT</td>
+    <td>网关或 带AC Mains，LAN口产品</td>
+  </tr>
+  <tr>
+    <td>Surge </td>
+    <td>网关或 带AC Mains，LAN口产品</td>
+  </tr>
+  <tr>
+    <td>ESD</td>
+    <td>所有产品</td>
+  </tr>
+  <tr>
+    <td>DIP</td>
+    <td>网关或带AC Mains产品</td>
+  </tr>
+  <tr>
+    <td>Electromagnetic Field</td>
+    <td>所有产品</td>
+  </tr>
+</tbody>
+</table>
+
+
+
+<h1 id="测试项目"><a href="#测试项目" class="headerlink" title="测试项目"></a>测试项目</h1><h2 id="传导骚扰-CE"><a href="#传导骚扰-CE" class="headerlink" title="传导骚扰(CE)"></a>传导骚扰(CE)</h2><h3 id="测试框图Block-Diagram-of-Test-Setup"><a href="#测试框图Block-Diagram-of-Test-Setup" class="headerlink" title="测试框图Block Diagram of Test Setup"></a>测试框图Block Diagram of Test Setup</h3><p><img src="clip_image002.png" alt="img"></p>
+<h3 id="限值Limit"><a href="#限值Limit" class="headerlink" title="限值Limit"></a>限值Limit</h3><p>我司产品都属于Class B 类产品，默认应做 B类设计；超过限值线即属于 FAIL，由于实验室之间的差异性，需要设定余量线以确保通过的概率，即 3dB 余量；最终结果以官方实验室测试数据为准。</p>
+<p>以下为EN55032标准</p>
+<p>Requirements for conducted emissions from the AC mains power ports of Class A equipment</p>
+ <table>
+<thead>
+  <tr>
+    <th rowspan="2">Frequency range(MHz)</th>
+    <th colspan="2">Limits dB(µV)</th>
+  </tr>
+  <tr>
+    <th>Quasi-peak</th>
+    <th>Average</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>0.15 to 0.5</td>
+    <td>79</td>
+    <td>66</td>
+  </tr>
+  <tr>
+    <td>0.5 to 30</td>
+    <td>73</td>
+    <td>60</td>
+  </tr>
+</tbody>
+</table>
+
+<p>Requirements for conducted emissions from the AC mains power ports of Class B equipment</p>
+ <table>
+<thead>
+  <tr>
+    <th rowspan="2">Frequency range(MHz)</th>
+    <th colspan="2">Limits dB(µV)</th>
+  </tr>
+  <tr>
+    <th>Quasi-peak</th>
+    <th>Average</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>0.15 to 0.5</td>
+    <td>66 to 56</td>
+    <td>56 to 46</td>
+  </tr>
+  <tr>
+    <td>0,5 to 5</td>
+    <td>56</td>
+    <td>46</td>
+  </tr>
+  <tr>
+    <td>5 to 30</td>
+    <td>60</td>
+    <td>50</td>
+  </tr>
+</tbody>
+</table>
+
+
+
+<p>Requirements for asymmetric mode conducted emissions from Class A equipment</p>
+<table>
+<thead>
+  <tr>
+    <th rowspan="2">Frequency range(MHz)</th>
+    <th colspan="2">Voltage Limits dB(µV)</th>
+    <th colspan="2">Current LimitsdB(µA)</th>
+  </tr>
+  <tr>
+    <th>Quasi-peak</th>
+    <th>Average</th>
+    <th>Quasi-peak</th>
+    <th>Average</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>0.15 to 0.5</td>
+    <td>97 to 87</td>
+    <td>87 to 74</td>
+    <td>53 to 43</td>
+    <td>40 to 30</td>
+  </tr>
+  <tr>
+    <td>0.5 to 30</td>
+    <td>87</td>
+    <td>74</td>
+    <td>43</td>
+    <td>30</td>
+  </tr>
+</tbody>
+</table> 
+
+<p>Requirements for asymmetric mode conducted emissions from Class B equipment</p>
+<table>
+<thead>
+  <tr>
+    <th rowspan="2">Frequency range(MHz)</th>
+    <th colspan="2">Voltage Limits dB(µV)</th>
+    <th colspan="2">Current Limits dB(µA)</th>
+  </tr>
+  <tr>
+    <th>Quasi-peak</th>
+    <th>Average</th>
+    <th>Quasi-peak</th>
+    <th>Average</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>0.15 to 0.5</td>
+    <td>84 to 74</td>
+    <td>74 to 64</td>
+    <td>40 to 30</td>
+    <td>30 to 20</td>
+  </tr>
+  <tr>
+    <td>0.5 to 30</td>
+    <td>74</td>
+    <td>64</td>
+    <td>30</td>
+    <td>20</td>
+  </tr>
+</tbody>
+</table>
+
+
+
+<h3 id="测试策略Test-strategy"><a href="#测试策略Test-strategy" class="headerlink" title="测试策略Test strategy"></a>测试策略Test strategy</h3><p>网关和模块都需要测试</p>
+<table>
+<thead>
+  <tr>
+    <th>Categories</th>
+    <th>Port</th>
+    <th>Limit</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td rowspan="3">Gateway</td>
+    <td>Line</td>
+    <td>Class B</td>
+  </tr>
+  <tr>
+    <td>Neutral</td>
+    <td>Class B</td>
+  </tr>
+  <tr>
+    <td>POE/Lan</td>
+    <td>Class B</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Module/Node</td>
+    <td>Line</td>
+    <td>Class B</td>
+  </tr>
+  <tr>
+    <td>Neutral</td>
+    <td>Class B</td>
+  </tr>
+</tbody>
+</table>
+
+
+
+<h3 id="测试步骤Test-Procedure"><a href="#测试步骤Test-Procedure" class="headerlink" title="测试步骤Test Procedure"></a>测试步骤Test Procedure</h3><ul>
+<li><p>确认产品是否接地，默认产品有接地设计，则应接地；浮地设计时需要根据实际情况来，若 接地后测试结果有改善，可建议增加 GND 设计。 </p>
+</li>
+<li><p>网口默认是非屏蔽网线，需要使用电压法测试；若是屏蔽线则使用电流法（极少）。</p>
+</li>
+<li><p>设备按照相应测试要求组网，连接好 EUT、AE、CDN 等，待测设备上电开机，正常使用场景，检查设备工作状态是否正常。</p>
+</li>
+<li><p>开始测试，根据测试情形记录表描述的情形进行具体产品的测试。</p>
+</li>
+</ul>
+<h2 id="辐射骚扰-RE"><a href="#辐射骚扰-RE" class="headerlink" title="辐射骚扰(RE)"></a>辐射骚扰(RE)</h2><h3 id="测试框图Block-Diagram-of-Test-Setup-1"><a href="#测试框图Block-Diagram-of-Test-Setup-1" class="headerlink" title="测试框图Block Diagram of Test Setup"></a>测试框图Block Diagram of Test Setup</h3><p><img src="clip_image004.png" alt="img"></p>
+<h3 id="限值Limit-1"><a href="#限值Limit-1" class="headerlink" title="限值Limit"></a>限值Limit</h3><p>我司产品都属于Class B 类产品，默认应做 B类设计；超过限值线即属于 FAIL，由于实验室之间的差异性，需要设定余量线以确保通过的概率，即 3dB 余量；最终结果以官方实验室测试数据为准。</p>
+<p>以下为EN55032标准</p>
+<p>Requirements for radiated emissions at frequencies up to 1 GHz for class A equipment</p>
+<table>
+<thead>
+  <tr>
+    <th>Frequency range (MHz)</th>
+    <th>Distance (m)</th>
+    <th>Quasi-peak&nbsp;&nbsp;&nbsp;Limits dB (µV/m)</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>30 to 230</td>
+    <td rowspan="2">10</td>
+    <td>40</td>
+  </tr>
+  <tr>
+    <td>230 to 1000</td>
+    <td>47</td>
+  </tr>
+  <tr>
+    <td>30 to 230</td>
+    <td rowspan="2">3</td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>230 to 1000</td>
+    <td>57</td>
+  </tr>
+</tbody>
+</table>
+
+
+
+<p>Requirements for radiated emissions at frequencies above 1 GHz for class A equipment </p>
+<table>
+<thead>
+  <tr>
+    <th rowspan="2">Frequency range(MHz)</th>
+    <th rowspan="2">Distance (m)</th>
+    <th colspan="2">Limits dB(µV)</th>
+  </tr>
+  <tr>
+    <th>Average</th>
+    <th>Peak</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>1000 to 3000</td>
+    <td rowspan="2">3</td>
+    <td>56</td>
+    <td>76</td>
+  </tr>
+  <tr>
+    <td>3000 to 6000</td>
+    <td>60</td>
+    <td>80</td>
+  </tr>
+</tbody>
+</table>
+
+
+
+
+
+<p>Requirements for radiated emissions at frequencies up to 1 GHz for class B equipment</p>
+<table>
+<thead>
+  <tr>
+    <th>Frequency range (MHz)</th>
+    <th>Distance (m)</th>
+    <th>Quasi-peak Limits dB (µV/m)</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>30 to 230</td>
+    <td rowspan="2">10</td>
+    <td>30</td>
+  </tr>
+  <tr>
+    <td>230 to 1000</td>
+    <td>37</td>
+  </tr>
+  <tr>
+    <td>30 to 230</td>
+    <td rowspan="2">3</td>
+    <td>40</td>
+  </tr>
+  <tr>
+    <td>230 to 1000</td>
+    <td>47</td>
+  </tr>
+</tbody>
+</table>
+
+
+
+
+<p>Requirements for radiated emissions at frequencies above 1 GHz for class B equipment</p>
+<table>
+<thead>
+  <tr>
+    <th rowspan="2">Frequency range(MHz)</th>
+    <th rowspan="2">Distance (m)</th>
+    <th colspan="2">Limits dB(µV)</th>
+  </tr>
+  <tr>
+    <th>Average</th>
+    <th>Peak</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>1000 to 3000</td>
+    <td rowspan="2">3</td>
+    <td>50</td>
+    <td>70</td>
+  </tr>
+  <tr>
+    <td>3000 to 6000</td>
+    <td>54</td>
+    <td>74</td>
+  </tr>
+</tbody>
+</table>
+
+
+
+
+<h3 id="测试策略Test-strategy-1"><a href="#测试策略Test-strategy-1" class="headerlink" title="测试策略Test strategy"></a>测试策略Test strategy</h3><p>网关和模块都需要测试</p>
+<table>
+<thead>
+  <tr>
+   <th rowspan="2">Category</th>
+    <th rowspan="2">Polarization</th>
+    <th rowspan="2">Limit</th>
+  </tr>
+  <tr>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td rowspan="2">Gateway/Module</td>
+    <td>Horizontal</td>
+    <td>Class B</td>
+  </tr>
+  <tr>
+    <td>Vertical</td>
+    <td>Class B</td>
+  </tr>
+</tbody>
+</table>
+
+
+<blockquote>
+<p>注意事项Note</p>
+<ul>
+<li><p>首先确认测试样机的软硬件版本，电源型号，机壳类型，螺丝孔锁紧，线材长度固定等。</p>
+</li>
+<li><p>注意辅助设备必须不能带入新的辐射，例如POE模块、笔记本应置于暗室之外，通过线缆进行连接。</p>
+</li>
+<li><p>测试过程中注意线缆的连接可能因转台转动而接触不良，例如电源线，可能会引起测试数据有偏差。</p>
+</li>
+<li><p>产品默认应该测试典型正常工作的情形，例如LoRa, WIFI, LTE, ethernet等需要正常工作。</p>
+</li>
+<li><p>测试过程中，详细描述备注情况，留意数据变化，差异明显时，现场确认环境是否一致。</p>
+</li>
+</ul>
+</blockquote>
+<h2 id="谐波电流-Harmonic"><a href="#谐波电流-Harmonic" class="headerlink" title="谐波电流(Harmonic)"></a>谐波电流(Harmonic)</h2><h3 id="测试框图Block-Diagram-of-Test-Setup-2"><a href="#测试框图Block-Diagram-of-Test-Setup-2" class="headerlink" title="测试框图Block Diagram of Test Setup"></a>测试框图Block Diagram of Test Setup</h3><p><img src="clip_image006.png" alt="img"></p>
+<h3 id="限值Limit-2"><a href="#限值Limit-2" class="headerlink" title="限值Limit"></a>限值Limit</h3><table>
+<thead>
+  <tr>
+    <th colspan="2">Limits for Class A equipment</th>
+    <th colspan="3">Limits for Class D equipment</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td rowspan="2">Harmonics Order n</td>
+    <td rowspan="2">Max. permissible harmonics&nbsp;&nbsp;&nbsp;current A</td>
+    <td rowspan="2">Harmonics Order n</td>
+    <td rowspan="2">Max. permissible harmonics&nbsp;&nbsp;&nbsp;current per watt mA/W</td>
+    <td>Max. permissible&nbsp;&nbsp;&nbsp;harmonics current</td>
+  </tr>
+  <tr>
+    <td> A</td>
+  </tr>
+  <tr>
+    <td colspan="2">Odd harmonics</td>
+    <td colspan="3">　&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>2.3</td>
+    <td>3</td>
+    <td>3.4</td>
+    <td>2.3</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>1.14</td>
+    <td>5</td>
+    <td>1.9</td>
+    <td>1.14</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>0.77</td>
+    <td>7</td>
+    <td>1</td>
+    <td>0.77</td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td>0.4</td>
+    <td>9</td>
+    <td>0.5</td>
+    <td>0.4</td>
+  </tr>
+  <tr>
+    <td>11</td>
+    <td>0.33</td>
+    <td>11</td>
+    <td>0.35</td>
+    <td>0.33</td>
+  </tr>
+  <tr>
+    <td>13</td>
+    <td>0.21</td>
+    <td>13</td>
+    <td>0.3</td>
+    <td>0.21</td>
+  </tr>
+  <tr>
+    <td>15＜＝n＜＝39</td>
+    <td>0.15×15/n</td>
+    <td>15＜＝n＜＝39</td>
+    <td>3.85/n</td>
+    <td>0.15×15/n</td>
+  </tr>
+  <tr>
+    <td colspan="2">Even harmonics</td>
+    <td>　</td>
+    <td>　</td>
+    <td>　</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>1.08</td>
+    <td>　</td>
+    <td>　</td>
+    <td>　</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>0.43</td>
+    <td>　</td>
+    <td>　</td>
+    <td>　</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>0.3</td>
+    <td>　</td>
+    <td>　</td>
+    <td>　</td>
+  </tr>
+  <tr>
+    <td>8＜＝n＜＝40</td>
+    <td>0.23×8/n</td>
+    <td>　</td>
+    <td>　</td>
+    <td>　</td>
+  </tr>
+</tbody>
+</table>
+
+
+
+<h3 id="测试策略Test-strategy-2"><a href="#测试策略Test-strategy-2" class="headerlink" title="测试策略Test strategy"></a>测试策略Test strategy</h3><p>According to EN 61000-3-2: 2014 section 7: Equipment with a rated power of 75 Watt or less, other than lighting equipment, are not included in this standard.</p>
+<p>由于我们的当前产品功率都小于75W，故这项测试可忽略。</p>
+<h2 id="电压变化与闪烁-Flicker"><a href="#电压变化与闪烁-Flicker" class="headerlink" title="电压变化与闪烁(Flicker)"></a>电压变化与闪烁(Flicker)</h2><h3 id="测试框图Block-Diagram-of-Test-Setup-3"><a href="#测试框图Block-Diagram-of-Test-Setup-3" class="headerlink" title="测试框图Block Diagram of Test Setup"></a>测试框图Block Diagram of Test Setup</h3><p><img src="clip_image007.png" alt="img"></p>
+<p>Test Standard:EN 61000-3-3:2013 / IEC 61000-3-3: 2013</p>
+<h3 id="限值Limit-3"><a href="#限值Limit-3" class="headerlink" title="限值Limit"></a>限值Limit</h3><table>
+<thead>
+<tr>
+<th>Test Item</th>
+<th>Limit</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Pst(Short-term flicker indicator.)</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Plt(Long-term flicker indicator.)</td>
+<td>0.65</td>
+</tr>
+<tr>
+<td>Td(t)(ms)(Maximum time that d(t)exceeds 3.3%)</td>
+<td>500</td>
+</tr>
+<tr>
+<td>dmax(%)(Maximum relative voltage change.)</td>
+<td>4</td>
+</tr>
+<tr>
+<td>dc(%)(Relative steady-state voltage change)</td>
+<td>3.3</td>
+</tr>
+</tbody></table>
+<h3 id="测试策略Test-strategy-3"><a href="#测试策略Test-strategy-3" class="headerlink" title="测试策略Test strategy"></a>测试策略Test strategy</h3><p>目前需要测试的产品为网关等产品。</p>
+<p>此测试项目只针对含有适配器或者电源模块的产品。</p>
+<h2 id="射频电磁场辐射抗扰度-RS"><a href="#射频电磁场辐射抗扰度-RS" class="headerlink" title="射频电磁场辐射抗扰度(RS)"></a>射频电磁场辐射抗扰度(RS)</h2><h3 id="测试框图Block-Diagram-of-Test-Setup-4"><a href="#测试框图Block-Diagram-of-Test-Setup-4" class="headerlink" title="测试框图Block Diagram of Test Setup"></a>测试框图Block Diagram of Test Setup</h3><p><img src="clip_image009.png" alt="img"></p>
+<h3 id="试验等级Severity-level"><a href="#试验等级Severity-level" class="headerlink" title="试验等级Severity level"></a>试验等级Severity level</h3><table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Field Strength V/m</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1.</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2.</td>
+<td>3</td>
+</tr>
+<tr>
+<td>3.</td>
+<td>10</td>
+</tr>
+<tr>
+<td>X</td>
+<td>Special</td>
+</tr>
+</tbody></table>
+<h3 id="测试策略Test-strategy-4"><a href="#测试策略Test-strategy-4" class="headerlink" title="测试策略Test strategy"></a>测试策略Test strategy</h3><p>网关和模块都需要测试</p>
+<h2 id="传导抗扰度-CS"><a href="#传导抗扰度-CS" class="headerlink" title="传导抗扰度(CS)"></a>传导抗扰度(CS)</h2><h3 id="测试框图Block-Diagram-of-Test-Setup-5"><a href="#测试框图Block-Diagram-of-Test-Setup-5" class="headerlink" title="测试框图Block Diagram of Test Setup"></a>测试框图Block Diagram of Test Setup</h3><p><img src="clip_image011.png" alt="img"></p>
+<h3 id="试验等级Severity-level-1"><a href="#试验等级Severity-level-1" class="headerlink" title="试验等级Severity level"></a>试验等级Severity level</h3><table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Field Strength V</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1.</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2.</td>
+<td>3</td>
+</tr>
+<tr>
+<td>3.</td>
+<td>10</td>
+</tr>
+<tr>
+<td>X</td>
+<td>Special</td>
+</tr>
+</tbody></table>
+<h3 id="测试策略Test-strategy-5"><a href="#测试策略Test-strategy-5" class="headerlink" title="测试策略Test strategy"></a>测试策略Test strategy</h3><p>目前需要测试的产品为网关等产品。</p>
+<p>此测试项目只针对含有适配器或者电源模块的产品。</p>
+<h2 id="电压暂降和短时中断-DIP"><a href="#电压暂降和短时中断-DIP" class="headerlink" title="电压暂降和短时中断(DIP)"></a>电压暂降和短时中断(DIP)</h2><h3 id="测试框图Block-Diagram-of-Test-Setup-6"><a href="#测试框图Block-Diagram-of-Test-Setup-6" class="headerlink" title="测试框图Block Diagram of Test Setup"></a>测试框图Block Diagram of Test Setup</h3><p><img src="clip_image013.png" alt="img"></p>
+<h3 id="试验等级Severity-level-2"><a href="#试验等级Severity-level-2" class="headerlink" title="试验等级Severity level"></a>试验等级Severity level</h3><table>
+<thead>
+  <tr>
+    <th>Test Level (%UT)</th>
+    <th>Voltage dip and short interruptions (%UT)</th>
+    <th>Duration (in period)</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td rowspan="2">0</td>
+    <td rowspan="2">100</td>
+    <td>0.5</td>
+  </tr>
+  <tr>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td rowspan="2">40</td>
+    <td rowspan="2">60</td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>10</td>
+  </tr>
+  <tr>
+    <td rowspan="3">70</td>
+    <td rowspan="3">30</td>
+    <td>25</td>
+  </tr>
+  <tr>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>*</td>
+  </tr>
+</tbody>
+</table>
+
+
+
+<h3 id="测试策略Test-strategy-6"><a href="#测试策略Test-strategy-6" class="headerlink" title="测试策略Test strategy"></a>测试策略Test strategy</h3><p>目前需要测试的产品为网关等产品。</p>
+<p>此测试项目只针对含有适配器或者电源模块的产品。</p>
+<h2 id="电快速脉冲群抗扰度-EFT"><a href="#电快速脉冲群抗扰度-EFT" class="headerlink" title="电快速脉冲群抗扰度(EFT)"></a>电快速脉冲群抗扰度(EFT)</h2><h3 id="测试框图Block-Diagram-of-Test-Setup-7"><a href="#测试框图Block-Diagram-of-Test-Setup-7" class="headerlink" title="测试框图Block Diagram of Test Setup"></a>测试框图Block Diagram of Test Setup</h3><p><img src="clip_image015.png" alt="img"></p>
+<h3 id="试验等级Severity-level-3"><a href="#试验等级Severity-level-3" class="headerlink" title="试验等级Severity level"></a>试验等级Severity level</h3><table>
+<thead>
+  <tr>
+    <th rowspan="2">Level</th>
+    <th colspan="2">On power port, PE</th>
+    <th colspan="2">On I/O (Input/Output) Signaldata and control ports</th>
+  </tr>
+  <tr>
+    <th>Voltage peak (KV)</th>
+    <th>Repetition rate(KHz)</th>
+    <th>Voltage peak (KV)</th>
+    <th>Repetition rate(KHz)</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>1</td>
+    <td>0.5</td>
+    <td>5 or 100</td>
+    <td>0.25</td>
+    <td>5 or 100</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>1</td>
+    <td>5 or 100</td>
+    <td>0.5</td>
+    <td>5 or 100</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>2</td>
+    <td>5 or 100</td>
+    <td>1</td>
+    <td>5 or 100</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>4</td>
+    <td>5 or 100</td>
+    <td>2</td>
+    <td>5 or 100</td>
+  </tr>
+  <tr>
+    <td>X</td>
+    <td>Special</td>
+    <td>Special</td>
+    <td>Special</td>
+    <td>Special</td>
+  </tr>
+</tbody>
+</table>
+
+<blockquote>
+<p>Note 1   Use of 5 KHz repetition rates is traditional; however, 100 KHz is closer to reality. Product committees should determine which frequencies are relevant for specific products or product types.</p>
+<p>Note 2   With some products, there may be no clear distinction, between power ports and I/O ports, in which case it is up to product committees to make this determination for test purposes.</p>
+<p>Note 3   “X” is an open level. The level has to be specified in the dedicated equipment specification.</p>
+</blockquote>
+<h3 id="测试策略Test-strategy-7"><a href="#测试策略Test-strategy-7" class="headerlink" title="测试策略Test strategy"></a>测试策略Test strategy</h3><p>目前需要测试的产品为网关等产品。</p>
+<p>此测试项目只针对含有适配器，电源模块或带有LAN口的产品。</p>
+<h2 id="静电放电抗扰度-ESD"><a href="#静电放电抗扰度-ESD" class="headerlink" title="静电放电抗扰度(ESD)"></a>静电放电抗扰度(ESD)</h2><h3 id="测试框图Block-Diagram-of-Test-Setup-8"><a href="#测试框图Block-Diagram-of-Test-Setup-8" class="headerlink" title="测试框图Block Diagram of Test Setup"></a>测试框图Block Diagram of Test Setup</h3><p><img src="clip_image017.png" alt="img"></p>
+<h3 id="试验等级Severity-level-4"><a href="#试验等级Severity-level-4" class="headerlink" title="试验等级Severity level"></a>试验等级Severity level</h3><table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Test Voltage  Contact  Discharge (KV)</th>
+<th>Test Voltage  Air Discharge  (KV)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>±2</td>
+<td>±2</td>
+</tr>
+<tr>
+<td>2</td>
+<td>±4</td>
+<td>±4</td>
+</tr>
+<tr>
+<td>3</td>
+<td>±6</td>
+<td>±8</td>
+</tr>
+<tr>
+<td>4</td>
+<td>±8</td>
+<td>±15</td>
+</tr>
+<tr>
+<td>X</td>
+<td>Special</td>
+<td>Special</td>
+</tr>
+</tbody></table>
+<h3 id="测试步骤Test-Procedure-1"><a href="#测试步骤Test-Procedure-1" class="headerlink" title="测试步骤Test Procedure"></a>测试步骤Test Procedure</h3> <table>
+<thead>
+  <tr>
+    <th colspan="2">分类</th>
+    <th>测试点</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td colspan="2">接触放电(ContactDischarge)</td>
+    <td>螺丝孔，DC电源接口，RJ45网口，天线接口，SIM卡槽，SD卡槽</td>
+  </tr>
+  <tr>
+    <td colspan="2">空气放电(AirDischarge)</td>
+    <td>外壳表面，缝隙等</td>
+  </tr>
+  <tr>
+    <td rowspan="2">间接放电(Indirect discharge)</td>
+    <td>HCP</td>
+    <td>EUT 四周</td>
+  </tr>
+  <tr>
+    <td>VCP</td>
+    <td>EUT 四周</td>
+  </tr>
+</tbody>
+</table>
+
+
+
+<h2 id="浪涌抗扰度-Surge"><a href="#浪涌抗扰度-Surge" class="headerlink" title="浪涌抗扰度(Surge)"></a>浪涌抗扰度(Surge)</h2><h3 id="测试框图Block-Diagram-of-Test-Setup-9"><a href="#测试框图Block-Diagram-of-Test-Setup-9" class="headerlink" title="测试框图Block Diagram of Test Setup"></a>测试框图Block Diagram of Test Setup</h3><p><img src="clip_image019.png" alt="img"></p>
+<h3 id="试验等级Severity-level-5"><a href="#试验等级Severity-level-5" class="headerlink" title="试验等级Severity level"></a>试验等级Severity level</h3><table>
+<thead>
+<tr>
+<th>Severity Level</th>
+<th>Open-Circuit Test Voltage KV</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>0.5</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>3</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>4</td>
+<td>4.0</td>
+</tr>
+<tr>
+<td>*</td>
+<td>Special</td>
+</tr>
+</tbody></table>
+<h3 id="测试策略Test-strategy-8"><a href="#测试策略Test-strategy-8" class="headerlink" title="测试策略Test strategy"></a>测试策略Test strategy</h3><p>目前需要测试的产品为网关等产品。</p>
+<p>此测试项目只针对含有适配器，电源模块或带有LAN口的产品</p>
+<p>AC Mains power input ports</p>
+<table>
+<thead>
+<tr>
+<th>Coupling Line</th>
+<th>Phase Angel</th>
+<th>Test voltage</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>L-N</td>
+<td>0°, 90°, 180°, 270°</td>
+<td>±1.0KV</td>
+</tr>
+<tr>
+<td>L-PE</td>
+<td>0°, 90°, 180°, 270°</td>
+<td>±2.0KV</td>
+</tr>
+<tr>
+<td>N-PE</td>
+<td>0°, 90°, 180°, 270°</td>
+<td>±2.0KV</td>
+</tr>
+</tbody></table>
+<p>Signal port: RJ45</p>
+<table>
+<thead>
+<tr>
+<th>Coupling Line</th>
+<th>Phase Angel</th>
+<th>Test voltage</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Line-GND</td>
+<td>0°, 90°, 180°, 270°</td>
+<td>±1.0KV</td>
+</tr>
+</tbody></table>
+<p>具体电压等级需要查看适配器和产品规格。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Stephen Chen</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://stephenchen0620.github.io/posts/3MCQHYT/">https://stephenchen0620.github.io/posts/3MCQHYT/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://stephenchen0620.github.io" target="_blank">Stephen's blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/posts/3MCQHYT/emc.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/KR71AD/"><img class="prev-cover" src="/posts/KR71AD/lora.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">lora射频测试_CE</div></div></a></div><div class="next-post pull-right"><a href="/posts/2C58KSR/"><img class="next-cover" src="/posts/2C58KSR/tektro_mso54-new.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">单板测试规范</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Stephen Chen</div><div class="author-info__description"></div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">13</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BC%96%E5%86%99%E7%9B%AE%E7%9A%84"><span class="toc-number">1.</span> <span class="toc-text">编写目的</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E8%AF%B4%E6%98%8E"><span class="toc-number">2.</span> <span class="toc-text">定义说明</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A"><span class="toc-number">3.</span> <span class="toc-text">名词解释</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E9%A1%B9%E7%9B%AE%E5%8F%8A%E5%8F%82%E8%80%83%E6%A0%87%E5%87%86"><span class="toc-number">4.</span> <span class="toc-text">测试项目及参考标准</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E7%8E%AF%E5%A2%83"><span class="toc-number">5.</span> <span class="toc-text">测试环境</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E6%A0%B7%E6%9C%BA"><span class="toc-number">6.</span> <span class="toc-text">测试样机</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E7%AD%96%E7%95%A5"><span class="toc-number">7.</span> <span class="toc-text">测试策略</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E9%A1%B9%E7%9B%AE"><span class="toc-number">8.</span> <span class="toc-text">测试项目</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BC%A0%E5%AF%BC%E9%AA%9A%E6%89%B0-CE"><span class="toc-number">8.1.</span> <span class="toc-text">传导骚扰(CE)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E6%A1%86%E5%9B%BEBlock-Diagram-of-Test-Setup"><span class="toc-number">8.1.1.</span> <span class="toc-text">测试框图Block Diagram of Test Setup</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%99%90%E5%80%BCLimit"><span class="toc-number">8.1.2.</span> <span class="toc-text">限值Limit</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E7%AD%96%E7%95%A5Test-strategy"><span class="toc-number">8.1.3.</span> <span class="toc-text">测试策略Test strategy</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E6%AD%A5%E9%AA%A4Test-Procedure"><span class="toc-number">8.1.4.</span> <span class="toc-text">测试步骤Test Procedure</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BE%90%E5%B0%84%E9%AA%9A%E6%89%B0-RE"><span class="toc-number">8.2.</span> <span class="toc-text">辐射骚扰(RE)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E6%A1%86%E5%9B%BEBlock-Diagram-of-Test-Setup-1"><span class="toc-number">8.2.1.</span> <span class="toc-text">测试框图Block Diagram of Test Setup</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%99%90%E5%80%BCLimit-1"><span class="toc-number">8.2.2.</span> <span class="toc-text">限值Limit</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E7%AD%96%E7%95%A5Test-strategy-1"><span class="toc-number">8.2.3.</span> <span class="toc-text">测试策略Test strategy</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B0%90%E6%B3%A2%E7%94%B5%E6%B5%81-Harmonic"><span class="toc-number">8.3.</span> <span class="toc-text">谐波电流(Harmonic)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E6%A1%86%E5%9B%BEBlock-Diagram-of-Test-Setup-2"><span class="toc-number">8.3.1.</span> <span class="toc-text">测试框图Block Diagram of Test Setup</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%99%90%E5%80%BCLimit-2"><span class="toc-number">8.3.2.</span> <span class="toc-text">限值Limit</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E7%AD%96%E7%95%A5Test-strategy-2"><span class="toc-number">8.3.3.</span> <span class="toc-text">测试策略Test strategy</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%B5%E5%8E%8B%E5%8F%98%E5%8C%96%E4%B8%8E%E9%97%AA%E7%83%81-Flicker"><span class="toc-number">8.4.</span> <span class="toc-text">电压变化与闪烁(Flicker)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E6%A1%86%E5%9B%BEBlock-Diagram-of-Test-Setup-3"><span class="toc-number">8.4.1.</span> <span class="toc-text">测试框图Block Diagram of Test Setup</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%99%90%E5%80%BCLimit-3"><span class="toc-number">8.4.2.</span> <span class="toc-text">限值Limit</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E7%AD%96%E7%95%A5Test-strategy-3"><span class="toc-number">8.4.3.</span> <span class="toc-text">测试策略Test strategy</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%84%E9%A2%91%E7%94%B5%E7%A3%81%E5%9C%BA%E8%BE%90%E5%B0%84%E6%8A%97%E6%89%B0%E5%BA%A6-RS"><span class="toc-number">8.5.</span> <span class="toc-text">射频电磁场辐射抗扰度(RS)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E6%A1%86%E5%9B%BEBlock-Diagram-of-Test-Setup-4"><span class="toc-number">8.5.1.</span> <span class="toc-text">测试框图Block Diagram of Test Setup</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%95%E9%AA%8C%E7%AD%89%E7%BA%A7Severity-level"><span class="toc-number">8.5.2.</span> <span class="toc-text">试验等级Severity level</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E7%AD%96%E7%95%A5Test-strategy-4"><span class="toc-number">8.5.3.</span> <span class="toc-text">测试策略Test strategy</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BC%A0%E5%AF%BC%E6%8A%97%E6%89%B0%E5%BA%A6-CS"><span class="toc-number">8.6.</span> <span class="toc-text">传导抗扰度(CS)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E6%A1%86%E5%9B%BEBlock-Diagram-of-Test-Setup-5"><span class="toc-number">8.6.1.</span> <span class="toc-text">测试框图Block Diagram of Test Setup</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%95%E9%AA%8C%E7%AD%89%E7%BA%A7Severity-level-1"><span class="toc-number">8.6.2.</span> <span class="toc-text">试验等级Severity level</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E7%AD%96%E7%95%A5Test-strategy-5"><span class="toc-number">8.6.3.</span> <span class="toc-text">测试策略Test strategy</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%B5%E5%8E%8B%E6%9A%82%E9%99%8D%E5%92%8C%E7%9F%AD%E6%97%B6%E4%B8%AD%E6%96%AD-DIP"><span class="toc-number">8.7.</span> <span class="toc-text">电压暂降和短时中断(DIP)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E6%A1%86%E5%9B%BEBlock-Diagram-of-Test-Setup-6"><span class="toc-number">8.7.1.</span> <span class="toc-text">测试框图Block Diagram of Test Setup</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%95%E9%AA%8C%E7%AD%89%E7%BA%A7Severity-level-2"><span class="toc-number">8.7.2.</span> <span class="toc-text">试验等级Severity level</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E7%AD%96%E7%95%A5Test-strategy-6"><span class="toc-number">8.7.3.</span> <span class="toc-text">测试策略Test strategy</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%B5%E5%BF%AB%E9%80%9F%E8%84%89%E5%86%B2%E7%BE%A4%E6%8A%97%E6%89%B0%E5%BA%A6-EFT"><span class="toc-number">8.8.</span> <span class="toc-text">电快速脉冲群抗扰度(EFT)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E6%A1%86%E5%9B%BEBlock-Diagram-of-Test-Setup-7"><span class="toc-number">8.8.1.</span> <span class="toc-text">测试框图Block Diagram of Test Setup</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%95%E9%AA%8C%E7%AD%89%E7%BA%A7Severity-level-3"><span class="toc-number">8.8.2.</span> <span class="toc-text">试验等级Severity level</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E7%AD%96%E7%95%A5Test-strategy-7"><span class="toc-number">8.8.3.</span> <span class="toc-text">测试策略Test strategy</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%99%E7%94%B5%E6%94%BE%E7%94%B5%E6%8A%97%E6%89%B0%E5%BA%A6-ESD"><span class="toc-number">8.9.</span> <span class="toc-text">静电放电抗扰度(ESD)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E6%A1%86%E5%9B%BEBlock-Diagram-of-Test-Setup-8"><span class="toc-number">8.9.1.</span> <span class="toc-text">测试框图Block Diagram of Test Setup</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%95%E9%AA%8C%E7%AD%89%E7%BA%A7Severity-level-4"><span class="toc-number">8.9.2.</span> <span class="toc-text">试验等级Severity level</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E6%AD%A5%E9%AA%A4Test-Procedure-1"><span class="toc-number">8.9.3.</span> <span class="toc-text">测试步骤Test Procedure</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%AA%E6%B6%8C%E6%8A%97%E6%89%B0%E5%BA%A6-Surge"><span class="toc-number">8.10.</span> <span class="toc-text">浪涌抗扰度(Surge)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E6%A1%86%E5%9B%BEBlock-Diagram-of-Test-Setup-9"><span class="toc-number">8.10.1.</span> <span class="toc-text">测试框图Block Diagram of Test Setup</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%95%E9%AA%8C%E7%AD%89%E7%BA%A7Severity-level-5"><span class="toc-number">8.10.2.</span> <span class="toc-text">试验等级Severity level</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E7%AD%96%E7%95%A5Test-strategy-8"><span class="toc-number">8.10.3.</span> <span class="toc-text">测试策略Test strategy</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/KR71AD/" title="lora射频测试_CE"><img src="/posts/KR71AD/lora.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="lora射频测试_CE"/></a><div class="content"><a class="title" href="/posts/KR71AD/" title="lora射频测试_CE">lora射频测试_CE</a><time datetime="2022-02-11T07:45:10.590Z" title="发表于 2022-02-11 15:45:10">2022-02-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/3MCQHYT/" title="emc测试规范"><img src="/posts/3MCQHYT/emc.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="emc测试规范"/></a><div class="content"><a class="title" href="/posts/3MCQHYT/" title="emc测试规范">emc测试规范</a><time datetime="2022-02-11T07:45:10.589Z" title="发表于 2022-02-11 15:45:10">2022-02-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/2C58KSR/" title="单板测试规范"><img src="/posts/2C58KSR/tektro_mso54-new.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="单板测试规范"/></a><div class="content"><a class="title" href="/posts/2C58KSR/" title="单板测试规范">单板测试规范</a><time datetime="2022-02-11T07:45:10.534Z" title="发表于 2022-02-11 15:45:10">2022-02-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/2Q829CG/" title="环境传感器1"><img src="/posts/2Q829CG/WisBlock-Sensor.svg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="环境传感器1"/></a><div class="content"><a class="title" href="/posts/2Q829CG/" title="环境传感器1">环境传感器1</a><time datetime="2022-02-11T03:09:13.557Z" title="发表于 2022-02-11 11:09:13">2022-02-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/1JE0BV0/" title="RAK7268固件烧录"><img src="/posts/1JE0BV0/WisGate.svg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="RAK7268固件烧录"/></a><div class="content"><a class="title" href="/posts/1JE0BV0/" title="RAK7268固件烧录">RAK7268固件烧录</a><time datetime="2022-02-10T12:00:01.000Z" title="发表于 2022-02-10 20:00:01">2022-02-10</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By Stephen Chen</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

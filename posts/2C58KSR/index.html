@@ -1,0 +1,1014 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>单板测试规范 | Stephen's blog</title><meta name="author" content="Stephen Chen"><meta name="copyright" content="Stephen Chen"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="概述编写目的研发设计产品的单板硬件测试指导。 测试准备测试仪器   名称 型号    示波器 Tektronix TDS7104   无源电压探头 Tektronix P6139A   直流电源 GWINSTEK GPS-2303C   频谱分析仪 HP8596E   万用表    同轴电缆    测试条件 测试仪器使用前需要校准 单板&#x2F;系统上电正常工作30分钟后测试 测试仪器和测试单板需要共地">
+<meta property="og:type" content="article">
+<meta property="og:title" content="单板测试规范">
+<meta property="og:url" content="https://stephenchen0620.github.io/posts/2C58KSR/index.html">
+<meta property="og:site_name" content="Stephen&#39;s blog">
+<meta property="og:description" content="概述编写目的研发设计产品的单板硬件测试指导。 测试准备测试仪器   名称 型号    示波器 Tektronix TDS7104   无源电压探头 Tektronix P6139A   直流电源 GWINSTEK GPS-2303C   频谱分析仪 HP8596E   万用表    同轴电缆    测试条件 测试仪器使用前需要校准 单板&#x2F;系统上电正常工作30分钟后测试 测试仪器和测试单板需要共地">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://stephenchen0620.github.io/posts/2C58KSR/tektro_mso54-new.jpg">
+<meta property="article:published_time" content="2022-02-11T07:45:10.534Z">
+<meta property="article:modified_time" content="2022-02-11T09:01:40.554Z">
+<meta property="article:author" content="Stephen Chen">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://stephenchen0620.github.io/posts/2C58KSR/tektro_mso54-new.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://stephenchen0620.github.io/posts/2C58KSR/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '单板测试规范',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-02-11 17:01:40'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">13</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 目录</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> RAK Product</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/WisGate/"><span> WisGate</span></a></li><li><a class="site-page child" href="/WisNode/"><span> WisNode</span></a></li><li><a class="site-page child" href="/WisBlock/"><span> WisBlock</span></a></li><li><a class="site-page child" href="/WisDuo/"><span> WisDuo</span></a></li><li><a class="site-page child" href="/WisLink/"><span> WisLink</span></a></li><li><a class="site-page child" href="/WisHat/"><span> WisHat</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/posts/2C58KSR/tektro_mso54-new.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Stephen's blog</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 目录</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> RAK Product</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/WisGate/"><span> WisGate</span></a></li><li><a class="site-page child" href="/WisNode/"><span> WisNode</span></a></li><li><a class="site-page child" href="/WisBlock/"><span> WisBlock</span></a></li><li><a class="site-page child" href="/WisDuo/"><span> WisDuo</span></a></li><li><a class="site-page child" href="/WisLink/"><span> WisLink</span></a></li><li><a class="site-page child" href="/WisHat/"><span> WisHat</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">单板测试规范</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-02-11T07:45:10.534Z" title="发表于 2022-02-11 15:45:10">2022-02-11</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-02-11T09:01:40.554Z" title="更新于 2022-02-11 17:01:40">2022-02-11</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%A1%AC%E4%BB%B6%E6%B5%8B%E8%AF%95/">硬件测试</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="单板测试规范"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><h2 id="编写目的"><a href="#编写目的" class="headerlink" title="编写目的"></a>编写目的</h2><p>研发设计产品的单板硬件测试指导。</p>
+<h1 id="测试准备"><a href="#测试准备" class="headerlink" title="测试准备"></a>测试准备</h1><h2 id="测试仪器"><a href="#测试仪器" class="headerlink" title="测试仪器"></a>测试仪器</h2><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>型号</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>示波器</td>
+<td>Tektronix TDS7104</td>
+</tr>
+<tr>
+<td>无源电压探头</td>
+<td>Tektronix P6139A</td>
+</tr>
+<tr>
+<td>直流电源</td>
+<td>GWINSTEK GPS-2303C</td>
+</tr>
+<tr>
+<td>频谱分析仪</td>
+<td>HP8596E</td>
+</tr>
+<tr>
+<td>万用表</td>
+<td></td>
+</tr>
+<tr>
+<td>同轴电缆</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="测试条件"><a href="#测试条件" class="headerlink" title="测试条件"></a>测试条件</h2><ul>
+<li>测试仪器使用前需要校准</li>
+<li>单板/系统上电正常工作30分钟后测试</li>
+<li>测试仪器和测试单板需要共地</li>
+<li>信号质量测试点选择在信号接收端</li>
+</ul>
+<h1 id="测试项目"><a href="#测试项目" class="headerlink" title="测试项目"></a>测试项目</h1><h2 id="单板功耗（Power-consumption）"><a href="#单板功耗（Power-consumption）" class="headerlink" title="单板功耗（Power consumption）"></a>单板功耗（Power consumption）</h2><h3 id="适配器供电-针对网关产品"><a href="#适配器供电-针对网关产品" class="headerlink" title="适配器供电(针对网关产品)"></a>适配器供电(针对网关产品)</h3><ul>
+<li>使用12V适配器供电，LoRa，WiFi，4G，以太网等业务正常运行，</li>
+<li>禁用wifi功能，4g、以太网功能跑起来，记录LoRa 接收和发送时的最大电流</li>
+<li>启用wifi功能，4g、以太网功能跑起来，记录LoRa 接收和发送时的最大电流</li>
+</ul>
+<h3 id="POE设备供电-针对网关产品"><a href="#POE设备供电-针对网关产品" class="headerlink" title="POE设备供电(针对网关产品)"></a>POE设备供电(针对网关产品)</h3><ul>
+<li>使用12V适配器供电，LoRa，WiFi，4G，以太网等业务正常运行，</li>
+<li>禁用wifi功能，4g、以太网功能跑起来，分别测试LoRa 接收和发送时的最大电流</li>
+<li>启用wifi功能，4g、以太网功能跑起来，分别测试LoRa 接收和发送时的最大电流</li>
+</ul>
+<h2 id="电源完整性（PI）"><a href="#电源完整性（PI）" class="headerlink" title="电源完整性（PI）"></a>电源完整性（PI）</h2><h3 id="电压精度（voltage-accuracy）"><a href="#电压精度（voltage-accuracy）" class="headerlink" title="电压精度（voltage accuracy）"></a>电压精度（voltage accuracy）</h3><h4 id="测试步骤"><a href="#测试步骤" class="headerlink" title="测试步骤"></a>测试步骤</h4><ul>
+<li>使用电压表（或万用表）的黑表笔连接测试电源的地</li>
+<li>使用电压表（或万用表）的红表笔连接被测试电压</li>
+<li>读取电压表的数值</li>
+</ul>
+<h4 id="测试点"><a href="#测试点" class="headerlink" title="测试点"></a>测试点</h4><ul>
+<li>电源模块(DC/DC,LDO等)的电压输出管脚或就近的电容</li>
+<li>芯片的电源管脚或就近的电容</li>
+</ul>
+<h4 id="测试标准"><a href="#测试标准" class="headerlink" title="测试标准"></a>测试标准</h4><p>​    一般在标称电压值5%范围内，或者根据芯片的Datasheet要求来确定。</p>
+<h4 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h4><ul>
+<li>首要推荐使用精密的电压表测试；</li>
+<li>次要选择用数字万用表，确保电池电量充足，否则测量误差较大；</li>
+<li>不推荐使用示波器测量电压精度，偏差较大；万一使用，则需设置为直流并取均方根值（RMS）。</li>
+</ul>
+<h3 id="纹波噪声（Ripple-amp-Noise）"><a href="#纹波噪声（Ripple-amp-Noise）" class="headerlink" title="纹波噪声（Ripple &amp; Noise）"></a>纹波噪声（Ripple &amp; Noise）</h3><h4 id="测试步骤-1"><a href="#测试步骤-1" class="headerlink" title="测试步骤"></a>测试步骤</h4><ul>
+<li>设置示波器AC耦合，同轴电缆一端接示波器，另外一端焊接到被测试电压的电容两端。</li>
+<li>测试纹波：设置示波器带宽20MHz，调节水平刻度为us级/格，示波器至少捕捉4个周期以上，读取示波器的峰峰值，周期/频率。</li>
+<li>测试噪声：设置示波器带宽为全带宽，波形设置累计模式，调节水平刻度为ms级/格，读取示波器的峰峰值。</li>
+<li>分别测试单板在空载和满载的情况。</li>
+</ul>
+<h4 id="测试点-1"><a href="#测试点-1" class="headerlink" title="测试点"></a>测试点</h4><p>​    芯片的电源管脚附近的电容</p>
+<h4 id="测试标准-1"><a href="#测试标准-1" class="headerlink" title="测试标准"></a>测试标准</h4><ul>
+<li>纹波：2%，或者依据datasheet要求；</li>
+<li>噪声：5%，或者依据datasheet要求。</li>
+</ul>
+<h4 id="注意事项-1"><a href="#注意事项-1" class="headerlink" title="注意事项"></a>注意事项</h4><ul>
+<li>无同轴电缆时，尽量使用自制的电源测试探头</li>
+<li>尽量使用小衰减比的探头，探头的接地线尽量短</li>
+</ul>
+<h3 id="电源上下电波形（Power-on-and-off-waveforms）"><a href="#电源上下电波形（Power-on-and-off-waveforms）" class="headerlink" title="电源上下电波形（Power on and off waveforms）"></a>电源上下电波形（Power on and off waveforms）</h3><h4 id="测试步骤-2"><a href="#测试步骤-2" class="headerlink" title="测试步骤"></a>测试步骤</h4><ul>
+<li> 设置示波器触发方式为边沿触发。</li>
+<li>上下电，查看波形是否单调，并读取过冲值。</li>
+</ul>
+<h4 id="测试标准-2"><a href="#测试标准-2" class="headerlink" title="测试标准"></a>测试标准</h4><p>波形单调，无平台、跌坑。过冲值一般不超过5%，或者依据datasheet要求。</p>
+<h4 id="注意事项-2"><a href="#注意事项-2" class="headerlink" title="注意事项"></a>注意事项</h4><ul>
+<li>需要遍历以下几种情况</li>
+<li>12V适配器拔插</li>
+<li>单板接口拔插</li>
+<li>POE上下电情况</li>
+</ul>
+<h3 id="电源上下电时序（Sequence）"><a href="#电源上下电时序（Sequence）" class="headerlink" title="电源上下电时序（Sequence）"></a>电源上下电时序（Sequence）</h3><h4 id="测试步骤-3"><a href="#测试步骤-3" class="headerlink" title="测试步骤"></a>测试步骤</h4><ul>
+<li>将探头连接主板待测电源的电容处。</li>
+<li>示波器设置上升沿触发，将主板上电开机，得到上电时序。</li>
+<li>示波器设置下降沿触发，将主板下电关机，得到上电时序。</li>
+</ul>
+<h4 id="测试标准-3"><a href="#测试标准-3" class="headerlink" title="测试标准"></a>测试标准</h4><p>时序标准参考datasheet要求。</p>
+<h2 id="信号完整性（SI）"><a href="#信号完整性（SI）" class="headerlink" title="信号完整性（SI）"></a>信号完整性（SI）</h2><h3 id="时钟信号（Clock）"><a href="#时钟信号（Clock）" class="headerlink" title="时钟信号（Clock）"></a>时钟信号（Clock）</h3><h4 id="测试步骤-4"><a href="#测试步骤-4" class="headerlink" title="测试步骤"></a>测试步骤</h4><ul>
+<li> 尽量选择靠近接收端，芯片时钟输入端的引脚连接探头。</li>
+<li> 使用示波器测量表3的相关参数</li>
+<li>使用频率计测试接收端时钟的频率，并核算ppm。</li>
+</ul>
+<h4 id="测试标准-4"><a href="#测试标准-4" class="headerlink" title="测试标准"></a>测试标准</h4><p>时钟信号参考datasheet要求。</p>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Parameter</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Vih</td>
+<td>高电平幅值</td>
+</tr>
+<tr>
+<td>Vil</td>
+<td>低电平幅值</td>
+</tr>
+<tr>
+<td>Tr</td>
+<td>上升时间</td>
+</tr>
+<tr>
+<td>Tf</td>
+<td>下降时间</td>
+</tr>
+<tr>
+<td>Freq.</td>
+<td>频率</td>
+</tr>
+<tr>
+<td>Duty cycle</td>
+<td>占空比</td>
+</tr>
+<tr>
+<td>tHIGH</td>
+<td>正脉冲宽度</td>
+</tr>
+<tr>
+<td>tLOW</td>
+<td>负脉冲宽度</td>
+</tr>
+<tr>
+<td>Period</td>
+<td>周期</td>
+</tr>
+<tr>
+<td>Jitter</td>
+<td>抖动</td>
+</tr>
+<tr>
+<td>Overshoot</td>
+<td>过冲</td>
+</tr>
+<tr>
+<td>Undershoot</td>
+<td>下冲</td>
+</tr>
+</tbody></table>
+<h4 id="注意事项-3"><a href="#注意事项-3" class="headerlink" title="注意事项"></a>注意事项</h4><ul>
+<li>注意观察时钟信号边沿是否单调，波形是否存在较大毛刺，回勾</li>
+<li>占空比满足40%-60%</li>
+</ul>
+<h3 id="复位信号（Reset）"><a href="#复位信号（Reset）" class="headerlink" title="复位信号（Reset）"></a>复位信号（Reset）</h3><h4 id="测试步骤-5"><a href="#测试步骤-5" class="headerlink" title="测试步骤"></a>测试步骤</h4><ul>
+<li> 尽量选择靠近芯片接收端的阻容或者过孔连接探头。</li>
+<li>单板上电，观察复位信号的波形</li>
+</ul>
+<h4 id="测试标准-5"><a href="#测试标准-5" class="headerlink" title="测试标准"></a>测试标准</h4><p>复位信号参考datasheet要求。</p>
+<h4 id="注意事项-4"><a href="#注意事项-4" class="headerlink" title="注意事项"></a>注意事项</h4><ul>
+<li> 除了看水平时间，还需要展开看边沿单调性等信号质量；</li>
+<li>对低电平复位有效的信号，取下降沿触发；</li>
+<li>对于上电复位信号，取最晚上电的电源信号作参考，与复位信号一起测试。</li>
+<li>复位信号有效的脉宽长度需要满足Datasheet的要求。</li>
+</ul>
+<h3 id="I2C"><a href="#I2C" class="headerlink" title="I2C"></a>I2C</h3><h4 id="测试步骤-6"><a href="#测试步骤-6" class="headerlink" title="测试步骤"></a>测试步骤</h4><ul>
+<li>分别测试SCL和SDA信号高低电平，确认是否存在过冲，毛刺。 </li>
+<li>用示波器测量I2C总线的各项参数，并记录。</li>
+</ul>
+<h4 id="测试标准-6"><a href="#测试标准-6" class="headerlink" title="测试标准"></a>测试标准</h4><p>I2C信号标准参考datasheet要求。</p>
+<p><img src="image-20220207173223349.png" alt="image-20220207173223349"></p>
+<p><img src="clip_image002.gif" alt="img"></p>
+<table>
+<thead>
+  <tr>
+    <th rowspan="2">PARAMETER</th>
+    <th rowspan="2">SYMBOL</th>
+    <th colspan="2">STANDARD-MODE</th>
+    <th colspan="2">FAST-MODE</th>
+    <th colspan="2">Hs-MODE</th>
+    <th rowspan="2">UNIT</th>
+  </tr>
+  <tr>
+    <th>MIN.</th>
+    <th>MAX.</th>
+    <th>MIN.</th>
+    <th>MAX.</th>
+    <th>MIN.</th>
+    <th>MAX.</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>LOWlevel input voltage</td>
+    <td>VIL</td>
+    <td>-0.5</td>
+    <td>0.3VDD</td>
+    <td>-0.5</td>
+    <td>0.3VDD</td>
+    <td>-0.5</td>
+    <td>0.3VDD</td>
+    <td>V</td>
+  </tr>
+  <tr>
+    <td>HIGHlevel input voltage</td>
+    <td>VIH</td>
+    <td>0.7VDD</td>
+    <td>VDD +0.5</td>
+    <td>0.7VDD</td>
+    <td>VDD +0.5</td>
+    <td>0.7VDD</td>
+    <td>VDD +0.5</td>
+    <td>V</td>
+  </tr>
+  <tr>
+    <td>SCLclock frequency</td>
+    <td>fSCL</td>
+    <td>0</td>
+    <td>100</td>
+    <td>0</td>
+    <td>400</td>
+    <td>0</td>
+    <td>3400</td>
+    <td>kHz</td>
+  </tr>
+  <tr>
+    <td>LOWperiod of the SCL clock</td>
+    <td>tLOW</td>
+    <td>4.7</td>
+    <td>–</td>
+    <td>1.3</td>
+    <td>–</td>
+    <td>0.16</td>
+    <td>–</td>
+    <td>ms</td>
+  </tr>
+  <tr>
+    <td>HIGHperiod of the SCL clock</td>
+    <td>tHIGH</td>
+    <td>4</td>
+    <td>–</td>
+    <td>0.6</td>
+    <td>–</td>
+    <td>0.06</td>
+    <td>–</td>
+    <td>ms</td>
+  </tr>
+  <tr>
+    <td>Risetime of both SDA and SCL signals</td>
+    <td>tr</td>
+    <td>–</td>
+    <td>1000</td>
+    <td>20</td>
+    <td>300</td>
+    <td>10</td>
+    <td>40</td>
+    <td>ns</td>
+  </tr>
+  <tr>
+    <td>Falltime of both SDA and SCL signals</td>
+    <td>tf</td>
+    <td>–</td>
+    <td>300</td>
+    <td>20</td>
+    <td>300</td>
+    <td>10</td>
+    <td>40</td>
+    <td>ns</td>
+  </tr>
+  <tr>
+    <td>Holdtime (repeated) START condition</td>
+    <td>tHD;STA</td>
+    <td>4</td>
+    <td>–</td>
+    <td>0.6</td>
+    <td>-</td>
+    <td>0.16</td>
+    <td>-</td>
+    <td>ms</td>
+  </tr>
+  <tr>
+    <td>Set-uptime for a repeated START condition</td>
+    <td>tSU;STA</td>
+    <td>4.7</td>
+    <td>–</td>
+    <td>0.6</td>
+    <td>–</td>
+    <td>0.16</td>
+    <td>–</td>
+    <td>ms</td>
+  </tr>
+  <tr>
+    <td>Datahold time</td>
+    <td>tHD;DAT</td>
+    <td>0</td>
+    <td>3.45</td>
+    <td>0</td>
+    <td>0.9</td>
+    <td>0</td>
+    <td>0.07</td>
+    <td>ms</td>
+  </tr>
+  <tr>
+    <td>Dataset-up time</td>
+    <td>tSU;DAT</td>
+    <td>250</td>
+    <td>-</td>
+    <td>100</td>
+    <td>–</td>
+    <td>10</td>
+    <td>–</td>
+    <td>ns</td>
+  </tr>
+  <tr>
+    <td>Set-uptime for STOP condition</td>
+    <td>tSU;STO</td>
+    <td>4</td>
+    <td>–</td>
+    <td>0.6</td>
+    <td>–</td>
+    <td>0.16</td>
+    <td>–</td>
+    <td>ms</td>
+  </tr>
+  <tr>
+    <td>Busfree time between a STOP and START condition</td>
+    <td>tBUF</td>
+    <td>4.7</td>
+    <td>–</td>
+    <td>1.3</td>
+    <td>–</td>
+    <td>0.1</td>
+    <td>–</td>
+    <td>ms</td>
+  </tr>
+</tbody>
+</table>
+
+<h3 id="SPI"><a href="#SPI" class="headerlink" title="SPI"></a>SPI</h3><h4 id="测试步骤-7"><a href="#测试步骤-7" class="headerlink" title="测试步骤"></a>测试步骤</h4><ul>
+<li>分别测试CLK,CS,SDI,SDO信号的高低电平，确认是否存在过冲，毛刺。</li>
+<li>量测SPI总线的各项参数，并记录。</li>
+</ul>
+<p><img src="clip_image002.jpg" alt="img"></p>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>名称</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>VIL</td>
+<td>输入信号的低电平范围</td>
+</tr>
+<tr>
+<td>VIH</td>
+<td>输入信号的高电平范围</td>
+</tr>
+<tr>
+<td>Freq</td>
+<td>时钟频率</td>
+</tr>
+<tr>
+<td>tR</td>
+<td>时钟上升时间</td>
+</tr>
+<tr>
+<td>tF</td>
+<td>时钟下降时间</td>
+</tr>
+<tr>
+<td>tLOW</td>
+<td>时钟低电平时间</td>
+</tr>
+<tr>
+<td>tHIGH</td>
+<td>时钟高电平时间</td>
+</tr>
+<tr>
+<td>tSU.CS</td>
+<td>片选信号建立时间</td>
+</tr>
+<tr>
+<td>tSU.SDI</td>
+<td>数据输入信号建立时间</td>
+</tr>
+<tr>
+<td>tHD.CS</td>
+<td>片选信号保持时间</td>
+</tr>
+<tr>
+<td>tHD.SDI</td>
+<td>数据输入信号保持时间</td>
+</tr>
+<tr>
+<td>tHD.SDO</td>
+<td>数据输出信号保持时间</td>
+</tr>
+<tr>
+<td>tV.SDO</td>
+<td>数据输出有效时间最大时间</td>
+</tr>
+</tbody></table>
+<h3 id="UART"><a href="#UART" class="headerlink" title="UART"></a>UART</h3><h4 id="测试步骤-8"><a href="#测试步骤-8" class="headerlink" title="测试步骤"></a>测试步骤</h4><ul>
+<li>分别测试Txd Rxd信号的高低电平，确认是否存在过冲，毛刺。</li>
+<li>测量UART总线的各项参数，并记录。</li>
+<li>用光标卡UART的波特率</li>
+</ul>
+<h4 id="测试标准-7"><a href="#测试标准-7" class="headerlink" title="测试标准"></a>测试标准</h4><p>参考芯片datasheet的要求</p>
+<h3 id="SD卡"><a href="#SD卡" class="headerlink" title="SD卡"></a>SD卡</h3><table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Symbol</th>
+<th>Min</th>
+<th>Max</th>
+<th>Unit</th>
+<th>Remark</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Supply  Voltage</td>
+<td>VDD</td>
+<td>2.7</td>
+<td>3.6</td>
+<td>V</td>
+<td></td>
+</tr>
+<tr>
+<td>Output  High Voltage</td>
+<td>VOH</td>
+<td>0.75*VDD</td>
+<td></td>
+<td>V</td>
+<td>IOH=-2mA VDD min</td>
+</tr>
+<tr>
+<td>Output  Low Voltage</td>
+<td>VOL</td>
+<td></td>
+<td>0.125*VDD</td>
+<td>V</td>
+<td>IOL = 2mA VDD min</td>
+</tr>
+<tr>
+<td>Input  High Voltage</td>
+<td>VIH</td>
+<td>0.625*VDD</td>
+<td>VDD+0.3</td>
+<td>V</td>
+<td></td>
+</tr>
+<tr>
+<td>Input  Low Voltage</td>
+<td>VIL</td>
+<td>VSS-0.3</td>
+<td>0.25  *VDD</td>
+<td>V</td>
+<td></td>
+</tr>
+<tr>
+<td>Power  Up Time</td>
+<td></td>
+<td></td>
+<td>250</td>
+<td>ms</td>
+<td>From  0V to VDD min</td>
+</tr>
+<tr>
+<td>Supply ramp up time</td>
+<td></td>
+<td>1</td>
+<td></td>
+<td>ms</td>
+<td>or  &gt;74 sd clocks</td>
+</tr>
+</tbody></table>
+<p><img src="image-20220207173956552.png" alt="image-20220207173956552"></p>
+<h4 id="下电时序"><a href="#下电时序" class="headerlink" title="下电时序"></a>下电时序</h4><p>下电时，在 1mS 内电源电压必须下降到小于500mV。</p>
+<h4 id="总线时序"><a href="#总线时序" class="headerlink" title="总线时序"></a>总线时序</h4><p><strong>普通模式</strong></p>
+<p><img src="image-20220207174020152.png" alt="image-20220207174020152"></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Symbol</th>
+<th>Min.</th>
+<th>Max.</th>
+<th>Unit</th>
+<th>Remark</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Clock  CLK (All values are referred to min (VIH) and max (VIL),</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Clock frequency Data Transfer Mode</td>
+<td>fPP</td>
+<td>0</td>
+<td>25</td>
+<td>MHz</td>
+<td>CCARD ≤ 10 pF (1  card)</td>
+</tr>
+<tr>
+<td>Clock frequency Identification Mode</td>
+<td>fOD</td>
+<td>0(1)/100</td>
+<td>400</td>
+<td>kHz</td>
+<td>CCARD ≤ 10 pF (1 card)</td>
+</tr>
+<tr>
+<td>Clock low time</td>
+<td>tWL</td>
+<td>10</td>
+<td></td>
+<td>ns</td>
+<td>CCARD ≤ 10 pF (1  card)</td>
+</tr>
+<tr>
+<td>Clock high time</td>
+<td>tWH</td>
+<td>10</td>
+<td></td>
+<td>ns</td>
+<td>CCARD ≤ 10 pF (1  card)</td>
+</tr>
+<tr>
+<td>Clock rise time</td>
+<td>tTLH</td>
+<td></td>
+<td>10</td>
+<td>ns</td>
+<td>CCARD ≤ 10 pF (1  card)</td>
+</tr>
+<tr>
+<td>Clock fall time</td>
+<td>tTHL</td>
+<td></td>
+<td>10</td>
+<td>ns</td>
+<td>CCARD ≤ 10 pF (1  card)</td>
+</tr>
+<tr>
+<td>Inputs CMD, DAT (referenced to CLK)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Input set-up time</td>
+<td>tISU</td>
+<td>5</td>
+<td></td>
+<td>ns</td>
+<td>CCARD ≤ 10 pF (1  card)</td>
+</tr>
+<tr>
+<td>Input hold time</td>
+<td>tIH</td>
+<td>5</td>
+<td></td>
+<td>ns</td>
+<td>CCARD ≤ 10 pF (1  card)</td>
+</tr>
+<tr>
+<td>Outputs CMD, DAT (referenced to CLK)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Output Delay time during Data Transfer  Mode</td>
+<td>tODLY</td>
+<td>0</td>
+<td>14</td>
+<td>ns</td>
+<td>CL ≤ 40 pF (1 card)</td>
+</tr>
+<tr>
+<td>Output Delay time during Identification  Mode</td>
+<td>tODLY</td>
+<td>0</td>
+<td>50</td>
+<td>ns</td>
+<td>CL ≤ 40 pF (1 card)</td>
+</tr>
+</tbody></table>
+<p><strong>高速模式</strong></p>
+<p><img src="image-20220207174056401.png" alt="image-20220207174056401"></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Symbol</th>
+<th>Min.</th>
+<th>Max.</th>
+<th>Unit</th>
+<th>Remark</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Clock CLK (All values are referred to min  (VIH)  and max (VIL),</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Clock frequency Data Transfer Mode</td>
+<td>fPP</td>
+<td>0</td>
+<td>50</td>
+<td>MHz</td>
+<td>CCARD ≤ 10 pF (1 card)</td>
+</tr>
+<tr>
+<td>Clock low time</td>
+<td>tWL</td>
+<td>7</td>
+<td></td>
+<td>ns</td>
+<td>CCARD ≤ 10 pF (1 card)</td>
+</tr>
+<tr>
+<td>Clock high time</td>
+<td>tWH</td>
+<td>7</td>
+<td></td>
+<td>ns</td>
+<td>CCARD ≤ 10 pF (1 card)</td>
+</tr>
+<tr>
+<td>Clock rise time</td>
+<td>tTLH</td>
+<td></td>
+<td>3</td>
+<td>ns</td>
+<td>CCARD ≤ 10 pF (1 card)</td>
+</tr>
+<tr>
+<td>Clock fall time</td>
+<td>tTHL</td>
+<td></td>
+<td>3</td>
+<td>ns</td>
+<td>CCARD ≤ 10 pF (1 card)</td>
+</tr>
+<tr>
+<td>Inputs CMD, DAT (referenced to CLK)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Input set-up time</td>
+<td>tISU</td>
+<td>6</td>
+<td></td>
+<td>ns</td>
+<td>CCARD ≤ 10 pF (1 card)</td>
+</tr>
+<tr>
+<td>Input hold time</td>
+<td>tIH</td>
+<td>2</td>
+<td></td>
+<td>ns</td>
+<td>CCARD ≤ 10 pF (1 card)</td>
+</tr>
+<tr>
+<td>Outputs CMD, DAT (referenced to CLK)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Output Delay time during Data Transfer  Mode</td>
+<td>tODLY</td>
+<td></td>
+<td>14</td>
+<td>ns</td>
+<td>CL ≤ 40 pF (1 card)</td>
+</tr>
+<tr>
+<td>Output Hold time</td>
+<td>tOH</td>
+<td>2.5</td>
+<td></td>
+<td>ns</td>
+<td>CL ³  15pF (1 card)</td>
+</tr>
+<tr>
+<td>Total System capacitance for each line1</td>
+<td>CL</td>
+<td></td>
+<td>40</td>
+<td>pF</td>
+<td>1 card</td>
+</tr>
+</tbody></table>
+<h3 id="SIM卡"><a href="#SIM卡" class="headerlink" title="SIM卡"></a>SIM卡</h3><h4 id="SIM电源"><a href="#SIM电源" class="headerlink" title="SIM电源"></a>SIM电源</h4><table>
+<thead>
+  <tr>
+    <th>Symbol</th>
+    <th>Conditions</th>
+    <th>Minimum</th>
+    <th>Maximum</th>
+    <th>Unit</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td rowspan="3">UCC</td>
+    <td>Class A</td>
+    <td>4.5</td>
+    <td>5.5</td>
+    <td rowspan="3">V</td>
+  </tr>
+  <tr>
+    <td>Class B</td>
+    <td>2.7</td>
+    <td>3.3</td>
+  </tr>
+  <tr>
+    <td>Class C</td>
+    <td>1.62</td>
+    <td>1.98</td>
+  </tr>
+</tbody>
+</table>
+
+
+
+<h4 id="RST"><a href="#RST" class="headerlink" title="RST"></a>RST</h4><table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Conditions</th>
+<th>Minimum</th>
+<th>Maximum</th>
+<th>Unit</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><em>U</em>IH</td>
+<td></td>
+<td>0,8  <em>U</em>CC</td>
+<td><em>U</em>CC</td>
+<td>V</td>
+</tr>
+<tr>
+<td><em>U</em>IL</td>
+<td></td>
+<td>0</td>
+<td>0,12  <em>U</em>CC</td>
+<td>V</td>
+</tr>
+<tr>
+<td><em>t</em>R <em>t</em>F</td>
+<td><em>C</em>IN = 30 pF</td>
+<td></td>
+<td>1</td>
+<td>µs</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>The  voltage shall remain between – 0,3 V and UCC + 0,3 V.</p>
+</blockquote>
+<h4 id="CLK"><a href="#CLK" class="headerlink" title="CLK"></a>CLK</h4><table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Conditions</th>
+<th>Minimum</th>
+<th>Maximum</th>
+<th>Unit</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><em>U</em>IH</td>
+<td></td>
+<td>0,7 <em>U</em>CC</td>
+<td><em>U</em>CC</td>
+<td>V</td>
+</tr>
+<tr>
+<td><em>U</em>IL</td>
+<td>Class A and class B</td>
+<td>0</td>
+<td>0,5</td>
+<td>V</td>
+</tr>
+<tr>
+<td>Class C</td>
+<td>0</td>
+<td>0,2 <em>U</em>CC</td>
+<td>V</td>
+<td></td>
+</tr>
+<tr>
+<td><em>t</em>R <em>t</em>F</td>
+<td><em>C</em>IN = 30 pF</td>
+<td></td>
+<td>9 % of cycle</td>
+<td></td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>The  voltage shall remain between – 0,3 V and <em>U</em>CC + 0,3 V.</p>
+</blockquote>
+<h4 id="IO"><a href="#IO" class="headerlink" title="IO"></a>IO</h4><table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Conditions</th>
+<th>Minimum</th>
+<th>Maximum</th>
+<th>Unit</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><em>U</em>IH</td>
+<td></td>
+<td>0,7  <em>U</em>CC</td>
+<td><em>U</em>CC</td>
+<td>V</td>
+</tr>
+<tr>
+<td><em>U</em>IL</td>
+<td></td>
+<td>0</td>
+<td>0,15  <em>U</em>CC</td>
+<td>V</td>
+</tr>
+<tr>
+<td><em>t</em>R <em>t</em>F</td>
+<td><em>C</em>IN = 30 pF; <em>C</em>OUT = 30 pF</td>
+<td></td>
+<td>1</td>
+<td>µs</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>The  voltage shall remain between – 0,3 V and <em>U</em>CC + 0,3 V.</p>
+</blockquote>
+<h4 id="上电时序-Tb-Tc"><a href="#上电时序-Tb-Tc" class="headerlink" title="上电时序 (Tb,Tc)"></a>上电时序 (Tb,Tc)</h4><p><img src="image-20220207174208174.png" alt="image-20220207174208174"></p>
+<h4 id="下电时序-1"><a href="#下电时序-1" class="headerlink" title="下电时序"></a>下电时序</h4><p><img src="image-20220207174217484.png" alt="image-20220207174217484"></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Stephen Chen</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://stephenchen0620.github.io/posts/2C58KSR/">https://stephenchen0620.github.io/posts/2C58KSR/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://stephenchen0620.github.io" target="_blank">Stephen's blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/posts/2C58KSR/tektro_mso54-new.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/3MCQHYT/"><img class="prev-cover" src="/posts/3MCQHYT/emc.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">emc测试规范</div></div></a></div><div class="next-post pull-right"><a href="/posts/2Q829CG/"><img class="next-cover" src="/posts/2Q829CG/WisBlock-Sensor.svg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">环境传感器1</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Stephen Chen</div><div class="author-info__description"></div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">13</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A6%82%E8%BF%B0"><span class="toc-number">1.</span> <span class="toc-text">概述</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%96%E5%86%99%E7%9B%AE%E7%9A%84"><span class="toc-number">1.1.</span> <span class="toc-text">编写目的</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E5%87%86%E5%A4%87"><span class="toc-number">2.</span> <span class="toc-text">测试准备</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E4%BB%AA%E5%99%A8"><span class="toc-number">2.1.</span> <span class="toc-text">测试仪器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E6%9D%A1%E4%BB%B6"><span class="toc-number">2.2.</span> <span class="toc-text">测试条件</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E9%A1%B9%E7%9B%AE"><span class="toc-number">3.</span> <span class="toc-text">测试项目</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%95%E6%9D%BF%E5%8A%9F%E8%80%97%EF%BC%88Power-consumption%EF%BC%89"><span class="toc-number">3.1.</span> <span class="toc-text">单板功耗（Power consumption）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%82%E9%85%8D%E5%99%A8%E4%BE%9B%E7%94%B5-%E9%92%88%E5%AF%B9%E7%BD%91%E5%85%B3%E4%BA%A7%E5%93%81"><span class="toc-number">3.1.1.</span> <span class="toc-text">适配器供电(针对网关产品)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#POE%E8%AE%BE%E5%A4%87%E4%BE%9B%E7%94%B5-%E9%92%88%E5%AF%B9%E7%BD%91%E5%85%B3%E4%BA%A7%E5%93%81"><span class="toc-number">3.1.2.</span> <span class="toc-text">POE设备供电(针对网关产品)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%B5%E6%BA%90%E5%AE%8C%E6%95%B4%E6%80%A7%EF%BC%88PI%EF%BC%89"><span class="toc-number">3.2.</span> <span class="toc-text">电源完整性（PI）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%B5%E5%8E%8B%E7%B2%BE%E5%BA%A6%EF%BC%88voltage-accuracy%EF%BC%89"><span class="toc-number">3.2.1.</span> <span class="toc-text">电压精度（voltage accuracy）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E6%AD%A5%E9%AA%A4"><span class="toc-number">3.2.1.1.</span> <span class="toc-text">测试步骤</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E7%82%B9"><span class="toc-number">3.2.1.2.</span> <span class="toc-text">测试点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E6%A0%87%E5%87%86"><span class="toc-number">3.2.1.3.</span> <span class="toc-text">测试标准</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-number">3.2.1.4.</span> <span class="toc-text">注意事项</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%B9%E6%B3%A2%E5%99%AA%E5%A3%B0%EF%BC%88Ripple-amp-Noise%EF%BC%89"><span class="toc-number">3.2.2.</span> <span class="toc-text">纹波噪声（Ripple &amp; Noise）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E6%AD%A5%E9%AA%A4-1"><span class="toc-number">3.2.2.1.</span> <span class="toc-text">测试步骤</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E7%82%B9-1"><span class="toc-number">3.2.2.2.</span> <span class="toc-text">测试点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E6%A0%87%E5%87%86-1"><span class="toc-number">3.2.2.3.</span> <span class="toc-text">测试标准</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9-1"><span class="toc-number">3.2.2.4.</span> <span class="toc-text">注意事项</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%B5%E6%BA%90%E4%B8%8A%E4%B8%8B%E7%94%B5%E6%B3%A2%E5%BD%A2%EF%BC%88Power-on-and-off-waveforms%EF%BC%89"><span class="toc-number">3.2.3.</span> <span class="toc-text">电源上下电波形（Power on and off waveforms）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E6%AD%A5%E9%AA%A4-2"><span class="toc-number">3.2.3.1.</span> <span class="toc-text">测试步骤</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E6%A0%87%E5%87%86-2"><span class="toc-number">3.2.3.2.</span> <span class="toc-text">测试标准</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9-2"><span class="toc-number">3.2.3.3.</span> <span class="toc-text">注意事项</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%B5%E6%BA%90%E4%B8%8A%E4%B8%8B%E7%94%B5%E6%97%B6%E5%BA%8F%EF%BC%88Sequence%EF%BC%89"><span class="toc-number">3.2.4.</span> <span class="toc-text">电源上下电时序（Sequence）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E6%AD%A5%E9%AA%A4-3"><span class="toc-number">3.2.4.1.</span> <span class="toc-text">测试步骤</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E6%A0%87%E5%87%86-3"><span class="toc-number">3.2.4.2.</span> <span class="toc-text">测试标准</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%A1%E5%8F%B7%E5%AE%8C%E6%95%B4%E6%80%A7%EF%BC%88SI%EF%BC%89"><span class="toc-number">3.3.</span> <span class="toc-text">信号完整性（SI）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%B6%E9%92%9F%E4%BF%A1%E5%8F%B7%EF%BC%88Clock%EF%BC%89"><span class="toc-number">3.3.1.</span> <span class="toc-text">时钟信号（Clock）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E6%AD%A5%E9%AA%A4-4"><span class="toc-number">3.3.1.1.</span> <span class="toc-text">测试步骤</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E6%A0%87%E5%87%86-4"><span class="toc-number">3.3.1.2.</span> <span class="toc-text">测试标准</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9-3"><span class="toc-number">3.3.1.3.</span> <span class="toc-text">注意事项</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%8D%E4%BD%8D%E4%BF%A1%E5%8F%B7%EF%BC%88Reset%EF%BC%89"><span class="toc-number">3.3.2.</span> <span class="toc-text">复位信号（Reset）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E6%AD%A5%E9%AA%A4-5"><span class="toc-number">3.3.2.1.</span> <span class="toc-text">测试步骤</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E6%A0%87%E5%87%86-5"><span class="toc-number">3.3.2.2.</span> <span class="toc-text">测试标准</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9-4"><span class="toc-number">3.3.2.3.</span> <span class="toc-text">注意事项</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#I2C"><span class="toc-number">3.3.3.</span> <span class="toc-text">I2C</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E6%AD%A5%E9%AA%A4-6"><span class="toc-number">3.3.3.1.</span> <span class="toc-text">测试步骤</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E6%A0%87%E5%87%86-6"><span class="toc-number">3.3.3.2.</span> <span class="toc-text">测试标准</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SPI"><span class="toc-number">3.3.4.</span> <span class="toc-text">SPI</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E6%AD%A5%E9%AA%A4-7"><span class="toc-number">3.3.4.1.</span> <span class="toc-text">测试步骤</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#UART"><span class="toc-number">3.3.5.</span> <span class="toc-text">UART</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E6%AD%A5%E9%AA%A4-8"><span class="toc-number">3.3.5.1.</span> <span class="toc-text">测试步骤</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E6%A0%87%E5%87%86-7"><span class="toc-number">3.3.5.2.</span> <span class="toc-text">测试标准</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SD%E5%8D%A1"><span class="toc-number">3.3.6.</span> <span class="toc-text">SD卡</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8B%E7%94%B5%E6%97%B6%E5%BA%8F"><span class="toc-number">3.3.6.1.</span> <span class="toc-text">下电时序</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%BB%E7%BA%BF%E6%97%B6%E5%BA%8F"><span class="toc-number">3.3.6.2.</span> <span class="toc-text">总线时序</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SIM%E5%8D%A1"><span class="toc-number">3.3.7.</span> <span class="toc-text">SIM卡</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#SIM%E7%94%B5%E6%BA%90"><span class="toc-number">3.3.7.1.</span> <span class="toc-text">SIM电源</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#RST"><span class="toc-number">3.3.7.2.</span> <span class="toc-text">RST</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CLK"><span class="toc-number">3.3.7.3.</span> <span class="toc-text">CLK</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#IO"><span class="toc-number">3.3.7.4.</span> <span class="toc-text">IO</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8A%E7%94%B5%E6%97%B6%E5%BA%8F-Tb-Tc"><span class="toc-number">3.3.7.5.</span> <span class="toc-text">上电时序 (Tb,Tc)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8B%E7%94%B5%E6%97%B6%E5%BA%8F-1"><span class="toc-number">3.3.7.6.</span> <span class="toc-text">下电时序</span></a></li></ol></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/KR71AD/" title="lora射频测试_CE"><img src="/posts/KR71AD/lora.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="lora射频测试_CE"/></a><div class="content"><a class="title" href="/posts/KR71AD/" title="lora射频测试_CE">lora射频测试_CE</a><time datetime="2022-02-11T07:45:10.590Z" title="发表于 2022-02-11 15:45:10">2022-02-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/3MCQHYT/" title="emc测试规范"><img src="/posts/3MCQHYT/emc.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="emc测试规范"/></a><div class="content"><a class="title" href="/posts/3MCQHYT/" title="emc测试规范">emc测试规范</a><time datetime="2022-02-11T07:45:10.589Z" title="发表于 2022-02-11 15:45:10">2022-02-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/2C58KSR/" title="单板测试规范"><img src="/posts/2C58KSR/tektro_mso54-new.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="单板测试规范"/></a><div class="content"><a class="title" href="/posts/2C58KSR/" title="单板测试规范">单板测试规范</a><time datetime="2022-02-11T07:45:10.534Z" title="发表于 2022-02-11 15:45:10">2022-02-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/2Q829CG/" title="环境传感器1"><img src="/posts/2Q829CG/WisBlock-Sensor.svg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="环境传感器1"/></a><div class="content"><a class="title" href="/posts/2Q829CG/" title="环境传感器1">环境传感器1</a><time datetime="2022-02-11T03:09:13.557Z" title="发表于 2022-02-11 11:09:13">2022-02-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/1JE0BV0/" title="RAK7268固件烧录"><img src="/posts/1JE0BV0/WisGate.svg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="RAK7268固件烧录"/></a><div class="content"><a class="title" href="/posts/1JE0BV0/" title="RAK7268固件烧录">RAK7268固件烧录</a><time datetime="2022-02-10T12:00:01.000Z" title="发表于 2022-02-10 20:00:01">2022-02-10</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By Stephen Chen</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

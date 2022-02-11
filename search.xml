@@ -68,6 +68,128 @@
 ]]></content>
   </entry>
   <entry>
+    <title>sensor</title>
+    <url>/posts/2Y8C5XG/</url>
+    <content><![CDATA[<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>RAK1901</th>
+<th>RAK12003</th>
+<th>RAK1902</th>
+<th>RAK12011</th>
+<th>RAK1906</th>
+<th>RAK1903</th>
+<th>RAK12010</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Description</td>
+<td>Temperature  and Humidity</td>
+<td>Infrared Temperature  Sensor</td>
+<td>Barometric  Pressure</td>
+<td>Barometer WT</td>
+<td>Environmental Sensor</td>
+<td>Ambient Light</td>
+<td>Ambient  Light</td>
+</tr>
+<tr>
+<td>accuracy</td>
+<td>±2.0  °C<br/>±2.0%</td>
+<td>±3° C</td>
+<td>±0.1  hPa<br/> ±1.5 °C</td>
+<td>±0.1 hPa</td>
+<td>±1.0<br/>±3 % r.H.<br/>±0.6 hPa</td>
+<td>0.20%</td>
+<td></td>
+</tr>
+<tr>
+<td>range</td>
+<td>-40  °C to +125 °C<br/>0 to 100%</td>
+<td>-20 °C to +85 °C</td>
+<td>260-1260  hPa<br/>      -40 °C to +85 °C</td>
+<td>260-1260 hPa</td>
+<td>-40  °C to +85 °C<br/> 0 to 100% <br/>300 to 1100 hPa</td>
+<td>0.01 to 83865 lux</td>
+<td>0 to 120,000 lux</td>
+</tr>
+<tr>
+<td>Size (mm)</td>
+<td>10 x 10</td>
+<td>10 x 10</td>
+<td>10 x 10</td>
+<td>10 x 10</td>
+<td>10 x 10</td>
+<td>10 x 10</td>
+<td>10 x 10</td>
+</tr>
+<tr>
+<td>Input voltage  (V)</td>
+<td>1.6~3.6</td>
+<td>3~3.6</td>
+<td>1.6~3.6</td>
+<td>1.7~3.6</td>
+<td>1.71~3.6</td>
+<td>1.6~3.6</td>
+<td>2.5~3.6</td>
+</tr>
+<tr>
+<td>Sleep current  (uA)</td>
+<td>0.3</td>
+<td>2.5</td>
+<td>1</td>
+<td>1</td>
+<td>0.15</td>
+<td>0.4</td>
+<td>0.5</td>
+</tr>
+<tr>
+<td>Measure  current (uA)</td>
+<td>430</td>
+<td>1400</td>
+<td>12</td>
+<td>15</td>
+<td>340  Humidity<br/>714 Pressure<br/>350 Temperature</td>
+<td>3.7</td>
+<td>45</td>
+</tr>
+<tr>
+<td>Communication  interface</td>
+<td>I2C</td>
+<td>I2C</td>
+<td>I2C</td>
+<td>I2C</td>
+<td>I2C</td>
+<td>I2C</td>
+<td>I2C</td>
+</tr>
+<tr>
+<td>connector pin</td>
+<td>24</td>
+<td>24</td>
+<td>24</td>
+<td>24</td>
+<td>24</td>
+<td>24</td>
+<td>24</td>
+</tr>
+<tr>
+<td>Chipset</td>
+<td>Sensirion SHTC3</td>
+<td>Melexis MLX90632SLD</td>
+<td>ST LPS22HB</td>
+<td>ST LPS33HW</td>
+<td>BOSCH BME680</td>
+<td>TI OPT3001DNPR</td>
+<td>Vishay VEML7700</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>WisBlock</category>
+      </categories>
+  </entry>
+  <entry>
     <title>WisBlock</title>
     <url>/posts/PT276M/</url>
     <content><![CDATA[<p><img src="wisblock-click-code-connect.png"></p>
@@ -556,128 +678,6 @@
       </tags>
   </entry>
   <entry>
-    <title>sensor</title>
-    <url>/posts/2Y8C5XG/</url>
-    <content><![CDATA[<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>RAK1901</th>
-<th>RAK12003</th>
-<th>RAK1902</th>
-<th>RAK12011</th>
-<th>RAK1906</th>
-<th>RAK1903</th>
-<th>RAK12010</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Description</td>
-<td>Temperature  and Humidity</td>
-<td>Infrared Temperature  Sensor</td>
-<td>Barometric  Pressure</td>
-<td>Barometer WT</td>
-<td>Environmental Sensor</td>
-<td>Ambient Light</td>
-<td>Ambient  Light</td>
-</tr>
-<tr>
-<td>accuracy</td>
-<td>±2.0  °C<br/>±2.0%</td>
-<td>±3° C</td>
-<td>±0.1  hPa<br/> ±1.5 °C</td>
-<td>±0.1 hPa</td>
-<td>±1.0<br/>±3 % r.H.<br/>±0.6 hPa</td>
-<td>0.20%</td>
-<td></td>
-</tr>
-<tr>
-<td>range</td>
-<td>-40  °C to +125 °C<br/>0 to 100%</td>
-<td>-20 °C to +85 °C</td>
-<td>260-1260  hPa<br/>      -40 °C to +85 °C</td>
-<td>260-1260 hPa</td>
-<td>-40  °C to +85 °C<br/> 0 to 100% <br/>300 to 1100 hPa</td>
-<td>0.01 to 83865 lux</td>
-<td>0 to 120,000 lux</td>
-</tr>
-<tr>
-<td>Size (mm)</td>
-<td>10 x 10</td>
-<td>10 x 10</td>
-<td>10 x 10</td>
-<td>10 x 10</td>
-<td>10 x 10</td>
-<td>10 x 10</td>
-<td>10 x 10</td>
-</tr>
-<tr>
-<td>Input voltage  (V)</td>
-<td>1.6~3.6</td>
-<td>3~3.6</td>
-<td>1.6~3.6</td>
-<td>1.7~3.6</td>
-<td>1.71~3.6</td>
-<td>1.6~3.6</td>
-<td>2.5~3.6</td>
-</tr>
-<tr>
-<td>Sleep current  (uA)</td>
-<td>0.3</td>
-<td>2.5</td>
-<td>1</td>
-<td>1</td>
-<td>0.15</td>
-<td>0.4</td>
-<td>0.5</td>
-</tr>
-<tr>
-<td>Measure  current (uA)</td>
-<td>430</td>
-<td>1400</td>
-<td>12</td>
-<td>15</td>
-<td>340  Humidity<br/>714 Pressure<br/>350 Temperature</td>
-<td>3.7</td>
-<td>45</td>
-</tr>
-<tr>
-<td>Communication  interface</td>
-<td>I2C</td>
-<td>I2C</td>
-<td>I2C</td>
-<td>I2C</td>
-<td>I2C</td>
-<td>I2C</td>
-<td>I2C</td>
-</tr>
-<tr>
-<td>connector pin</td>
-<td>24</td>
-<td>24</td>
-<td>24</td>
-<td>24</td>
-<td>24</td>
-<td>24</td>
-<td>24</td>
-</tr>
-<tr>
-<td>Chipset</td>
-<td>Sensirion SHTC3</td>
-<td>Melexis MLX90632SLD</td>
-<td>ST LPS22HB</td>
-<td>ST LPS33HW</td>
-<td>BOSCH BME680</td>
-<td>TI OPT3001DNPR</td>
-<td>Vishay VEML7700</td>
-</tr>
-</tbody></table>
-]]></content>
-      <categories>
-        <category>WisBlock</category>
-      </categories>
-  </entry>
-  <entry>
     <title>环境传感器1</title>
     <url>/posts/2Q829CG/</url>
     <content><![CDATA[<h1 id="传感器参数对比"><a href="#传感器参数对比" class="headerlink" title="传感器参数对比"></a>传感器参数对比</h1><table>
@@ -847,6 +847,1006 @@
       </categories>
   </entry>
   <entry>
+    <title>emc测试规范</title>
+    <url>/posts/3MCQHYT/</url>
+    <content><![CDATA[<h1 id="编写目的"><a href="#编写目的" class="headerlink" title="编写目的"></a>编写目的</h1><p>公司研发的LoRa网关，节点等产品整机 EMC测试指导。</p>
+<h1 id="定义说明"><a href="#定义说明" class="headerlink" title="定义说明"></a>定义说明</h1><p>EMC 即电磁兼容，Electromagnetic Compatibility 我们把电磁能量对电子设备的这种影响称之为电磁干扰。就是它不会因为周边的电磁环境而导致性能降低、功能丧失或损坏，也不会在周边 环境中产生过量的电磁能量，以致影响周边设备的正常工作。</p>
+<p>EMC 包含了以下三个方面的含义：</p>
+<ul>
+<li><p>EMI 电磁干扰：即处在一定环境中设备或系统，在正常运行时，不应超过相应标准。</p>
+</li>
+<li><p>EMS电磁敏感度：即处在一定环境中设备或系统，在正常运行时，设备或系统能承受相应标准规定范围内的电磁能量干扰。</p>
+</li>
+<li><p>电磁环境：即系统或设备的工作环境。</p>
+</li>
+</ul>
+<h1 id="名词解释"><a href="#名词解释" class="headerlink" title="名词解释"></a>名词解释</h1><table>
+<thead>
+<tr>
+<th>RGP</th>
+<th>Reference  Ground Plane 一块导电平面，其电位用作公共参考电位</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>耦合网络</td>
+<td>将能量从一个电路传送到另一个电路的电路</td>
+</tr>
+<tr>
+<td>去耦网络</td>
+<td>用于防止施加到 EUT 上的浪涌信号影响其他辅助实验的设备</td>
+</tr>
+<tr>
+<td>RE</td>
+<td>Radiated Emission 辐射骚扰</td>
+</tr>
+<tr>
+<td>EUT</td>
+<td>Equipment Under  Test 受试设备</td>
+</tr>
+<tr>
+<td>AE</td>
+<td>Auxiliary Equipment 辅助设备</td>
+</tr>
+<tr>
+<td>CDN</td>
+<td>Coupling &amp; Decoupling Net 耦合、去耦合网络</td>
+</tr>
+<tr>
+<td>AMN</td>
+<td>Artificial  Mains Network人工电源网络</td>
+</tr>
+<tr>
+<td>ISN</td>
+<td>Impedance  Stabilization Network阻抗稳定网络</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>注：</p>
+<p><strong>AMN</strong>：人工电源网络，为了在端子电压测量点上提供规定的高频阻抗，并把被测电路和电网上的背景噪声隔离开，需要使用到 AMN。在相线与参考地之间、中线与参考地之间测量传导骚扰。 </p>
+<p><strong>ISN</strong>：阻抗稳定网络。ISN（包括校准时需要与 EUT和 AE连接的所有转接头）应能提供足够</p>
+<p>的隔离，以隔离那些来自与受试电信端口相连的 AE和负载的骚扰。</p>
+</blockquote>
+<h1 id="测试项目及参考标准"><a href="#测试项目及参考标准" class="headerlink" title="测试项目及参考标准"></a>测试项目及参考标准</h1><table>
+<thead>
+  <tr>
+    <th colspan="2">Standard</th>
+    <th>Description</th>
+    <th>Remark</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td rowspan="4">Emission</td>
+    <td>EN 55032</td>
+    <td>Radiated Emission<br>辐射骚扰</td>
+    <td>Below 1GHz<br>Above 1GHz</td>
+  </tr>
+  <tr>
+    <td>EN 55032</td>
+    <td>Conducted Emission<br>传导骚扰</td>
+    <td>AC Mains Port<br>DC Power Port<br>Wired Network Port</td>
+  </tr>
+  <tr>
+    <td>EN 61000-3-2</td>
+    <td>Harmonic Current Emissions<br>谐波电流</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>EN 61000-3-3</td>
+    <td>Voltage Fluctuations &amp; Flicker<br>电压波动与闪烁</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td rowspan="6">Immunity</td>
+    <td>EN 61000-4-2</td>
+    <td>Electrostatic Discharge Immunity<br>静电放电抗扰度</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>EN 61000-4-3</td>
+    <td>Radiated RF Electromagnetic Field Immunity<br>辐射射频电磁场抗扰度</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>EN 61000-4-4</td>
+    <td>Electrical Fast Transient/Burst Immunity<br>电快速瞬变脉冲群抗扰度</td>
+    <td>AC Port<br>DC Port<br>Wired Network Port</td>
+  </tr>
+  <tr>
+    <td>EN 61000-4-5</td>
+    <td>Surge Immunity<br>浪涌抗扰度</td>
+    <td>AC Port<br>Wired Network Port</td>
+  </tr>
+  <tr>
+    <td>EN 61000-4-6</td>
+    <td>Immunity to Conducted Disturbances Induced by RF Fields<br>射频场感应的传导骚扰抗扰度</td>
+    <td>AC Port<br>DC Port<br>Wired Network Port</td>
+  </tr>
+  <tr>
+    <td>EN 61000-4-11</td>
+    <td>Voltage Dips and short Interruptions Immunity<br>电压暂降,短时中断和电压变化抗扰度</td>
+    <td> </td>
+  </tr>
+</tbody>
+</table>
+
+
+
+<h1 id="测试环境"><a href="#测试环境" class="headerlink" title="测试环境"></a>测试环境</h1><p>在下列温度湿度以及气压极限范围内的任一组合的条件下来进行测量和机械方面的检验： </p>
+<ul>
+<li><p>环境温度：15~35℃</p>
+</li>
+<li><p>相对湿度：30%~60% </p>
+</li>
+<li><p>气压：86~106kPa</p>
+</li>
+</ul>
+<h1 id="测试样机"><a href="#测试样机" class="headerlink" title="测试样机"></a>测试样机</h1><ul>
+<li><p>由项目组提供单板样机，确定最新硬件配置，并升级最新固件。</p>
+</li>
+<li><p>NPI工程师负责组装新整机，安装对应新机壳和整机附件(指定电源，散热片等)</p>
+</li>
+<li><p>测试人员样机领用签名，资产挂账记录。</p>
+</li>
+<li><p>测试通过的样机许保留封样，以便追溯。</p>
+</li>
+</ul>
+<h1 id="测试策略"><a href="#测试策略" class="headerlink" title="测试策略"></a>测试策略</h1><table>
+<thead>
+  <tr>
+    <th>EMC</th>
+    <th>Description</th>
+    <th>适用产品</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td rowspan="4">Emission</td>
+    <td>RE</td>
+    <td>所有产品</td>
+  </tr>
+  <tr>
+    <td>CE</td>
+    <td>所有产品</td>
+  </tr>
+  <tr>
+    <td>Harmonic Current</td>
+    <td>目前产品不适用</td>
+  </tr>
+  <tr>
+    <td>Voltage Fluctuations &amp; Flicker</td>
+    <td>网关或带AC Mains产品</td>
+  </tr>
+  <tr>
+    <td rowspan="7">Immunity</td>
+    <td>RS</td>
+    <td>所有产品</td>
+  </tr>
+  <tr>
+    <td>CS</td>
+    <td>网关或 带AC Mains，LAN口产品</td>
+  </tr>
+  <tr>
+    <td>EFT</td>
+    <td>网关或 带AC Mains，LAN口产品</td>
+  </tr>
+  <tr>
+    <td>Surge </td>
+    <td>网关或 带AC Mains，LAN口产品</td>
+  </tr>
+  <tr>
+    <td>ESD</td>
+    <td>所有产品</td>
+  </tr>
+  <tr>
+    <td>DIP</td>
+    <td>网关或带AC Mains产品</td>
+  </tr>
+  <tr>
+    <td>Electromagnetic Field</td>
+    <td>所有产品</td>
+  </tr>
+</tbody>
+</table>
+
+
+
+<h1 id="测试项目"><a href="#测试项目" class="headerlink" title="测试项目"></a>测试项目</h1><h2 id="传导骚扰-CE"><a href="#传导骚扰-CE" class="headerlink" title="传导骚扰(CE)"></a>传导骚扰(CE)</h2><h3 id="测试框图Block-Diagram-of-Test-Setup"><a href="#测试框图Block-Diagram-of-Test-Setup" class="headerlink" title="测试框图Block Diagram of Test Setup"></a>测试框图Block Diagram of Test Setup</h3><p><img src="clip_image002.png" alt="img"></p>
+<h3 id="限值Limit"><a href="#限值Limit" class="headerlink" title="限值Limit"></a>限值Limit</h3><p>我司产品都属于Class B 类产品，默认应做 B类设计；超过限值线即属于 FAIL，由于实验室之间的差异性，需要设定余量线以确保通过的概率，即 3dB 余量；最终结果以官方实验室测试数据为准。</p>
+<p>以下为EN55032标准</p>
+<p>Requirements for conducted emissions from the AC mains power ports of Class A equipment</p>
+ <table>
+<thead>
+  <tr>
+    <th rowspan="2">Frequency range(MHz)</th>
+    <th colspan="2">Limits dB(µV)</th>
+  </tr>
+  <tr>
+    <th>Quasi-peak</th>
+    <th>Average</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>0.15 to 0.5</td>
+    <td>79</td>
+    <td>66</td>
+  </tr>
+  <tr>
+    <td>0.5 to 30</td>
+    <td>73</td>
+    <td>60</td>
+  </tr>
+</tbody>
+</table>
+
+<p>Requirements for conducted emissions from the AC mains power ports of Class B equipment</p>
+ <table>
+<thead>
+  <tr>
+    <th rowspan="2">Frequency range(MHz)</th>
+    <th colspan="2">Limits dB(µV)</th>
+  </tr>
+  <tr>
+    <th>Quasi-peak</th>
+    <th>Average</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>0.15 to 0.5</td>
+    <td>66 to 56</td>
+    <td>56 to 46</td>
+  </tr>
+  <tr>
+    <td>0,5 to 5</td>
+    <td>56</td>
+    <td>46</td>
+  </tr>
+  <tr>
+    <td>5 to 30</td>
+    <td>60</td>
+    <td>50</td>
+  </tr>
+</tbody>
+</table>
+
+
+
+<p>Requirements for asymmetric mode conducted emissions from Class A equipment</p>
+<table>
+<thead>
+  <tr>
+    <th rowspan="2">Frequency range(MHz)</th>
+    <th colspan="2">Voltage Limits dB(µV)</th>
+    <th colspan="2">Current LimitsdB(µA)</th>
+  </tr>
+  <tr>
+    <th>Quasi-peak</th>
+    <th>Average</th>
+    <th>Quasi-peak</th>
+    <th>Average</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>0.15 to 0.5</td>
+    <td>97 to 87</td>
+    <td>87 to 74</td>
+    <td>53 to 43</td>
+    <td>40 to 30</td>
+  </tr>
+  <tr>
+    <td>0.5 to 30</td>
+    <td>87</td>
+    <td>74</td>
+    <td>43</td>
+    <td>30</td>
+  </tr>
+</tbody>
+</table> 
+
+<p>Requirements for asymmetric mode conducted emissions from Class B equipment</p>
+<table>
+<thead>
+  <tr>
+    <th rowspan="2">Frequency range(MHz)</th>
+    <th colspan="2">Voltage Limits dB(µV)</th>
+    <th colspan="2">Current Limits dB(µA)</th>
+  </tr>
+  <tr>
+    <th>Quasi-peak</th>
+    <th>Average</th>
+    <th>Quasi-peak</th>
+    <th>Average</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>0.15 to 0.5</td>
+    <td>84 to 74</td>
+    <td>74 to 64</td>
+    <td>40 to 30</td>
+    <td>30 to 20</td>
+  </tr>
+  <tr>
+    <td>0.5 to 30</td>
+    <td>74</td>
+    <td>64</td>
+    <td>30</td>
+    <td>20</td>
+  </tr>
+</tbody>
+</table>
+
+
+
+<h3 id="测试策略Test-strategy"><a href="#测试策略Test-strategy" class="headerlink" title="测试策略Test strategy"></a>测试策略Test strategy</h3><p>网关和模块都需要测试</p>
+<table>
+<thead>
+  <tr>
+    <th>Categories</th>
+    <th>Port</th>
+    <th>Limit</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td rowspan="3">Gateway</td>
+    <td>Line</td>
+    <td>Class B</td>
+  </tr>
+  <tr>
+    <td>Neutral</td>
+    <td>Class B</td>
+  </tr>
+  <tr>
+    <td>POE/Lan</td>
+    <td>Class B</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Module/Node</td>
+    <td>Line</td>
+    <td>Class B</td>
+  </tr>
+  <tr>
+    <td>Neutral</td>
+    <td>Class B</td>
+  </tr>
+</tbody>
+</table>
+
+
+
+<h3 id="测试步骤Test-Procedure"><a href="#测试步骤Test-Procedure" class="headerlink" title="测试步骤Test Procedure"></a>测试步骤Test Procedure</h3><ul>
+<li><p>确认产品是否接地，默认产品有接地设计，则应接地；浮地设计时需要根据实际情况来，若 接地后测试结果有改善，可建议增加 GND 设计。 </p>
+</li>
+<li><p>网口默认是非屏蔽网线，需要使用电压法测试；若是屏蔽线则使用电流法（极少）。</p>
+</li>
+<li><p>设备按照相应测试要求组网，连接好 EUT、AE、CDN 等，待测设备上电开机，正常使用场景，检查设备工作状态是否正常。</p>
+</li>
+<li><p>开始测试，根据测试情形记录表描述的情形进行具体产品的测试。</p>
+</li>
+</ul>
+<h2 id="辐射骚扰-RE"><a href="#辐射骚扰-RE" class="headerlink" title="辐射骚扰(RE)"></a>辐射骚扰(RE)</h2><h3 id="测试框图Block-Diagram-of-Test-Setup-1"><a href="#测试框图Block-Diagram-of-Test-Setup-1" class="headerlink" title="测试框图Block Diagram of Test Setup"></a>测试框图Block Diagram of Test Setup</h3><p><img src="clip_image004.png" alt="img"></p>
+<h3 id="限值Limit-1"><a href="#限值Limit-1" class="headerlink" title="限值Limit"></a>限值Limit</h3><p>我司产品都属于Class B 类产品，默认应做 B类设计；超过限值线即属于 FAIL，由于实验室之间的差异性，需要设定余量线以确保通过的概率，即 3dB 余量；最终结果以官方实验室测试数据为准。</p>
+<p>以下为EN55032标准</p>
+<p>Requirements for radiated emissions at frequencies up to 1 GHz for class A equipment</p>
+<table>
+<thead>
+  <tr>
+    <th>Frequency range (MHz)</th>
+    <th>Distance (m)</th>
+    <th>Quasi-peak&nbsp;&nbsp;&nbsp;Limits dB (µV/m)</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>30 to 230</td>
+    <td rowspan="2">10</td>
+    <td>40</td>
+  </tr>
+  <tr>
+    <td>230 to 1000</td>
+    <td>47</td>
+  </tr>
+  <tr>
+    <td>30 to 230</td>
+    <td rowspan="2">3</td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>230 to 1000</td>
+    <td>57</td>
+  </tr>
+</tbody>
+</table>
+
+
+
+<p>Requirements for radiated emissions at frequencies above 1 GHz for class A equipment </p>
+<table>
+<thead>
+  <tr>
+    <th rowspan="2">Frequency range(MHz)</th>
+    <th rowspan="2">Distance (m)</th>
+    <th colspan="2">Limits dB(µV)</th>
+  </tr>
+  <tr>
+    <th>Average</th>
+    <th>Peak</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>1000 to 3000</td>
+    <td rowspan="2">3</td>
+    <td>56</td>
+    <td>76</td>
+  </tr>
+  <tr>
+    <td>3000 to 6000</td>
+    <td>60</td>
+    <td>80</td>
+  </tr>
+</tbody>
+</table>
+
+
+
+
+
+<p>Requirements for radiated emissions at frequencies up to 1 GHz for class B equipment</p>
+<table>
+<thead>
+  <tr>
+    <th>Frequency range (MHz)</th>
+    <th>Distance (m)</th>
+    <th>Quasi-peak Limits dB (µV/m)</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>30 to 230</td>
+    <td rowspan="2">10</td>
+    <td>30</td>
+  </tr>
+  <tr>
+    <td>230 to 1000</td>
+    <td>37</td>
+  </tr>
+  <tr>
+    <td>30 to 230</td>
+    <td rowspan="2">3</td>
+    <td>40</td>
+  </tr>
+  <tr>
+    <td>230 to 1000</td>
+    <td>47</td>
+  </tr>
+</tbody>
+</table>
+
+
+
+
+<p>Requirements for radiated emissions at frequencies above 1 GHz for class B equipment</p>
+<table>
+<thead>
+  <tr>
+    <th rowspan="2">Frequency range(MHz)</th>
+    <th rowspan="2">Distance (m)</th>
+    <th colspan="2">Limits dB(µV)</th>
+  </tr>
+  <tr>
+    <th>Average</th>
+    <th>Peak</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>1000 to 3000</td>
+    <td rowspan="2">3</td>
+    <td>50</td>
+    <td>70</td>
+  </tr>
+  <tr>
+    <td>3000 to 6000</td>
+    <td>54</td>
+    <td>74</td>
+  </tr>
+</tbody>
+</table>
+
+
+
+
+<h3 id="测试策略Test-strategy-1"><a href="#测试策略Test-strategy-1" class="headerlink" title="测试策略Test strategy"></a>测试策略Test strategy</h3><p>网关和模块都需要测试</p>
+<table>
+<thead>
+  <tr>
+   <th rowspan="2">Category</th>
+    <th rowspan="2">Polarization</th>
+    <th rowspan="2">Limit</th>
+  </tr>
+  <tr>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td rowspan="2">Gateway/Module</td>
+    <td>Horizontal</td>
+    <td>Class B</td>
+  </tr>
+  <tr>
+    <td>Vertical</td>
+    <td>Class B</td>
+  </tr>
+</tbody>
+</table>
+
+
+<blockquote>
+<p>注意事项Note</p>
+<ul>
+<li><p>首先确认测试样机的软硬件版本，电源型号，机壳类型，螺丝孔锁紧，线材长度固定等。</p>
+</li>
+<li><p>注意辅助设备必须不能带入新的辐射，例如POE模块、笔记本应置于暗室之外，通过线缆进行连接。</p>
+</li>
+<li><p>测试过程中注意线缆的连接可能因转台转动而接触不良，例如电源线，可能会引起测试数据有偏差。</p>
+</li>
+<li><p>产品默认应该测试典型正常工作的情形，例如LoRa, WIFI, LTE, ethernet等需要正常工作。</p>
+</li>
+<li><p>测试过程中，详细描述备注情况，留意数据变化，差异明显时，现场确认环境是否一致。</p>
+</li>
+</ul>
+</blockquote>
+<h2 id="谐波电流-Harmonic"><a href="#谐波电流-Harmonic" class="headerlink" title="谐波电流(Harmonic)"></a>谐波电流(Harmonic)</h2><h3 id="测试框图Block-Diagram-of-Test-Setup-2"><a href="#测试框图Block-Diagram-of-Test-Setup-2" class="headerlink" title="测试框图Block Diagram of Test Setup"></a>测试框图Block Diagram of Test Setup</h3><p><img src="clip_image006.png" alt="img"></p>
+<h3 id="限值Limit-2"><a href="#限值Limit-2" class="headerlink" title="限值Limit"></a>限值Limit</h3><table>
+<thead>
+  <tr>
+    <th colspan="2">Limits for Class A equipment</th>
+    <th colspan="3">Limits for Class D equipment</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td rowspan="2">Harmonics Order n</td>
+    <td rowspan="2">Max. permissible harmonics&nbsp;&nbsp;&nbsp;current A</td>
+    <td rowspan="2">Harmonics Order n</td>
+    <td rowspan="2">Max. permissible harmonics&nbsp;&nbsp;&nbsp;current per watt mA/W</td>
+    <td>Max. permissible&nbsp;&nbsp;&nbsp;harmonics current</td>
+  </tr>
+  <tr>
+    <td> A</td>
+  </tr>
+  <tr>
+    <td colspan="2">Odd harmonics</td>
+    <td colspan="3">　&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>2.3</td>
+    <td>3</td>
+    <td>3.4</td>
+    <td>2.3</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>1.14</td>
+    <td>5</td>
+    <td>1.9</td>
+    <td>1.14</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>0.77</td>
+    <td>7</td>
+    <td>1</td>
+    <td>0.77</td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td>0.4</td>
+    <td>9</td>
+    <td>0.5</td>
+    <td>0.4</td>
+  </tr>
+  <tr>
+    <td>11</td>
+    <td>0.33</td>
+    <td>11</td>
+    <td>0.35</td>
+    <td>0.33</td>
+  </tr>
+  <tr>
+    <td>13</td>
+    <td>0.21</td>
+    <td>13</td>
+    <td>0.3</td>
+    <td>0.21</td>
+  </tr>
+  <tr>
+    <td>15＜＝n＜＝39</td>
+    <td>0.15×15/n</td>
+    <td>15＜＝n＜＝39</td>
+    <td>3.85/n</td>
+    <td>0.15×15/n</td>
+  </tr>
+  <tr>
+    <td colspan="2">Even harmonics</td>
+    <td>　</td>
+    <td>　</td>
+    <td>　</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>1.08</td>
+    <td>　</td>
+    <td>　</td>
+    <td>　</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>0.43</td>
+    <td>　</td>
+    <td>　</td>
+    <td>　</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>0.3</td>
+    <td>　</td>
+    <td>　</td>
+    <td>　</td>
+  </tr>
+  <tr>
+    <td>8＜＝n＜＝40</td>
+    <td>0.23×8/n</td>
+    <td>　</td>
+    <td>　</td>
+    <td>　</td>
+  </tr>
+</tbody>
+</table>
+
+
+
+<h3 id="测试策略Test-strategy-2"><a href="#测试策略Test-strategy-2" class="headerlink" title="测试策略Test strategy"></a>测试策略Test strategy</h3><p>According to EN 61000-3-2: 2014 section 7: Equipment with a rated power of 75 Watt or less, other than lighting equipment, are not included in this standard.</p>
+<p>由于我们的当前产品功率都小于75W，故这项测试可忽略。</p>
+<h2 id="电压变化与闪烁-Flicker"><a href="#电压变化与闪烁-Flicker" class="headerlink" title="电压变化与闪烁(Flicker)"></a>电压变化与闪烁(Flicker)</h2><h3 id="测试框图Block-Diagram-of-Test-Setup-3"><a href="#测试框图Block-Diagram-of-Test-Setup-3" class="headerlink" title="测试框图Block Diagram of Test Setup"></a>测试框图Block Diagram of Test Setup</h3><p><img src="clip_image007.png" alt="img"></p>
+<p>Test Standard:EN 61000-3-3:2013 / IEC 61000-3-3: 2013</p>
+<h3 id="限值Limit-3"><a href="#限值Limit-3" class="headerlink" title="限值Limit"></a>限值Limit</h3><table>
+<thead>
+<tr>
+<th>Test Item</th>
+<th>Limit</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Pst(Short-term flicker indicator.)</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Plt(Long-term flicker indicator.)</td>
+<td>0.65</td>
+</tr>
+<tr>
+<td>Td(t)(ms)(Maximum time that d(t)exceeds 3.3%)</td>
+<td>500</td>
+</tr>
+<tr>
+<td>dmax(%)(Maximum relative voltage change.)</td>
+<td>4</td>
+</tr>
+<tr>
+<td>dc(%)(Relative steady-state voltage change)</td>
+<td>3.3</td>
+</tr>
+</tbody></table>
+<h3 id="测试策略Test-strategy-3"><a href="#测试策略Test-strategy-3" class="headerlink" title="测试策略Test strategy"></a>测试策略Test strategy</h3><p>目前需要测试的产品为网关等产品。</p>
+<p>此测试项目只针对含有适配器或者电源模块的产品。</p>
+<h2 id="射频电磁场辐射抗扰度-RS"><a href="#射频电磁场辐射抗扰度-RS" class="headerlink" title="射频电磁场辐射抗扰度(RS)"></a>射频电磁场辐射抗扰度(RS)</h2><h3 id="测试框图Block-Diagram-of-Test-Setup-4"><a href="#测试框图Block-Diagram-of-Test-Setup-4" class="headerlink" title="测试框图Block Diagram of Test Setup"></a>测试框图Block Diagram of Test Setup</h3><p><img src="clip_image009.png" alt="img"></p>
+<h3 id="试验等级Severity-level"><a href="#试验等级Severity-level" class="headerlink" title="试验等级Severity level"></a>试验等级Severity level</h3><table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Field Strength V/m</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1.</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2.</td>
+<td>3</td>
+</tr>
+<tr>
+<td>3.</td>
+<td>10</td>
+</tr>
+<tr>
+<td>X</td>
+<td>Special</td>
+</tr>
+</tbody></table>
+<h3 id="测试策略Test-strategy-4"><a href="#测试策略Test-strategy-4" class="headerlink" title="测试策略Test strategy"></a>测试策略Test strategy</h3><p>网关和模块都需要测试</p>
+<h2 id="传导抗扰度-CS"><a href="#传导抗扰度-CS" class="headerlink" title="传导抗扰度(CS)"></a>传导抗扰度(CS)</h2><h3 id="测试框图Block-Diagram-of-Test-Setup-5"><a href="#测试框图Block-Diagram-of-Test-Setup-5" class="headerlink" title="测试框图Block Diagram of Test Setup"></a>测试框图Block Diagram of Test Setup</h3><p><img src="clip_image011.png" alt="img"></p>
+<h3 id="试验等级Severity-level-1"><a href="#试验等级Severity-level-1" class="headerlink" title="试验等级Severity level"></a>试验等级Severity level</h3><table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Field Strength V</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1.</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2.</td>
+<td>3</td>
+</tr>
+<tr>
+<td>3.</td>
+<td>10</td>
+</tr>
+<tr>
+<td>X</td>
+<td>Special</td>
+</tr>
+</tbody></table>
+<h3 id="测试策略Test-strategy-5"><a href="#测试策略Test-strategy-5" class="headerlink" title="测试策略Test strategy"></a>测试策略Test strategy</h3><p>目前需要测试的产品为网关等产品。</p>
+<p>此测试项目只针对含有适配器或者电源模块的产品。</p>
+<h2 id="电压暂降和短时中断-DIP"><a href="#电压暂降和短时中断-DIP" class="headerlink" title="电压暂降和短时中断(DIP)"></a>电压暂降和短时中断(DIP)</h2><h3 id="测试框图Block-Diagram-of-Test-Setup-6"><a href="#测试框图Block-Diagram-of-Test-Setup-6" class="headerlink" title="测试框图Block Diagram of Test Setup"></a>测试框图Block Diagram of Test Setup</h3><p><img src="clip_image013.png" alt="img"></p>
+<h3 id="试验等级Severity-level-2"><a href="#试验等级Severity-level-2" class="headerlink" title="试验等级Severity level"></a>试验等级Severity level</h3><table>
+<thead>
+  <tr>
+    <th>Test Level (%UT)</th>
+    <th>Voltage dip and short interruptions (%UT)</th>
+    <th>Duration (in period)</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td rowspan="2">0</td>
+    <td rowspan="2">100</td>
+    <td>0.5</td>
+  </tr>
+  <tr>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td rowspan="2">40</td>
+    <td rowspan="2">60</td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>10</td>
+  </tr>
+  <tr>
+    <td rowspan="3">70</td>
+    <td rowspan="3">30</td>
+    <td>25</td>
+  </tr>
+  <tr>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>*</td>
+  </tr>
+</tbody>
+</table>
+
+
+
+<h3 id="测试策略Test-strategy-6"><a href="#测试策略Test-strategy-6" class="headerlink" title="测试策略Test strategy"></a>测试策略Test strategy</h3><p>目前需要测试的产品为网关等产品。</p>
+<p>此测试项目只针对含有适配器或者电源模块的产品。</p>
+<h2 id="电快速脉冲群抗扰度-EFT"><a href="#电快速脉冲群抗扰度-EFT" class="headerlink" title="电快速脉冲群抗扰度(EFT)"></a>电快速脉冲群抗扰度(EFT)</h2><h3 id="测试框图Block-Diagram-of-Test-Setup-7"><a href="#测试框图Block-Diagram-of-Test-Setup-7" class="headerlink" title="测试框图Block Diagram of Test Setup"></a>测试框图Block Diagram of Test Setup</h3><p><img src="clip_image015.png" alt="img"></p>
+<h3 id="试验等级Severity-level-3"><a href="#试验等级Severity-level-3" class="headerlink" title="试验等级Severity level"></a>试验等级Severity level</h3><table>
+<thead>
+  <tr>
+    <th rowspan="2">Level</th>
+    <th colspan="2">On power port, PE</th>
+    <th colspan="2">On I/O (Input/Output) Signaldata and control ports</th>
+  </tr>
+  <tr>
+    <th>Voltage peak (KV)</th>
+    <th>Repetition rate(KHz)</th>
+    <th>Voltage peak (KV)</th>
+    <th>Repetition rate(KHz)</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>1</td>
+    <td>0.5</td>
+    <td>5 or 100</td>
+    <td>0.25</td>
+    <td>5 or 100</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>1</td>
+    <td>5 or 100</td>
+    <td>0.5</td>
+    <td>5 or 100</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>2</td>
+    <td>5 or 100</td>
+    <td>1</td>
+    <td>5 or 100</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>4</td>
+    <td>5 or 100</td>
+    <td>2</td>
+    <td>5 or 100</td>
+  </tr>
+  <tr>
+    <td>X</td>
+    <td>Special</td>
+    <td>Special</td>
+    <td>Special</td>
+    <td>Special</td>
+  </tr>
+</tbody>
+</table>
+
+<blockquote>
+<p>Note 1   Use of 5 KHz repetition rates is traditional; however, 100 KHz is closer to reality. Product committees should determine which frequencies are relevant for specific products or product types.</p>
+<p>Note 2   With some products, there may be no clear distinction, between power ports and I/O ports, in which case it is up to product committees to make this determination for test purposes.</p>
+<p>Note 3   “X” is an open level. The level has to be specified in the dedicated equipment specification.</p>
+</blockquote>
+<h3 id="测试策略Test-strategy-7"><a href="#测试策略Test-strategy-7" class="headerlink" title="测试策略Test strategy"></a>测试策略Test strategy</h3><p>目前需要测试的产品为网关等产品。</p>
+<p>此测试项目只针对含有适配器，电源模块或带有LAN口的产品。</p>
+<h2 id="静电放电抗扰度-ESD"><a href="#静电放电抗扰度-ESD" class="headerlink" title="静电放电抗扰度(ESD)"></a>静电放电抗扰度(ESD)</h2><h3 id="测试框图Block-Diagram-of-Test-Setup-8"><a href="#测试框图Block-Diagram-of-Test-Setup-8" class="headerlink" title="测试框图Block Diagram of Test Setup"></a>测试框图Block Diagram of Test Setup</h3><p><img src="clip_image017.png" alt="img"></p>
+<h3 id="试验等级Severity-level-4"><a href="#试验等级Severity-level-4" class="headerlink" title="试验等级Severity level"></a>试验等级Severity level</h3><table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Test Voltage  Contact  Discharge (KV)</th>
+<th>Test Voltage  Air Discharge  (KV)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>±2</td>
+<td>±2</td>
+</tr>
+<tr>
+<td>2</td>
+<td>±4</td>
+<td>±4</td>
+</tr>
+<tr>
+<td>3</td>
+<td>±6</td>
+<td>±8</td>
+</tr>
+<tr>
+<td>4</td>
+<td>±8</td>
+<td>±15</td>
+</tr>
+<tr>
+<td>X</td>
+<td>Special</td>
+<td>Special</td>
+</tr>
+</tbody></table>
+<h3 id="测试步骤Test-Procedure-1"><a href="#测试步骤Test-Procedure-1" class="headerlink" title="测试步骤Test Procedure"></a>测试步骤Test Procedure</h3> <table>
+<thead>
+  <tr>
+    <th colspan="2">分类</th>
+    <th>测试点</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td colspan="2">接触放电(ContactDischarge)</td>
+    <td>螺丝孔，DC电源接口，RJ45网口，天线接口，SIM卡槽，SD卡槽</td>
+  </tr>
+  <tr>
+    <td colspan="2">空气放电(AirDischarge)</td>
+    <td>外壳表面，缝隙等</td>
+  </tr>
+  <tr>
+    <td rowspan="2">间接放电(Indirect discharge)</td>
+    <td>HCP</td>
+    <td>EUT 四周</td>
+  </tr>
+  <tr>
+    <td>VCP</td>
+    <td>EUT 四周</td>
+  </tr>
+</tbody>
+</table>
+
+
+
+<h2 id="浪涌抗扰度-Surge"><a href="#浪涌抗扰度-Surge" class="headerlink" title="浪涌抗扰度(Surge)"></a>浪涌抗扰度(Surge)</h2><h3 id="测试框图Block-Diagram-of-Test-Setup-9"><a href="#测试框图Block-Diagram-of-Test-Setup-9" class="headerlink" title="测试框图Block Diagram of Test Setup"></a>测试框图Block Diagram of Test Setup</h3><p><img src="clip_image019.png" alt="img"></p>
+<h3 id="试验等级Severity-level-5"><a href="#试验等级Severity-level-5" class="headerlink" title="试验等级Severity level"></a>试验等级Severity level</h3><table>
+<thead>
+<tr>
+<th>Severity Level</th>
+<th>Open-Circuit Test Voltage KV</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>0.5</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>3</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>4</td>
+<td>4.0</td>
+</tr>
+<tr>
+<td>*</td>
+<td>Special</td>
+</tr>
+</tbody></table>
+<h3 id="测试策略Test-strategy-8"><a href="#测试策略Test-strategy-8" class="headerlink" title="测试策略Test strategy"></a>测试策略Test strategy</h3><p>目前需要测试的产品为网关等产品。</p>
+<p>此测试项目只针对含有适配器，电源模块或带有LAN口的产品</p>
+<p>AC Mains power input ports</p>
+<table>
+<thead>
+<tr>
+<th>Coupling Line</th>
+<th>Phase Angel</th>
+<th>Test voltage</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>L-N</td>
+<td>0°, 90°, 180°, 270°</td>
+<td>±1.0KV</td>
+</tr>
+<tr>
+<td>L-PE</td>
+<td>0°, 90°, 180°, 270°</td>
+<td>±2.0KV</td>
+</tr>
+<tr>
+<td>N-PE</td>
+<td>0°, 90°, 180°, 270°</td>
+<td>±2.0KV</td>
+</tr>
+</tbody></table>
+<p>Signal port: RJ45</p>
+<table>
+<thead>
+<tr>
+<th>Coupling Line</th>
+<th>Phase Angel</th>
+<th>Test voltage</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Line-GND</td>
+<td>0°, 90°, 180°, 270°</td>
+<td>±1.0KV</td>
+</tr>
+</tbody></table>
+<p>具体电压等级需要查看适配器和产品规格。</p>
+]]></content>
+      <categories>
+        <category>硬件测试</category>
+      </categories>
+  </entry>
+  <entry>
     <title>ripple</title>
     <url>/posts/2M58RF5/</url>
     <content><![CDATA[<p><img src="image-20211216153757245.png" alt="image-20211216153757245" style="zoom:10%;" /> <img src="image-20211216153834632.png" alt="image-20211216153834632" style="zoom:10%;" /></p>
@@ -874,7 +1874,885 @@
 <p><img src="image-20211216153347681.png" alt="image-20211216153347681"></p>
 ]]></content>
       <categories>
-        <category>hardware test</category>
+        <category>硬件测试</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>单板测试规范</title>
+    <url>/posts/2C58KSR/</url>
+    <content><![CDATA[<h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><h2 id="编写目的"><a href="#编写目的" class="headerlink" title="编写目的"></a>编写目的</h2><p>研发设计产品的单板硬件测试指导。</p>
+<h1 id="测试准备"><a href="#测试准备" class="headerlink" title="测试准备"></a>测试准备</h1><h2 id="测试仪器"><a href="#测试仪器" class="headerlink" title="测试仪器"></a>测试仪器</h2><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>型号</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>示波器</td>
+<td>Tektronix TDS7104</td>
+</tr>
+<tr>
+<td>无源电压探头</td>
+<td>Tektronix P6139A</td>
+</tr>
+<tr>
+<td>直流电源</td>
+<td>GWINSTEK GPS-2303C</td>
+</tr>
+<tr>
+<td>频谱分析仪</td>
+<td>HP8596E</td>
+</tr>
+<tr>
+<td>万用表</td>
+<td></td>
+</tr>
+<tr>
+<td>同轴电缆</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="测试条件"><a href="#测试条件" class="headerlink" title="测试条件"></a>测试条件</h2><ul>
+<li>测试仪器使用前需要校准</li>
+<li>单板/系统上电正常工作30分钟后测试</li>
+<li>测试仪器和测试单板需要共地</li>
+<li>信号质量测试点选择在信号接收端</li>
+</ul>
+<h1 id="测试项目"><a href="#测试项目" class="headerlink" title="测试项目"></a>测试项目</h1><h2 id="单板功耗（Power-consumption）"><a href="#单板功耗（Power-consumption）" class="headerlink" title="单板功耗（Power consumption）"></a>单板功耗（Power consumption）</h2><h3 id="适配器供电-针对网关产品"><a href="#适配器供电-针对网关产品" class="headerlink" title="适配器供电(针对网关产品)"></a>适配器供电(针对网关产品)</h3><ul>
+<li>使用12V适配器供电，LoRa，WiFi，4G，以太网等业务正常运行，</li>
+<li>禁用wifi功能，4g、以太网功能跑起来，记录LoRa 接收和发送时的最大电流</li>
+<li>启用wifi功能，4g、以太网功能跑起来，记录LoRa 接收和发送时的最大电流</li>
+</ul>
+<h3 id="POE设备供电-针对网关产品"><a href="#POE设备供电-针对网关产品" class="headerlink" title="POE设备供电(针对网关产品)"></a>POE设备供电(针对网关产品)</h3><ul>
+<li>使用12V适配器供电，LoRa，WiFi，4G，以太网等业务正常运行，</li>
+<li>禁用wifi功能，4g、以太网功能跑起来，分别测试LoRa 接收和发送时的最大电流</li>
+<li>启用wifi功能，4g、以太网功能跑起来，分别测试LoRa 接收和发送时的最大电流</li>
+</ul>
+<h2 id="电源完整性（PI）"><a href="#电源完整性（PI）" class="headerlink" title="电源完整性（PI）"></a>电源完整性（PI）</h2><h3 id="电压精度（voltage-accuracy）"><a href="#电压精度（voltage-accuracy）" class="headerlink" title="电压精度（voltage accuracy）"></a>电压精度（voltage accuracy）</h3><h4 id="测试步骤"><a href="#测试步骤" class="headerlink" title="测试步骤"></a>测试步骤</h4><ul>
+<li>使用电压表（或万用表）的黑表笔连接测试电源的地</li>
+<li>使用电压表（或万用表）的红表笔连接被测试电压</li>
+<li>读取电压表的数值</li>
+</ul>
+<h4 id="测试点"><a href="#测试点" class="headerlink" title="测试点"></a>测试点</h4><ul>
+<li>电源模块(DC/DC,LDO等)的电压输出管脚或就近的电容</li>
+<li>芯片的电源管脚或就近的电容</li>
+</ul>
+<h4 id="测试标准"><a href="#测试标准" class="headerlink" title="测试标准"></a>测试标准</h4><p>​    一般在标称电压值5%范围内，或者根据芯片的Datasheet要求来确定。</p>
+<h4 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h4><ul>
+<li>首要推荐使用精密的电压表测试；</li>
+<li>次要选择用数字万用表，确保电池电量充足，否则测量误差较大；</li>
+<li>不推荐使用示波器测量电压精度，偏差较大；万一使用，则需设置为直流并取均方根值（RMS）。</li>
+</ul>
+<h3 id="纹波噪声（Ripple-amp-Noise）"><a href="#纹波噪声（Ripple-amp-Noise）" class="headerlink" title="纹波噪声（Ripple &amp; Noise）"></a>纹波噪声（Ripple &amp; Noise）</h3><h4 id="测试步骤-1"><a href="#测试步骤-1" class="headerlink" title="测试步骤"></a>测试步骤</h4><ul>
+<li>设置示波器AC耦合，同轴电缆一端接示波器，另外一端焊接到被测试电压的电容两端。</li>
+<li>测试纹波：设置示波器带宽20MHz，调节水平刻度为us级/格，示波器至少捕捉4个周期以上，读取示波器的峰峰值，周期/频率。</li>
+<li>测试噪声：设置示波器带宽为全带宽，波形设置累计模式，调节水平刻度为ms级/格，读取示波器的峰峰值。</li>
+<li>分别测试单板在空载和满载的情况。</li>
+</ul>
+<h4 id="测试点-1"><a href="#测试点-1" class="headerlink" title="测试点"></a>测试点</h4><p>​    芯片的电源管脚附近的电容</p>
+<h4 id="测试标准-1"><a href="#测试标准-1" class="headerlink" title="测试标准"></a>测试标准</h4><ul>
+<li>纹波：2%，或者依据datasheet要求；</li>
+<li>噪声：5%，或者依据datasheet要求。</li>
+</ul>
+<h4 id="注意事项-1"><a href="#注意事项-1" class="headerlink" title="注意事项"></a>注意事项</h4><ul>
+<li>无同轴电缆时，尽量使用自制的电源测试探头</li>
+<li>尽量使用小衰减比的探头，探头的接地线尽量短</li>
+</ul>
+<h3 id="电源上下电波形（Power-on-and-off-waveforms）"><a href="#电源上下电波形（Power-on-and-off-waveforms）" class="headerlink" title="电源上下电波形（Power on and off waveforms）"></a>电源上下电波形（Power on and off waveforms）</h3><h4 id="测试步骤-2"><a href="#测试步骤-2" class="headerlink" title="测试步骤"></a>测试步骤</h4><ul>
+<li> 设置示波器触发方式为边沿触发。</li>
+<li>上下电，查看波形是否单调，并读取过冲值。</li>
+</ul>
+<h4 id="测试标准-2"><a href="#测试标准-2" class="headerlink" title="测试标准"></a>测试标准</h4><p>波形单调，无平台、跌坑。过冲值一般不超过5%，或者依据datasheet要求。</p>
+<h4 id="注意事项-2"><a href="#注意事项-2" class="headerlink" title="注意事项"></a>注意事项</h4><ul>
+<li>需要遍历以下几种情况</li>
+<li>12V适配器拔插</li>
+<li>单板接口拔插</li>
+<li>POE上下电情况</li>
+</ul>
+<h3 id="电源上下电时序（Sequence）"><a href="#电源上下电时序（Sequence）" class="headerlink" title="电源上下电时序（Sequence）"></a>电源上下电时序（Sequence）</h3><h4 id="测试步骤-3"><a href="#测试步骤-3" class="headerlink" title="测试步骤"></a>测试步骤</h4><ul>
+<li>将探头连接主板待测电源的电容处。</li>
+<li>示波器设置上升沿触发，将主板上电开机，得到上电时序。</li>
+<li>示波器设置下降沿触发，将主板下电关机，得到上电时序。</li>
+</ul>
+<h4 id="测试标准-3"><a href="#测试标准-3" class="headerlink" title="测试标准"></a>测试标准</h4><p>时序标准参考datasheet要求。</p>
+<h2 id="信号完整性（SI）"><a href="#信号完整性（SI）" class="headerlink" title="信号完整性（SI）"></a>信号完整性（SI）</h2><h3 id="时钟信号（Clock）"><a href="#时钟信号（Clock）" class="headerlink" title="时钟信号（Clock）"></a>时钟信号（Clock）</h3><h4 id="测试步骤-4"><a href="#测试步骤-4" class="headerlink" title="测试步骤"></a>测试步骤</h4><ul>
+<li> 尽量选择靠近接收端，芯片时钟输入端的引脚连接探头。</li>
+<li> 使用示波器测量表3的相关参数</li>
+<li>使用频率计测试接收端时钟的频率，并核算ppm。</li>
+</ul>
+<h4 id="测试标准-4"><a href="#测试标准-4" class="headerlink" title="测试标准"></a>测试标准</h4><p>时钟信号参考datasheet要求。</p>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Parameter</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Vih</td>
+<td>高电平幅值</td>
+</tr>
+<tr>
+<td>Vil</td>
+<td>低电平幅值</td>
+</tr>
+<tr>
+<td>Tr</td>
+<td>上升时间</td>
+</tr>
+<tr>
+<td>Tf</td>
+<td>下降时间</td>
+</tr>
+<tr>
+<td>Freq.</td>
+<td>频率</td>
+</tr>
+<tr>
+<td>Duty cycle</td>
+<td>占空比</td>
+</tr>
+<tr>
+<td>tHIGH</td>
+<td>正脉冲宽度</td>
+</tr>
+<tr>
+<td>tLOW</td>
+<td>负脉冲宽度</td>
+</tr>
+<tr>
+<td>Period</td>
+<td>周期</td>
+</tr>
+<tr>
+<td>Jitter</td>
+<td>抖动</td>
+</tr>
+<tr>
+<td>Overshoot</td>
+<td>过冲</td>
+</tr>
+<tr>
+<td>Undershoot</td>
+<td>下冲</td>
+</tr>
+</tbody></table>
+<h4 id="注意事项-3"><a href="#注意事项-3" class="headerlink" title="注意事项"></a>注意事项</h4><ul>
+<li>注意观察时钟信号边沿是否单调，波形是否存在较大毛刺，回勾</li>
+<li>占空比满足40%-60%</li>
+</ul>
+<h3 id="复位信号（Reset）"><a href="#复位信号（Reset）" class="headerlink" title="复位信号（Reset）"></a>复位信号（Reset）</h3><h4 id="测试步骤-5"><a href="#测试步骤-5" class="headerlink" title="测试步骤"></a>测试步骤</h4><ul>
+<li> 尽量选择靠近芯片接收端的阻容或者过孔连接探头。</li>
+<li>单板上电，观察复位信号的波形</li>
+</ul>
+<h4 id="测试标准-5"><a href="#测试标准-5" class="headerlink" title="测试标准"></a>测试标准</h4><p>复位信号参考datasheet要求。</p>
+<h4 id="注意事项-4"><a href="#注意事项-4" class="headerlink" title="注意事项"></a>注意事项</h4><ul>
+<li> 除了看水平时间，还需要展开看边沿单调性等信号质量；</li>
+<li>对低电平复位有效的信号，取下降沿触发；</li>
+<li>对于上电复位信号，取最晚上电的电源信号作参考，与复位信号一起测试。</li>
+<li>复位信号有效的脉宽长度需要满足Datasheet的要求。</li>
+</ul>
+<h3 id="I2C"><a href="#I2C" class="headerlink" title="I2C"></a>I2C</h3><h4 id="测试步骤-6"><a href="#测试步骤-6" class="headerlink" title="测试步骤"></a>测试步骤</h4><ul>
+<li>分别测试SCL和SDA信号高低电平，确认是否存在过冲，毛刺。 </li>
+<li>用示波器测量I2C总线的各项参数，并记录。</li>
+</ul>
+<h4 id="测试标准-6"><a href="#测试标准-6" class="headerlink" title="测试标准"></a>测试标准</h4><p>I2C信号标准参考datasheet要求。</p>
+<p><img src="image-20220207173223349.png" alt="image-20220207173223349"></p>
+<p><img src="clip_image002.gif" alt="img"></p>
+<table>
+<thead>
+  <tr>
+    <th rowspan="2">PARAMETER</th>
+    <th rowspan="2">SYMBOL</th>
+    <th colspan="2">STANDARD-MODE</th>
+    <th colspan="2">FAST-MODE</th>
+    <th colspan="2">Hs-MODE</th>
+    <th rowspan="2">UNIT</th>
+  </tr>
+  <tr>
+    <th>MIN.</th>
+    <th>MAX.</th>
+    <th>MIN.</th>
+    <th>MAX.</th>
+    <th>MIN.</th>
+    <th>MAX.</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>LOWlevel input voltage</td>
+    <td>VIL</td>
+    <td>-0.5</td>
+    <td>0.3VDD</td>
+    <td>-0.5</td>
+    <td>0.3VDD</td>
+    <td>-0.5</td>
+    <td>0.3VDD</td>
+    <td>V</td>
+  </tr>
+  <tr>
+    <td>HIGHlevel input voltage</td>
+    <td>VIH</td>
+    <td>0.7VDD</td>
+    <td>VDD +0.5</td>
+    <td>0.7VDD</td>
+    <td>VDD +0.5</td>
+    <td>0.7VDD</td>
+    <td>VDD +0.5</td>
+    <td>V</td>
+  </tr>
+  <tr>
+    <td>SCLclock frequency</td>
+    <td>fSCL</td>
+    <td>0</td>
+    <td>100</td>
+    <td>0</td>
+    <td>400</td>
+    <td>0</td>
+    <td>3400</td>
+    <td>kHz</td>
+  </tr>
+  <tr>
+    <td>LOWperiod of the SCL clock</td>
+    <td>tLOW</td>
+    <td>4.7</td>
+    <td>–</td>
+    <td>1.3</td>
+    <td>–</td>
+    <td>0.16</td>
+    <td>–</td>
+    <td>ms</td>
+  </tr>
+  <tr>
+    <td>HIGHperiod of the SCL clock</td>
+    <td>tHIGH</td>
+    <td>4</td>
+    <td>–</td>
+    <td>0.6</td>
+    <td>–</td>
+    <td>0.06</td>
+    <td>–</td>
+    <td>ms</td>
+  </tr>
+  <tr>
+    <td>Risetime of both SDA and SCL signals</td>
+    <td>tr</td>
+    <td>–</td>
+    <td>1000</td>
+    <td>20</td>
+    <td>300</td>
+    <td>10</td>
+    <td>40</td>
+    <td>ns</td>
+  </tr>
+  <tr>
+    <td>Falltime of both SDA and SCL signals</td>
+    <td>tf</td>
+    <td>–</td>
+    <td>300</td>
+    <td>20</td>
+    <td>300</td>
+    <td>10</td>
+    <td>40</td>
+    <td>ns</td>
+  </tr>
+  <tr>
+    <td>Holdtime (repeated) START condition</td>
+    <td>tHD;STA</td>
+    <td>4</td>
+    <td>–</td>
+    <td>0.6</td>
+    <td>-</td>
+    <td>0.16</td>
+    <td>-</td>
+    <td>ms</td>
+  </tr>
+  <tr>
+    <td>Set-uptime for a repeated START condition</td>
+    <td>tSU;STA</td>
+    <td>4.7</td>
+    <td>–</td>
+    <td>0.6</td>
+    <td>–</td>
+    <td>0.16</td>
+    <td>–</td>
+    <td>ms</td>
+  </tr>
+  <tr>
+    <td>Datahold time</td>
+    <td>tHD;DAT</td>
+    <td>0</td>
+    <td>3.45</td>
+    <td>0</td>
+    <td>0.9</td>
+    <td>0</td>
+    <td>0.07</td>
+    <td>ms</td>
+  </tr>
+  <tr>
+    <td>Dataset-up time</td>
+    <td>tSU;DAT</td>
+    <td>250</td>
+    <td>-</td>
+    <td>100</td>
+    <td>–</td>
+    <td>10</td>
+    <td>–</td>
+    <td>ns</td>
+  </tr>
+  <tr>
+    <td>Set-uptime for STOP condition</td>
+    <td>tSU;STO</td>
+    <td>4</td>
+    <td>–</td>
+    <td>0.6</td>
+    <td>–</td>
+    <td>0.16</td>
+    <td>–</td>
+    <td>ms</td>
+  </tr>
+  <tr>
+    <td>Busfree time between a STOP and START condition</td>
+    <td>tBUF</td>
+    <td>4.7</td>
+    <td>–</td>
+    <td>1.3</td>
+    <td>–</td>
+    <td>0.1</td>
+    <td>–</td>
+    <td>ms</td>
+  </tr>
+</tbody>
+</table>
+
+<h3 id="SPI"><a href="#SPI" class="headerlink" title="SPI"></a>SPI</h3><h4 id="测试步骤-7"><a href="#测试步骤-7" class="headerlink" title="测试步骤"></a>测试步骤</h4><ul>
+<li>分别测试CLK,CS,SDI,SDO信号的高低电平，确认是否存在过冲，毛刺。</li>
+<li>量测SPI总线的各项参数，并记录。</li>
+</ul>
+<p><img src="clip_image002.jpg" alt="img"></p>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>名称</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>VIL</td>
+<td>输入信号的低电平范围</td>
+</tr>
+<tr>
+<td>VIH</td>
+<td>输入信号的高电平范围</td>
+</tr>
+<tr>
+<td>Freq</td>
+<td>时钟频率</td>
+</tr>
+<tr>
+<td>tR</td>
+<td>时钟上升时间</td>
+</tr>
+<tr>
+<td>tF</td>
+<td>时钟下降时间</td>
+</tr>
+<tr>
+<td>tLOW</td>
+<td>时钟低电平时间</td>
+</tr>
+<tr>
+<td>tHIGH</td>
+<td>时钟高电平时间</td>
+</tr>
+<tr>
+<td>tSU.CS</td>
+<td>片选信号建立时间</td>
+</tr>
+<tr>
+<td>tSU.SDI</td>
+<td>数据输入信号建立时间</td>
+</tr>
+<tr>
+<td>tHD.CS</td>
+<td>片选信号保持时间</td>
+</tr>
+<tr>
+<td>tHD.SDI</td>
+<td>数据输入信号保持时间</td>
+</tr>
+<tr>
+<td>tHD.SDO</td>
+<td>数据输出信号保持时间</td>
+</tr>
+<tr>
+<td>tV.SDO</td>
+<td>数据输出有效时间最大时间</td>
+</tr>
+</tbody></table>
+<h3 id="UART"><a href="#UART" class="headerlink" title="UART"></a>UART</h3><h4 id="测试步骤-8"><a href="#测试步骤-8" class="headerlink" title="测试步骤"></a>测试步骤</h4><ul>
+<li>分别测试Txd Rxd信号的高低电平，确认是否存在过冲，毛刺。</li>
+<li>测量UART总线的各项参数，并记录。</li>
+<li>用光标卡UART的波特率</li>
+</ul>
+<h4 id="测试标准-7"><a href="#测试标准-7" class="headerlink" title="测试标准"></a>测试标准</h4><p>参考芯片datasheet的要求</p>
+<h3 id="SD卡"><a href="#SD卡" class="headerlink" title="SD卡"></a>SD卡</h3><table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Symbol</th>
+<th>Min</th>
+<th>Max</th>
+<th>Unit</th>
+<th>Remark</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Supply  Voltage</td>
+<td>VDD</td>
+<td>2.7</td>
+<td>3.6</td>
+<td>V</td>
+<td></td>
+</tr>
+<tr>
+<td>Output  High Voltage</td>
+<td>VOH</td>
+<td>0.75*VDD</td>
+<td></td>
+<td>V</td>
+<td>IOH=-2mA VDD min</td>
+</tr>
+<tr>
+<td>Output  Low Voltage</td>
+<td>VOL</td>
+<td></td>
+<td>0.125*VDD</td>
+<td>V</td>
+<td>IOL = 2mA VDD min</td>
+</tr>
+<tr>
+<td>Input  High Voltage</td>
+<td>VIH</td>
+<td>0.625*VDD</td>
+<td>VDD+0.3</td>
+<td>V</td>
+<td></td>
+</tr>
+<tr>
+<td>Input  Low Voltage</td>
+<td>VIL</td>
+<td>VSS-0.3</td>
+<td>0.25  *VDD</td>
+<td>V</td>
+<td></td>
+</tr>
+<tr>
+<td>Power  Up Time</td>
+<td></td>
+<td></td>
+<td>250</td>
+<td>ms</td>
+<td>From  0V to VDD min</td>
+</tr>
+<tr>
+<td>Supply ramp up time</td>
+<td></td>
+<td>1</td>
+<td></td>
+<td>ms</td>
+<td>or  &gt;74 sd clocks</td>
+</tr>
+</tbody></table>
+<p><img src="image-20220207173956552.png" alt="image-20220207173956552"></p>
+<h4 id="下电时序"><a href="#下电时序" class="headerlink" title="下电时序"></a>下电时序</h4><p>下电时，在 1mS 内电源电压必须下降到小于500mV。</p>
+<h4 id="总线时序"><a href="#总线时序" class="headerlink" title="总线时序"></a>总线时序</h4><p><strong>普通模式</strong></p>
+<p><img src="image-20220207174020152.png" alt="image-20220207174020152"></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Symbol</th>
+<th>Min.</th>
+<th>Max.</th>
+<th>Unit</th>
+<th>Remark</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Clock  CLK (All values are referred to min (VIH) and max (VIL),</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Clock frequency Data Transfer Mode</td>
+<td>fPP</td>
+<td>0</td>
+<td>25</td>
+<td>MHz</td>
+<td>CCARD ≤ 10 pF (1  card)</td>
+</tr>
+<tr>
+<td>Clock frequency Identification Mode</td>
+<td>fOD</td>
+<td>0(1)/100</td>
+<td>400</td>
+<td>kHz</td>
+<td>CCARD ≤ 10 pF (1 card)</td>
+</tr>
+<tr>
+<td>Clock low time</td>
+<td>tWL</td>
+<td>10</td>
+<td></td>
+<td>ns</td>
+<td>CCARD ≤ 10 pF (1  card)</td>
+</tr>
+<tr>
+<td>Clock high time</td>
+<td>tWH</td>
+<td>10</td>
+<td></td>
+<td>ns</td>
+<td>CCARD ≤ 10 pF (1  card)</td>
+</tr>
+<tr>
+<td>Clock rise time</td>
+<td>tTLH</td>
+<td></td>
+<td>10</td>
+<td>ns</td>
+<td>CCARD ≤ 10 pF (1  card)</td>
+</tr>
+<tr>
+<td>Clock fall time</td>
+<td>tTHL</td>
+<td></td>
+<td>10</td>
+<td>ns</td>
+<td>CCARD ≤ 10 pF (1  card)</td>
+</tr>
+<tr>
+<td>Inputs CMD, DAT (referenced to CLK)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Input set-up time</td>
+<td>tISU</td>
+<td>5</td>
+<td></td>
+<td>ns</td>
+<td>CCARD ≤ 10 pF (1  card)</td>
+</tr>
+<tr>
+<td>Input hold time</td>
+<td>tIH</td>
+<td>5</td>
+<td></td>
+<td>ns</td>
+<td>CCARD ≤ 10 pF (1  card)</td>
+</tr>
+<tr>
+<td>Outputs CMD, DAT (referenced to CLK)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Output Delay time during Data Transfer  Mode</td>
+<td>tODLY</td>
+<td>0</td>
+<td>14</td>
+<td>ns</td>
+<td>CL ≤ 40 pF (1 card)</td>
+</tr>
+<tr>
+<td>Output Delay time during Identification  Mode</td>
+<td>tODLY</td>
+<td>0</td>
+<td>50</td>
+<td>ns</td>
+<td>CL ≤ 40 pF (1 card)</td>
+</tr>
+</tbody></table>
+<p><strong>高速模式</strong></p>
+<p><img src="image-20220207174056401.png" alt="image-20220207174056401"></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Symbol</th>
+<th>Min.</th>
+<th>Max.</th>
+<th>Unit</th>
+<th>Remark</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Clock CLK (All values are referred to min  (VIH)  and max (VIL),</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Clock frequency Data Transfer Mode</td>
+<td>fPP</td>
+<td>0</td>
+<td>50</td>
+<td>MHz</td>
+<td>CCARD ≤ 10 pF (1 card)</td>
+</tr>
+<tr>
+<td>Clock low time</td>
+<td>tWL</td>
+<td>7</td>
+<td></td>
+<td>ns</td>
+<td>CCARD ≤ 10 pF (1 card)</td>
+</tr>
+<tr>
+<td>Clock high time</td>
+<td>tWH</td>
+<td>7</td>
+<td></td>
+<td>ns</td>
+<td>CCARD ≤ 10 pF (1 card)</td>
+</tr>
+<tr>
+<td>Clock rise time</td>
+<td>tTLH</td>
+<td></td>
+<td>3</td>
+<td>ns</td>
+<td>CCARD ≤ 10 pF (1 card)</td>
+</tr>
+<tr>
+<td>Clock fall time</td>
+<td>tTHL</td>
+<td></td>
+<td>3</td>
+<td>ns</td>
+<td>CCARD ≤ 10 pF (1 card)</td>
+</tr>
+<tr>
+<td>Inputs CMD, DAT (referenced to CLK)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Input set-up time</td>
+<td>tISU</td>
+<td>6</td>
+<td></td>
+<td>ns</td>
+<td>CCARD ≤ 10 pF (1 card)</td>
+</tr>
+<tr>
+<td>Input hold time</td>
+<td>tIH</td>
+<td>2</td>
+<td></td>
+<td>ns</td>
+<td>CCARD ≤ 10 pF (1 card)</td>
+</tr>
+<tr>
+<td>Outputs CMD, DAT (referenced to CLK)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Output Delay time during Data Transfer  Mode</td>
+<td>tODLY</td>
+<td></td>
+<td>14</td>
+<td>ns</td>
+<td>CL ≤ 40 pF (1 card)</td>
+</tr>
+<tr>
+<td>Output Hold time</td>
+<td>tOH</td>
+<td>2.5</td>
+<td></td>
+<td>ns</td>
+<td>CL ³  15pF (1 card)</td>
+</tr>
+<tr>
+<td>Total System capacitance for each line1</td>
+<td>CL</td>
+<td></td>
+<td>40</td>
+<td>pF</td>
+<td>1 card</td>
+</tr>
+</tbody></table>
+<h3 id="SIM卡"><a href="#SIM卡" class="headerlink" title="SIM卡"></a>SIM卡</h3><h4 id="SIM电源"><a href="#SIM电源" class="headerlink" title="SIM电源"></a>SIM电源</h4><table>
+<thead>
+  <tr>
+    <th>Symbol</th>
+    <th>Conditions</th>
+    <th>Minimum</th>
+    <th>Maximum</th>
+    <th>Unit</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td rowspan="3">UCC</td>
+    <td>Class A</td>
+    <td>4.5</td>
+    <td>5.5</td>
+    <td rowspan="3">V</td>
+  </tr>
+  <tr>
+    <td>Class B</td>
+    <td>2.7</td>
+    <td>3.3</td>
+  </tr>
+  <tr>
+    <td>Class C</td>
+    <td>1.62</td>
+    <td>1.98</td>
+  </tr>
+</tbody>
+</table>
+
+
+
+<h4 id="RST"><a href="#RST" class="headerlink" title="RST"></a>RST</h4><table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Conditions</th>
+<th>Minimum</th>
+<th>Maximum</th>
+<th>Unit</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><em>U</em>IH</td>
+<td></td>
+<td>0,8  <em>U</em>CC</td>
+<td><em>U</em>CC</td>
+<td>V</td>
+</tr>
+<tr>
+<td><em>U</em>IL</td>
+<td></td>
+<td>0</td>
+<td>0,12  <em>U</em>CC</td>
+<td>V</td>
+</tr>
+<tr>
+<td><em>t</em>R <em>t</em>F</td>
+<td><em>C</em>IN = 30 pF</td>
+<td></td>
+<td>1</td>
+<td>µs</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>The  voltage shall remain between – 0,3 V and UCC + 0,3 V.</p>
+</blockquote>
+<h4 id="CLK"><a href="#CLK" class="headerlink" title="CLK"></a>CLK</h4><table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Conditions</th>
+<th>Minimum</th>
+<th>Maximum</th>
+<th>Unit</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><em>U</em>IH</td>
+<td></td>
+<td>0,7 <em>U</em>CC</td>
+<td><em>U</em>CC</td>
+<td>V</td>
+</tr>
+<tr>
+<td><em>U</em>IL</td>
+<td>Class A and class B</td>
+<td>0</td>
+<td>0,5</td>
+<td>V</td>
+</tr>
+<tr>
+<td>Class C</td>
+<td>0</td>
+<td>0,2 <em>U</em>CC</td>
+<td>V</td>
+<td></td>
+</tr>
+<tr>
+<td><em>t</em>R <em>t</em>F</td>
+<td><em>C</em>IN = 30 pF</td>
+<td></td>
+<td>9 % of cycle</td>
+<td></td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>The  voltage shall remain between – 0,3 V and <em>U</em>CC + 0,3 V.</p>
+</blockquote>
+<h4 id="IO"><a href="#IO" class="headerlink" title="IO"></a>IO</h4><table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Conditions</th>
+<th>Minimum</th>
+<th>Maximum</th>
+<th>Unit</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><em>U</em>IH</td>
+<td></td>
+<td>0,7  <em>U</em>CC</td>
+<td><em>U</em>CC</td>
+<td>V</td>
+</tr>
+<tr>
+<td><em>U</em>IL</td>
+<td></td>
+<td>0</td>
+<td>0,15  <em>U</em>CC</td>
+<td>V</td>
+</tr>
+<tr>
+<td><em>t</em>R <em>t</em>F</td>
+<td><em>C</em>IN = 30 pF; <em>C</em>OUT = 30 pF</td>
+<td></td>
+<td>1</td>
+<td>µs</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>The  voltage shall remain between – 0,3 V and <em>U</em>CC + 0,3 V.</p>
+</blockquote>
+<h4 id="上电时序-Tb-Tc"><a href="#上电时序-Tb-Tc" class="headerlink" title="上电时序 (Tb,Tc)"></a>上电时序 (Tb,Tc)</h4><p><img src="image-20220207174208174.png" alt="image-20220207174208174"></p>
+<h4 id="下电时序-1"><a href="#下电时序-1" class="headerlink" title="下电时序"></a>下电时序</h4><p><img src="image-20220207174217484.png" alt="image-20220207174217484"></p>
+]]></content>
+      <categories>
+        <category>硬件测试</category>
       </categories>
   </entry>
   <entry>
@@ -946,7 +2824,1894 @@
 </ul>
 ]]></content>
       <categories>
-        <category>hardware test</category>
+        <category>硬件测试</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>lora射频测试_CE</title>
+    <url>/posts/KR71AD/</url>
+    <content><![CDATA[<h1 id="测试条件"><a href="#测试条件" class="headerlink" title="测试条件"></a>测试条件</h1><h2 id="接收机类别"><a href="#接收机类别" class="headerlink" title="接收机类别"></a>接收机类别</h2><p>短距离无线电设备的产品系列根据接收机类别进行划分，见下表，每个类别都有一组相关的接收机要求和最低性能标准。</p>
+<p>接收机类别的选择应特别注意来自运行在相同或相邻频段的其他系统的干扰风险，特别是在短距离无线电设备的运行可能对人类生命安全具有内在安全影响的情况下。 如果风险评估表明设备可能无法按照预期用途运行，则应向用户提供信息。</p>
+<table>
+<thead>
+<tr>
+<th>接收机类别</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>类别 1 是高性能级别的接收机。特别是在短距离无线电设备的运行可能对人类生命安 全具有内在安全影响的情况下使用。</td>
+</tr>
+<tr>
+<td>1.5</td>
+<td>类别 1.5 是类别  2 接收机性能水平的改进。</td>
+</tr>
+<tr>
+<td>2</td>
+<td>第 2 类是接收机的标准性能水平。</td>
+</tr>
+<tr>
+<td>3</td>
+<td>第 3 类是一种性能较低的接收机。制造商必须意识到，如果与相邻频段的移动无线电 服务等某些服务共存时，第 3 类接收机将无法正常工作。制造商应提供另一种方法来克服无线电链路的弱点或接受故障。</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>注意：第 3 类接收机已于在 2018 年 12 月 31 日之后撤回。LoRa 设备接收机属于第 2 或者 1.5 类接收机。</p>
+</blockquote>
+<h2 id="测试信号"><a href="#测试信号" class="headerlink" title="测试信号"></a>测试信号</h2><p>就本文件而言，测试信号是由 EUT 生成的调制或未调制载波，以方便特定测试。 EUT 应该能够产生以下测试信号：</p>
+<p><strong>DM-1</strong>：由未调制载波组成的测试信号，即单载波信号。此测试信号是可选的，但有助于简化一些测试 。</p>
+<p><strong>DM-2</strong>：由代表正常工作的调制载波组成的测试信号，该信号应持续不断，duty cycle 为 100%的调制波形， 即持续发射信号，并产生最大占用的 RF 带宽。</p>
+<p><strong>DM-2a</strong>：D-M2 中描述的测试信号，但间歇性产生。每次传输产生的 RF 信号应相同，按时间规律出现，可准确重复，其定时持续时间应代表 EUT 的正常工作的状态，但必须符合占空比限制。</p>
+<p><strong>DM-3</strong>：代表 EUT 正常运行的测试信号。</p>
+<p>测试模式下的操作可能涉及对被测设备进行适当的临时内部修改或使用特殊软件。所用方法的详细信息应由制造商声明并记录在测试报告中。</p>
+<p>对于每次执行的测试，所使用的测试信号应记录在测试报告中。每项测试的推荐测试信号如下表</p>
+<table>
+<thead>
+<tr>
+<th>测试项目</th>
+<th>测试信号</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Effective Radiated Power</td>
+<td>D-M1, D-M2,  D-M2a, D-M3</td>
+</tr>
+<tr>
+<td>Maximum Effective Radiated Power spectral density</td>
+<td>D-M3</td>
+</tr>
+<tr>
+<td>Duty Cycle</td>
+<td>D-M3</td>
+</tr>
+<tr>
+<td>Duty Cycle  Template</td>
+<td>D-M3</td>
+</tr>
+<tr>
+<td>Occupied Bandwidth</td>
+<td>D-M2, D-M2a,  D-M3</td>
+</tr>
+<tr>
+<td>Frequency error</td>
+<td>D-M1, D-M2,  D-M2a, D-M3</td>
+</tr>
+<tr>
+<td>Tx Out Of Band Emissions</td>
+<td>D-M2, D-M2a,  D-M3</td>
+</tr>
+<tr>
+<td>Unwanted emissions in the spurious domain</td>
+<td>D-M1, D-M2,  D-M2a, D-M3</td>
+</tr>
+<tr>
+<td>Transient power</td>
+<td>D-M3</td>
+</tr>
+<tr>
+<td>Adjacent Channel Power</td>
+<td>D-M2, D-M2a,  D-M3</td>
+</tr>
+<tr>
+<td>TX behaviour under Low Voltage Conditions</td>
+<td>D-M1, D-M2,  D-M2a, D-M3</td>
+</tr>
+<tr>
+<td>Adaptive Power  Control</td>
+<td>D-M3</td>
+</tr>
+<tr>
+<td>RX sensitivity level</td>
+<td>D-M3</td>
+</tr>
+<tr>
+<td>Adjacent channel selectivity</td>
+<td>D-M3</td>
+</tr>
+<tr>
+<td>Receiver saturation at Adjacent Channel</td>
+<td>D-M3</td>
+</tr>
+<tr>
+<td>Spurious response rejection</td>
+<td>D-M3</td>
+</tr>
+<tr>
+<td>Blocking</td>
+<td>D-M3</td>
+</tr>
+<tr>
+<td>Behaviour at high wanted  signal level</td>
+<td>D-M3</td>
+</tr>
+<tr>
+<td>Polite spectrum access</td>
+<td>D-M3</td>
+</tr>
+</tbody></table>
+<h2 id="正常测试条件"><a href="#正常测试条件" class="headerlink" title="正常测试条件"></a>正常测试条件</h2><h3 id="正常温度和湿度"><a href="#正常温度和湿度" class="headerlink" title="正常温度和湿度"></a>正常温度和湿度</h3><p>试验的正常温度和湿度条件应为下列范围内的任何温度和湿度的方便组合：</p>
+<ul>
+<li><p>温度 +15 °C 至 +35 °C；</p>
+</li>
+<li><p>相对湿度 20 % 至 75 %。</p>
+</li>
+</ul>
+<p>当在这些条件下进行试验不可行时，应在试验报告中添加对这种影响的注释，说明试验期间的环境温度和相对湿度。</p>
+<h3 id="正常测试电源"><a href="#正常测试电源" class="headerlink" title="正常测试电源"></a>正常测试电源</h3><ul>
+<li>市电电压</li>
+</ul>
+<p>连接到市电的设备的正常试验电压应为标称市电电压。 就本文件而言，标称电压应为设备设计时所声明的电压或任何其他声明的电压。对应于交流电源的测试电源的频率应在 49 Hz 和 51 Hz 之间。</p>
+<ul>
+<li>稳压铅酸蓄电池电源</li>
+</ul>
+<p>当无线电设备打算使用铅酸电池电源运行时，正常测试电压应为 1.1 乘以电池的标称电压（例如 6 V、12 V 等）。</p>
+<ul>
+<li>其他电源</li>
+</ul>
+<p>对于使用其他电源或电池类型（初级或次级）的操作，正常测试电压应为设备制造商声明并经认可的测试实验室同意的电压。 这些值应在测试报告中说明。</p>
+<h2 id="极限测试条件"><a href="#极限测试条件" class="headerlink" title="极限测试条件"></a>极限测试条件</h2><p>除非另有说明，在极端测试条件下进行的测试应同时应用最坏情况下的温度和电压条件。</p>
+<h3 id="极限温度"><a href="#极限温度" class="headerlink" title="极限温度"></a>极限温度</h3><p>极端温度下的测试应在制造商声明的上限和下限温度下进行。测试报告应说明所使用的范围。</p>
+<h3 id="极限测试电源电压"><a href="#极限测试电源电压" class="headerlink" title="极限测试电源电压"></a>极限测试电源电压</h3><ul>
+<li>市电电压</li>
+</ul>
+<p>连接到交流电源的设备的极限测试电压应为标称电源电压±10%。</p>
+<ul>
+<li>稳压铅酸蓄电池电源</li>
+</ul>
+<p>当无线电设备打算使用常规类型的调节铅酸电池电源运行时，极限测试电压应为 1.3 和 0.9 乘以电池的标称电压（6 V、12 V 等），对于使用“凝胶电池”型电池的浮充电应用，极限电压应为 1.15 和 0.85 乘以声明的电池电压的标称电压。</p>
+<ul>
+<li>使用其他类型电池的电源</li>
+</ul>
+<p>使用电池供电的设备的最低极限试验电压如下： 对于碳锌或锂电池：0.85 乘以电池的标称电压； 对于镍镉电池：0.9 乘以电池的标称电压；</p>
+<p>对于其他类型的电池或设备，放电条件下极限试验电压应为由设备制造商声明。</p>
+<ul>
+<li>其他电源</li>
+</ul>
+<p>对于使用其他电源或能够使用多种电源工作的设备，极限试验电压应为设备制造商和试验实验室商定的电压。这应记录在测试报告中。</p>
+<h2 id="频率捷变或跳频设备的测试"><a href="#频率捷变或跳频设备的测试" class="headerlink" title="频率捷变或跳频设备的测试"></a>频率捷变或跳频设备的测试</h2><p>测试应在最高工作信道和最低工作信道上进行。 在适当的情况下，还应在测试实验室和制造商之间同意的一个或多个中频上进行测试。</p>
+<p>对于跳频扩频设备，应在上述条件下进行两种不同的测试：</p>
+<ul>
+<li><p>停止跳频序列，并如上所述在两个不同的信道上测试设备，即还需要实现定频功能，以便测试。</p>
+</li>
+<li><p>跳频序列功能正常，设备使用制造商声明的所有跳频信道进行测试。</p>
+</li>
+</ul>
+<h2 id="没有外部射频连接器的设备"><a href="#没有外部射频连接器的设备" class="headerlink" title="没有外部射频连接器的设备"></a>没有外部射频连接器的设备</h2><p>对于带有集成天线或带有非传统 50Ω 同轴电缆的天线连接的设备连接器，可以通过以下方式在此类设备上进行传导测量：</p>
+<ul>
+<li><p>访问内部连接器；</p>
+</li>
+<li><p>安装临时连接器；</p>
+</li>
+<li><p>使用测试夹具。</p>
+</li>
+</ul>
+<p>对于带有内部连接器的设备，当 EUT 在天线和电路之间有一个内部常规 50 Ω 同轴连接器时，这可用于执行传导测量。 接入连接器的方法应借助图表加以说明。 使用内部天线连接来促进测量的事实应记录在测试报告中。</p>
+<p>对于带有临时天线连接器的设备，可以测试一组连接正常天线的设备，以进行辐射测量。 制造商应在辐射测量结束时前往测试实验室，断开天线并安装临时连接器。 测试实验室工作人员不得连接或断开任何临时天线连接器。或者，可以将两套设备提交给测试实验室，一套装有临时天线连接器，天线断开，另一套设备连接天线。 每个设备都应用于适当的测试。 应声明两套设备除天线连接器外的所有方面都相同。</p>
+<h2 id="传导和辐射测量"><a href="#传导和辐射测量" class="headerlink" title="传导和辐射测量"></a>传导和辐射测量</h2><p>本文件中的测量方法允许进行传导测量，但应注意设备及其所有预期天线组件应符合适用的技术要求。在使用传导连接给出测试方法的情况下，可以使用等效辐射测量来代替。 对于某些测量，可以使用测试夹具进行等效测试。当测量方法规定了辐射测量时，一般不能用传导或试验夹具测量来代替。</p>
+<p>有关辐射测试场地的指南，请参见 ETSI EN300 220-1 附录 C。辐射测量布置的详细说明包含在附录中。下表 给出了关于可以使用传导或测试夹具连接执行哪些测量的指导。</p>
+<table>
+<thead>
+<tr>
+<th>描述</th>
+<th>通过 EUT 上的  连接器传导</th>
+<th>测试夹具</th>
+<th>辐射</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Operating Frequency</td>
+<td>是</td>
+<td>是</td>
+<td>是</td>
+</tr>
+<tr>
+<td>Effective Radiated Power</td>
+<td>是</td>
+<td>仅用于极限温度测试</td>
+<td>是</td>
+</tr>
+<tr>
+<td>Maximum e.r.p  spectral density</td>
+<td>是</td>
+<td>仅用于极限温度测试</td>
+<td>是</td>
+</tr>
+<tr>
+<td>Maximum Occupied Bandwidth</td>
+<td>是</td>
+<td>是</td>
+<td>是</td>
+</tr>
+<tr>
+<td>Transmitter Frequency Error</td>
+<td>是</td>
+<td>是</td>
+<td>否</td>
+</tr>
+<tr>
+<td>Tx Out Of Band Emissions</td>
+<td>是</td>
+<td>仅用于极限温度测试</td>
+<td>是</td>
+</tr>
+<tr>
+<td>Unwanted Emissions in the Spurious Domain</td>
+<td>是</td>
+<td>否</td>
+<td>是</td>
+</tr>
+<tr>
+<td>Transient Power</td>
+<td>是</td>
+<td>否</td>
+<td>是</td>
+</tr>
+<tr>
+<td>Adjacent Channel Power</td>
+<td>是</td>
+<td>仅用于极限温度测试</td>
+<td>是</td>
+</tr>
+<tr>
+<td>Tx behaviour under Low Voltage Conditions</td>
+<td>是</td>
+<td>是</td>
+<td>是</td>
+</tr>
+<tr>
+<td>Adaptive Power  Control</td>
+<td>是</td>
+<td>否</td>
+<td>是</td>
+</tr>
+<tr>
+<td>RX sensitivity</td>
+<td>是</td>
+<td>否</td>
+<td>是</td>
+</tr>
+<tr>
+<td>Adjacent Channel Selectivity</td>
+<td>是</td>
+<td>否</td>
+<td>是</td>
+</tr>
+<tr>
+<td>Blocking</td>
+<td>是</td>
+<td>否</td>
+<td>是</td>
+</tr>
+<tr>
+<td>Receiver saturation</td>
+<td>是</td>
+<td>否</td>
+<td>是</td>
+</tr>
+<tr>
+<td>Spurious response rejection</td>
+<td>是</td>
+<td>否</td>
+<td>是</td>
+</tr>
+<tr>
+<td>Behaviour at high wanted  signal level</td>
+<td>是</td>
+<td>否</td>
+<td>否</td>
+</tr>
+<tr>
+<td>Rx Spurious Radiation</td>
+<td>是</td>
+<td>否</td>
+<td>是</td>
+</tr>
+<tr>
+<td>CCA threshold</td>
+<td>是</td>
+<td>否</td>
+<td>是</td>
+</tr>
+</tbody></table>
+<p>如果 EUT 有多个天线端口，例如 Tx 和 Rx 的分离天线或不同工作频率的分离天线或分集天线，则:</p>
+<ul>
+<li><p>如果每个天线端口都有一个传统的 50 欧姆连接器，则可以按照表 3 进行传导测量，所有天线端口都应以 50 欧姆连接。</p>
+</li>
+<li><p>否则，只能进行辐射测量。所有天线端口都应该安装一个正常使用的天线。原因是，用传输线替换一个天线可能会影响其他任何天线的运行。</p>
+</li>
+</ul>
+<h2 id="测量接收机"><a href="#测量接收机" class="headerlink" title="测量接收机"></a>测量接收机</h2><p>测量接收机是选频电压表或频谱分析仪。除非另有说明，否则应使用 RMS 检波器。 通常，测量接收机的分辨率带宽（RBW）应等于参考带宽（RBWREF）</p>
+<table>
+<thead>
+<tr>
+<th>频率范围：（f）</th>
+<th>测量接收机分辨率带宽（RBWREF）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>f &lt; 150 kHz</td>
+<td>200 Hz 或 300 Hz</td>
+</tr>
+<tr>
+<td>150 kHz ≤ f &lt;  25 MHz</td>
+<td>9 kHz 或 10 kHz</td>
+</tr>
+<tr>
+<td>25MHz≤ f &lt;1000MHz</td>
+<td>100 kHz 或 120 kHz</td>
+</tr>
+<tr>
+<td>f &gt; 1 000 MHz</td>
+<td>1 MHz</td>
+</tr>
+</tbody></table>
+<h1 id="技术规格"><a href="#技术规格" class="headerlink" title="技术规格"></a>技术规格</h1><p>设备技术规格和运行的环境规范，应由制造商声明。</p>
+<h2 id="LoRa-设备的工作频段"><a href="#LoRa-设备的工作频段" class="headerlink" title="LoRa 设备的工作频段"></a>LoRa 设备的工作频段</h2><p>LoRa 网关和终端在欧盟区域工作在 863~870MHz ISM 频段，符合 ETSI EN300.220-2 标准定义的无线电频谱使用区域，支持频段如表 5 所示。</p>
+<table>
+<thead>
+<tr>
+<th>代号</th>
+<th>工作频段</th>
+<th>有效辐射功率限制 (e.r.p）</th>
+<th>信道访问和占用规则（如 Duty Cycle、LBT+AFA）</th>
+<th>最大占用     带宽</th>
+<th>2013/752/EU的频段编号</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>K</td>
+<td>863-865MHz</td>
+<td>25mW(14dBm)</td>
+<td>DC&lt;0.1%或者礼让频谱访问</td>
+<td>整个频段</td>
+<td>46a</td>
+</tr>
+<tr>
+<td>L①</td>
+<td>865-868MHZ</td>
+<td>25mW(14dBm)     PSD 限值: 6.2dBm/100kHz</td>
+<td>DC&lt;1%或者礼让频谱访问</td>
+<td>整个频段</td>
+<td>47</td>
+</tr>
+<tr>
+<td>M</td>
+<td>868-868.6MHz</td>
+<td>25mW(14dBm)</td>
+<td>DC&lt;1%或者礼让频谱访问</td>
+<td>整个频段</td>
+<td>48</td>
+</tr>
+<tr>
+<td>N</td>
+<td>868.7-869.2MHz</td>
+<td>25mW(14dBm)</td>
+<td>DC&lt;0.1%或者礼让频谱访问</td>
+<td>整个频段</td>
+<td>50</td>
+</tr>
+<tr>
+<td>P</td>
+<td>869.4-869.65MHz</td>
+<td>500mW(27dBm)</td>
+<td>DC&lt;10%或者礼让频谱访问</td>
+<td>整个频段</td>
+<td>54b</td>
+</tr>
+<tr>
+<td>R</td>
+<td>869.7-870MHz</td>
+<td>25mW(14dBm)</td>
+<td>DC&lt;1%或者礼让频谱访问</td>
+<td>整个频段</td>
+<td>56b</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>注</strong>①</p>
+<p>以上规定是参照 ETSI EN 300 220-2 V3.1.1 标准，最新标准 ETSI EN 300 220-2 V3.2.1 对使用频段 L 的设备进行分类不同类型产品技术要求有所不同，同时不再对 PSD 进行限制，如表 6 所示。</p>
+<table>
+<thead>
+<tr>
+<th>2017/1483/EU 频段编号</th>
+<th>频段</th>
+<th>SRD 设备类别</th>
+<th>有效辐射功率限制</th>
+<th>使用限制</th>
+<th>信道访问和占用规则DC&lt;1%或者礼让频谱访问</th>
+<th>实施日     期</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>47</td>
+<td>865-868     MHz</td>
+<td>非特定的     SRDs</td>
+<td>25 mW</td>
+<td>-</td>
+<td></td>
+<td>2014/1/1</td>
+</tr>
+<tr>
+<td>47a</td>
+<td>865-868     MHz</td>
+<td>射频识别设备（RFID 设备）</td>
+<td>2 W</td>
+<td>仅允许在以 865.7 MHz、866.3     MHz、866.9 MHz和 867.5 MHz 为中心的四个信道内；最大带宽为     200 kHz</td>
+<td>礼让频谱访问</td>
+<td>2018/1/1</td>
+</tr>
+<tr>
+<td>47b</td>
+<td>865-868     MHz</td>
+<td>非特定的     SRDs</td>
+<td>500 mW</td>
+<td>仅允许在 865.6-     865.8 MHz、866.2-     866.4 MHz、866.8-     867.0 MHz 和  867.4-867.6 MHz 频段内传输。需要自适应功率控制     (APC)。或者，具有至少同等水平的频谱兼容性的其他缓     解技术。</td>
+<td>礼让频谱访问占   用 带 宽     ≤200kHz，对于网络接入点 DC≤10% ，对于其  他    的 DC≤2.5%</td>
+<td>2018/1/1</td>
+</tr>
+</tbody></table>
+</blockquote>
+<p>对于 LoRa 产品认证目前是使用 ETSI EN 300 220-2 V3.1.1 标准。后续可以考虑使用 47b 频段以提高产品的发射功率</p>
+<h2 id="LoRa-设备调制方式和速率"><a href="#LoRa-设备调制方式和速率" class="headerlink" title="LoRa 设备调制方式和速率"></a>LoRa 设备调制方式和速率</h2><p>LoRaWAN® EU863-870 支持 LoRa 和 FSK 两种调制方式，125kHz 和 250kHz 两种带宽。支持速率 DR0~DR7， 具体配置如表 7 所示</p>
+<table>
+<thead>
+<tr>
+<th align="center">速率 DR</th>
+<th align="center">配置</th>
+<th align="center">比特率（bit/s）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center">LoRa: SF12  / 125 kHz</td>
+<td align="center">250</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">LoRa: SF11  / 125 kHz</td>
+<td align="center">440</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">LoRa: SF10  / 125 kHz</td>
+<td align="center">980</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">LoRa: SF9  / 125 kHz</td>
+<td align="center">1760</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">LoRa: SF8  / 125 kHz</td>
+<td align="center">3125</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="center">LoRa: SF7  / 125 kHz</td>
+<td align="center">5470</td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td align="center">LoRa: SF7  / 250 kHz</td>
+<td align="center">11000</td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td align="center">FSK: 50 kbps</td>
+<td align="center">50000</td>
+</tr>
+</tbody></table>
+<p>注意：</p>
+<p>LoRaWAN®协议要求至少支持 DR0~DR5。对于 CE 合规认证因为考虑到有可能设备工作于非 LoRa 协议下和</p>
+<p>P2P 模式下，所以建议按表 8 的速率配置 DR0~DR7 进行认证，</p>
+<p>随着 LoRaWAN®协议的更新，支持的调制方式、扩频技术、速率、带宽等可能会增加或还改变。最新的RP002-1.0.3 LoRaWAN®区域参数增加了对跳频扩频技术的的支持，速率相应所示增加了 DR8~DR11 的 4 种配置。</p>
+<h1 id="测量要求"><a href="#测量要求" class="headerlink" title="测量要求"></a>测量要求</h1><table>
+<thead>
+<tr>
+<th>编号</th>
+<th>描述</th>
+<th>参考编     号</th>
+<th>条件</th>
+<th>无 LBT 功能</th>
+<th>有 LBT 功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>Operating frequency</td>
+<td>4.2.1</td>
+<td></td>
+<td>适用</td>
+<td>适用</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Unwanted emissions in the spurious domain</td>
+<td>4.2.2</td>
+<td></td>
+<td>适用</td>
+<td>适用</td>
+</tr>
+<tr>
+<td>3</td>
+<td>TX  effective radiated  power</td>
+<td>4.3.1</td>
+<td></td>
+<td>适用</td>
+<td>适用</td>
+</tr>
+<tr>
+<td>4</td>
+<td>TX  Maximum e.r.p  spectral density</td>
+<td>4.3.2</td>
+<td>适用于使用频段  I、L  的 EUT。适用于使用 DSSS 或除     FHSS 调制以外的宽带技术使用频段 X 的 EUT。</td>
+<td>仅适用频段  L</td>
+<td>仅适用频段     L</td>
+</tr>
+<tr>
+<td>5</td>
+<td>TX  Duty cycle</td>
+<td>4.3.3</td>
+<td>不适用于具有礼让频谱访问的  EUT。</td>
+<td>适用</td>
+<td>不适用</td>
+</tr>
+<tr>
+<td>6</td>
+<td>TX  Occupied bandwidth</td>
+<td>4.3.4</td>
+<td></td>
+<td>适用</td>
+<td>适用</td>
+</tr>
+<tr>
+<td>7</td>
+<td>TX  out of band emissions</td>
+<td>4.3.5</td>
+<td>适用于  OCW &gt; 25 kHz 的 EUT。</td>
+<td>适用</td>
+<td>适用</td>
+</tr>
+<tr>
+<td>8</td>
+<td>TX  Transient</td>
+<td>4.3.6</td>
+<td></td>
+<td>适用</td>
+<td>适用</td>
+</tr>
+<tr>
+<td>9</td>
+<td>TX  Adjacent channel power</td>
+<td>4.3.7</td>
+<td>适用于  OCW&lt;=25 kHz 的 EUT。</td>
+<td>不适用</td>
+<td>不适用</td>
+</tr>
+<tr>
+<td>10</td>
+<td>TX  behaviour under low     voltage conditions</td>
+<td>4.3.8</td>
+<td>适用于电池供电的  EUT。</td>
+<td>仅适用电池供电设备</td>
+<td>仅适用电池     供电设备</td>
+</tr>
+<tr>
+<td>11</td>
+<td>TX  Adaptive power control</td>
+<td>4.3.9</td>
+<td>适用于使用频段  AA 进行自适应功率控制的 EUT。</td>
+<td>不适用</td>
+<td>不适用</td>
+</tr>
+<tr>
+<td>12</td>
+<td>TX  FHSS</td>
+<td>4.3.10</td>
+<td>适用于使用跳频扩频技术的  EUT</td>
+<td>不适用</td>
+<td>不适用</td>
+</tr>
+<tr>
+<td>13</td>
+<td>TX  Short term behaviour</td>
+<td>4.3.11</td>
+<td>适用于使用频段  Y、Z、AA、AB、AC、AD 的 EUT。</td>
+<td>不适用</td>
+<td>不适用</td>
+</tr>
+<tr>
+<td>14</td>
+<td>RX  sensitivity</td>
+<td>4.4.1</td>
+<td>适用于具有礼让频谱访问的  EUT。</td>
+<td>不适用</td>
+<td>适用</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Clear channel assessment threshold</td>
+<td>4.5.2</td>
+<td>适用于具有礼让频谱访问的  EUT。</td>
+<td>不适用</td>
+<td>适用</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Polite  spectrum access     timing parameters</td>
+<td>4.5.3</td>
+<td>适用于具有礼让频谱访问的  EUT。</td>
+<td>不适用</td>
+<td>适用</td>
+</tr>
+<tr>
+<td>17</td>
+<td>RX  Blocking</td>
+<td>4.4.2</td>
+<td></td>
+<td>适用</td>
+<td>适用</td>
+</tr>
+<tr>
+<td>18</td>
+<td>Adaptive  Frequency  Agility</td>
+<td>4.5.4</td>
+<td>适用于具有频率自适应的  EUT。</td>
+<td>不适用</td>
+<td>不适用</td>
+</tr>
+</tbody></table>
+<h1 id="测试规范"><a href="#测试规范" class="headerlink" title="测试规范"></a>测试规范</h1><h2 id="Operating-frequency"><a href="#Operating-frequency" class="headerlink" title="Operating frequency"></a>Operating frequency</h2><p>EUT 的工作频段、标称工作信道和工作信道带宽（OCW）均需由制造商声明。标称工作信道是指信道占用带宽（OCW）的中心。</p>
+<p>LoRa 设备的工作频段和工作信道带宽如表 5 所示，工作信道带宽如表 7 所示，工作信道可以由网络运营商在工作频段范围内自由定义。但是，表 9 中三个默认信道在 EU863-870 终端设备上必须支持。</p>
+<table>
+<thead>
+<tr>
+<th>调制方式</th>
+<th>带宽/kHz</th>
+<th>信道频率/MHz</th>
+<th>速率</th>
+<th>信道数量</th>
+<th>占空比</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>LoRa</td>
+<td>125</td>
+<td>868.1  868.3  868.5</td>
+<td>DR0~DR5</td>
+<td>3</td>
+<td>&lt; 1%</td>
+</tr>
+</tbody></table>
+<p>固定标称信道只有以上三个信道，其他信道可以根据实际使用情况配置，且 LoRaWAN®设备最多同时支持16 个信道。考虑到设备有可能工作于非 LoRaWAN®协议下和 P2P 模式下，推荐信道列表如下。</p>
+<table>
+<thead>
+<tr>
+<th>频段</th>
+<th>LoRa/125kHz</th>
+<th>LoRa/250kHz</th>
+<th>FSK/50kbps</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>K</td>
+<td>863.1/863.3/863.5/863.7/863.9     864.1/864.3/864.5/864.7/864.9</td>
+<td>863.2/863.6/864/864.4     864.8</td>
+<td>863.1/863.3/863.5/863.7/863.9     864.1/864.3/864.5/864.7/864.9</td>
+</tr>
+<tr>
+<td>L</td>
+<td>865.1/865.3/865.5/865.7/865.9     866.1/866.3/866.5/866.7/866.9     867.1/867.3/867.5/867.7/867.9</td>
+<td>865.2/865.6/866/866.4     866.8/867.2/867.6</td>
+<td>865.1/865.3/865.5/865.7/865.9     866.1/866.3/866.5/866.7/866.9     867.1/867.3/867.5/867.7/867.9</td>
+</tr>
+<tr>
+<td>M</td>
+<td>868.1/868.3/868.5</td>
+<td>868.3</td>
+<td>868.1/868.3/868.5</td>
+</tr>
+<tr>
+<td>N</td>
+<td>868.8/869.1</td>
+<td>868.9</td>
+<td>868.8/869.1</td>
+</tr>
+<tr>
+<td>P</td>
+<td>869.525</td>
+<td>869.525</td>
+<td>869.525</td>
+</tr>
+<tr>
+<td>R</td>
+<td>869.85</td>
+<td>869.85</td>
+<td>869.85</td>
+</tr>
+</tbody></table>
+<h2 id="Unwanted-emissions-in-the-spurious-domain"><a href="#Unwanted-emissions-in-the-spurious-domain" class="headerlink" title="Unwanted emissions in the spurious domain"></a>Unwanted emissions in the spurious domain</h2><h3 id="测量限值"><a href="#测量限值" class="headerlink" title="测量限值"></a>测量限值</h3><p>杂散域中的无用发射是指杂散域中除工作信道及其带外域之外的频率上的无用发射，测量分为发射模式、接收和其他模式，不同的测量模式对杂散限值要求不同，下表 所示杂散域发射限值。</p>
+<table>
+<thead>
+  <tr>
+    <th colspan="2">频率</th>
+    <th colspan="2">47MHz-74MHz<br>87.5MHz-118MHz<br>174MHz-230MHz<br>470MHz-790MHz</th>
+    <th colspan="2">低于 1000MHz 以下的其他频率</th>
+    <th colspan="2">1000MHz 以上的频率</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td colspan="2">发射模式限值</td>
+    <td colspan="2">-54dBm</td>
+    <td colspan="2">-36dBm</td>
+    <td colspan="2">-30dBm</td>
+  </tr>
+  <tr>
+    <td colspan="2">接收模式和其他模式限值</td>
+    <td colspan="2">-57dBm</td>
+    <td colspan="2">-57dBm</td>
+    <td colspan="2">-47dBm</td>
+  </tr>
+</tbody>
+</table>
+
+<h3 id="测量方法"><a href="#测量方法" class="headerlink" title="测量方法"></a>测量方法</h3><p><strong>发射模式测量方法：</strong></p>
+<ul>
+<li>对没有外部天线连接器的 EUT（板载天线或者集成天线等），杂散发射按辐射法测量。对于其他（有天线连接器）的 EUT，杂散发射应按传导法测量和辐射法测量。</li>
+<li>发射机应在制造商声明的最低和最高工作频率下运行。可以增加测试其他频率。</li>
+<li>测量应在 EUT 以制造商声明的最大工作功率水平运行时进行，并且 EUT 应处于通电待机模式。</li>
+<li>测量仪器的 RBW 设置见下表。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">测量频率范围</th>
+<th align="center">RBWREF</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">9kHz≤f&lt;150kHz</td>
+<td align="center">1kHz</td>
+</tr>
+<tr>
+<td align="center">150kHz≤f&lt;30MHz</td>
+<td align="center">10kHz</td>
+</tr>
+<tr>
+<td align="center">30MHz≤f &lt; fc-m</td>
+<td align="center">100kHz</td>
+</tr>
+<tr>
+<td align="center">fc-m≤f &lt; fc-n</td>
+<td align="center">10kHz</td>
+</tr>
+<tr>
+<td align="center">fc-n≤f &lt; fc-p</td>
+<td align="center">1kHz</td>
+</tr>
+<tr>
+<td align="center">fc +p&lt;f≤fc +n</td>
+<td align="center">1kHz</td>
+</tr>
+<tr>
+<td align="center">fc +n&lt; f≤fc +m</td>
+<td align="center">10kHz</td>
+</tr>
+<tr>
+<td align="center">fc +m&lt;f≤1GHz</td>
+<td align="center">100kHz</td>
+</tr>
+<tr>
+<td align="center">1GHz&lt;f≤6 GHz</td>
+<td align="center">1MHz</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>注：f 为测量频率  fc 为工作频率  m 为 10×OCW 和 500kHz 的较大者，LoRa 设备 OCW 为 125kHz 和 250kHz 两种，10×OCW&gt;500kHz， 取前者。  n 为 4×OCW 和 100kHz 的较大者，LoRa 设备 OCW 为 125kHz 和 250kHz 两种，4×OCW&gt;100kHz，取前者。  p 为 2.5×OCW  </p>
+</blockquote>
+<ul>
+<li>杂散域中无用发射的频谱模板和 RBW 如下图  所示。</li>
+</ul>
+<p><img src="image-20220207110833224.png" alt="image-20220207110833224"></p>
+<p><strong>接收模式和其他模式测量方法：</strong></p>
+<ul>
+<li><p>EUT 应在正常运行的模式运行。</p>
+</li>
+<li><p>对没有外部天线连接器的 EUT（板载天线或者集成天线等），杂散发射按辐射法测量。对于其他（有天线连接器）的 EUT，杂散发射应按传导法测量和辐射法测量。</p>
+</li>
+</ul>
+<p>传导和辐射测量要求：</p>
+<p>传导法测量 EUT 的天线端口连接到假负载（如陷波器等），假负载的输出连接到测量接收机。辐射测量法 EUT 应连接到其正常工作的天线，测试天线的输出应连接到测量接收机，辐射测试场地根据 ETSI EN300 220-1 条款 C.1 中选择合适的测试场地，开阔试验场(OATS)、半电波暗室(SAR)或者全电波暗室(FAR)。测试方法参考 ETSI EN300 220-1 条款 C.5，注意的是辐射法需要测量垂直和水平极化两个方向的杂散分量。</p>
+<p>杂散测量的频率范围如下表所示。</p>
+<table>
+<thead>
+<tr>
+<th align="center">测量方法</th>
+<th align="center">测量频率范围</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">传导测量法</td>
+<td align="center">9kHz-6GHz</td>
+</tr>
+<tr>
+<td align="center">辐射测量法</td>
+<td align="center">25MHz-6GHz</td>
+</tr>
+</tbody></table>
+<h2 id="Effective-Radiated-Power"><a href="#Effective-Radiated-Power" class="headerlink" title="Effective Radiated Power"></a>Effective Radiated Power</h2><p>无线电发射机供给天线的功率和在给定方向上该天线相对于半波偶极振子的增益的乘积。实际上用有效发射功率 ERP 代替 EIRP 来表示同半波耦极子天线相比的最大发射功率。注：耦极子天线具有 1.64 的增益（2.15dB），因此，ERP 比 EIRP 低 2.15dB，即 ERP=EIRP-2.15dB。</p>
+<h3 id="测量限值-1"><a href="#测量限值-1" class="headerlink" title="测量限值"></a>测量限值</h3><p>对于选定的工作频段，有效辐射功率不得大于表 5  中允许的值。</p>
+<h3 id="测量方法-1"><a href="#测量方法-1" class="headerlink" title="测量方法"></a>测量方法</h3><p><strong>传导测试法</strong></p>
+<p>此方法仅适用于带有永久性外部天线连接器的 EUT。</p>
+<ul>
+<li><p>测量应在制造商声明的最低和最高工作频率下进行。可以增加测试其他频率。</p>
+</li>
+<li><p>如果可以，发射机应在不调制的情况下打开，测量接收机调到被测发射机的频率。D-M1 测试信号（未调制载波）不得用于非恒定包络调制的设备。</p>
+</li>
+<li><p>频谱分析仪的 RBW 应足够宽以覆盖 EUT 信号的完整功率包络（≥OCW）。对于 LoRa 产品 RBW 可设置为 300kHz。</p>
+</li>
+<li><p>在非恒定包络调制的情况下，应使用 Peak 检波器。（LoRa 调制为恒定包络调制，使用 RMS 检波器）。</p>
+</li>
+<li><p>与设备一起使用的天线的最大增益应由制造商声明。</p>
+</li>
+<li><p>Perp 有效辐射功率（e.r.p）= Pconducted 传导功率 + G 天线增益（dBd）,天线增益（dBd）=天线增益（dBi）-2.15。</p>
+</li>
+</ul>
+<p><strong>辐射测试法</strong></p>
+<p>此方法仅适用于不带有永久性外部天线连接器的 EUT。</p>
+<ul>
+<li>测量应在制造商声明的最低和最高工作频率下进行。可以增加测试其他频率。</li>
+<li>测量应在发射机预期运行的最高功率水平下进行。</li>
+<li>如果可以，发射机应在不调制的情况下打开，测量接收机调到被测发射机的频率。D-M1 测试信号（未调制载波）不得用于非恒定包络调制的设备。</li>
+<li>频谱分析仪的 RBW 应足够宽以覆盖 EUT 信号的完整功率包络（≥OCW）。对于 LoRa 产品 RBW 可设置为 300kHz。</li>
+<li>在可拆卸天线的情况下，天线应为设备正常使用的安装方式。</li>
+<li>对于极端温度条件下的测量，最好使用内部或临时连接器而不是测试夹具。</li>
+<li>辐射测试场地根据 ETSI EN300 220-1 条款 C.1 中选择合适的测试场地，开阔试验场（OATS）、半电波暗室（SAR）或者全电波暗室（FAR）。测试方法参考 ETSI EN300 220-1 条款 C.5。</li>
+</ul>
+<h2 id="Effective-Radiated-Power-spectral-density"><a href="#Effective-Radiated-Power-spectral-density" class="headerlink" title="Effective Radiated Power spectral density"></a>Effective Radiated Power spectral density</h2><p>最大 e.r.p.谱密度定义为最高 e.r.p.发射机在功率包络内产生的每赫兹 dBm 电平。</p>
+<h3 id="测量限值-2"><a href="#测量限值-2" class="headerlink" title="测量限值"></a>测量限值</h3><p>有效辐射功率不得大于表 5 中允许的值。对于 LoRa 设备只适用于频段 L。</p>
+<h3 id="测量方法-2"><a href="#测量方法-2" class="headerlink" title="测量方法"></a>测量方法</h3><ul>
+<li><p>测量应在制造商声明的最低和最高工作频率下进行。可以增加测试其他频率。</p>
+</li>
+<li><p>如果设备设计为在不同的功率等级下运行，制造商应声明每个等级或等级范围的额定功率。 这些测量应在发射机预期运行的最高功率电平下进行。</p>
+</li>
+<li><p>发射机应使用表 2 中适当的测试信号调制打开，测量接收机调到被测发射机的频率。</p>
+</li>
+<li><p>将 EUT 连接到频谱分析仪并使用以下设置：</p>
+<ul>
+<li><p>Centre Frequency：被测工作信道的中心频率</p>
+</li>
+<li><p>Span：足够宽以覆盖 EUT 发射信号的完整功率包络（≥OBW），一般设置为 2×OBW RBW：100kHz</p>
+</li>
+<li><p>VBW：100kHz Sweep time：1 分钟Detector：RMS</p>
+</li>
+<li><p>Trace Mode：Max Hold</p>
+</li>
+</ul>
+</li>
+<li><p>Trace 完成后，使用峰值搜索捕获轨迹上的峰值标记点，该标记点记录为 100kHz 频带中的最高平均功率（频谱功率密度）D，或者，如果频谱分析仪配备有测量频谱功率密度的设备，则该设备可用于显示以 dBm/100 kHz 为单位的频谱功率密度 D。</p>
+</li>
+<li><p>根据公式 PD = D + G，最大 e.r.p 频谱密度是根据上述测量的功率密度 D 和相对于理想半波偶极子的以 dB 为单位的适用天线组件增益“G”计算得出的。如果将多个天线组件用于此功率设置，则应使用具有最高增益的天线组件的增益。</p>
+</li>
+</ul>
+<h2 id="Duty-Cycle"><a href="#Duty-Cycle" class="headerlink" title="Duty Cycle"></a>Duty Cycle</h2><p>占空比是在一段监测时间内发射机在观测带宽 Fobs 上发射无线电信号的累积持续时间 Ton_cum 和监测总时间时间 Tobs 以百分比表示的百分比，</p>
+<p>![Duty Cycle](Duty Cycle.svg)</p>
+<h3 id="测量限值-3"><a href="#测量限值-3" class="headerlink" title="测量限值"></a>测量限值</h3><p>对于不具有频谱礼让功能的 EUT，Duty cycle 不得大于表 5 中各频段允许的值。</p>
+<h3 id="测量方法-3"><a href="#测量方法-3" class="headerlink" title="测量方法"></a>测量方法</h3><ul>
+<li><p>将 EUT 连接到频谱分析仪并使用以下设置： Centre Frequency：被测工作信道的中心频率Span：Zero</p>
+<ul>
+<li><p>RBW：大于 OCW，LoRa 可设置为 300kHz</p>
+</li>
+<li><p>Sweep time：对于发射时间和发射间隔固定的 EUT，可在合适的周期内设置，对于发射时间和发射间隔不固定的 EUT 设置 1 小时，或者使用功率计测试。</p>
+</li>
+<li><p>Detector：RMS</p>
+</li>
+<li><p>Trace Mode：Max Hold</p>
+</li>
+<li><p>计算出 EUT 的累积发射时间 Ton_cum，sweep time 即 Tob，利用公式计算出 Duty cycle。</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="image-20220207135106673.png" alt="image-20220207135106673"></p>
+<h2 id="Occupied-Bandwidth"><a href="#Occupied-Bandwidth" class="headerlink" title="Occupied Bandwidth"></a>Occupied Bandwidth</h2><p>占用带宽（OCW）是给定发射总平均功率的 99% 落在其中的频率范围。总功率的剩余部分表示为 β，在对称光谱的情况下，它在频谱的每一侧分成 β/2。 除非另有规定，否则 β/2 取 0.5%，如下图所示。最大占用带宽包括所有相关边带高于适当发射电平以及极端测试条件下的频率误差或漂移。</p>
+<p><img src="image-20220207135221171.png" alt="image-20220207135221171"></p>
+<h3 id="测量限值-4"><a href="#测量限值-4" class="headerlink" title="测量限值"></a>测量限值</h3><p>工作信道占用带宽应由制造商声明，定义信道两个频率边值 Flow 和 Fhigh，所有信道的频率边值完全落在如表 5 规定的频段范围内。99%处最大占用带宽边值必须在定义的频率边值 Flow 和 Fhigh 之内。</p>
+<h3 id="测量方法-4"><a href="#测量方法-4" class="headerlink" title="测量方法"></a>测量方法</h3><p>占用带宽亦可使用辐射测量法和传导测量法。辐射测量法：</p>
+<p>应从 ETSI EN300 220-1 条款 C.1 中选择合适的测试场地，开阔试验场（OATS）、半电波暗室（SAR）或者全电波暗室（FAR），测试方法参考 ETSI EN300 220-1 条款 C.5。</p>
+<p><strong>传导测量法：</strong></p>
+<p>EUT 应连接到射频线，射频线应通过适当的衰减器连接到测试设备。执行以下测试步骤，</p>
+<ul>
+<li>频谱分析仪按照下表 14 所示参数配置</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>设置值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Centre frequency</td>
+<td>EUT 工作频率</td>
+<td>制造商声明的各频段最高或最低工作频率</td>
+</tr>
+<tr>
+<td>RBW</td>
+<td>占用带宽的 1%~3%，  但不低于  100Hz</td>
+<td>LoRa 占用带宽为 125kHz 和 250kHz，所以建议 RBW 设  置为 3kHz</td>
+</tr>
+<tr>
+<td>VBW</td>
+<td>3×RBW</td>
+<td>LoRa 产品建议设置为 10kHz</td>
+</tr>
+<tr>
+<td>Span</td>
+<td>至少信道带宽的 2 倍</td>
+<td>125kHz 带宽 span 设置为 250kHz，250kHz 带宽 span 设  置为 500kHz</td>
+</tr>
+<tr>
+<td>Detector Mode</td>
+<td>RMS</td>
+<td><strong>-</strong></td>
+</tr>
+<tr>
+<td>Trace Mode</td>
+<td>Max Hold</td>
+<td><strong>-</strong></td>
+</tr>
+</tbody></table>
+<ul>
+<li><p>应以制造商声明的最高工作频率和适当的测试信号测试。应调整信号衰减以确保信号功率包络充分高于分析仪的底噪，以避免功率包络任一侧的噪声信号被包含在底噪中。尽量使用最大 e.r.p 功率测试占用带宽。</p>
+</li>
+<li><p>应使用频谱分析仪的 99% 占用带宽功能来测量信号的占用带宽。</p>
+</li>
+</ul>
+<h2 id="Tx-Out-of-Band-Emissions"><a href="#Tx-Out-of-Band-Emissions" class="headerlink" title="Tx Out of Band Emissions"></a>Tx Out of Band Emissions</h2><p>带外（OOB）：频带以外</p>
+<p>带外域：紧靠工作信道之外的频谱区域。带外发射：带外域中的发射。</p>
+<p>工作信道（OC）: 设备传输发生的频率范围，由两个频率边缘值定义： flow  和 fhigh。</p>
+<p>工作频段（OFB）: 表 5 中的频段，该设备将在其中一个或多个频段运行并执行设备的预期功能；由两个频率边缘值定义：flow_OFB 和 fhigh_OFB。flow_OFB 是工作频段的下边缘。fhigh_OFB 是工作频段的上边缘。</p>
+<p>带外发射定义了两个带外域，一个用于 OC，另一个用于 OFB，这两个域的频谱有可能重叠（当 OC 在 OFB 的边缘时就会重叠）。带外域中的无用发射是那些落在紧邻工作信道的下限和上限频率以下的频率范围内的发射。带外域包括操作频带内操作信道外的频率和操作频带外的频率。适用于 OC 域如下图所示。</p>
+<p><img src="image-20220207135518245.png" alt="image-20220207135518245"></p>
+<p>适用于 OFB 域如下图所示</p>
+<p><img src="image-20220207135606789.png" alt="image-20220207135606789"></p>
+<h3 id="测量限值-5"><a href="#测量限值-5" class="headerlink" title="测量限值"></a>测量限值</h3><p>工作信道和工作频段的 OOB 域中的 EUT 发射电平应低于或等于频谱模板。</p>
+<table>
+<thead>
+<tr>
+<th>带外域</th>
+<th>频率范围</th>
+<th>RBWREF</th>
+<th>最大功率限值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>适用于 OFB 的 OOB 限值  （见图 5）</td>
+<td>f ≤ flow_OFB - 400 kHz</td>
+<td>10kHz</td>
+<td>-36dBm</td>
+</tr>
+<tr>
+<td>flow_OFB - 400 kHz ≤  f ≤ flow_OFB - 200 kHz</td>
+<td>1kHz</td>
+<td>-36dBm</td>
+<td></td>
+</tr>
+<tr>
+<td>fow_OFB - 200 kHz ≤  f &lt; flow_OFB</td>
+<td>1kHz</td>
+<td>见图 5</td>
+<td></td>
+</tr>
+<tr>
+<td>f = flow_OFB</td>
+<td>1kHz</td>
+<td>0dBm</td>
+<td></td>
+</tr>
+<tr>
+<td>f = fhigh_OFB</td>
+<td>1kHz</td>
+<td>0dBm</td>
+<td></td>
+</tr>
+<tr>
+<td>fhigh_OFB &lt; f ≤ fhigh_OFB + 200 kHz</td>
+<td>1kHz</td>
+<td>见图 5</td>
+<td></td>
+</tr>
+<tr>
+<td>fhigh_OFB + 200 kHz ≤  f ≤ fhigh_OFB + 400 kHz</td>
+<td>1kHz</td>
+<td>-36dBm</td>
+<td></td>
+</tr>
+<tr>
+<td>fhigh_OFB + 400 kHz ≤  f</td>
+<td>10kHz</td>
+<td>-36dBm</td>
+<td></td>
+</tr>
+<tr>
+<td>适用于 OFB 的 OOB 限值  （见图 4）</td>
+<td>f = fc- 2.5  x OCW</td>
+<td>1kHz</td>
+<td>-36dBm</td>
+</tr>
+<tr>
+<td>fc – 2.5  x OCW ≤ f ≤ fc – 0.5  x OCW</td>
+<td>1kHz</td>
+<td>见图 4</td>
+<td></td>
+</tr>
+<tr>
+<td>f = fc – 0.5 x  OCW</td>
+<td>1kHz</td>
+<td>0dBm</td>
+<td></td>
+</tr>
+<tr>
+<td>f = fc + 0.5 x  OCW</td>
+<td>1kHz</td>
+<td>0dBm</td>
+<td></td>
+</tr>
+<tr>
+<td>fc + 0.5  x OCW ≤ f ≤ fc + 2.5  x OCW</td>
+<td>1kHz</td>
+<td>见图 4</td>
+<td></td>
+</tr>
+<tr>
+<td>f = fc+ 2.5  x OCW</td>
+<td>1kHz</td>
+<td>-36dBm</td>
+<td></td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>说明：</p>
+<p>f 是测量频率。</p>
+<p>fc 是工作频率。</p>
+<p>flow_OFB  是操作频带的下边缘。</p>
+<p>fhigh_OFB  是操作频带的上边缘。</p>
+<p>OCW 是工作信道带宽。</p>
+</blockquote>
+<h3 id="测量方法-5"><a href="#测量方法-5" class="headerlink" title="测量方法"></a>测量方法</h3><p>对没有永久或临时天线连接器的 EUT 应按照 ETSI EN300 220-1 条款 C.1 中选择合适的测试场地，开阔试验场（OATS）、半电波暗室（SAR）或者全电波暗室（FAR），参考 ETSI EN300 220-1 条款 C.5 测试方法进行测试。</p>
+<p>带有永久或临时天线连接器的 EUT 应使用传导法测试，EUT 应连接到射频线，射频线通过适当的衰减器连接到测试设备。测量步骤如下，</p>
+<ul>
+<li>测量 OC 带外域发射时测试仪器应根据表 16 中所示的参数进行适当配置。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>频谱仪参数</th>
+<th>设置值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Centre frequency</td>
+<td>EUT 工作频率</td>
+<td></td>
+</tr>
+<tr>
+<td>Span</td>
+<td>6×工作信道带宽</td>
+<td></td>
+</tr>
+<tr>
+<td>RBW</td>
+<td>1kHz</td>
+<td>带外域测量的分辨率带宽</td>
+</tr>
+<tr>
+<td>Detector</td>
+<td>RMS</td>
+<td></td>
+</tr>
+<tr>
+<td>Trace Mode</td>
+<td>Linear AVG</td>
+<td>仅适用于 EUT 发射 D-M2 测试信号。应平均适当  数量的样本以提供稳定的读数</td>
+</tr>
+<tr>
+<td>Max Hold</td>
+<td>仅适用于 EUT 发射 D-M2a 或 D-M3 测试信号。</td>
+<td></td>
+</tr>
+</tbody></table>
+<ul>
+<li><p>以制造商声明的最高工作频率和适当的测试信号测试。信号形状在稳定时记录，并且应低于工作信道的带外频谱模板。</p>
+</li>
+<li><p>测量 OFB 带外域发射时需重新设置测试仪器参数如表 17 所示为用于频段下边缘信道带外发射测量的测试参数设置。</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>频谱仪参数</th>
+<th>设置值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Centre frequency</td>
+<td>fclow</td>
+<td>频段内的最低工作信道</td>
+</tr>
+<tr>
+<td>Span</td>
+<td>2 x (500  kHz + fclow - flow_OFB)</td>
+<td>确保最左边的模板规范保持在 span 内</td>
+</tr>
+<tr>
+<td>注：flow_OFB 是工作频段的下边缘。</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<ul>
+<li><p>使用适当的测试信号，以制造商声明的工作频段内最低工作信道测试。如果设备仅使用工作频段中的一个工作信道，则应在标称工作信道下进行测量。频谱稳定时记录信号形状；并且应低于工作信道的频谱模板和工作频段的频谱模板。</p>
+</li>
+<li><p>频段上边缘信道带外发射测量的测试参数设置。</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>频谱仪参数</th>
+<th>设置值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Centre frequency</td>
+<td>fchigh</td>
+<td>频段内的最高工作信道</td>
+</tr>
+<tr>
+<td>Span</td>
+<td>2 x (500  kHz + fhigh_OFB - fchigh)</td>
+<td>确保最右边的模板规范保持在 span 内</td>
+</tr>
+<tr>
+<td>注：flow_OFB 是工作频段的上边缘。</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<ul>
+<li><p>使用适当的测试信号，以制造商声明的工作频段内最高工作信道测试。如果设备仅使用工作频段中的一个工作信道，则应在标称工作信道下进行测量。频谱稳定时记录信号形状；并且应低于工作信道的频谱模板和工作频段的频谱模板</p>
+</li>
+<li><p>对于频率捷变设备，应在每个工作频段内重复测量。</p>
+</li>
+<li><p>应在极端试验条件下重复以上步骤中的测量。</p>
+</li>
+</ul>
+<h2 id="Transient-power"><a href="#Transient-power" class="headerlink" title="Transient power"></a>Transient power</h2><p>发射机瞬态功率是指由于发射机被打开和关闭而落到工作信道以外频率的功率。</p>
+<h3 id="测量限值-6"><a href="#测量限值-6" class="headerlink" title="测量限值"></a>测量限值</h3><table>
+<thead>
+<tr>
+<th>工作信道中心频率偏移量</th>
+<th>RBWREF</th>
+<th>测量点的峰值功率限值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>≤ 400 kHz</td>
+<td>1kHz</td>
+<td>0dBm</td>
+</tr>
+<tr>
+<td>&gt; 400 kHz</td>
+<td>1kHz</td>
+<td>-27dBm</td>
+</tr>
+</tbody></table>
+<h3 id="测量方法-6"><a href="#测量方法-6" class="headerlink" title="测量方法"></a>测量方法</h3><ul>
+<li>测量应在制造商声明的最低和最高工作频率下进行，可以增加测试其他频率。</li>
+<li>这些测量应在发射机预期运行的最高功率电平下进行。</li>
+<li>EUT 的输出应连接到频谱分析仪或等效的测量设备。测量应在 span=0 的模式下进行。分析仪的中心频率应设置为偏离操作中心频率</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>测量点：偏离中心频率</th>
+<th>分析仪 RBW</th>
+<th>RBWREF</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-0.5×OCW-3kHz 0.5×OCW+3kHz  不适用于 OCW &lt; 25 kHz</td>
+<td>1kHz</td>
+<td>1kHz</td>
+</tr>
+<tr>
+<td>±12.5 kHz 或±OCW  以较大者为准</td>
+<td>最大值（RBW 模式 1、3、10  kHz）≤ 偏移频率/6（见注释）</td>
+<td>1kHz</td>
+</tr>
+<tr>
+<td>-0.5 x OCW - 400  kHz  0.5 x OCW + 400  kHz</td>
+<td>100kHz</td>
+<td>1kHz</td>
+</tr>
+<tr>
+<td>-0.5 x OCW -1200 kHz  0.5 x OCW +1200 kHz</td>
+<td>300kHz</td>
+<td>1kHz</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>注：最大（RBW 模式 1、3、10 kHz）表示属于频谱分析仪常用的 1、3、10 kHz RBW 滤波器带宽增量模式的最大带宽。</p>
+<p>示例：如果 OCW 为 25 kHz，则对应于一个 OCW 偏移频率的 RBW 值为 3 kHz。其余的分析仪设置</p>
+<p>如果 OCW 为 250 kHz，则对应于一个 OCW 偏移频率的 RBW 值为 30 kHz。</p>
+<table>
+<thead>
+<tr>
+<th>频谱仪参数</th>
+<th>设置值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>VBW/RBW</td>
+<td>10</td>
+<td>在较高的 RBW 值下，VBW 可能会被剪  裁到其最大值</td>
+</tr>
+<tr>
+<td>Sweep time</td>
+<td>500 ms</td>
+<td>-</td>
+</tr>
+<tr>
+<td>RBW filter</td>
+<td>Gaussian</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Trace Detector</td>
+<td>RMS</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Trace Mode</td>
+<td>Max hold</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Sweep points</td>
+<td>501</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Measurement mode</td>
+<td>Continuous sweep</td>
+<td></td>
+</tr>
+</tbody></table>
+<p>注意：如果使用不同的扫描点数，扫描点数与扫描时间的比率应与上述比率相同。</p>
+</blockquote>
+<h2 id="Adjacent-Channel-Power"><a href="#Adjacent-Channel-Power" class="headerlink" title="Adjacent Channel Power"></a>Adjacent Channel Power</h2><p>相邻信道：工作频段内在工作信道的两边带宽为 OCW 的信道。如图 6，邻信道分为上邻信道和下邻信道以及上间隔邻信道和下间隔邻信道。</p>
+<p>相邻信道功率是发射机正常运行时落入相邻信道的有关的功率。邻道功率适用于所有 OCW ≤ 25 kHz 的发射机。LoRa 设备发射机发射信号 OCW＞25kHz，故此项不适用 LoRa 设备。</p>
+<p><img src="image-20220207140227425.png" alt="image-20220207140227425"></p>
+<h3 id="1-1-1-测量限值"><a href="#1-1-1-测量限值" class="headerlink" title="1.1.1  测量限值"></a>1.1.1  测量限值</h3><p>当工作信道宽度小于或等于 25 kHz 时，相邻信道的功率不应超过表 22 中给出的值。</p>
+<p><strong>表</strong> <strong>22<strong><strong>：</strong></strong>OCW ≤ 25 kHz</strong> <strong>发射机的相邻信道功率限制</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th>0.7×OCW 积分的邻信  道功率</th>
+<th>0.7×OCW 积分的相邻  间隔信道功率</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>OCW＜20kHz</td>
+<td>正常测试条件</td>
+<td>-20dBm</td>
+<td>-20dBm</td>
+</tr>
+<tr>
+<td>极限测试条件</td>
+<td>-15dBm</td>
+<td>-20dBm</td>
+<td></td>
+</tr>
+<tr>
+<td>OCW≥20kHz</td>
+<td>正常测试条件</td>
+<td>-37dBm</td>
+<td>-40dBm</td>
+</tr>
+<tr>
+<td>极限测试条件</td>
+<td>-32dBm</td>
+<td>-37dBm</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="测量方法-7"><a href="#测量方法-7" class="headerlink" title="测量方法"></a>测量方法</h3><p><strong>辐射测量法</strong></p>
+<p>对于没有永久性或临时天线连接器的 EUT 应按辐射测量法进行测试，应从 ETSI EN300 220-1 条款 C.1 中选择合适的测试场地，开阔试验场（OATS）、半电波暗室（SAR）或者全电波暗室（FAR），测试方法参考 ETSI EN300 220-1 条款 C.5。</p>
+<p><strong>传导测量法</strong></p>
+<p>对于有永久性或临时天线连接器的 EUT 应按传导测量法进行测试。传导法测试步骤：</p>
+<ul>
+<li>使用频谱分析仪的 ACP 功能或积分标记。 如果使用频谱分析仪的 ACP 特性，则应禁用积分带宽上的任何附加过滤。频谱分析仪应根据表 23 中所示的参数进行适当配置。</li>
+</ul>
+<table>
+<thead>
+  <tr>
+    <th>频谱仪参数&nbsp;&nbsp;&nbsp;</th>
+    <th>设置值&nbsp;&nbsp;&nbsp;</th>
+    <th>说明&nbsp;&nbsp;&nbsp;</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Centre frequency&nbsp;&nbsp;&nbsp;</td>
+    <td>正常工作频率&nbsp;&nbsp;&nbsp;</td>
+    <td> &nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+    <td>RBW&nbsp;&nbsp;&nbsp;</td>
+    <td>100Hz&nbsp;&nbsp;&nbsp;</td>
+    <td> &nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+    <td>VBW&nbsp;&nbsp;&nbsp;</td>
+    <td>≥3×RBW&nbsp;&nbsp;&nbsp;</td>
+    <td> &nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Span&nbsp;&nbsp;&nbsp;</td>
+    <td>至少 5×OCW&nbsp;&nbsp;&nbsp;</td>
+    <td>Span 应该足够大以包括相邻和相邻间隔信道&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Detector Mode&nbsp;&nbsp;&nbsp;</td>
+    <td>RMS&nbsp;&nbsp;&nbsp;</td>
+    <td> &nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+    <td rowspan="2"> <br>Trace mode&nbsp;&nbsp;&nbsp;</td>
+    <td> <br>Linear Averaging&nbsp;&nbsp;&nbsp;</td>
+    <td>仅适用于 EUT 产生 D-M2 测试信号，应该取适当数<br>量的样品的平均值，以获得稳定的读数&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Max hold&nbsp;&nbsp;&nbsp;</td>
+    <td>仅适用于 EUT 产生 D-M2a 或 D-M3 测试信号&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</tbody>
+</table>
+
+<blockquote>
+<p>注意:最高和最低的工作频率由制造商声明。</p>
+</blockquote>
+<ul>
+<li><p>EUT 应按制造商声明的工作频率启动。所使用的调制应按表 2 设置。应调整信号衰减以确保信号功率不会使频谱分析仪输入端口饱和。</p>
+</li>
+<li><p>测量应按制造商所声明的最低和最高工作频率进行，这些测量应在发射机预期工作的最高功率水平下进行。</p>
+</li>
+<li><p>偏移频率（offset frequency）和积分带宽设置（integrated BW）设置按下表设置，</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>测量信道</th>
+<th>中心频率偏移</th>
+<th>积分带宽</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>邻信道</td>
+<td>±OCW</td>
+<td>0.7×OCW</td>
+</tr>
+<tr>
+<td>间隔邻信道</td>
+<td>±2×OCW</td>
+<td>0.7×OCW</td>
+</tr>
+</tbody></table>
+<ul>
+<li>Trace 完成后，读取以表 24 中指定的中心频率偏移为中心的积分带宽上的积分功率。</li>
+</ul>
+<h2 id="TX-behaviour-under-Low-Voltage-Conditions"><a href="#TX-behaviour-under-Low-Voltage-Conditions" class="headerlink" title="TX behaviour under Low Voltage Conditions"></a>TX behaviour under Low Voltage Conditions</h2><p>低电压条件下的 TX 行为适用于电池供电的 EUT。低电压条件下的 TX 行为是设备在电池电压低于下限电压水平时保持其工作频率并且不产生超过任何相关限制的排放的能力。</p>
+<h3 id="测量限值-7"><a href="#测量限值-7" class="headerlink" title="测量限值"></a>测量限值</h3><p>设备应该：</p>
+<ul>
+<li>在不超过任何适用限制（例如占空比）的情况下，保持在工作信道中；或者</li>
+<li>在不超过任何适用限制（例如占空比）的情况下，将其有效辐射功率（e.r.p）降低到杂散发射限制以下；或者</li>
+<li>关机，（停止功能）； 当电压低于制造商声明的工作电压时。</li>
+</ul>
+<h3 id="测量方法-8"><a href="#测量方法-8" class="headerlink" title="测量方法"></a>测量方法</h3><p>测试步骤：</p>
+<ul>
+<li>在适当的测试信号和 EUT 在额定工作电压下运行时，EUT 应在制造商声明的工作频率上开始运行。应测量并记录发射信号的中心频率。</li>
+<li>工作电压应适当的逐渐降低，直至电压为零。应测量并记录发射信号的中心频率。任何异常行为都要注意。</li>
+</ul>
+<h2 id="Adaptive-Power-Control"><a href="#Adaptive-Power-Control" class="headerlink" title="Adaptive Power Control"></a>Adaptive Power Control</h2><p>自适应功率控制 (APC) 在与邻近设备通信时修改设备传输的功率。 APC 需要双向通信来交换信息用于管理发射功率电平。 自适应功率控制适用于所有使用频段 AA 进行自适应功率控制的 EUT。LoRa 设备不运行此频段内，故 LoRa 设备不适用。</p>
+<h3 id="测量限值-8"><a href="#测量限值-8" class="headerlink" title="测量限值"></a>测量限值</h3><p>当开启 APC 功能在其最小设置时所测量的峰值功率不应超过表 25 所示的值。</p>
+<table>
+<thead>
+<tr>
+<th align="center">参数</th>
+<th align="center">限值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">发射有效辐射功率</td>
+<td align="center">+7dBm</td>
+</tr>
+</tbody></table>
+<h3 id="测量方法-9"><a href="#测量方法-9" class="headerlink" title="测量方法"></a>测量方法</h3><p><strong>辐射测量法</strong></p>
+<p>对于没有永久性或临时天线连接器的 EUT 应按辐射测量法进行测试，应从 ETSI EN300 220-1 条款 C.1 中选择合适的测试场地，开阔试验场（OATS）、半电波暗室（SAR）或者全电波暗室（FAR），测试方法参考 ETSI EN300 220-1 条款 C.5。EUT 与其配套设备之间的路径损耗可以通过两个设备之间的间隔距离或其他方式来控制，以确保与图 7 所示的配置等效。</p>
+<p><strong>传导测量法</strong></p>
+<p>带有永久或临时天线连接器的 EUT 应按辐射测量法进行测试， 传导法测试步骤：</p>
+<ul>
+<li>测量应在制造商声明的频率上进行。该频率应对应于与制造商声明的最高和最低频率一致的标称信道中心频率。</li>
+<li>测量应在 EUT 以其支持的最高发射功率运行的情况下进行。</li>
+<li>测量应在制造商声明的 APC 建立时间间隔内进行。</li>
+<li>测试仪器应根据下表所示的参数进行适当配置。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">参数</th>
+<th align="center">设置值</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">RBW</td>
+<td align="center">工作频段</td>
+<td align="center">工作频段</td>
+</tr>
+<tr>
+<td align="center">Detector Mode</td>
+<td align="center">Peak</td>
+<td align="center">-</td>
+</tr>
+</tbody></table>
+<ul>
+<li><p>两个 EUT 应如图 8 所示互连。应使用适当的方法测量两点 A 和 B 之间的衰减，并记录下来。</p>
+<p><img src="image-20220207141136102.png" alt="image-20220207141136102"></p>
+</li>
+<li><p>调整可变衰减器，使 A 点和 B 点之间的衰减为 75 dB。</p>
+</li>
+</ul>
+<blockquote>
+<p>注意： EUT 应设置为至少在 APC 建立时间内相互通信。然后应使用测试仪器测量功率至少 60 秒。功率测量间隔应该足够长以捕获来自 EUT 的传输。EUT 应设置为至少在 APC 建立时间内相互通信。然后应使用测试仪器测量功率至少 60 秒。功率测量间隔应该足够长以捕获来自 EUT 的传输。</p>
+<p>信息应记录在试验报告中。</p>
+<table>
+<thead>
+<tr>
+<th>记录值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>测试信号</td>
+<td>使用的测试信号</td>
+</tr>
+<tr>
+<td>工作频率</td>
+<td>EUT 运行信道的中心频率</td>
+</tr>
+<tr>
+<td>建立时间</td>
+<td>APC 建立时间</td>
+</tr>
+<tr>
+<td>发射功率电平</td>
+<td>峰值测量功率</td>
+</tr>
+</tbody></table>
+<p>APC 建立时间由制造商声明。</p>
+</blockquote>
+<h2 id="FHSS-equipment"><a href="#FHSS-equipment" class="headerlink" title="FHSS equipment"></a>FHSS equipment</h2><p>跳频扩频 (FHSS) 是一种技术，其中每次传输都分布在多个称为跳频信道的工作频率上。尽管 LoRaWAN®</p>
+<p>协议已经支持跳频技术，但是目前 EU868 频段设备还不使用跳频技术。</p>
+<h3 id="测量限值-9"><a href="#测量限值-9" class="headerlink" title="测量限值"></a>测量限值</h3><p>FHSS 设备应满足以下限制：</p>
+<ul>
+<li>FHSS 设备不得在欧盟委员会决定 2013/752/EC [i.3] 中定义的低占空比/高可靠性的设备频段内进行传输。</li>
+<li>跳频信道数应大于或等于表 28 中给出的值。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>工作频段</th>
+<th>跳频信道</th>
+<th>每个跳频信道的最大占用带宽</th>
+<th>具体要求</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>865 MHz - 868 MHz</td>
+<td>≥ 58</td>
+<td>≤ 50 kHz</td>
+<td>TX 占空比&lt;1%</td>
+</tr>
+<tr>
+<td>863 MHz - 870 MHz</td>
+<td>≥ 47</td>
+<td>≤ 100 kHz</td>
+<td>TX 占空比&lt;0.1%</td>
+</tr>
+<tr>
+<td>占空比适用于整个传输（不是在每个跳频信道）。</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<ul>
+<li><p>对于驻留时间小于 10 ms 的 FHSS 传输，适用 0.1% 的占空比限制。</p>
+</li>
+<li><p>序列的每个跳频信道在一个时期内至少被占用一次。</p>
+</li>
+<li><p>跳频信道的返回时间应小于或等于一个周期或 20 秒的较低者。</p>
+</li>
+<li><p>停留时间不得超过 400 毫秒。</p>
+</li>
+<li><p>如果使用空闲信道评估（CCA），则应适用：</p>
+<ul>
+<li><p>在每个跳频信道</p>
+</li>
+<li><p>对于第一频率上的前导传输。在这种情况下，占空比限制适用于 FHSS 传输的其余部分，即排除前导码。</p>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>注意：</p>
+<p>制造商应作出以下跳频扩频声明：</p>
+<ul>
+<li>非重叠跳频信道的数量。</li>
+<li>跳频信道的带宽</li>
+<li>驻留时间</li>
+<li>跳频信道的返回时间。</li>
+</ul>
+</blockquote>
+<h2 id="RX-sensitivity"><a href="#RX-sensitivity" class="headerlink" title="RX sensitivity"></a>RX sensitivity</h2><p>接收机灵敏度是输入到接收机的最小信号功率，并可达到设备的一般性能标准运行。测试输入信号以标称工作频率产生，并用正常调制方式进行调制。适用于具有礼让频谱访问（LBT 或 AFA）功能的 EUT。</p>
+<h3 id="测量限值-10"><a href="#测量限值-10" class="headerlink" title="测量限值"></a>测量限值</h3><p>接收机的灵敏度应低于或等于下面公式的水平。</p>
+<p>![RX sensitivity](RX sensitivity.svg)</p>
+<p>![RX sensitivity1](RX sensitivity1.svg)</p>
+<ul>
+<li> S 是以场强为单位的灵敏度。</li>
+<li>SP 是以 dBm 为单位的灵敏度。</li>
+<li>RB 是以 kHz 为单位声明的接收机带宽。</li>
+</ul>
+<p>例如：使用 125kHz 带宽的LoRa 设备的灵敏度应低于 SP=10log125-117dBm=-96dBm</p>
+<h3 id="测量方法-10"><a href="#测量方法-10" class="headerlink" title="测量方法"></a>测量方法</h3><p> <strong>辐射测量法</strong></p>
+<p>对于没有永久性或临时天线连接器的 EUT 应按辐射测量法进行测试，信号发生器的输出应连接到与 EUT 具有相同天线极化的发射测试天线。 发射测试天线应放置在测试现场。EUT 应放置在转盘最敏感的位置。测量应应从 ETSI EN300 220-1 条款 C.1 中选择合适的测试场地，开阔试验场（OATS）、半电波暗室（SAR）或者全电波暗室（FAR），测试方法参考 ETSI EN300 220-1 条款 C.5。 2） </p>
+<p><strong>传导测量法</strong></p>
+<p>EUT 应连接到信号发生器的输出端。 应执行以下中的测量步骤。测量步骤：</p>
+<ul>
+<li>用适当的测试信号调制的信号发生器应设置为制造商声明的工作频率。</li>
+<li>根据制造商声明的工作频率，EUT 的操作应以接收的形式在工作频率上启动。</li>
+<li>调整 EUT 的输入信号电平，直到刚好超过第 4.13.1 节中描述的所需标准。</li>
+<li>对于 EUT 能够支持的每个数据速率，应重复步骤 1 至 3。</li>
+<li>下表所示信息应记录在试验报告中。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>记录值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>测试信号</td>
+<td>测试使用的信号</td>
+</tr>
+<tr>
+<td>数据速率</td>
+<td>EUT 的数据速率</td>
+</tr>
+<tr>
+<td>前向纠错/自动重复请求状态</td>
+<td>前向纠错/自动重复请求启用或禁用</td>
+</tr>
+<tr>
+<td>测量方法</td>
+<td>BER/报文成功率/其他</td>
+</tr>
+<tr>
+<td>测量说明</td>
+<td>消息成功率计算/其他测量方法的说明（如果适用）</td>
+</tr>
+<tr>
+<td>工作频率</td>
+<td>测试的工作频率</td>
+</tr>
+<tr>
+<td>接收机灵敏度</td>
+<td>测得的信号发生器功率电平</td>
+</tr>
+</tbody></table>
+<h2 id="Blocking"><a href="#Blocking" class="headerlink" title="Blocking"></a>Blocking</h2><p>阻塞适用于所有接收机。阻塞是对接收机接收有用调制信号的能力的度量，接收机阻塞也可称为接收机退敏，当存在强干扰信号并导致接收机的灵敏度降低（即接收机退敏），当接收机和发射机在同一地点运 行，发射机信号非常强时，通常会出现这种情况。当这种情况发生时，它具有抑制所有其他试图通过放大器的信号的效果，从而产生增益减少的效果。例如 LoRa 产品和其他射频设备放在一起时，就会影响 LoRa 产品接收机低噪放大器的效果。</p>
+<h3 id="测量限值-11"><a href="#测量限值-11" class="headerlink" title="测量限值"></a>测量限值</h3><p>接收机类别 1.5/2/3 的参考限值，指定频率偏移处的阻塞电平应等于或大于下表的限值，但发现杂散响应的频率除外。</p>
+<table>
+<thead>
+  <tr>
+    <th colspan="2" rowspan="2">测量要求</th>
+    <th colspan="6">限值</th>
+  </tr>
+  <tr>
+    <th colspan="2">1.5 类接收机</th>
+    <th colspan="2">2 类接收机</th>
+    <th colspan="2">3 类接收机</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td colspan="2">在工作信道上下边缘±2MHz 处阻塞</td>
+    <td colspan="2">≥ -43dBm</td>
+    <td colspan="2">≥ -69 dBm</td>
+    <td colspan="2">≥ -80 dBm</td>
+  </tr>
+  <tr>
+    <td colspan="2">在工作信道上下边缘±10MHz 处阻塞</td>
+    <td colspan="2">≥ -33dBm</td>
+    <td colspan="2">≥ -44 dBm</td>
+    <td colspan="2">≥ -60 dBm</td>
+  </tr>
+  <tr>
+    <td colspan="2">在中心频率的±5 %或 15MHz 处阻塞，以较大者为准</td>
+    <td colspan="2">≥ -33dBm</td>
+    <td colspan="2">≥ -44 dBm</td>
+    <td colspan="2">≥ -60 dBm</td>
+  </tr>
+</tbody>
+</table>
+
+<p>接收机类别1的参考限值，指定频率偏移处的阻塞电平应等于或大于下表 的限值，但发现杂散响应的频率除外。</p>
+<table>
+<thead>
+<tr>
+<th>测量要求</th>
+<th>限值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>在中心频率±2MHz 处阻塞</td>
+<td>≥ -20 dBm</td>
+</tr>
+<tr>
+<td>在中心频率±10MHz 处阻塞</td>
+<td>≥ -20 dBm</td>
+</tr>
+<tr>
+<td>在中心频率的±5  %或 15MHz 处阻塞，以较大者为准</td>
+<td>≥ -20 dBm</td>
+</tr>
+</tbody></table>
+<h3 id="测量方法-11"><a href="#测量方法-11" class="headerlink" title="测量方法"></a>测量方法</h3><p><strong>辐射测量</strong></p>
+<p>对于没有永久性或临时天线连接器的 EUT 应按辐射测量法进行测试，测量应从 ETSI EN300 220-1 条款 C.1 中选择合适的测试场地，开阔试验场（OATS）、半电波暗室（SAR）或者全电波暗室（FAR），信号发生器 A 和 B 连接到合路器，如图 8 所示，应放置在测试暗室外。合路器的输出应连接到与 EUT 具有相同天线极化的发射测试天线。 发射测试天线应放置在测试现场。EUT 应放置在转盘最敏感的位置。应参考ETSI EN300 220-1 条款 C.5.4 中描述的适当辐射测量方法执行下面的测量步骤。</p>
+<p><strong>传导测量</strong></p>
+<p>两个信号发生器 A 和 B 应通过一个合路网络连接到 EUT</p>
+<p><img src="1111.png" alt="1111"></p>
+<p>测量需在制造商声明的工作频率下进行。信号发生器 A 应设置为 发射 EUT 接收机工作频率下的适当调制测试信号。信号发生器 B 应该发射未调制的信号。测量应在表 31 或表 32 中定义的频率偏移的干扰频率上进行，避免出现杂散响应的频率。技术要求条款可能会要求额外的测量点。如果设备使用多个工作频段，则每个频段必须至少进行一次阻塞测量。</p>
+<p>1）   测量步骤</p>
+<ul>
+<li><p>信号发生器 B 断电。信号发生器 A 应设置为 EUT 接收机所需性能标准的最小电平或表 29 中的参考电平，以较高者为准。除非技术要求中另有规定，否则信号发生器 A 的输出电平应增加 3 dB。所以对于使用 125kHz 带宽的LoRa 设备，信号发生器 A 的输出电平应为 -93dBm。</p>
+</li>
+<li><p>信号发生器 B 通电并设置为在标称工作频率 - 偏移频率下工作。然后打开信号发生器 B 并调整发射信号电平直到 EUT 不能达到所需性能标准（一般定义为接收机 PER &gt; 10%）的最低电平。</p>
+</li>
+<li><p>在信号发生器 B 设置不变的情况下，接收机应更换为合适的射频功率测量设备。应测量并记录进入测量设备的功率。阻塞电平是在 EUT 天线连接器处从发生器 B 接收到的传导功率。这既可以在天线连接器上进行传导测试以进行测量，也可以在辐射测试中进行计算（参考 ETSI EN300 220-1 条款 C.5.4）。阻塞电平应高于或等于技术要求条款中要求的阻塞功率电平。</p>
+</li>
+<li><p>步骤 1 到 3 中的测量应按对应所需要测量的频率偏移信号进行重复测试。</p>
+</li>
+</ul>
+<blockquote>
+<p>注意：对于使用空闲信道评估（CCA）的设备无论接收机类别如何，都应重复步骤 1 到 4，信号发生器 A 电平调整为比步骤 1 中的测量值高 +13 dB。例如：具有 LBT 功能的使用 125kHz 带宽LoRa 设备测量阻塞，信号发生器 A 的输出电平应为-83dBm。</p>
+</blockquote>
+<h2 id="Clear-Channel-Assessment-threshold"><a href="#Clear-Channel-Assessment-threshold" class="headerlink" title="Clear Channel Assessment threshold"></a>Clear Channel Assessment threshold</h2><p>空闲信道评估阈值（CCA）适用于具有礼让频谱访问功能设备。礼让频谱访问是指使用空闲信道评估访问频谱和减轻干扰的技术。在传输前，EUT 至少在空闲信道评估时间间隔内检测信道，以确定该信道是否空闲。如果空闲信道评估侦听间隔内的平均信号电平低于 CCA 阈值，则设备可以继续传输。如果平均信号电平高于 CCA 阈值，则设备将其传输推迟到以后的时间。在随机间隔期满（最小延迟周期的倍数）之前， 设备不得尝试在相同的工作频率上重新传输。或者，设备可以选择另一个工作频率并再次开始传输前的监听时间。随机间隔应与 EUT 的传输持续时间一致，并可能与媒体接入协议规范提供的争用解决算法相关联。在 RF 信道不可用的情况下，礼让的频谱访问可以与信道自适应一起使用。信道自适应指的是在不改变信道的情况下适应设备行为的能力。</p>
+<p>CCA 阈值定义为接收信号电平，高于该电平，EUT 确定信道不可使用。</p>
+<h3 id="测量限值-12"><a href="#测量限值-12" class="headerlink" title="测量限值"></a>测量限值</h3><table>
+<thead>
+<tr>
+<th>EUT 的 e.r.p 范围</th>
+<th>限值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>e.r.p&lt;100mW 的 EUT 的  CCA 阈值</td>
+<td>比Rx灵敏度级别限制高 15 dB</td>
+</tr>
+<tr>
+<td>e.r.p 为 100mW~500mW 的  CCA 阈值</td>
+<td>比 Rx灵敏度级别限制高 11 dB</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>注意：这些限制是基于天线增益相对于偶极子(即 2.15 dBi)最大值为 0 dB。对于其他增益不同于 0dB 的天线，应相应地调整其限值。</p>
+</blockquote>
+<h3 id="1-1-1-测量方法"><a href="#1-1-1-测量方法" class="headerlink" title="1.1.1    测量方法"></a>1.1.1    测量方法</h3><p>1）   辐射测量</p>
+<p>对于没有永久或临时天线连接器的 EUT 应按辐射方式进行测试。测量应从 ETSI EN300 220-1 条款 C.1 中选择合适的测试场地，开阔试验场（OATS）、半电波暗室（SAR）或者全电波暗室（FAR）。信号发生器和合路器/耦合器（如图 9 所示）应放置在暗室之外。</p>
+<img src="image-20220207145356191.png" alt="image-20220207145356191" style="zoom:50%;" />
+
+<p>合路器或耦合器的输出应连接到与 EUT 具有相同天线极化的发射测试天线。发射测试天线应放置在测试场地内。EUT 应放置在转盘的最敏感位置。辐射方式测量应使用 ETSI EN300 220-1 第 C.5 条中描述的适当的辐射测量方法进行。</p>
+<p>1）   传导测量</p>
+<p>如图 9 所示，信号发生器和功率计或频谱分析仪应分别通过适当的衰减器组合到 EUT 天线连接器中。应执行以下测试步骤。</p>
+<p>2）   测试步骤</p>
+<ul>
+<li>频谱分析仪的配置如表 34 所示。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数设置</th>
+<th>设置值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>中心频率</td>
+<td>标称的 EUT 工作频率</td>
+</tr>
+<tr>
+<td>RBW</td>
+<td>大约  3 倍的工作信道占用带宽</td>
+</tr>
+<tr>
+<td>VBW</td>
+<td>3×RBW</td>
+</tr>
+<tr>
+<td>Span</td>
+<td>Zero span</td>
+</tr>
+<tr>
+<td>Detector Mode</td>
+<td>RMS</td>
+</tr>
+<tr>
+<td>Trace Mode</td>
+<td>Max Hold</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>说明：标称工作频率由测试实验室和制造商商定。</p>
+<p>标称工作频率应与制造商声明的最高和最低工作频率和信道间隔一致。</p>
+<p>信道间隔由制造商声明。</p>
+</blockquote>
+<ul>
+<li><p>启动 EUT 的接收机并且激活 CCA 功能。具有正常测试调制的信号发生器应调整到标称工作频率。 调整频谱分析仪电平和 RBW，以提供令人满意的信号发生器信号显示。</p>
+</li>
+<li><p>信号发生器的输出功率电平应设置为高于 EUT 接收机参考灵敏度约 20 dB。命令 EUT 传输。命令EUT 传输的方式由制造商确定。频谱分析仪检测到的任何来自 EUT 的信号都应该被记录下来。</p>
+</li>
+<li><p>信号发生器的电平以 1 dB 的步进降低，直到设备开始传输。一旦达到 CCA 阈值，在 EUT 开始传输之前可能会出现延迟。 确保在降低信号发生器电平的速率时考虑了任何此类延迟。传输开始时EUT 接收机输入端的信号发生器电平就是 CCA 阈值，应记录下来。</p>
+</li>
+<li><p>重复步骤 3 和步骤 4。</p>
+</li>
+<li><p>以下信息应记录在测试报告中</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>测试值</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>测试信号</td>
+<td>测试使用的信号</td>
+</tr>
+<tr>
+<td>CCA 阈值</td>
+<td>第一次测量的  CCA 阈值功率电平</td>
+</tr>
+<tr>
+<td>CCA 阈值</td>
+<td>第二次测量的  CCA 阈值功率电平</td>
+</tr>
+<tr>
+<td>出现意外的 EUT   传输信号</td>
+<td>在步骤  3 中频谱分析仪检测到的任何传输</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p> 注意：出现意外的 EUT 传输是测试失败。所有观察结果和结果都应在测试报告中详细说明。</p>
+</blockquote>
+<h2 id="Polite-spectrum-access-timing-parameters"><a href="#Polite-spectrum-access-timing-parameters" class="headerlink" title="Polite spectrum access timing parameters"></a>Polite spectrum access timing parameters</h2><p>礼让频谱访问时序参数条款适用于具有礼貌频谱访问的 EUT。使用礼让频谱访问应由制造商声明。</p>
+<h3 id="测量限值-13"><a href="#测量限值-13" class="headerlink" title="测量限值"></a>测量限值</h3><table>
+<thead>
+<tr>
+<th>测量参数</th>
+<th>限值</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>最小 CCA 时间</td>
+<td>160 μs</td>
+<td>最短 CCA 侦听时间</td>
+</tr>
+<tr>
+<td>最小延迟时间</td>
+<td>最小 CCA 时间</td>
+<td>延迟间隔的最小值</td>
+</tr>
+<tr>
+<td>延迟时间的最小单位</td>
+<td>制造商声明</td>
+<td>两个相邻延迟周期之间的最小间隔</td>
+</tr>
+<tr>
+<td>死区时间</td>
+<td>供应商声明的 CCA 时间，但不超过  5ms</td>
+<td>侦听结束和传输开始之间的最长时间</td>
+</tr>
+<tr>
+<td>最大传输持续时间  Ton MAX</td>
+<td>1s</td>
+<td>对于单个传输</td>
+</tr>
+<tr>
+<td>最大传输持续时间  Ton MAX</td>
+<td>4s</td>
+<td>对于传输对话或轮询序列</td>
+</tr>
+<tr>
+<td>1 小时内最大传输时间</td>
+<td>100s/h 每 200kHz 频谱</td>
+<td>每小时 200  kHz 频谱部分的最大允许  累积传输时间</td>
+</tr>
+<tr>
+<td>同一操作信道中两次连  续传输之间的最小时间</td>
+<td>100ms</td>
+<td>在相同工作频率上传输后特定发射机  应保持关闭的最小时间</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>说明：</p>
+<p>死区时间：CCA 结束和传输开始之间的时间。</p>
+<p>延迟时间：当信道不空闲时，传输延迟到 CCA 重试之前的随机时间。通过实现更多的 AFA 信道，可以实现更长的累计传输时间。</p>
+</blockquote>
+<h3 id="测量方法-12"><a href="#测量方法-12" class="headerlink" title="测量方法"></a>测量方法</h3><p>以下参数需制造商声明：</p>
+<ul>
+<li>使用最小 CCA 时间。</li>
+<li>最长死区时间。</li>
+<li>用于随机重新传输尝试的时间的方法。</li>
+<li>延迟时间的最小单位。</li>
+<li>延迟随机时间的最小值和最大值。</li>
+<li>最大传输持续时间，Tonmax。</li>
+<li>在同一工作频率上的最小传输关闭时间，即关闭最小时间，Toffmin。</li>
+</ul>
+<p>所声明的参数不得超过技术要求中的要求值。</p>
+<h2 id="Adaptive-Frequency-Agility"><a href="#Adaptive-Frequency-Agility" class="headerlink" title="Adaptive Frequency Agility"></a>Adaptive Frequency Agility</h2><p>自适应频率捷变条款适用于带有 AFA 的 EUT。使用自适应频率捷变应由制造商声明。</p>
+<p>如果礼貌的短控制信令或确认，可以进一步改进共享频谱访问与 CCA 和频率适应性或敏捷性相结合。 可以使用各种算法来实现信道自适应，包括周期性和事件驱动的决策，以等待或改变速度传输（自适应）或改变操作信道（敏捷 - 也称为 AFA）。 优选算法将生成的流量均匀地分布在可用信道上，并避免使用被其他设备永久或临时占用的信道。</p>
+<p>虽然没有强加特定的时间限制，但需要注意的是，接收和发送状态之间切换的延迟以及通过接收器和发送器的信号的相应处理延迟应小于 CCA 间隔，以避免丢失信道到另一个设备。</p>
+]]></content>
+      <categories>
+        <category>硬件测试</category>
       </categories>
   </entry>
   <entry>
