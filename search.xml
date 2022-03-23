@@ -3,7 +3,10 @@
   <entry>
     <title>RAK3172</title>
     <url>/posts/1EYDFHD/</url>
-    <content><![CDATA[<h1 id="WisDuo-RAK3172"><a href="#WisDuo-RAK3172" class="headerlink" title="WisDuo RAK3172"></a>WisDuo RAK3172</h1><p><img src="RAK3172_WisDuo-LPWAN-Stamp-Module-Front-V2_757x.progressive.png" alt="img"></p>
+    <content><![CDATA[<h1 id="WisDuo-RAK3172-LoRaWAN-模块"><a href="#WisDuo-RAK3172-LoRaWAN-模块" class="headerlink" title="WisDuo RAK3172  LoRaWAN 模块"></a>WisDuo RAK3172  LoRaWAN 模块</h1><p>特点</p>
+<p>价格便宜 $5.99</p>
+<p>体积小 15.5×15mm 硬币尺寸还小</p>
+<p><img src="RAK3172_WisDuo-LPWAN-Stamp-Module-Front-V2_757x.progressive.png" alt="img"></p>
 <h1 id="产品概述"><a href="#产品概述" class="headerlink" title="产品概述"></a>产品概述</h1><p>RAK3172模块集成了STM32WLE5CC MCU芯片，是一款低功耗、远距离、易用、小巧的无线数据应用LoRa®收发模块。该模块遵循LoRaWAN® 1.0.3协议，支持Class A、Class B、Class C三种工作模式，易于连接到不同的LoRaWAN服务器平台，如TTN、Chirpstack、Activity、腾讯云等等。该模块还支持LoRa® P2P（点对点）通信，可帮助用户快速实现自己的远距离LoRa®网络。</p>
 <p>用户可通过UART接口使用AT命令来配置模式和控制模块工作。RAK3172特别适合需要低功耗、电池供电的各种应用。</p>
 <h1 id="产品特性"><a href="#产品特性" class="headerlink" title="产品特性"></a>产品特性</h1><ul>
